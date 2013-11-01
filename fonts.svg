@@ -14,7 +14,7 @@
    id="svg2"
    version="1.1"
    inkscape:version="0.48.3.1 r9886"
-   sodipodi:docname="New document 1">
+   sodipodi:docname="fonts.svg">
   <defs
      id="defs4" />
   <sodipodi:namedview
@@ -24,9 +24,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.2949707"
-     inkscape:cx="425.1429"
-     inkscape:cy="-21.697293"
+     inkscape:zoom="0.57557346"
+     inkscape:cx="-1635.9082"
+     inkscape:cy="-341.42727"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -43,7 +43,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -51,24 +51,31 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1">
+    <rect
+       style="fill:#ffff00;fill-opacity:1;stroke:none"
+       id="rect3643"
+       width="719.8645"
+       height="362.81171"
+       x="-1056.761"
+       y="830.64392" />
     <text
        xml:space="preserve"
        style="font-size:72px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Archivo Black;-inkscape-font-specification:'Archivo Black,'"
-       x="-705.72601"
-       y="1454.097"
+       x="-700.68549"
+       y="1444.016"
        id="text2985"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
-         x="-693.70258"
-         y="1454.097"
+         x="-688.66205"
+         y="1444.016"
          id="tspan2991">Médor </tspan><tspan
          sodipodi:role="line"
-         x="-693.70258"
-         y="1544.097"
+         x="-688.66205"
+         y="1534.016"
          id="tspan2997">refuse </tspan><tspan
          sodipodi:role="line"
-         x="-705.72601"
-         y="1634.097"
+         x="-700.68549"
+         y="1624.016"
          id="tspan2999">l'équidistance</tspan></text>
     <text
        sodipodi:linespacing="125%"
@@ -261,34 +268,190 @@
     <text
        xml:space="preserve"
        style="font-size:72px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#536c67;fill-opacity:1;stroke:none;font-family:Goblin One;-inkscape-font-specification:Goblin One"
-       x="-1079.8934"
-       y="386.22455"
+       x="-774.6709"
+       y="273.92569"
        id="text3870"
        sodipodi:linespacing="125%"><tspan
          style="font-size:72px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#374548;fill-opacity:1;font-family:Univers Else;-inkscape-font-specification:Univers Else"
          sodipodi:role="line"
-         x="-1079.8934"
-         y="386.22455"
+         x="-774.6709"
+         y="273.92569"
          id="tspan3874">Médor </tspan><tspan
          style="font-size:72px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#374548;fill-opacity:1;font-family:Univers Else;-inkscape-font-specification:Univers Else"
          sodipodi:role="line"
-         x="-1079.8934"
-         y="476.22455"
+         x="-774.6709"
+         y="363.92569"
          id="tspan3880">n’est ni votre ami,</tspan><tspan
          style="font-size:72px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#374548;fill-opacity:1;font-family:Univers Else;-inkscape-font-specification:Univers Else"
          sodipodi:role="line"
-         x="-1079.8934"
-         y="566.22461"
+         x="-774.6709"
+         y="453.92569"
          id="tspan3882">ni votre ennemi.</tspan><tspan
          style="font-size:72px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#374548;fill-opacity:1;font-family:Univers Else;-inkscape-font-specification:Univers Else"
          sodipodi:role="line"
-         x="-1079.8934"
-         y="656.22461"
+         x="-774.6709"
+         y="543.92572"
          id="tspan3884">Seuls les faits </tspan><tspan
          style="font-size:72px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#374548;fill-opacity:1;font-family:Univers Else;-inkscape-font-specification:Univers Else"
          sodipodi:role="line"
-         x="-1079.8934"
-         y="746.22461"
+         x="-774.6709"
+         y="633.92572"
          id="tspan3886">comptent. </tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text3032"
+       y="498.05124"
+       x="-1931.6682"
+       style="font-size:72px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Archivo Black;-inkscape-font-specification:'Archivo Black,'"
+       xml:space="preserve"><tspan
+         id="tspan3038"
+         y="498.05124"
+         x="-1931.6682"
+         sodipodi:role="line"
+         style="font-size:72px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;font-family:Archivo Narrow;-inkscape-font-specification:Archivo Narrow Bold">Belge</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:72px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Archivo Black;-inkscape-font-specification:'Archivo Black,'"
+       x="-1939.0394"
+       y="247.43201"
+       id="text3045"
+       sodipodi:linespacing="125%"><tspan
+         style="font-size:72px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:extra-expanded;text-align:center;line-height:125%;writing-mode:lr;text-anchor:middle;font-family:Alfphabet;-inkscape-font-specification:Alfphabet Extra-Expanded"
+         sodipodi:role="line"
+         x="-1939.0394"
+         y="247.43201"
+         id="tspan3048">Belge</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:72px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Archivo Black;-inkscape-font-specification:'Archivo Black,'"
+       x="-1934.1252"
+       y="768.3269"
+       id="text3050"
+       sodipodi:linespacing="125%"><tspan
+         style="font-size:72px;font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr;text-anchor:middle;font-family:Certege;-inkscape-font-specification:Certege Italic"
+         sodipodi:role="line"
+         x="-1934.1252"
+         y="768.3269"
+         id="tspan3052">Belge</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text3054"
+       y="989.46155"
+       x="-1924.297"
+       style="font-size:72px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Archivo Black;-inkscape-font-specification:'Archivo Black,'"
+       xml:space="preserve"><tspan
+         id="tspan3056"
+         y="989.46155"
+         x="-1924.297"
+         sodipodi:role="line"
+         style="font-size:72px;font-style:italic;font-variant:normal;font-weight:800;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr;text-anchor:middle;font-family:Crickx SCHRBK;-inkscape-font-specification:Crickx SCHRBK Ultra-Bold Italic">Belge</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:72px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Archivo Black;-inkscape-font-specification:'Archivo Black,'"
+       x="-1875.1559"
+       y="1136.8846"
+       id="text3058"
+       sodipodi:linespacing="125%"><tspan
+         style="font-size:72px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr;text-anchor:middle;font-family:Indubitably;-inkscape-font-specification:Indubitably"
+         sodipodi:role="line"
+         x="-1875.1559"
+         y="1136.8846"
+         id="tspan3060">Belge</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text3062"
+       y="1269.5654"
+       x="-1862.8706"
+       style="font-size:72px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Archivo Black;-inkscape-font-specification:'Archivo Black,'"
+       xml:space="preserve"><tspan
+         id="tspan3064"
+         y="1269.5654"
+         x="-1862.8706"
+         sodipodi:role="line"
+         style="font-size:72px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr;text-anchor:middle;font-family:Karla;-inkscape-font-specification:Karla Bold">Belge</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:72px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Archivo Black;-inkscape-font-specification:'Archivo Black,'"
+       x="-1914.4686"
+       y="1436.6449"
+       id="text3066"
+       sodipodi:linespacing="125%"><tspan
+         style="font-size:72px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:condensed;text-align:center;line-height:125%;writing-mode:lr;text-anchor:middle;font-family:Open Sans Condensed;-inkscape-font-specification:'Open Sans Condensed, Bold Condensed'"
+         sodipodi:role="line"
+         x="-1914.4686"
+         y="1436.6449"
+         id="tspan3068">belge</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text3070"
+       y="1611.0956"
+       x="-1838.3"
+       style="font-size:72px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Archivo Black;-inkscape-font-specification:'Archivo Black,'"
+       xml:space="preserve"><tspan
+         id="tspan3072"
+         y="1611.0956"
+         x="-1838.3"
+         sodipodi:role="line"
+         style="font-size:72px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr;text-anchor:middle;font-family:Sans Guilt Extrude;-inkscape-font-specification:Sans Guilt Extrude Medium">belge</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:72px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Archivo Black;-inkscape-font-specification:'Archivo Black,'"
+       x="-2623.6038"
+       y="1467.4355"
+       id="text3074"
+       sodipodi:linespacing="125%"><tspan
+         style="font-size:72px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;font-family:Univers Else;-inkscape-font-specification:Univers Else"
+         sodipodi:role="line"
+         x="-2623.6038"
+         y="1467.4355"
+         id="tspan3076">belge</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text3078"
+       y="1815.0956"
+       x="-1838.3"
+       style="font-size:72px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Archivo Black;-inkscape-font-specification:'Archivo Black,'"
+       xml:space="preserve"><tspan
+         id="tspan3080"
+         y="1815.0956"
+         x="-1838.3"
+         sodipodi:role="line"
+         style="font-size:72px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;font-family:Univers Else;-inkscape-font-specification:Univers Else">belge</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text3082"
+       y="861.56628"
+       x="-2722.3586"
+       style="font-size:72px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Archivo Black;-inkscape-font-specification:'Archivo Black,'"
+       xml:space="preserve"><tspan
+         id="tspan3084"
+         y="861.56628"
+         x="-2722.3586"
+         sodipodi:role="line"
+         style="font-size:72px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:condensed;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;font-family:Open Sans Condensed;-inkscape-font-specification:'Open Sans Condensed, Bold Condensed'">belge</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text3086"
+       y="1623.8014"
+       x="-2616.6541"
+       style="font-size:72px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Archivo Black;-inkscape-font-specification:'Archivo Black,'"
+       xml:space="preserve"><tspan
+         id="tspan3088"
+         y="1623.8014"
+         x="-2616.6541"
+         sodipodi:role="line"
+         style="font-size:72px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;font-family:Univers Else;-inkscape-font-specification:Univers Else">mordant</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:72px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Archivo Black;-inkscape-font-specification:'Archivo Black,'"
+       x="-2597.5427"
+       y="1758.833"
+       id="text3090"
+       sodipodi:linespacing="125%"><tspan
+         style="font-size:72px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;font-family:Univers Else;-inkscape-font-specification:Univers Else"
+         sodipodi:role="line"
+         x="-2597.5427"
+         y="1758.833"
+         id="tspan3092">mordant</tspan></text>
   </g>
 </svg>
