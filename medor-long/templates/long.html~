@@ -1,0 +1,278 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>Médor - long-form</title>
+    <link href="./components/reset-css/reset.css" rel="stylesheet" type="text/css" />
+    <link href='http://fonts.googleapis.com/css?family=Archivo+Narrow' rel='stylesheet' type='text/css'>
+</head>
+
+<style type="text/css" media="screen">
+     * {
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+      }
+
+      html, body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+      }
+
+      body {
+        color: black;
+        font-family: 'Archivo Narrow', sans-serif;
+        font-weight: 200;
+        font-size: 1.2em;
+      }
+
+      p {
+        max-width: 800px;
+      }
+      
+      h1 {
+        font-family: 'Archivo Narrow', sans-serif;
+        font-size: 3em;
+        margin: 0;
+        text-transform:none;
+      }
+      
+        h2 {
+        font-weight: inherit;
+        font-size: 2em;
+        margin: 0;
+        text-transform:none;
+      }
+      
+        h3 {
+        font-weight: inherit;
+        font-size: 2em;
+        margin: 0;
+        text-transform:none;
+      }
+
+      a {
+        color: inherit;
+      }
+
+      img {
+        max-width: 100%;
+      }
+
+      p {
+      }
+      
+      nav{
+        margin:20px;
+        float:left;
+      }
+
+      section {
+        position: relative;
+        overflow: hidden;
+        padding: 50px;
+        width: 100%;
+        height: 100%;
+        background: white;
+        background-image: url(/static/img/clavier.jpg);
+        background-size: cover;
+        background-position: center center;
+        color: brown;
+      }
+
+      .belge {
+        font-family: Alfphabet;
+        font-size: 3.5em;
+        background: yellow;
+      }
+      
+       .mordant {
+        font-family: Indubitably;
+        font-size: 3.5em;
+        background: #1a1a1a;
+        color: yellow;
+      }
+      
+       .impartial {
+        font-family: Archivo;
+        font-weight: Black;
+        font-size: 3.5em;
+        background:
+        text-transform: uppercase;
+      }
+
+</style>
+
+
+
+<body>
+
+<section id="intro">
+    <nav>
+        <ul>
+            <li><a href="#ADN">L’ADN de Médor</a></li>
+            <li>Découvrez les rubriques de Médor</li>
+            <li><a href="#pourquoi">Pourquoi ?</li>
+            <li><a href="#comment">Comment ? </li>
+            <li><a href="#qui">Qui?</li>
+            <li><a href="#cooperateurs">Devenez coopérateur ou pré-abonnés + Ils nous soutiennent déjà</a></li>
+            <li>Indépendance / Médor et la pub</li>
+            <li>Médor et l’argent</li>
+    </nav>
+
+    
+<div style="float:left;">
+<p>
+C'est quoi, Médor?</p>
+<p>La revue « Médor » est un trimestriel d’enquêtes, de récits, de portraits de grands reportages dans un petit pays (essentiellement réalisées en Belgique).</p>
+<div>
+
+</section>
+
+
+<section id="mag">
+
+<div>
+<h1>MÉDOR, LE GRAND MAG D’UN PETIT PAYS</h1>
+<p>MÉDOR est un magazine trimestriel d’enquêtes, de récits et de grands reportages, centrés sur un petit pays: la Belgique.
+MÉDOR est exclusif. Ce que vous lisez chez nous - des textes fouillés créés par des auteurs imbibés de leur sujet - vous ne le lisez pas ailleurs. 
+MÉDOR prend son temps. Ou plutôt donne du temps aux journalistes, graphistes, photographes ou dessinateurs de presse pour atteindre la qualité. C’est la garantie que notre contenu est soupesé et sur-pensé.</p>
+<p>MÉDOR est un projet participatif et citoyen. Organisé en coopérative, il n’appartient à aucun groupe de presse, ne dépend ni de la publicité, ni de subsides. Il dépend de vous.</p>
+<p>MÉDOR vise la cohérence à chaque étape de vie1 : il est pensé par une rédaction horizontale, imprimé sur du papier recyclé, distribué à vélo, développé sur des logiciels libres, sans pub sexiste.</p>
+<p>MÉDOR, si on pouvait choisir, ce serait un mag pensé par saint-Exupery dirigé par Alain Chabbat. Un sourire léger pour lire la gravité du monde.</p>
+</div>
+
+</section>
+
+
+<section id="naissance">
+<div>
+<h1>Naissance</h1>
+<p>Médor est né en août 2012 lors d’une réunion entre journalistes et graphistes partant de deux préalables :</p>
+<p>- Un mag qui raconte autrement la Belgique manque, un mag’ plus lent, moins calé dans les lignes et agendas médiatiques classiques.</p>
+<p>- La précarisation du journalisme amène une information de faible qualité, vite écrite vite périmée. Le temps, et donc l’argent pour rémunérer les producteurs de sens (journaliste, graphiste,…), est un préalable indispensable pour fournir un travail de qualité. Donc, pour viser une qualité de production, Médor payera correctement tous ses collaborateurs et ce dès le début.</p>
+</div>
+
+</section>
+
+
+<section id="ADN">
+    <h2>Acide désoxyribonucléique.</h2>
+    <p>Il y avait les 7 samouraïs, les 7 nains, les 7 péchés capitaux, les 7 merveilles du monde (avant qu'on ajoute d'autorité la Grand-Place de Bruxelles), il y a à présent les 7 nucléotides de l'ADN médorien.</p>
+</section>
+
+        <section class="belge">
+        <p>Belge</p>
+        <p>Médor revendique cet acide tendre qu'est l'identité belge, tant dans le choix des sujets que dans leur traitement.</p>
+        </section>
+        
+        <section class="mordant">
+        <p>Mordant</p>
+        <p>Médor cherche, enquête, fouine, et insiste. Et en exclu' SVP. Ce que vous lirez dans Médor, vous ne le lirez pas ailleurs.</p>
+        </section>
+        
+        <section class="impartial">
+        <p>Impartial</p>
+        <p>Médor n'est ni votre ami, ni votre ennemi. Seuls les faits comptent.</p>
+        <section>
+        
+        </section>
+        Engagé Sur base de ces faits, Médor se permet un point de vue, un regard. Car Médor refuse le confort de l'équidistance. Il évolue sur une ligne de crête, bien loin au-dessus du relativisme absolu et de la quête universaliste.
+        <section>
+        
+        </section>
+        Curieux Tant dans son processus de fabrication que dans sa ligne éditoriale ou le choix des sujets, Médor cherche à inventer: arts graphiques qui ont du chien, écriture inspirée du jeu de rôles ou du cinéma, prise de décision collective, partage tournant des rôles...
+        <section>
+        
+        </section>
+        Imparfait Médor imprime sur du FSC (écolabel), travaille en structure horizontale, en logiciel libre, paie tout le monde (et même les impôts), se constitue en coopérative, assure la transparence, l'indépendance... Mais il y a sans aucun doute possibilité de faire mieux. Alors on continue.
+        </section>
+        
+        <section>
+        Equilibriste Sur un fil, Médor veut faire marcher son cerveau sans être intellectuel, être drôle sans être débile, impertinent mais pas insignifiant, révolté mais pas militant...</p>
+        </section>
+
+
+<section id="rubriques">
+Un exemple 
+Papier d’Oli « demain je meurs » avec OSP (making of, conseils musicaux, etc.)
++ projets éventuels pour le n°1 ?
+</section>
+
+
+
+<section id="pourquoi">
+<div>
+
+POURQUOI ?
+<p>Parce que la presse belge va mal. Titres racoleurs, absence d’analyses, infos copiées-collées, course à la vitesse : l’urgence a fini par ronger le sens. 
+Parce que, dans nos médias, le moindre fait divers bouscule les priorités. 
+Parce que les journalistes, photographes, graphistes ou dessinateurs de presse travaillent dans des conditions déplorables. Un pigiste belge gagne, en moyenne, moins qu’un laveur de vitre (étude de l’AJP,  ici : LIEN). (A priori, cela ne nous gêne pas, mais il faudrait augmenter les laveurs de vitres. Comme eux, le journalisme aide à y voir clair.)</p>
+
+</div>
+</section>
+
+<section id="comment">
+page niveau 2 – COMMENT ?
+<p>Des mesures concrètes pour une info de qualité :</p>
+<p>MEDOR offre du temps pour penser et chercher. Pas d’esclavagisme : tous les collaborateurs (journalistes, photographes, graphistes, dessinateurs) sont payés correctement. Consultez les tarifs ici : LIEN. 
+MEDOR n’a pas de patron ni de structure hiérarchique figée. C’est une équipe qui prend ses décisions de manière horizontale et redistribue fréquemment les rôles. L’équipe actuelle se présente comme ça : LIEN. 
+MEDOR recrée du lien entre les différents métiers de la presse : les journalistes se relisent entre eux (système de peer review) et travaillent en osmose avec les graphistes, illustrateurs ou photographes. 
+MEDOR conserve toute son indépendance face aux annonceurs publicitaires. Voir LIEN Médor et la pub. Ses finances sont gérées par une coopérative, transparente et ouverte à tous. Pour nous rejoindre : LIEN. Nos sources de financement sont en rupture totale avec celles de la presse « classique ». Voir LIEN Médor et l’argent.</p>
+
+</section>
+
+<section id="qui">
+QUI ?
+Une page pour chacun. Photo + CV en trois lignes (cfr De Correspondent). 
+</section>
+
+
+
+<section id="cooperateurs">
+Devenez coopérateur ou pré-abonnés + Ils nous soutiennent déjà
+MEDOR compte actuellement 87654 coopérateurs (compteur automatique comme sur le site de New B).
+
+Comment devenir coopérateur ?
+En remplissant le formulaire ci-dessous. Une fois votre demande validée, vous devrez vous acquitter du montant correspondant au nombre de parts souhaitées (une part = 20 euros).
+
+Quels sont mes droits en tant que coopérateur ?
+Chaque année, vous serez invité à l’Assemblée générale de Médor, où seront votées toutes les grandes décisions (nominations pour le Conseil d’administration, budget, fonctionnement, ligne éditoriale,…).
+Deux membres de l’AG seront élus pour devenir observateur du comité de rédaction de Médor, avec rapport à l’AG 
+Voir LIEN règlement complet.
+
+Qu’ai-je à y gagner (ou à y perdre) ?
+En devenant coopérateur de Médor, vous contribuez à l’existence d’un magazine indépendant et de qualité en Belgique. Vous participez à un projet collaboratif salutaire pour notre démocratie. 
+_ Dans le meilleur des cas, si des bénéfices sont engrangés par Médor, vous pourriez toucher des dividendes correspondant au nombre de parts dont vous disposez (transparence oblige : ne comptez quand même pas trop dessus,…) 
+_Dans le pire des cas, si Médor venait à mourir et était incapable de rembourser tous les coopérateurs, vous pourriez perdre le montant de votre part. 
+
+Consultez le règlement complet ici : LIEN PDF et nos questions/réponses fréquentes là : LIEN FAQ
+
+Ils nous soutiennent déjà :
+José Happart
+Le Grand Jojo
+Laurent Louis
+Sandra Kim
+Patrick de Saint-Exupéry
+</section>
+
+
+
+<li>Panier bio -> pdf à télécharger et à insérer dans le panier</li>
+<li>Certains liens = un face cam’ (genre De Correspondent ?)</li>
+
+
+
+    <script src="{{ STATIC_URL }}components/jquery/jquery.js"></script>
+    <script src="{{ STATIC_URL }}components/panelsnap/jquery.panelSnap.js"></script>
+    <script src="{{ STATIC_URL }}components/less/dist/less-1.5.1.js"></script>
+    <script>
+      $('body').panelSnap();
+    </script>
+
+    
+    
+    
+    
+</body>
+</html>
