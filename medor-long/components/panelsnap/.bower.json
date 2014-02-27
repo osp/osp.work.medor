@@ -1,0 +1,15 @@
+{
+  "name": "panelsnap",
+  "homepage": "https://github.com/guidobouman/jquery-panelsnap",
+  "version": "0.10.0",
+  "_release": "0.10.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "v0.10.0",
+    "commit": "121c4957af26c77f6f7326a1cf82e10c2e1e0824"
+  },
+  "_source": "git://github.com/guidobouman/jquery-panelsnap.git",
+  "_target": "~0.10.0",
+  "_originalSource": "panelsnap",
+  "_direct": true
+}
