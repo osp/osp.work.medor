@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8"/>
     <title>Médor - long-form</title>
-    <link href="./components/reset-css/reset.css" rel="stylesheet" type="text/css" />
+    <link href="../components/reset-css/reset.css" rel="stylesheet" type="text/css" />
     <link href='http://fonts.googleapis.com/css?family=Archivo+Narrow' rel='stylesheet' type='text/css'>
 </head>
 
