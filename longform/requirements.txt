@@ -1,5 +1,6 @@
-Markdown==2.3.1
-mdx-outline==1.02.1
+Django==1.6.2
+html5lib==0.999
+lxml==3.3.3
 requests==2.2.1
-git+https://github.com/html5lib/html5lib-python.git
-git+https://github.com/crazyzubr/bleach.git@6b62c0336c218f83b9eba8b62b72b95427e4c22b
+six==1.6.1
+wsgiref==0.1.2
