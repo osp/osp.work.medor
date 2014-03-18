@@ -1,14 +1,40 @@
 <!doctype html>
 <html>
     <head>
-        <meta charset="utf-8"/>
+        <meta charset="utf-8">
         <title>Médor</title>
+        <link href='http://fonts.googleapis.com/css?family=Archivo+Narrow' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Chivo' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Bitter' rel='stylesheet' type='text/css'>
+
+        <link rel="stylesheet" text='text/css' href="static/components/reset-css/reset.css">
+        <link rel="stylesheet" type="text/less" href="static/css/styles.less">
     </head>
 
     <body>
         {% load mediawiki_tags %}
 
+        <section>
+            <div id="video"></div>
+        </section>
+
         {% mwinclude "Première_page" ".C3.80_la_fin_de_cette_page.2C_vous_aurez_envie_de_vous_offrir_une_nouvelle_revue" %}
+
+        {% mwinclude "Première_page" "Voici_M.C3.A9dor.21" %}
+        {% mwinclude "Première_page" "Pourquoi_cr.C3.A9er_une_nouvelle_revue_.3F" %}
+        {% mwinclude "Première_page" "L.27essence.2C_les_trippes_ou_l.27atomium" %}
+        {% mwinclude "Première_page" "Les_rubriques" %}
+        {% mwinclude "Première_page" "Le_sommaire_du_premier_num.C3.A9ro" %}
+        {% mwinclude "Première_page" "Parcours_d.27un_article" %}
+        {% mwinclude "Première_page" "Un_exemple" %}
+        {% mwinclude "Première_page" "Pr.C3.A9-abonnez-vous_.21" %}
+        {% mwinclude "Première_page" "Devenez_coop.C3.A9rateur" %}
+        {% mwinclude "Première_page" "Organisez_une_.28.C3.A9.29meutes" %}
+        {% mwinclude "Première_page" "Notre_ind.C3.A9pendance" %}
+        {% mwinclude "Première_page" "M.C3.A9dor_et_la_pub" %}
+        {% mwinclude "Première_page" "Qui.3F" %}
+
+        <script src="static/components/less/dist/less-1.7.0.min.js"></script>
     </body>
 </html>
 
