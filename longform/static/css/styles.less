@@ -6,7 +6,10 @@
 @line-height-small:18pt;
 
 @font-size-medium: 25pt;
+@line-height-medium: 35pt;
+
 @font-size-big: 40pt;
+@line-height-big: 40pt;
 
 
 * {
@@ -34,16 +37,18 @@ p {
 h1 {
     font-family: @font-family;
     font-size: @font-size-big;
+    line-height: @line-height-big;
 }
 
 h2 {
     font-size: @font-size-big;
+    line-height: @line-height-big;
     margin-bottom: 15pt;
 }
 
 h3 {
-    font-size: 1.5em;
-    margin: 0;
+    font-size: @font-size-medium;
+    line-height: @line-height-medium;
     text-transform:none;
 }
 
@@ -60,9 +65,9 @@ nav {
     float:left;
 }
 
-#Voici_M.C3.A9dor.21{
-        background-image: url(img/juliemedorouestu.jpg);
-/*         background-size: cover; */
+#voici-medor{
+        background-image: url(../img/juliemedorouestu.jpg);
+         background-size: cover; 
         background-position: center center;
         background-repeat: no-repeat;
         background-attachment: fixed;
@@ -106,7 +111,7 @@ nav {
 }
 
 .wrapper {
-    width: 800px;
+    width: 850px;
     margin: 0 auto;
 }
 
@@ -117,4 +122,8 @@ dl {
     dd {
         display: block;
     }
+}
+
+#slide-belge {
+    background-color: pink;
 }
