@@ -7,8 +7,9 @@
         <link href='http://fonts.googleapis.com/css?family=Chivo' rel='stylesheet' type='text/css'>
         <link href='http://fonts.googleapis.com/css?family=Bitter' rel='stylesheet' type='text/css'>
 
-        <link rel="stylesheet" text='text/css' href="static/components/reset-css/reset.css">
-        <link rel="stylesheet" type="text/less" href="static/css/styles.less">
+        <link rel="stylesheet" text="text/css" href="static/components/reset-css/reset.css">
+        <link rel="stylesheet" text="text/css" href="static/components/fullpage.js/jquery.fullPage.css">
+        <!--<link rel="stylesheet" type="text/less" href="static/css/styles.less">-->
     </head>
 
     <body>
@@ -19,7 +20,6 @@
         </section>
 
         {% mwinclude "Première_page" ".C3.80_la_fin_de_cette_page.2C_vous_aurez_envie_de_vous_offrir_une_nouvelle_revue" %}
-
         {% mwinclude "Première_page" "Voici_M.C3.A9dor.21" %}
         {% mwinclude "Première_page" "Pourquoi_cr.C3.A9er_une_nouvelle_revue_.3F" %}
         {% mwinclude "Première_page" "L.27essence.2C_les_trippes_ou_l.27atomium" %}
@@ -35,6 +35,16 @@
         {% mwinclude "Première_page" "Qui.3F" %}
 
         <script src="static/components/less/dist/less-1.7.0.min.js"></script>
+        <script src="static/components/jQuery/dist/jquery.min.js"></script>
+        <script src="static/components/jquery.ui/ui/jquery.ui.core.js"></script>
+        <script src="static/components/jquery.ui/ui/jquery.ui.effect.js"></script>
+        <script src="static/components/jquery.slimscroll/jquery.slimscroll.min.js"></script>
+        <script src="static/components/fullpage.js/jquery.fullPage.min.js"></script>
+        <script>
+        $(document).ready(function() {
+            $.fn.fullpage();
+        });
+        </script>
     </body>
 </html>
 
