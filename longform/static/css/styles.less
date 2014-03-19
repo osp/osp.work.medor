@@ -23,12 +23,12 @@ html, body {
 body {
     color: black;
     font-family: @font-family;
-    font-size:@font-size-small;
+    font-size:@font-size-small !important;
     line-height:@line-height-small;
 }
 
 p {
-    max-width: 50%;
+    /*max-width: 50%;*/
 }
 
 h1 {
@@ -58,13 +58,6 @@ img {
 nav {
     margin:20px;
     float:left;
-}
-
-section {
-    position: relative;
-    overflow: hidden;
-    padding: 50px;  
-
 }
 
 #Voici_M.C3.A9dor.21{
@@ -110,4 +103,18 @@ section {
     width: 460px;
     height: 320px;
     outline: 1px solid black;
+}
+
+.wrapper {
+    width: 800px;
+    margin: 0 auto;
+}
+
+dl {
+    dt {
+        display: block;
+    }
+    dd {
+        display: block;
+    }
 }
