@@ -1,3 +1,14 @@
+@grey:#e2e2e0;
+
+@font-family: 'Archivo Narrow', sans-serif;
+
+@font-size-small: 15pt;
+@line-height-small:18pt;
+
+@font-size-medium: 25pt;
+@font-size-big: 40pt;
+
+
 * {
     box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -11,35 +22,26 @@ html, body {
 
 body {
     color: black;
-    font-family: 'Bitter', sans-serif;
-    font-weight: 200;
-    font-size: 0.9em;
-    line-height: 1.3em;
-    margin-left:15%;
+    font-family: @font-family;
+    font-size:@font-size-small;
+    line-height:@line-height-small;
 }
 
 p {
-    max-width: 60%;
+    max-width: 50%;
 }
 
 h1 {
-    font-family: 'Bitter', sans-serif;
-    font-size: 3em;
-    line-height: 1.3em;
-    margin: 0;
-    text-transform:none;
+    font-family: @font-family;
+    font-size: @font-size-big;
 }
 
 h2 {
-    font-weight: inherit;
-    line-height: 1.1em;
-    font-size: 2em;
-    margin: 0;
-    text-transform:none;
+    font-size: @font-size-big;
+    margin-bottom: 15pt;
 }
 
 h3 {
-    font-weight: inherit;
     font-size: 1.5em;
     margin: 0;
     text-transform:none;
