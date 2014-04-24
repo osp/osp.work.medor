@@ -13,7 +13,6 @@
         <COLOR NAME="FromSVG#000000" RGB="#000000" Spot="0" Register="0"/>
         <COLOR NAME="Green" RGB="#00ff00" Spot="0" Register="0"/>
         <COLOR NAME="Magenta" CMYK="#00ff0000" Spot="0" Register="0"/>
-        <COLOR NAME="None" RGB="#966432" Spot="0" Register="0"/>
         <COLOR NAME="Red" RGB="#ff0000" Spot="0" Register="0"/>
         <COLOR NAME="Registration" CMYK="#ffffffff" Spot="0" Register="1"/>
         <COLOR NAME="Rich Black" CMYK="#996666ff" Spot="0" Register="0"/>
@@ -21,7 +20,7 @@
         <COLOR NAME="White" CMYK="#00000000" Spot="0" Register="0"/>
         <COLOR NAME="Yellow" CMYK="#0000ff00" Spot="0" Register="0"/>
         <HYPHEN/>
-        <STYLE NAME="Default Paragraph Style" ALIGN="0" LINESPMode="0" LINESP="15" INDENT="0" RMARGIN="0" FIRST="0" VOR="0" NACH="0" DROP="0" DROPLIN="2" DROPDIST="0"/>
+        <STYLE NAME="Default Paragraph Style" DefaultStyle="1" ALIGN="0" LINESPMode="0" LINESP="15" INDENT="0" RMARGIN="0" FIRST="0" VOR="0" NACH="0" DROP="0" DROPLIN="2" DROPDIST="0"/>
         <STYLE NAME="body" ALIGN="3" LINESPMode="0" LINESP="10" FIRST="14.1732283464567" VOR="0" NACH="0" OpticalMargins="14" MinGlyphShrink="0.99" MaxGlyphExtend="1.01" FONT="Century-Cathologue Roman?" FONTSIZE="8" LANGUAGE="French"/>
         <STYLE NAME="titre reportage" LINESPMode="0" LINESP="40" NACH="15" FONT="Latin Modern Mono Prop Light 10 Regular" FONTSIZE="38" FEATURES="allcaps" FCOLOR="Black" TXTSHX="5" TXTSHY="-5" TXTOUT="1" TXTULP="-0.1" TXTULW="-0.1" TXTSTP="-0.1" TXTSTW="-0.1" KERN="0" LANGUAGE="English"/>
         <STYLE NAME="intro reportage" ALIGN="3" LINESPMode="0" LINESP="13" OpticalMargins="14" MinGlyphShrink="0.98" MaxGlyphExtend="1.02" FONT="URW Grotesk T Bold" FONTSIZE="10" LANGUAGE="French"/>
@@ -30,22 +29,21 @@
         <STYLE NAME="sous-titres" ALIGN="1" LINESPMode="0" LINESP="10" VOR="5" NACH="0" FONT="URW Grotesk T Bold" FONTSIZE="8" FEATURES="allcaps" TXTSHX="5" TXTSHY="-5" TXTOUT="1" TXTULP="-0.1" TXTULW="-0.1" TXTSTP="-0.1" TXTSTW="-0.1" KERN="3" LANGUAGE="French"/>
         <STYLE NAME="dialogues" LINESP="11" INDENT="0" FIRST="8.503937008" VOR="0" NACH="0" FONT="Century Schoolbook L Italic" FONTSIZE="8" LANGUAGE="English"/>
         <STYLE NAME="legendes" LINESPMode="1" FONT="Univers Else Regular" FONTSIZE="8" FEATURES="" TXTSHX="5" TXTSHY="-5" TXTOUT="1" TXTULP="-0.1" TXTULW="-0.1" TXTSTP="-0.1" TXTSTW="-0.1" LANGUAGE="French"/>
-        <CHARSTYLE CNAME="Default Character Style" FONT="Abdijsha Regular" FONTSIZE="12" FEATURES="inherit" FCOLOR="Black" FSHADE="100" SCOLOR="Black" SSHADE="100" TXTSHX="5" TXTSHY="-5" TXTOUT="1" TXTULP="-0.1" TXTULW="-0.1" TXTSTP="-0.1" TXTSTW="-0.1" SCALEH="100" SCALEV="100" BASEO="0" KERN="0" LANGUAGE="English"/>
+        <CHARSTYLE CNAME="Default Character Style" DefaultStyle="1" FONT="Abdijsha Regular" FONTSIZE="12" FEATURES="inherit" FCOLOR="Black" FSHADE="100" SCOLOR="Black" SSHADE="100" TXTSHX="5" TXTSHY="-5" TXTOUT="1" TXTULP="-0.1" TXTULW="-0.1" TXTSTP="-0.1" TXTSTW="-0.1" SCALEH="100" SCALEV="100" BASEO="0" KERN="0" LANGUAGE="English"/>
         <CHARSTYLE CNAME="perso dialogues" FONT="Century Schoolbook L Roman" FONTSIZE="6" FEATURES="allcaps" TXTSHX="5" TXTSHY="-5" TXTOUT="1" TXTULP="-0.1" TXTULW="-0.1" TXTSTP="-0.1" TXTSTW="-0.1" KERN="5" LANGUAGE="English"/>
         <CHARSTYLE CNAME="courant" FONT="Alfphabet IV" FONTSIZE="6" KERN="3" LANGUAGE="English"/>
         <LAYERS NUMMER="0" LEVEL="0" NAME="Background" SICHTBAR="1" DRUCKEN="1" EDIT="1" FLOW="1" TRANS="1" BLEND="0" OUTL="0" LAYERC="#000000"/>
         <Printer firstUse="1" toFile="0" useAltPrintCommand="0" outputSeparations="0" useSpotColors="0" useColor="0" mirrorH="0" mirrorV="0" useICC="1" doGCR="0" doClip="0" setDevParam="0" useDocBleeds="0" cropMarks="0" bleedMarks="0" registrationMarks="0" colorMarks="1" includePDFMarks="1" PSLevel="0" PDLanguage="0" markOffset="2.78132110317609e-309" BleedTop="0" BleedLeft="0" BleedRight="0" BleedBottom="0" printer="" filename="" separationName="" printerCommand=""/>
-        <PDF firstUse="0" Thumbnails="0" Articles="0" Bookmarks="0" Compress="1" CMethod="0" Quality="0" MirrorH="0" MirrorV="0" Clip="0" RotateDeg="0" PresentMode="0" RecalcPic="0" Grayscale="1" RGBMode="0" UseProfiles="0" UseProfiles2="0" Binding="0" PicRes="300" Resolution="300" Version="14" Intent="1" Intent2="0" SolidP="CineonLog M " ImageP="CineonLog M " PrintP="Fogra27L CMYK Coated Press" InfoString="" BTop="8.50393700787402" BLeft="8.50393700787402" BRight="8.50393700787402" BBottom="8.50393700787402" useDocBleeds="0" cropMarks="1" bleedMarks="0" registrationMarks="0" colorMarks="0" docInfoMarks="0" markOffset="0" ImagePr="0" PassOwner="" PassUser="" Permissions="-4" Encrypt="0" UseLayers="0" UseLpi="0" UseSpotColors="1" doMultiFile="0" displayBookmarks="0" displayFullscreen="0" displayLayers="0" displayThumbs="0" hideMenuBar="0" hideToolBar="0" fitWindow="0" PageLayout="0" openAction="">
+        <PDF firstUse="0" Thumbnails="0" Articles="0" Bookmarks="0" Compress="1" CMethod="0" Quality="1" MirrorH="0" MirrorV="0" Clip="0" RotateDeg="0" PresentMode="0" RecalcPic="0" Grayscale="1" RGBMode="0" UseProfiles="0" UseProfiles2="0" Binding="0" PicRes="300" Resolution="300" Version="14" Intent="1" Intent2="0" SolidP="CineonLog M " ImageP="CineonLog M " PrintP="Fogra27L CMYK Coated Press" InfoString="" BTop="8.50393700787402" BLeft="8.50393700787402" BRight="8.50393700787402" BBottom="8.50393700787402" useDocBleeds="0" cropMarks="1" bleedMarks="0" registrationMarks="0" colorMarks="0" docInfoMarks="0" markOffset="0" ImagePr="0" PassOwner="" PassUser="" Permissions="-4" Encrypt="0" UseLayers="0" UseLpi="0" UseSpotColors="1" doMultiFile="0" displayBookmarks="0" displayFullscreen="0" displayLayers="0" displayThumbs="0" hideMenuBar="0" hideToolBar="0" fitWindow="0" PageLayout="0" openAction="">
             <Subset Name="Abdijsha Regular"/>
-            <Subset Name="AntiqueOlive Bold"/>
-            <Subset Name="AntiqueOlive Regular"/>
+            <Subset Name="Alfphabet IV"/>
+            <Subset Name="Century Schoolbook L Italic"/>
+            <Subset Name="Century Schoolbook L Roman"/>
             <Subset Name="Century-Cathologue Roman?"/>
-            <Subset Name="Gilda Display Regular"/>
-            <Subset Name="Grosjean Regular"/>
-            <Subset Name="Oranienbaum Regular"/>
-            <Subset Name="Univers Else Light"/>
+            <Subset Name="Latin Modern Mono Prop Light 10 Bold"/>
+            <Subset Name="Latin Modern Mono Prop Light 10 Regular"/>
+            <Subset Name="URW Grotesk T Bold"/>
             <Subset Name="Univers Else Regular"/>
-            <Subset Name="YoungSerif Regular"/>
             <Effekte pageEffectDuration="1" pageViewDuration="1" effectType="0" Dm="0" M="0" Di="0"/>
             <Effekte pageEffectDuration="1" pageViewDuration="1" effectType="0" Dm="0" M="0" Di="0"/>
             <Effekte pageEffectDuration="1" pageViewDuration="1" effectType="0" Dm="0" M="0" Di="0"/>
