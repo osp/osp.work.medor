@@ -20,7 +20,7 @@
         <COLOR NAME="White" CMYK="#00000000" Spot="0" Register="0"/>
         <COLOR NAME="Yellow" CMYK="#0000ff00" Spot="0" Register="0"/>
         <HYPHEN/>
-        <STYLE NAME="Default Paragraph Style" ALIGN="0" LINESPMode="0" LINESP="15" INDENT="0" RMARGIN="0" FIRST="0" VOR="0" NACH="0" DROP="0" DROPLIN="2" DROPDIST="0"/>
+        <STYLE NAME="Default Paragraph Style" DefaultStyle="1" ALIGN="0" LINESPMode="0" LINESP="15" INDENT="0" RMARGIN="0" FIRST="0" VOR="0" NACH="0" DROP="0" DROPLIN="2" DROPDIST="0"/>
         <STYLE NAME="body" ALIGN="3" LINESPMode="0" LINESP="10" FIRST="14.17322835" VOR="0" NACH="0" OpticalMargins="14" MinGlyphShrink="0.99" MaxGlyphExtend="1.01" FONT="Century-Cathologue Roman?" FONTSIZE="8" LANGUAGE="French"/>
         <STYLE NAME="titre reportage" LINESPMode="0" LINESP="40" NACH="15" FONT="Century-Cathologue Roman?" FONTSIZE="55" FEATURES="" FCOLOR="Black" TXTSHX="5" TXTSHY="-5" TXTOUT="1" TXTULP="-0.1" TXTULW="-0.1" TXTSTP="-0.1" TXTSTW="-0.1" KERN="0" LANGUAGE="English"/>
         <STYLE NAME="intro reportage" ALIGN="3" LINESPMode="0" LINESP="15" OpticalMargins="14" MinGlyphShrink="0.98" MaxGlyphExtend="1.02" FONT="Alfphabetbipocat Condensed" FONTSIZE="13" KERN="0" LANGUAGE="French"/>
@@ -29,7 +29,7 @@
         <STYLE NAME="sous-titres" ALIGN="1" LINESPMode="0" LINESP="10" VOR="10" NACH="0" FONT="Alfphabetbipocat Condensed" FONTSIZE="12" FEATURES="allcaps" TXTSHX="5" TXTSHY="-5" TXTOUT="1" TXTULP="-0.1" TXTULW="-0.1" TXTSTP="-0.1" TXTSTW="-0.1" KERN="3" LANGUAGE="French"/>
         <STYLE NAME="dialogues" LINESP="11" INDENT="0" FIRST="8.503937008" VOR="0" NACH="0" FONT="Century Schoolbook L Italic" FONTSIZE="8" LANGUAGE="English"/>
         <STYLE NAME="legendes" LINESPMode="1" FONT="Univers Else Regular" FONTSIZE="8" FEATURES="" TXTSHX="5" TXTSHY="-5" TXTOUT="1" TXTULP="-0.1" TXTULW="-0.1" TXTSTP="-0.1" TXTSTW="-0.1" LANGUAGE="French"/>
-        <CHARSTYLE CNAME="Default Character Style" FONT="Abdijsha Regular" FONTSIZE="12" FEATURES="inherit" FCOLOR="Black" FSHADE="100" SCOLOR="Black" SSHADE="100" TXTSHX="5" TXTSHY="-5" TXTOUT="1" TXTULP="-0.1" TXTULW="-0.1" TXTSTP="-0.1" TXTSTW="-0.1" SCALEH="100" SCALEV="100" BASEO="0" KERN="0" LANGUAGE="English"/>
+        <CHARSTYLE CNAME="Default Character Style" DefaultStyle="1" FONT="Abdijsha Regular" FONTSIZE="12" FEATURES="inherit" FCOLOR="Black" FSHADE="100" SCOLOR="Black" SSHADE="100" TXTSHX="5" TXTSHY="-5" TXTOUT="1" TXTULP="-0.1" TXTULW="-0.1" TXTSTP="-0.1" TXTSTW="-0.1" SCALEH="100" SCALEV="100" BASEO="0" KERN="0" LANGUAGE="English"/>
         <CHARSTYLE CNAME="perso dialogues" FONT="Century Schoolbook L Roman" FONTSIZE="6" FEATURES="allcaps" TXTSHX="5" TXTSHY="-5" TXTOUT="1" TXTULP="-0.1" TXTULW="-0.1" TXTSTP="-0.1" TXTSTW="-0.1" KERN="5" LANGUAGE="English"/>
         <CHARSTYLE CNAME="courant" FONT="Alfphabet IV" FONTSIZE="6" KERN="3" LANGUAGE="English"/>
         <LAYERS NUMMER="0" LEVEL="0" NAME="Background" SICHTBAR="1" DRUCKEN="1" EDIT="1" FLOW="1" TRANS="1" BLEND="0" OUTL="0" LAYERC="#000000"/>
