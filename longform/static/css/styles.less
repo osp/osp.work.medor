@@ -1,266 +1,74 @@
-/*@import "../components/semantic-grid/stylesheets/less/grid.less";*/
-
-/*@column-width: 60;*/
-/*@gutter-width: 20;*/
-/*@columns: 4;*/
-/*@total-width: 100%;*/
-
-@font-family: 'Dauphine', sans-serif;
-@font-size: 19pt;
-@line-height: 23pt;
-
-@font-face {
-    font-family: 'Dauphine';
-    src: url('/static/fonts/dauphine-webfont.eot');
-    src: url('/static/fonts/dauphine-webfont.eot?#iefix') format('embedded-opentype'),
-         url('/static/fonts/dauphine-webfont.woff') format('woff'),
-         url('/static/fonts/dauphine-webfont.ttf') format('truetype'),
-         url('/static/fonts/Dauphine-Regular.otf') format('opentype'),
-         url('/static/fonts/dauphine-webfont.svg#DauphineRegular') format('svg');
-    font-weight: 400;
-    font-style: normal;
+/* mixins */
+.box-sizing (@type: border-box) {
+    -webkit-box-sizing: @type;
+       -moz-box-sizing: @type;
+        -ms-box-sizing: @type;
+            box-sizing: @type;
 }
 
-@font-face {
-    font-family: 'Dauphine';
-    src: url('/static/fonts/dauphine_italic-webfont.eot');
-    src: url('/static/fonts/dauphine_italic-webfont.eot?#iefix') format('embedded-opentype'),
-         url('/static/fonts/dauphine_italic-webfont.woff') format('woff'),
-         url('/static/fonts/dauphine_italic-webfont.ttf') format('truetype'),
-         url('/static/fonts/Dauphine-Italic.otf') format('opentype'),
-         url('/static/fonts/dauphine_italic-webfont.svg#dauphineitalic') format('svg');
-    font-weight: 400;
-    font-style: italic;
-}
-
-@font-face {
-    font-family: 'Dauphine Superior';
-    src: url('/static/fonts/dauphine-superior-webfont.eot');
-    src: url('/static/fonts/dauphine-superior-webfont.eot?#iefix') format('embedded-opentype'),
-         url('/static/fonts/dauphine-superior-webfont.woff') format('woff'),
-         url('/static/fonts/dauphine-superior-webfont.ttf') format('truetype'),
-         url('/static/fonts/dauphine-superior-webfont.svg#dauphinesuperior') format('svg');
-    font-weight: 400;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Dauphine Dings';
-    src: url('/static/fonts/dauphine-dings-webfont.eot');
-    src: url('/static/fonts/dauphine-dings-webfont.eot?#iefix') format('embedded-opentype'),
-         url('/static/fonts/dauphine-dings-webfont.woff') format('woff'),
-         url('/static/fonts/dauphine-dings-webfont.ttf') format('truetype'),
-         url('/static/fonts/Dauphine-Dings.otf') format('opentype'),
-         url('/static/fonts/dauphine-dings-webfont.svg#dauphinedings') format('svg');
-    font-weight: 400;
-    font-style: normal;
-}
-
-
-.wrapper {
-    width: 75%;
-    margin: 0 auto;
-}
-
-#toc {
-    width: 25%;
-    left: 5%;
-    top: 5%;
-}
-
-#content {
-    width: 75%;
-    margin-left: 25%;
-}
-
-section {
-    margin-bottom: @line-height;
-
-    h2 {
-        margin-top: @line-height;
-        margin-bottom: @line-height;
-        text-align: center;
-    }
-}
-
-section + section {
-    margin-top: @line-height;
-    border-top: 2px solid black;
+html, body {
+    width: 100%;
+    height: 100%;
 }
 
 body {
-    color: black;
-    font-family: @font-family;
-    font-size: @font-size;
-    line-height: @line-height;
-    margin: @line-height;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 1.25;
+}
+section {
+    .box-sizing();
+    height: 75%;
+    overflow: hidden;
+    clear: both;
+    border-bottom: 3px solid lightgrey;
+}
+.compta {
+    .box-sizing();
+    padding: 32px;
+    width: 20%;
+    float: left;
+    height: 100%;
+    font-size: 13px;
+}
+.main {
+    .box-sizing();
+    padding: 32px 32px * 3;
+    width: 65%;
+    height: 100%;
+    float: left;
+    font-size: 1.7em;
+}
+.parcours {
+    .box-sizing();
+    padding: 32px;
+    width: 15%;
+    float: left;
+    height: 100%;
 }
 
-header {
-    margin-bottom: @line-height * 2;
+td {
+    padding: 0.25em;
+    border: 1px solid black;
+
+    &:nth-child(3) {
+        display: none;
+
+        table:hover & {
+            display: table-cell;
+        }
+    }
+}
+
+img {
+    max-width: 100%;
 }
 
 p + p {
-    margin-top: @line-height;
+    margin-top: 1.45em;
 }
 
-/*p {*/
-    /*[>max-width: 50%;<]*/
-/*}*/
-
-/*h1 {*/
-    /*font-family: @font-family;*/
-    /*font-size: @font-size-big;*/
-    /*line-height: @line-height-big;*/
-/*}*/
-
-/*h2 {*/
-    /*font-size: @font-size-big;*/
-    /*line-height: @line-height-big;*/
-    /*margin-bottom: 15pt;*/
-    /*line-height:@line-height-big;*/
-/*}*/
-
-/*h3 {*/
-    /*font-size: @font-size-medium;*/
-    /*line-height: @line-height-medium;*/
-    /*text-transform:none;*/
-    /*line-height:@line-height-big;*/
-/*}*/
-
-/*a {*/
-    /*color: inherit;*/
-/*}*/
-
-/*img {*/
-    /*max-width: 100%;*/
-/*}*/
-
-/*nav {*/
-    /*margin:20px;*/
-    /*float:left;*/
-/*}*/
-
-/*#voici-medor{*/
-        /*background-image: url(../img/juliemedorouestu.jpg);*/
-         /*background-size: cover; */
-        /*background-position: center center;*/
-        /*background-repeat: no-repeat;*/
-        /*background-attachment: fixed;*/
-        /*background-color:yellow;*/
-/*}*/
-
-/*.adn{*/
-    /*font-size: 3.5em;*/
-    /*line-height: 1.2em;*/
-    /*margin-top: 30px;*/
-/*}*/
-/*.belge {*/
-    /*font-family: Alfphabet;*/
-/*}*/
-
-/*.mordant {*/
-    /*font-family: Indubitably;*/
-/*}*/
-
-/*.impartial {*/
-    /*font-family: Bitter;*/
-    /*text-transform: uppercase;*/
-/*}*/
-/*.engagé {*/
-    /*font-family: Archivo Black;*/
-/*}*/
-/*.curieux {*/
-    /*font-family: Open Sans;*/
-/*}*/
-/*.imparfait {*/
-    /*font-family: Crickx;*/
-/*}*/
-/*.applicateur {*/
-    /*font-family: Archivo;*/
-/*}*/
-
-/*#video {*/
-    /*width: 460px;*/
-    /*height: 320px;*/
-    /*outline: 1px solid black;*/
-/*}*/
-
-/*.wrapper {*/
-    /*width: 1000px;*/
-    /*margin: 0 auto;*/
-/*}*/
-
-/*dl {*/
-    /*dt {*/
-        /*display: block;*/
-    /*}*/
-    /*dd {*/
-        /*display: block;*/
-    /*}*/
-/*}*/
-
-/*#slide-belge {*/
-    /*background-color: pink;*/
-/*}*/
-
-#menu {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-}
-
-/*
- * jquery.tocify.css 1.9.0
- * Author: @gregfranko
- */
-
-/* The Table of Contents container element */
-.tocify {
-    width: 25%;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    overflow: auto;
-    /*margin-left: 2%;*/
-    position: fixed;
-    /*border: 1px solid #ccc;*/
-    /*webkit-border-radius: 6px;*/
-    /*moz-border-radius: 6px;*/
-    /*border-radius: 6px;*/
-}
-
-/* The Table of Contents is composed of multiple nested unordered lists.  These styles remove the default styling of an unordered list because it is ugly. */
-.tocify ul, .tocify li {
-    /*list-style: none;*/
-    /*margin: 0;*/
-    /*padding: 0;*/
-    /*border: none;*/
-    /*line-height: 30px;*/
-}
-
-/* Top level header elements */
-.tocify-header {
-    text-indent: 10px;
-}
-
-/* Top level subheader elements.  These are the first nested items underneath a header element. */
-.tocify-subheader {
-    text-indent: 20px;
-    display: none;
-}
-
-/* Makes the font smaller for all subheader elements. */
-.tocify-subheader li {
-    /*font-size: 12px;*/
-}
-
-/* Further indents second level subheader elements. */
-.tocify-subheader .tocify-subheader {
-    text-indent: 30px;
-}
-
-/* Further indents third level subheader elements. You can continue this pattern if you have more nested elements. */
-.tocify-subheader .tocify-subheader .tocify-subheader {
-    text-indent: 40px;
+ol li {
+    list-style-type: decimal;
 }
