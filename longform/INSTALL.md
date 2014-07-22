@@ -10,10 +10,16 @@
 
     vim templates/longform.html
 
-# Geneate the page
+# Generate the page
 
     python generate.py
     python generate.py -c
     python generate.py -h
 
     python generate.py >| output.html
+
+# Run the server
+
+    python -m SimpleHTTPServer
+
+and go to your web browser at <http://localhost:8000/output.html>
