@@ -1,4 +1,5 @@
 <!doctype html>
+{% load mediawiki_tags %}
 <html>
     <head>
         <meta charset="utf-8">
@@ -11,9 +12,33 @@
     <body>
         <section>
             <div class="compta">
-                <p>Fabriquer un numéro de Médor coûte 16 euros. Vous payez 15 euros, la pub 1 euro.</p>
+                <p><img src="static/img/280px-Repartition-prix-magazine-cover.png" /> </p>
+                <ul>
+                    <li>Fabriquer un numéro de Médor coûte <strong>16 euros</strong>.</li>
+                    <li>Vous en payez <strong>15 euros</strong>, la pub l'euro restant.</li>
+                    <li>Les rémunérations directes comptent pour 2/3 soit <strong>10,05 €</strong></li>
+                    <li>L'impression <strong>2,00 €</strong> et la distribution <strong>1,10 €</strong></li>
+                    <li>Les frais de fonctionnement sont à <strong>0,40 €</strong></li>
+                    <li>Les outils nécessaires au démarrage à <strong>0,60 €</strong></li>
+                    <li>Et enfin la TVA à <strong>0,85 €</strong></li>
+                </ul>
             </div>
             <div class="main">
+                <p>La revue Médor est un trimestriel d’enquêtes, de récits, de
+                portraits de grands reportages dans un petit pays,
+                essentiellement réalisées en Belgique. Il s'installe sur un
+                format 16 x 23 cm de 128 pages en couleurs et à 5000
+                exemplaires par numéro.</p>
+
+                <p>Mais surtout, Médor gravit avec passion le col qui sépare le
+                monde des médias qui s'écroulent de la vallée neuve, dans le
+                brouillard, qui s'ouvre. Et puisque comme dit un entrepreneur
+                capitaliste «Tu ne peux pas innover dans la lignée de ce que tu
+                fais. La république n’est pas fille de monarchie, Et la société
+                qui arrive ne sera pas fille du duo consommation/production. On
+                ne doit pas essayer d’améliorer le système existant, ce serait
+                faire perdurer un système caduc. Il doit s’effondrer.» Médor
+                s'attache résolument à construire un des médias de l'après.</p>
             </div>
             <div class="parcours">
                 <p>Parcours d'un article</p>
@@ -31,6 +56,141 @@
                 {% include "partials/journey-journalist.html" %}
             </div>
         </section>
+
+        <hr />
+
+        <section>
+            <div class="compta">
+                {% mwinclude "Appel_à_souscription" "Intro_compta" %}
+            </div>
+            <div class="main">
+                {% mwinclude "Appel_à_souscription" "Intro_central" %}
+            </div>
+            <div class="parcours">
+                {% mwinclude "Appel_à_souscription" "Intro_parcours" %}
+            </div>
+        </section>
+
+        <section>
+            <div class="compta">
+                {% mwinclude "Appel_à_souscription" "R.C3.A9mun.C3.A9rations_compta" %}
+            </div>
+            <div class="main">
+                {% mwinclude "Appel_à_souscription" "R.C3.A9mun.C3.A9rations_central" %}
+            </div>
+            <div class="parcours">
+                {% mwinclude "Appel_à_souscription" "R.C3.A9mun.C3.A9rations_parcours" %}
+            </div>
+        </section>
+
+        <section>
+            <div class="compta">
+                {% mwinclude "Appel_à_souscription" "Journalisme_compta" %}
+            </div>
+            <div class="main">
+                {% mwinclude "Appel_à_souscription" "Journalisme_central" %}
+            </div>
+            <div class="parcours">
+                {% mwinclude "Appel_à_souscription" "Journalisme_parcours" %}
+            </div>
+        </section>
+
+        <section>
+            <div class="compta">
+                {% mwinclude "Appel_à_souscription" "Visuel_compta" %}
+            </div>
+            <div class="main">
+                {% mwinclude "Appel_à_souscription" "Visuel_central" %}
+            </div>
+            <div class="parcours">
+                {% mwinclude "Appel_à_souscription" "Visuel_parcours" %}
+            </div>
+        </section>
+
+        <section>
+            <div class="compta">
+                {% mwinclude "Appel_à_souscription" "R.C3.A9daction_compta" %}
+            </div>
+            <div class="main">
+                {% mwinclude "Appel_à_souscription" "R.C3.A9daction_central" %}
+            </div>
+            <div class="parcours">
+                {% mwinclude "Appel_à_souscription" "R.C3.A9daction_parcours" %}
+            </div>
+        </section>
+
+        <section>
+            <div class="compta">
+                {% mwinclude "Appel_à_souscription" "Coop.C3.A9rative_compta" %}
+            </div>
+            <div class="main">
+                {% mwinclude "Appel_à_souscription" "Coop.C3.A9rative_central" %}
+            </div>
+            <div class="parcours">
+                {% mwinclude "Appel_à_souscription" "Coop.C3.A9rative_parcours" %}
+            </div>
+        </section>
+
+        <section>
+            <div class="compta">
+                {% mwinclude "Appel_à_souscription" "Impression_compta" %}
+            </div>
+            <div class="main">
+                {% mwinclude "Appel_à_souscription" "Impression_central" %}
+            </div>
+            <div class="parcours">
+                {% mwinclude "Appel_à_souscription" "Impression_parcours" %}
+            </div>
+        </section>
+
+        <section>
+            <div class="compta">
+                {% mwinclude "Appel_à_souscription" "Distribution_compta" %}
+            </div>
+            <div class="main">
+                {% mwinclude "Appel_à_souscription" "Distribution_central" %}
+            </div>
+            <div class="parcours">
+                {% mwinclude "Appel_à_souscription" "Distribution_parcours" %}
+            </div>
+        </section>
+
+        <section>
+            <div class="compta">
+                {% mwinclude "Appel_à_souscription" "Fonctionnement_compta" %}
+            </div>
+            <div class="main">
+                {% mwinclude "Appel_à_souscription" "Fonctionnement_central" %}
+            </div>
+            <div class="parcours">
+                {% mwinclude "Appel_à_souscription" "Fonctionnement_parcours" %}
+            </div>
+        </section>
+
+        <section>
+            <div class="compta">
+                {% mwinclude "Appel_à_souscription" "Soci.C3.A9t.C3.A9_compta" %}
+            </div>
+            <div class="main">
+                {% mwinclude "Appel_à_souscription" "Soci.C3.A9t.C3.A9_central" %}
+            </div>
+            <div class="parcours">
+                {% mwinclude "Appel_à_souscription" "Soci.C3.A9t.C3.A9_parcours" %}
+            </div>
+        </section>
+
+        <section>
+            <div class="compta">
+                {% mwinclude "Appel_à_souscription" "Publicit.C3.A9_compta" %}
+            </div>
+            <div class="main">
+                {% mwinclude "Appel_à_souscription" "Publicit.C3.A9_central" %}
+            </div>
+            <div class="parcours">
+                {% mwinclude "Appel_à_souscription" "Publicit.C3.A9_parcours" %}
+            </div>
+        </section>
+
         <script src="static/components/less/dist/less-1.7.0.min.js"></script>
         <script src="static/components/jquery/jquery.min.js"></script>
     </body>
