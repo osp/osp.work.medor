@@ -10,7 +10,7 @@
     </head>
 
     <body>
-        <section>
+        <section id="un">
             <div class="compta">
                 <p><img src="static/img/280px-Repartition-prix-magazine-cover.png" /> </p>
                 <ul>
@@ -45,7 +45,7 @@
             </div>
         </section>
 
-        <section>
+        <section id="deux">
             <div class="compta">
                 {% include "partials/table-journalist.html" %}
             </div>
@@ -59,7 +59,7 @@
 
         <hr />
 
-        <section>
+        <section id="trois">
             <div class="compta">
                 {% mwinclude "Appel_à_souscription" "Intro_compta" %}
             </div>
@@ -191,8 +191,31 @@
             </div>
         </section>
 
+        <section>
+            {% mwinclude "Appel_à_souscription" "Appel" %}
+        </section>
+
+
         <script src="static/components/less/dist/less-1.7.0.min.js"></script>
         <script src="static/components/jquery/jquery.min.js"></script>
+        <script src="static/components/jquery.hotkeys/jquery.hotkeys.js"></script>
+        <script>
+        $(function() {
+            var ids = $('body > section[id]');
+            var len = ids.length;
+            var i = -1;
+            $(document).bind('keydown', 'down', function() {
+                i = (i + 1) % len;
+                document.location.hash = '#' + $(ids.get(i)).attr('id');
+                console.log('down');
+            });
+            $(document).bind('keydown', 'up', function() {
+                i = (i - 1) % len;
+                document.location.hash = '#' + $(ids.get(i)).attr('id');
+                console.log('up');
+            });
+        });
+        </script>
     </body>
 </html>
 

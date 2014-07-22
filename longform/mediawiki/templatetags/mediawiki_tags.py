@@ -78,6 +78,9 @@ def extract(src, id):
         parent.remove(elt)
         parent.text = text
 
+    for elt in tree.xpath('//img'):
+        elt.attrib['src'] = 'http://tunakutafuta.be/' + elt.attrib['src']
+
     #walker = html5lib.getTreeWalker("lxml")
     #stream = walker(tree)
 
