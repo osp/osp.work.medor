@@ -4,148 +4,36 @@
     <head>
         <meta charset="utf-8">
         <title>Médor</title>
+        <link href='http://fonts.googleapis.com/css?family=Old+Standard+TT:400,400italic,700' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Goudy+Bookletter+1911' rel='stylesheet' type='text/css'>
         <link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" text="text/css" href="static/components/reset-css/reset.css">
         <link rel="stylesheet" type="text/less" href="static/css/styles.less">
     </head>
 
     <body>
-        <section id="intro">
-            <div class="compta">
-                {% mwinclude "Appel_à_souscription" "Intro_compta" %}
-            </div>
-            <div class="main">
-                {% mwinclude "Appel_à_souscription" "Intro_central" %}
-            </div>
-            <div class="parcours">
-                {% mwinclude "Appel_à_souscription" "Intro_parcours" %}
-            </div>
-        </section>
+        <!--
+        {% comment %}
+        Pour générer le code pour inclure les sections, tapez ça dans Firebug
 
-        <section id="remunerations">
-            <div class="compta">
-                {% mwinclude "Appel_à_souscription" "R.C3.A9mun.C3.A9rations_compta" %}
-            </div>
-            <div class="main">
-                {% mwinclude "Appel_à_souscription" "R.C3.A9mun.C3.A9rations_central" %}
-            </div>
-            <div class="parcours">
-                {% mwinclude "Appel_à_souscription" "R.C3.A9mun.C3.A9rations_parcours" %}
-            </div>
-        </section>
-
-        <section id="journalisme">
-            <div class="compta">
-                {% mwinclude "Appel_à_souscription" "Journalisme_compta" %}
-            </div>
-            <div class="main">
-                {% mwinclude "Appel_à_souscription" "Journalisme_central" %}
-            </div>
-            <div class="parcours">
-                {% mwinclude "Appel_à_souscription" "Journalisme_parcours" %}
-            </div>
-        </section>
-
-        <section id="visuel">
-            <div class="compta">
-                {% mwinclude "Appel_à_souscription" "Visuel_compta" %}
-            </div>
-            <div class="main">
-                {% mwinclude "Appel_à_souscription" "Visuel_central" %}
-            </div>
-            <div class="parcours">
-                {% mwinclude "Appel_à_souscription" "Visuel_parcours" %}
-            </div>
-        </section>
-
-        <section id="redaction">
-            <div class="compta">
-                {% mwinclude "Appel_à_souscription" "R.C3.A9daction_compta" %}
-            </div>
-            <div class="main">
-                {% mwinclude "Appel_à_souscription" "R.C3.A9daction_central" %}
-            </div>
-            <div class="parcours">
-                {% mwinclude "Appel_à_souscription" "R.C3.A9daction_parcours" %}
-            </div>
-        </section>
-
-        <section id="cooperative">
-            <div class="compta">
-                {% mwinclude "Appel_à_souscription" "Coop.C3.A9rative_compta" %}
-            </div>
-            <div class="main">
-                {% mwinclude "Appel_à_souscription" "Coop.C3.A9rative_central" %}
-            </div>
-            <div class="parcours">
-                {% mwinclude "Appel_à_souscription" "Coop.C3.A9rative_parcours" %}
-            </div>
-        </section>
-
-        <section id="impression">
-            <div class="compta">
-                {% mwinclude "Appel_à_souscription" "Impression_compta" %}
-            </div>
-            <div class="main">
-                {% mwinclude "Appel_à_souscription" "Impression_central" %}
-            </div>
-            <div class="parcours">
-                {% mwinclude "Appel_à_souscription" "Impression_parcours" %}
-            </div>
-        </section>
-
-        <section id="distribution">
-            <div class="compta">
-                {% mwinclude "Appel_à_souscription" "Distribution_compta" %}
-            </div>
-            <div class="main">
-                {% mwinclude "Appel_à_souscription" "Distribution_central" %}
-            </div>
-            <div class="parcours">
-                {% mwinclude "Appel_à_souscription" "Distribution_parcours" %}
-            </div>
-        </section>
-
-        <section id="fonctionnement">
-            <div class="compta">
-                {% mwinclude "Appel_à_souscription" "Fonctionnement_compta" %}
-            </div>
-            <div class="main">
-                {% mwinclude "Appel_à_souscription" "Fonctionnement_central" %}
-            </div>
-            <div class="parcours">
-                {% mwinclude "Appel_à_souscription" "Fonctionnement_parcours" %}
-            </div>
-        </section>
-
-        <section id="societe">
-            <div class="compta">
-                {% mwinclude "Appel_à_souscription" "Soci.C3.A9t.C3.A9_compta" %}
-            </div>
-            <div class="main">
-                {% mwinclude "Appel_à_souscription" "Soci.C3.A9t.C3.A9_central" %}
-            </div>
-            <div class="parcours">
-                {% mwinclude "Appel_à_souscription" "Soci.C3.A9t.C3.A9_parcours" %}
-            </div>
-        </section>
-
-        <section id="publicite">
-            <div class="compta">
-                {% mwinclude "Appel_à_souscription" "Publicit.C3.A9_compta" %}
-            </div>
-            <div class="main">
-                {% mwinclude "Appel_à_souscription" "Publicit.C3.A9_central" %}
-            </div>
-            <div class="parcours">
-                {% mwinclude "Appel_à_souscription" "Publicit.C3.A9_parcours" %}
-            </div>
-        </section>
-
-        <section id="souscription">
-            {% mwinclude "Appel_à_souscription" "Appel" %}
-        </section>
-
+            $('h2 span.mw-headline').each(function() {
+                console.log('{% mwinclude "Appel_à_souscription" "' + $(this).attr('id') + '" %}')
+            });
+        {% endcomment %}
+        -->
+        <h1>Voici Médor</h1>
+        {% mwinclude "Appel_à_souscription" "Ici_un_baseline_qui_bute" %}
+        {% mwinclude "Appel_à_souscription" "Comment_et_quoi_payer" %}
+        {% mwinclude "Appel_à_souscription" "Du_journalisme" %}
+        {% mwinclude "Appel_à_souscription" "Du_visuel" %}
+        {% mwinclude "Appel_à_souscription" "La_r.C3.A9daction" %}
+        {% mwinclude "Appel_à_souscription" "Une_coop.C3.A9rative" %}
+        {% mwinclude "Appel_à_souscription" "Un_objet_imprim.C3.A9" %}
+        {% mwinclude "Appel_à_souscription" "Un_object_partag.C3.A9" %}
+        {% mwinclude "Appel_à_souscription" "Le_fonctionnement" %}
+        {% mwinclude "Appel_à_souscription" "M.C3.A9dor_et_les_autres" %}
+        {% mwinclude "Appel_à_souscription" "De_la_publicit.C3.A9" %}
+        {% mwinclude "Appel_à_souscription" "Appel" %}
 
         <script src="static/components/less/dist/less-1.7.0.min.js"></script>
         <script src="static/components/jquery/jquery.min.js"></script>

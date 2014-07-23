@@ -87,7 +87,10 @@ def extract(src, id):
     #serializer = html5lib.serializer.HTMLSerializer(quote_attr_values=True, omit_optional_tags=False)
     #output = serializer.render(stream)
 
-    frag = lxml.etree.tostring(tree.xpath("//section[@id='%s']" % id)[0], method='xml', pretty_print=True, xml_declaration=None, encoding="utf-8")
+    try:
+        frag = lxml.etree.tostring(tree.xpath("//section[@id='%s']" % id)[0], method='xml', pretty_print=True, xml_declaration=None, encoding="utf-8")
+    except IndexError:
+        print('There is no section with id "%s"' % id)
     return frag
 
 
