@@ -11,11 +11,11 @@
 /* fonts */
 @font-face {
     font-family: 'alfphabetbipocatcondensed';
-    src: url('/static/fonts/alfphabetbipocat-condensed-webfont.eot');
-    src: url('/static/fonts/alfphabetbipocat-condensed-webfont.eot?#iefix') format('embedded-opentype'),
-         url('/static/fonts/alfphabetbipocat-condensed-webfont.woff') format('woff'),
-         url('/static/fonts/alfphabetbipocat-condensed-webfont.ttf') format('truetype'),
-         url('/static/fonts/alfphabetbipocat-condensed-webfont.svg#alfphabetbipocatcondensed') format('svg');
+    src: url('../fonts/alfphabetbipocat-condensed-webfont.eot');
+    src: url('../fonts/alfphabetbipocat-condensed-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/alfphabetbipocat-condensed-webfont.woff') format('woff'),
+         url('../fonts/alfphabetbipocat-condensed-webfont.ttf') format('truetype'),
+         url('../fonts/alfphabetbipocat-condensed-webfont.svg#alfphabetbipocatcondensed') format('svg');
     font-weight: normal;
     font-style: normal;
 
@@ -48,13 +48,15 @@ body {
     font-size: 16px;
     line-height: 1.25;
     
+
     & > section {
+        padding: 32px 0;
         .box-sizing();
         /*height: 75%;*/
         overflow: hidden;
         clear: both;
         border-bottom: 3px solid lightgrey;
-        background-color: @color-bleu-layette;
+        /*background-color: @color-bleu-layette;*/
 
         pre,
         h2 {
@@ -64,7 +66,7 @@ body {
 }
 .compta {
     .box-sizing();
-    padding: 32px;
+    padding: 0 32px;
     width: 25%;
     float: left;
     height: 100%;
@@ -72,7 +74,7 @@ body {
 }
 .main {
     .box-sizing();
-    padding: 32px 32px * 3;
+    padding: 0 32px * 3;
     width: 60%;
     height: 100%;
     float: left;
@@ -80,10 +82,14 @@ body {
 }
 .parcours {
     .box-sizing();
-    padding: 32px;
+    padding: 0 32px;
     width: 15%;
     float: left;
     height: 100%;
+}
+
+table {
+    width: 100%;
 }
 
 th {
