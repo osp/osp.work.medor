@@ -10,56 +10,7 @@
     </head>
 
     <body>
-        <section id="un">
-            <div class="compta">
-                <p><img src="static/img/280px-Repartition-prix-magazine-cover.png" /> </p>
-                <ul>
-                    <li>Fabriquer un numéro de Médor coûte <strong>16 euros</strong>.</li>
-                    <li>Vous en payez <strong>15 euros</strong>, la pub l'euro restant.</li>
-                    <li>Les rémunérations directes comptent pour 2/3 soit <strong>10,05 €</strong></li>
-                    <li>L'impression <strong>2,00 €</strong> et la distribution <strong>1,10 €</strong></li>
-                    <li>Les frais de fonctionnement sont à <strong>0,40 €</strong></li>
-                    <li>Les outils nécessaires au démarrage à <strong>0,60 €</strong></li>
-                    <li>Et enfin la TVA à <strong>0,85 €</strong></li>
-                </ul>
-            </div>
-            <div class="main">
-                <p>La revue Médor est un trimestriel d’enquêtes, de récits, de
-                portraits de grands reportages dans un petit pays,
-                essentiellement réalisées en Belgique. Il s'installe sur un
-                format 16 x 23 cm de 128 pages en couleurs et à 5000
-                exemplaires par numéro.</p>
-
-                <p>Mais surtout, Médor gravit avec passion le col qui sépare le
-                monde des médias qui s'écroulent de la vallée neuve, dans le
-                brouillard, qui s'ouvre. Et puisque comme dit un entrepreneur
-                capitaliste «Tu ne peux pas innover dans la lignée de ce que tu
-                fais. La république n’est pas fille de monarchie, Et la société
-                qui arrive ne sera pas fille du duo consommation/production. On
-                ne doit pas essayer d’améliorer le système existant, ce serait
-                faire perdurer un système caduc. Il doit s’effondrer.» Médor
-                s'attache résolument à construire un des médias de l'après.</p>
-            </div>
-            <div class="parcours">
-                <p>Parcours d'un article</p>
-            </div>
-        </section>
-
-        <section id="deux">
-            <div class="compta">
-                {% include "partials/table-journalist.html" %}
-            </div>
-            <div class="main">
-                {% include "partials/content-journalist.html" %}
-            </div>
-            <div class="parcours">
-                {% include "partials/journey-journalist.html" %}
-            </div>
-        </section>
-
-        <hr />
-
-        <section id="trois">
+        <section id="intro">
             <div class="compta">
                 {% mwinclude "Appel_à_souscription" "Intro_compta" %}
             </div>
@@ -71,7 +22,7 @@
             </div>
         </section>
 
-        <section>
+        <section id="remunerations">
             <div class="compta">
                 {% mwinclude "Appel_à_souscription" "R.C3.A9mun.C3.A9rations_compta" %}
             </div>
@@ -83,7 +34,7 @@
             </div>
         </section>
 
-        <section>
+        <section id="journalisme">
             <div class="compta">
                 {% mwinclude "Appel_à_souscription" "Journalisme_compta" %}
             </div>
@@ -95,7 +46,7 @@
             </div>
         </section>
 
-        <section>
+        <section id="visuel">
             <div class="compta">
                 {% mwinclude "Appel_à_souscription" "Visuel_compta" %}
             </div>
@@ -107,7 +58,7 @@
             </div>
         </section>
 
-        <section>
+        <section id="redaction">
             <div class="compta">
                 {% mwinclude "Appel_à_souscription" "R.C3.A9daction_compta" %}
             </div>
@@ -119,7 +70,7 @@
             </div>
         </section>
 
-        <section>
+        <section id="cooperative">
             <div class="compta">
                 {% mwinclude "Appel_à_souscription" "Coop.C3.A9rative_compta" %}
             </div>
@@ -131,7 +82,7 @@
             </div>
         </section>
 
-        <section>
+        <section id="impression">
             <div class="compta">
                 {% mwinclude "Appel_à_souscription" "Impression_compta" %}
             </div>
@@ -143,7 +94,7 @@
             </div>
         </section>
 
-        <section>
+        <section id="distribution">
             <div class="compta">
                 {% mwinclude "Appel_à_souscription" "Distribution_compta" %}
             </div>
@@ -155,7 +106,7 @@
             </div>
         </section>
 
-        <section>
+        <section id="fonctionnement">
             <div class="compta">
                 {% mwinclude "Appel_à_souscription" "Fonctionnement_compta" %}
             </div>
@@ -167,7 +118,7 @@
             </div>
         </section>
 
-        <section>
+        <section id="societe">
             <div class="compta">
                 {% mwinclude "Appel_à_souscription" "Soci.C3.A9t.C3.A9_compta" %}
             </div>
@@ -179,7 +130,7 @@
             </div>
         </section>
 
-        <section>
+        <section id="publicite">
             <div class="compta">
                 {% mwinclude "Appel_à_souscription" "Publicit.C3.A9_compta" %}
             </div>
@@ -191,7 +142,7 @@
             </div>
         </section>
 
-        <section>
+        <section id="souscription">
             {% mwinclude "Appel_à_souscription" "Appel" %}
         </section>
 
@@ -204,16 +155,24 @@
             var ids = $('body > section[id]');
             var len = ids.length;
             var i = -1;
-            $(document).bind('keydown', 'down', function() {
+            $(document).bind('keydown', 'down', function(event) {
+                event.preventDefault();
                 i = (i + 1) % len;
                 document.location.hash = '#' + $(ids.get(i)).attr('id');
                 console.log('down');
             });
-            $(document).bind('keydown', 'up', function() {
+            $(document).bind('keydown', 'up', function(event) {
+                event.preventDefault();
                 i = (i - 1) % len;
                 document.location.hash = '#' + $(ids.get(i)).attr('id');
                 console.log('up');
             });
+            // $(window).on('hashchange', function(event) {
+            //     event.preventDefault();
+            //     $('html,body').animate({
+            //         scrollTop: $('#distribution').offset().top
+            //     }, 1000);
+            // });
         });
         </script>
     </body>
