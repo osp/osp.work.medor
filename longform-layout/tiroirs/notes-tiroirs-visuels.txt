@@ -1,0 +1,56 @@
+Partie 'Visuel' à tiroirs
+------------------
+
+1. "C'est quoi?"
+Un dessin vaut mieux que... Médor se mouille et fusionne texte et image à la soudure à l'arc. Le massage des sens façon le medium is the message de McLuhan. Le visuel est l'autre lecture, le visuel appelle une autre écriture. Chaque article est entamé, écrit, développé et bouclé par une équipe double : journaliste et auteur visuel. Soudure totale avec un graphisme dont les sources sont autant ouverte que le texte, et avec des auteurs visuels intéressés de raconter l'histoire particulière de la construction de chaque sujet.
+
+2. "Et concrètement?"
+- Un illustrateur, photographe, dessinateur, et/ou graphiste démarre le travail sur un sujet *avec* le journaliste. Chaque partie d'une enquête est traitée par le duo, les entretiens et investigations sont conduits en double chaque fois qu'utile. Tout tableau de données, plan, cartographie, schéma, potentielle trace visuelle est mise en forme et peut venir compléter ou remplacer une partie texte. 
+- Les visuels sont produits au fur et à mesure, comme le brouillon de texte. Ils sont échangés déjà mis en page à travers Massage, la plateforme web de Médor. Certaines parties d'une enquête sont prépubliés sur le site public. 
+- Tout les fichiers échangés sont dans des formats en sources ouvertes et les logiciels de graphisme sont libres. La typographie est neuve et libre elle-aussi, elle puise une partie de ses sources dans la culture graphique belge. Chaque fonte développée ou modifiée est téléchargeable librement sur osp.kitchen/foundry. Médor profite de et irrige l'ébullition typographique en cours. La plateforme de publication Massage, initiée et développée en Belgique d'abord pour Médor, est proposée en licence libre pour un usage à des fins très diverses.
+- Selon les critères des journalistes et des visualisateurs, la licence d'une enquête ou d'une partie est ouverte pour lui permettre une diffusion dans un autre média en ligne, ou -mieux- des collaborations, ou sur Wikipedia, par exemple.
+
+3. Compta - "Oui mais ça coûte combien ça?"
+Équipe visuelle : 2,97 € - Soit environ autant que pour les journalistes.
+Reportage photo : 0,81 € - Dans chaque numéro de Médor, 12 pages sont dédiées à un travail photo ou de bande dessinée avec un sujet long.
+Illustrations et schématique : 0,81 € - 60 visuels par numéro, soit un par double page en moyenne : illustrations, croquis, diagrammes de données, plans, cartographies, schémas, animation, toute visualisation de donnée développée en parallèle et en même temps que le sujet par le journaliste.
+Graphistes : 1,35 € - Une équipe de quatre graphistes suit le développement de chaque sujet-visuels et adaptent sa mise en page à travers Massage. De nouvelles typographies sont introduites en fonction des sujets. La mise en ligne xxxx.
+Licences logicielles : 0 € - Vous ne financez pas une série de multinationales étanusiennes.
+
+4. "Tu peux m'expliquer autrement?"
+Reprenons notre resto. OK il y la nourriture. Il y a aussi les boissons, comment le vin des coteaux de Seraing est produit, est-ce que du souffre y est ajouté pour simplifier sa conservation et lisser les possibles variations de son goût au dépit des maux de tête des buveurs et des producteurs. Mais aussi la décoration du restaurant, le plaisir de trouver aux toilettes un lavabo de récupération bien intégré dans l'architecture contemporaine de la rénovation du lieu plutôt qu'un modèle entrée de gamme un peu foireux de chez Ikea. Et en discutant avec le producteur de légumes qui passe, en savoir plus sur le type de grolinette qu'il modifie pour s'adapter à la largeur des racines des betteraves qu'il cultive.
+
+5. "Et en quoi c'est différent d'un autre magazine?"
+Ça peut paraître une nuance mais dans la plupart des médias, le visuel est commandé après l'écriture de l'article. Le journaliste ne s'appuye donc que rarement sur un support visuel, et celui-ci est -au mieux- illustratif. Quand des photographes sont utilisés plutôt que des banques d'images, ils n'ont très peu de temps pour travailler et ne sont que peu impliqués dans le sujet. Une étude xxxxx. La mise en page est elle une commodité, un service rendu où la lisibilité doit primer, lisse et déconnectée de la culture du contenu qu'elle transporte. Dernière étape de la chaîne, très peu de moyens sont alloué à son soin, là aussi prime la notion du coût le plus bas possible. 
+
+6. "Et pour approfondir"
+* Marshall McLuhan - Medium is the massage. Xxxxx xxxx xxxxx.
+** Transformeur Marie Neurath. Xxxxx xxxx xxxxx.
+*** «Nous concevons l'utopie dans son sens originel qui est toujours une critique de la société et une proposition. Nous nous inscrivons en faux avec l'idée que l'utopie est la perfection, car les conséquences de cette conception peuvent être très dangereuses. Cela a donné lieu à des atrocités que nous connaissons, le fascisme, le nazisme, le stalinisme, et à notre avis le capitalisme. ce sont des utopies dont la perfection finale, forcément figée, pure, légitime toute les atrocités. Nous voulions revendiquer la notion d'utopie comme acte d'imagination, le fait le fait de rêver à quelque chose de mieux. Il nous importait de ne pas donner l'impression que l'utopie se conjuque au singulier, et qu'à un problème analysé - la société capitaliste - répondait une solution à trouver, à dupliquer à l'infini. Au contraire, cette solution ne peut être qu'une multiplicité qui s'adapte à différents contextes, qu'ils soient culturels, sociaux, écologiques. Nous n'essayons pas de faire la même chose dans une ville de onze millions d'habitants et dans un village au fin fond de l'Andalousie.» - Isabelle Frémeaux répondant avec John Jordan à Ruth Stégassy à propos de leur livre-film 'Les Sentiers de l'utopie' dans l'émission Terre à terre le 24 mars 2012 sur France Culture.
+**** Le logiciel libre. Xxxxx xxxx xxxxx.
+
+7. Testimonials "Ce qu'ils en disent"
+«Ce qui m'a d'abord intéressé, c'est l'intérêt de ces graphistes et illustrateurs à donner à voir leur pratique xxxxx.» - Bernard Stiegler
+
+
+Idées en vrac
+---------------
+
+Pas un médor, mais une série de nouveaux média, un paysage médiatique à redessiner entièrement.
+
+La germe.
+
+All generalizations are false, including this one
+
+Médor, en épaisseur.
+
+Magazine Matter, 'A magazine for a generation who grew up not caring about magazines'
+
+Parcours d'un article : déployé à l'horizontale, avec reprise de toutes une série d'éléments provenants du reste des blocs.
+
+Repenser
+- publication web
+- archives web
+- trouver des contributeurs pour chaque domaine culturel centré sur l'actualité belge : bd (Stéphane Noël, mais aussi Xxxx critique BD de Liège), animation (Nicolas Fong), art contemporain (David?), musique électro (Harri et sa bande, May, Frédé, et Nicolas LEM? mais aussi des jeunes, et gay, dj?), art num (?), danse (?), musique classique et opéra (à partir de Monsieur le chanteur RGB? - j'oublie tous les noms ce matin)
+
+Autre référence : "Petits éditeurs, gros impact" d'André Schiffrin, Monde diplomatique, octobre 2007
