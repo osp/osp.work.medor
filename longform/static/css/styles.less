@@ -5,6 +5,7 @@
 @color-bleu-layette: #DBE3E2; 
 @color-rose: #FF8080;
 @color-vert-eau: #BEE5BE;
+@color-bleu-gris:#506464;
 
 
 
@@ -20,6 +21,22 @@
     font-style: normal;
 
 }
+
+@font-face {
+    font-family: 'Alfphabet-IV';
+    src: url('../fonts/Alfphabet-IV.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Cabin';
+    src: url('../fonts/CabinCondensed-Regular.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
 
 /* mixins */
 .transition (@prop: all, @time: 1s, @ease: linear, @delay: 0s) {
@@ -44,7 +61,7 @@ body {
 }
 
 body {
-    font-family: 'alfphabetbipocatcondensed', sans-serif;
+    font-family: 'Goudy Bookletter 1911', serif;
     font-weight: 300;
     font-size: 16px;
     line-height: 1.25;
@@ -65,14 +82,36 @@ body {
 }
 
 h1 {
+    font-family: 'alfphabetbipocatcondensed', sans-serif;
     text-align: center;
     font-size: 96px;
 }
 
 h2 {
+    font-family: 'alfphabetbipocatcondensed', sans-serif;
     text-align: center;
     font-size: 96px / 2;
 }
+
+h3 {
+    font-family: 'Goudy Bookletter 1911', serif;
+    
+}
+
+h4 {
+    font-family: 'alfphabetbipocatcondensed';
+    font-size: 32px;
+    margin-top: 26px;
+}
+
+h5 {
+    font-family: 'Alfphabet-IV', sans-serif;
+    font-size: 24px;
+    text-transform: uppercase;
+    color: black;
+    margin-top: 12px;
+}
+
 
 [id^="compta"],
 [id^="central"],
@@ -86,6 +125,7 @@ h2 {
     }
 }
 [id^="compta"] {
+    font-family: 'alfphabetbipocatcondensed', sans-serif;
     padding: 32px * 2 32px * 2 32px * 2 32px;
     width: 25%;
     font-size: 13px;
@@ -98,15 +138,28 @@ h2 {
     border-left: 1px solid lightgrey;
     border-right: 1px solid lightgrey;
     color: #289099;
-    font-family: 'Goudy Bookletter 1911', serif;
 }
+
 [id^="parcours"] {
+    font-family: 'alfphabetbipocatcondensed', sans-serif;
     padding: 32px * 2 32px 32px * 2 32px * 2;
     width: 15%;
     color: #43380D;
 }
 [id^="central_et_parcours"] {
     width: 75%;
+}
+
+/* style pour le tiroir en métaphore */
+.negatif {
+      color: white !important;
+      background-color:@color-bleu-gris;
+    }
+    
+/* style pour le tiroir qui détaille*/
+.concretement {
+      font-family: 'Cabin', sans-serif;
+      font-size: 18px;
 }
 
 table {
@@ -181,12 +234,6 @@ a {
 :target {
     display: block !important;
   .transition(all, 1000ms, ease-out, 0s);
-}
-
-h4 {
-    font-family: 'alfphabetbipocatcondensed';
-    font-size: 32px;
-    margin-top: 26px;
 }
 
 
