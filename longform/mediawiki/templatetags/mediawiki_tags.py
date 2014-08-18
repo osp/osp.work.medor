@@ -94,8 +94,11 @@ def extract(src, id):
     return frag
 
 
-def mwinclude(name, id):
-    src = cache('http://tunakutafuta.be/index.php?title=%s' % name)
+def mwinclude(name, id, rev=None):
+    url = 'http://tunakutafuta.be/index.php?title=%s' % name
+    if rev:
+        url += '&oldid=%s' % rev
+    src = cache(url)
     section = extract(src, id)
     return section
 

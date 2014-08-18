@@ -23,3 +23,14 @@
     python -m SimpleHTTPServer
 
 and go to your web browser at <http://localhost:8000/output.html>
+
+
+# Tip: generate the code to include the content from the wiki
+
+Go visit the wiki page, open the javascript console and type:
+
+    $('h2 span.mw-headline').each(function() {
+        console.log('{% mwinclude "Titre de la page en question" "' + $(this).attr('id') + '" %}')
+    });
+
+It will output the code to include in the template
