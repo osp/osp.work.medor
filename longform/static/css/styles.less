@@ -71,12 +71,12 @@
     font-style: normal;
 }
 
-/*@font-face {*/
-    /*font-family: 'Cabin';*/
-    /*src: url('../fonts/CabinCondensed-Regular.ttf');*/
-    /*font-weight: normal;*/
-    /*font-style: normal;*/
-/*}*/
+@font-face {
+    font-family: 'CabinCondensed';
+    src: url('../fonts/CabinCondensed-Regular.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
 
 /* mixins */
 .transition (@prop: all, @time: 1s, @ease: linear, @delay: 0s) {
@@ -94,194 +94,215 @@
             box-sizing: @type;
 }
 
+/* layout */
+
 html,
 body {
-    width: 100%;
     height: 100%;
 }
 
+#main-header {
+    .box-sizing();
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 20%;
+    overflow: auto;
+    padding: 1.21em;
+}
+
+#main {
+    .box-sizing();
+    position: fixed;
+    bottom: 0;
+    left: 10%;
+    width: 55%;
+    height: 80%;
+    overflow: auto;
+    padding: 1.21em;
+}
+
+nav {
+    .box-sizing();
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 10%;
+    height: 80%;
+    overflow: auto;
+    padding: 1.21em;
+}
+
+#compta {
+    .box-sizing();
+    position: fixed;
+    bottom: 0;
+    left: 65%;
+    width: 35%;
+    height: 80%;
+    overflow: auto;
+    padding: 1.21em;
+}
+
+/* styles */
+
 body {
     font-family: 'texgyreschola';
-    /*font-family: 'Goudy Bookletter 1911', serif;*/
-    /*font-weight: 300;*/
     font-size: 28px;
     line-height: 1.21;
-    
+}
 
-    & > section {
-        .box-sizing();
-        /*height: 75%;*/
-        overflow: hidden;
-        clear: both;
-        border-bottom: 8px solid white;
-        /*background-color: @color-bleu-layette;*/
+pre {
+    display: none;
+}
 
-        pre {
+#main-header {
+    font-family: 'alfphabetbipocatcondensed';
+    text-align: center;
+
+    h1 {
+        font-size: 2em;
+    }
+}
+
+#main {
+    #content > section {
+        margin-bottom: 1.21em * 2;
+    }
+
+    h2 {
+        font-family: 'alfphabetbipocatcondensed';
+        text-align: center;
+        margin: 0 15%;
+        margin-bottom: 1.21em;
+        font-size: 1.3em;
+    }
+
+    h3 {
+        font-family: 'alfphabetbipocatcondensed';
+        text-align: center;
+        margin: 0 15%;
+        margin-top: 1.21em;
+    }
+
+    img {
+        max-width: 100%;
+    }
+}
+
+nav {
+    text-align: center;
+
+    &:before {
+        content: "\2191"
+    }
+
+    &:after {
+        /*content: "\2193"*/
+        content: "\21E4";
+        display: inline-block;
+        -webkit-transform: rotate(90deg); 
+        -moz-transform: rotate(90deg); 
+        -o-transform: rotate(90deg);
+        -ms-transform: rotate(90deg); 
+    }
+
+    hr {
+        border: none;
+        border-top: 1px solid black;
+    }
+}
+
+#compta {
+    font-size: 0.7em;
+
+    table {
+        margin: 2em 0;
+        font-size: 18px;
+        line-height: 1.41em;
+        width: 75%;
+
+        tr:first-child {
+            border-top: 1px solid black;
+        }
+
+        tr:nth-child(odd) {
+            td {
+                padding-top: 0.5em;
+            }
+        }
+
+        tr:nth-child(even) {
+            border-bottom: 1px solid black;
+
+            td {
+                padding-bottom: 0.5em;
+            }
+        }
+
+        td:last-child {
+            font-family: 'alfphabetbipocatcondensed';
+        }
+    }
+
+    #Intro {
+        h2 {
             display: none;
         }
     }
 }
 
-h1 {
-    font-family: 'alfphabetbipocatcondensed', sans-serif;
-    text-align: center;
-    font-size: 96px;
-}
-
-h2 {
-    font-family: 'alfphabetbipocatcondensed', sans-serif;
-    text-align: center;
-    font-size: 96px / 2;
-}
-
-h3 {
-    font-family: 'Goudy Bookletter 1911', serif;
-    
-}
-
-h4 {
-    font-family: 'alfphabetbipocatcondensed';
-    font-size: 32px;
-    margin-top: 26px;
-}
-
-h5 {
-    font-family: 'Alfphabet-IV', sans-serif;
-    font-size: 24px;
-    text-transform: uppercase;
-    color: black;
-    margin-top: 12px;
-}
-
-
-[id^="compta"],
-[id^="central"],
-[id^="parcours"] {
-    .box-sizing();
-    float: left;
-    height: 100%;
-
-    h3 {
-        display: none;
-    }
-}
-[id^="compta"] {
-    padding: 8px * 2 8px * 2 8px * 2 8px;
-    width: 30%;
-    font-size: 13px;
-    /*color: #1ABC75;*/
-}
-[id^="central"] {
-    padding: 8px * 2 8px * 2;
-    width: 45%;
-    font-size: 26px;
-    border-left: 1px solid lightgrey;
-    border-right: 1px solid lightgrey;
-    /*color: #289099;*/
-}
-
-[id^="parcours"] {
-    font-family: 'cabin', sans-serif;
-    font-size: 18px;
-    padding: 8px * 2 8px 8px * 2 8px * 2;
-    width: 25%;
-    /*color: #43380D;*/
-}
-[id^="central_et_parcours"] {
-    width: 75%;
-}
-
-/* style pour le tiroir en métaphore */
-.negatif {
-      color: white !important;
-      background-color:@color-bleu-gris;
-    }
-    
-/* style pour le tiroir qui détaille*/
-.concretement {
-      font-family: 'Cabin', sans-serif;
-      font-size: 18px;
-}
-
-table {
-    width: 100%;
-    border-top: 1px solid black;
-    font-size: 16.762750625610352px;
-    line-height: 1.31;
-}
-
-tr {
-    &:nth-child(even) {
-        border-bottom: 1px solid black;
+#main,
+#compta {
+    h1 {
+        font-family: 'alfphabetbipocatcondensed';
+        font-size: 18px;
+        text-align: center;
+        margin-bottom: 1.21em * 2;
     }
 }
 
-th {
-    text-align: left;
-    padding: 2px;
-
-    &:nth-child(2) {
-        text-align: right;
+ul {
+    li:before {
+        content: "— ";
     }
 }
 
-td {
-    padding: 2px;
-
-    &:nth-child(2) {
-        text-align: right;
-    }
-
-    &[colspan="2"] {
-        font-family: 'alfphabetbipocatcondensed', sans-serif;
-    }
-}
-
-img {
-    /*max-width: 100%;*/
-}
-
-p + p {
-    margin-top: 1.45em;
-}
-
-ol li {
+ol {
     list-style-type: decimal;
-}
+    list-style-position: inside;
 
-ul li {
-    & li {
-        text-indent: 1em;
+    li {
+        margin-bottom: 1.21em;
     }
 }
 
-ul li:before {
-    content: "• ";
+blockquote {
+    font-style: italic;
+    font-size: 1.3em;
+    margin-left: 25%;
+    margin-top: 1.31em;
+    margin-bottom: 1.31em;
 }
 
-strong {
-    color: @color-rose;
+#Intro {
+    -moz-column-count: 2;
+    -webkit-column-count: 2;
+    column-count: 2;
 }
 
-a {
-    color: inherit;
+[id="M.C3.A9dor.2C_c.27est_qui_.3F"] section {
+    font-size: 0.7em;
+    color: red;
+
+    img {
+    width: 50%;
+        float: left;
+    }
 }
 
-.main > section > section {
-    display: none;
-}
-
-:target {
-    display: block !important;
-  .transition(all, 1000ms, ease-out, 0s);
-}
-
-
-.floatleft {
-    float: left;
-    padding: 8px;
-}
-.floatright {
-    float: right;
-    padding: 8px;
-}
+/*#La_revue_digne_qui_fouine {*/
+    /*background-color: @color-vert-eau;*/
+    /*color: white;*/
+/*}*/
