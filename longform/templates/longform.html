@@ -9,8 +9,12 @@
         <link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
         <link href='http://fonts.googleapis.com/css?family=Cabin' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" text="text/css" href="static/components/reset-css/reset.css">
+<<<<<<< HEAD
         <link rel="stylesheet" type="text/less" href="static/css/styles.less">
         <link rel="stylesheet" href="static/css/jquery.mCustomScrollbar.css" />
+=======
+        <link rel="stylesheet" type="text/less" href="static/css/styles.less">        
+>>>>>>> 07cdd03a3e389b95a61263aa4bbd176b64339ca1
     </head>
 
     <body>
@@ -24,10 +28,26 @@
         {% endcomment %}
         -->
         <header id="main-header">
+        
+        
+        <div id="cartouche">
             <h1>Médor</h1>
             <h2 contenteditable="true">Les yeux ouverts</h2>
+            </div>
             
-            <img src="/static/img/compteur-kiss.png" style="position:relative; float:right; align:right; top:-160px; margin-right:300px"/>
+        <div id="menu">    
+            <ul style="list-style-type:none;">
+                <li><a href="#La_revue_digne_qui_fouine">Quoi</a></li>
+                <li><a href="#M.C3.A9dor.2C_c.27est_qui_.3F">Qui</a></li>
+                <li><a href="#Soyez_M.C3.A9dor">Comment</a></li>
+            </ul>
+        </div>    
+            
+        <div id="compteur">    
+            <img src="/static/img/compteur-kiss.png"/>
+        </div>
+               
+        
         </header>
 
         <section id="main" class="mCustomScrollbar">
@@ -63,9 +83,19 @@
         <script src="static/components/jquery/jquery.min.js"></script>
         <script src="static/js/jquery.mCustomScrollbar.concat.min.js"></script>
         <script src="static/components/jquery.hotkeys/jquery.hotkeys.js"></script>
-        <script src="static/js/jquery.xdomainajax.js"></script>
+        <script src="static/js/jquery.xdomainajax.js"></script>    
         <script>
         $(function() {
+            $('a[href^="#"]').click(function(){  
+                var the_id = $(this).attr("href");  
+                console.log('bla');
+                $('#main').animate({  
+                    scrollTop:$('[id="' + the_id.substring(1) + '"]').offset().top,
+                    //scrollLeft:$(the_id).offset().left  
+                }, 1500);  
+                return false;  
+            }); 
+            
             $.ajax({
                 url: 'http://www.kisskissbankbank.com/fr/projects/the-french-fromage/widget',
                 type: 'GET',
