@@ -59,7 +59,7 @@ def outline(tree):
         section[1].insert(0, section[0])
 
 
-def extract(src, id):
+def extract(src, id, details=False):
     f = codecs.open(src, "r", "utf-8")
     html = f.read()
 
@@ -87,11 +87,30 @@ def extract(src, id):
     #serializer = html5lib.serializer.HTMLSerializer(quote_attr_values=True, omit_optional_tags=False)
     #output = serializer.render(stream)
 
-    try:
-        frag = lxml.etree.tostring(tree.xpath("//section[@id='%s']" % id)[0], method='xml', pretty_print=True, xml_declaration=None, encoding="utf-8")
-    except IndexError:
-        print('There is no section with id "%s"' % id)
-    return frag
+    frag = tree.xpath("//section[@id='%s']" % id)[0]
+
+    #frag.tag = "details"
+    #pattern = re.compile('^h(\d)')
+    #for child in frag.iterchildren():
+        #tag = child.tag
+        #match = pattern.match(tag.lower())
+        #if match:
+            #child.tag = "summary"
+
+
+    if details:
+        pattern = re.compile('^h(\d)')
+        for child in frag.iterchildren():
+            if child.tag == "section":
+                child.tag = "details"
+                for child in child.iterchildren():
+                    tag = child.tag
+                    match = pattern.match(tag.lower())
+                    if match:
+                        child.tag = "summary"
+
+
+    return lxml.etree.tostring(frag, method='xml', pretty_print=True, xml_declaration=None, encoding="utf-8")
 
 
 def mwinclude(name, id, rev=None):
@@ -104,3 +123,15 @@ def mwinclude(name, id, rev=None):
 
 
 register.simple_tag(mwinclude)
+
+
+def mwincludedetails(name, id, rev=None):
+    url = 'http://tunakutafuta.be/index.php?title=%s' % name
+    if rev:
+        url += '&oldid=%s' % rev
+    src = cache(url)
+    section = extract(src, id, details=True)
+    return section
+
+
+register.simple_tag(mwincludedetails)
