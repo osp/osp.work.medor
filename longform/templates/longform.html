@@ -46,7 +46,7 @@
         
         </header>
 
-        <section id="main" class="mCustomScrollbar">
+        <section id="main" class="crolle"> <!-- mCustomScrollbar -->
             <nav>
                 <div>1</div>
                 <hr/>
@@ -119,6 +119,15 @@
             });
         });
         </script>
+        <script>
+	  (function($){
+	      $(window).load(function(){
+		$(".crolle").mCustomScrollbar({
+		  theme:"rounded-dots"
+		});
+	      });
+	   })(jQuery);
+	</script>
     </body>
 </html>
 
