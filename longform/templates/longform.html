@@ -10,6 +10,7 @@
         <link href='http://fonts.googleapis.com/css?family=Cabin' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" text="text/css" href="static/components/reset-css/reset.css">
         <link rel="stylesheet" type="text/less" href="static/css/styles.less">
+        <link rel="stylesheet" href="static/css/jquery.mCustomScrollbar.css" />
     </head>
 
     <body>
@@ -29,7 +30,7 @@
             <img src="/static/img/compteur-kiss.png" style="position:relative; float:right; align:right; top:-160px; margin-right:300px"/>
         </header>
 
-        <section id="main">
+        <section id="main" class="mCustomScrollbar">
             <nav>
                 <div>1</div>
                 <hr/>
@@ -53,13 +54,14 @@
 
         <section id="compta">
             <h1>Et concrètement?</h1>
-
-    {% mwinclude "Appelàsous_-_concrètement" "En_chiffres" %}
-
+	      {% mwinclude "Appelàsous_-_concrètement" "En_chiffres" %}
+	      {% mwinclude "Appelàsous_-_concrètement" "En_contraste" %}
+	      {% mwinclude "Appelàsous_-_concrètement" "Par_r.C3.A9f.C3.A9rences" %}
         </section>
 
         <script src="static/components/less/dist/less-1.7.0.min.js"></script>
         <script src="static/components/jquery/jquery.min.js"></script>
+        <script src="static/js/jquery.mCustomScrollbar.concat.min.js"></script>
         <script src="static/components/jquery.hotkeys/jquery.hotkeys.js"></script>
         <script src="static/js/jquery.xdomainajax.js"></script>
         <script>
@@ -91,8 +93,6 @@
             });
         });
         </script>
-        
-
     </body>
 </html>
 
