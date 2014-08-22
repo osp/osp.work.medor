@@ -40,13 +40,13 @@
         </div>
 
         <div id="compteur">
-            <img src="/static/img/compteur-kiss.png"/>
+            <img src="static/img/compteur-kiss.png"/>
         </div>
 
 
         </header>
 
-        <section id="main" class="crolle"> <!-- mCustomScrollbar -->
+        <section id="main"> <!-- mCustomScrollbar -->
             <nav>
                 <div>1</div>
                 <hr/>
@@ -83,16 +83,22 @@
         <script src="static/js/jquery.xdomainajax.js"></script>
         <script>
         $(function() {
+            $("#main, #compta").mCustomScrollbar({
+                theme:"rounded-dots-dark"
+            });
+
             $('a[href^="#"]').click(function(){
                 var the_id = $(this).attr("href");
-                console.log('bla');
-                $('#main').animate({
-                    scrollTop:$('[id="' + the_id.substring(1) + '"]').offset().top,
-                    //scrollLeft:$(the_id).offset().left
-                }, 1500);
+                scrollTop = $('[id="' + the_id.substring(1) + '"]').position().top + 180;
+                console.log(scrollTop)
+                $('#main').mCustomScrollbar("scrollTo", scrollTop);
+                //$('#main').animate({
+                //    scrollTop:$('[id="' + the_id.substring(1) + '"]').offset().top,
+                //}, 1500);
                 return false;
             });
 
+            /*
             $.ajax({
                 url: 'http://www.kisskissbankbank.com/fr/projects/the-french-fromage/widget',
                 type: 'GET',
@@ -118,17 +124,9 @@
                     $('header').append($elt);
                 }
             });
+            */
         });
         </script>
-        <script>
-	  (function($){
-	      $(window).load(function(){
-		$(".crolle").mCustomScrollbar({
-		  theme:"rounded-dots"
-		});
-	      });
-	   })(jQuery);
-	</script>
     </body>
 </html>
 

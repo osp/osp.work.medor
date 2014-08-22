@@ -34,13 +34,13 @@
         </div>
 
         <div id="compteur">
-            <img src="/static/img/compteur-kiss.png"/>
+            <img src="static/img/compteur-kiss.png"/>
         </div>
 
 
         </header>
 
-        <section id="main" class="crolle"> <!-- mCustomScrollbar -->
+        <section id="main"> <!-- mCustomScrollbar -->
             <nav>
                 <div>1</div>
                 <hr/>
@@ -76,9 +76,8 @@
 <p>Médor entend cultiver le plaisir de lecture. S'informer et s'amuser. On dirait bien qu'on va être drôle mais y a rien de pire que de l'affirmer. 
 </p>
 </section><section id="Inventeur"><h3> Inventeur </h3>
-<p><a href="/index.php?title=Fichier:Bulle1.jpg" class="image"><img width="188" alt="Bulle1.jpg" height="86" src="http://tunakutafuta.be//images/7/77/Bulle1.jpg"/></a>
-Médor cherche, plus que Zénobe Gramme, Adolphe Sax et Edgard Frankignoul réunis. Avec un avantage sur les médias déjà en place : il n'existe pas. Il peut donc tout réinventer jusqu'à l'écosystème qui lui convient : média constitué en coopérative de lecteurs, graphisme en logiciel libre, prise de décision collective, rédaction en chef tournante, salaires décents pour tous, imprime sur <a href="/index.php?title=Papier_FSC&amp;action=edit&amp;redlink=1" class="new" title="Papier FSC (page inexistante)">papier FSC</a>, pratique <a href="/index.php?title=L%27article_27&amp;action=edit&amp;redlink=1" class="new" title="L'article 27 (page inexistante)">l'article 27</a> (démocratisation de l'accès à la culture et l'info), est attentif aux questions de diversité et d'égalité femmes-hommes, est livré à vélo et est emballé par une entreprise de travail adapté <a href="/index.php?title=Nos_Pilifs&amp;action=edit&amp;redlink=1" class="new" title="Nos Pilifs (page inexistante)">Nos Pilifs</a>, indépendance et transparence garanties (un an, le temps de votre abonnement). À côté, Nicolas Hulot et Pierre Rabhi, ce sont les princes du Qatar.
-<a href="/index.php?title=Fichier:Louis-plateforme-2.jpg" class="image"><img width="899" alt="Louis-plateforme-2.jpg" height="432" src="http://tunakutafuta.be//images/b/bc/Louis-plateforme-2.jpg"/></a>
+<p>Médor cherche, plus que Zénobe Gramme, Adolphe Sax et Edgard Frankignoul réunis. Avec un avantage sur les médias déjà en place : il n'existe pas. Il peut donc tout réinventer jusqu'à l'écosystème qui lui convient : média constitué en coopérative de lecteurs, graphisme en logiciel libre, prise de décision collective, rédaction en chef tournante, salaires décents pour tous, imprime sur <a href="/index.php?title=Papier_FSC&amp;action=edit&amp;redlink=1" class="new" title="Papier FSC (page inexistante)">papier FSC</a>, pratique <a href="/index.php?title=L%27article_27&amp;action=edit&amp;redlink=1" class="new" title="L'article 27 (page inexistante)">l'article 27</a> (démocratisation de l'accès à la culture et l'info), est attentif aux questions de diversité et d'égalité femmes-hommes, est livré à vélo et est emballé par une entreprise de travail adapté <a href="/index.php?title=Nos_Pilifs&amp;action=edit&amp;redlink=1" class="new" title="Nos Pilifs (page inexistante)">Nos Pilifs</a>, indépendance et transparence garanties (un an, le temps de votre abonnement). À côté, Nicolas Hulot et Pierre Rabhi, ce sont les princes du Qatar.
+</p><p><a href="/index.php?title=Fichier:Louis-plateforme-2.jpg" class="image"><img width="899" alt="Louis-plateforme-2.jpg" height="432" src="http://tunakutafuta.be//images/b/bc/Louis-plateforme-2.jpg"/></a>
 </p>
 </section></section>
 
@@ -272,16 +271,22 @@ Fixe à 996 et 300 € pris sur chaque pub (vendue à 1250 €), charges varia
         <script src="static/js/jquery.xdomainajax.js"></script>
         <script>
         $(function() {
+            $("#main, #compta").mCustomScrollbar({
+                theme:"rounded-dots-dark"
+            });
+
             $('a[href^="#"]').click(function(){
                 var the_id = $(this).attr("href");
-                console.log('bla');
-                $('#main').animate({
-                    scrollTop:$('[id="' + the_id.substring(1) + '"]').offset().top,
-                    //scrollLeft:$(the_id).offset().left
-                }, 1500);
+                scrollTop = $('[id="' + the_id.substring(1) + '"]').position().top + 180;
+                console.log(scrollTop)
+                $('#main').mCustomScrollbar("scrollTo", scrollTop);
+                //$('#main').animate({
+                //    scrollTop:$('[id="' + the_id.substring(1) + '"]').offset().top,
+                //}, 1500);
                 return false;
             });
 
+            /*
             $.ajax({
                 url: 'http://www.kisskissbankbank.com/fr/projects/the-french-fromage/widget',
                 type: 'GET',
@@ -307,17 +312,9 @@ Fixe à 996 et 300 € pris sur chaque pub (vendue à 1250 €), charges varia
                     $('header').append($elt);
                 }
             });
+            */
         });
         </script>
-        <script>
-	  (function($){
-	      $(window).load(function(){
-		$(".crolle").mCustomScrollbar({
-		  theme:"rounded-dots"
-		});
-	      });
-	   })(jQuery);
-	</script>
     </body>
 </html>
 
