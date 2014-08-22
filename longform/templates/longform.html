@@ -9,16 +9,7 @@
         <link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
         <link href='http://fonts.googleapis.com/css?family=Cabin' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" text="text/css" href="static/components/reset-css/reset.css">
-        <link rel="stylesheet" type="text/less" href="static/css/styles.less">
-        
-        <script src="static/js/jquery.js" type="text/javascript"></script><!-- Insertion de la bibliotheque jQuery -->
-
-        <script type="text/javascript" src="static/js/localscroll/jquery.localscroll.js"></script>
-        <script type="text/javascript" src="static/js/localscroll/jquery.scrollTo.js"></script>
-    
-        <script type="text/javascript" src="static/js/lancement.js"></script><!-- permet le lancement de la fonction de scroll -->
-        
-        
+        <link rel="stylesheet" type="text/less" href="static/css/styles.less">        
     </head>
 
     <body>
@@ -33,19 +24,19 @@
         -->
         <header id="main-header">
         
-        <div id="menu">    
-            <ul>
-                <li>Quoi</li>
-                <li><a href="#M.C3.A9dor.2C_c.27est_qui_.3F">Qui</a></li>
-                <li>Comment</li>
-            </ul>
-        </div>
-        
         
         <div id="cartouche">
             <h1>Médor</h1>
             <h2 contenteditable="true">Les yeux ouverts</h2>
             </div>
+            
+        <div id="menu">    
+            <ul style="list-style-type:none;">
+                <li><a href="#La_revue_digne_qui_fouine">Quoi</a></li>
+                <li><a href="#M.C3.A9dor.2C_c.27est_qui_.3F">Qui</a></li>
+                <li><a href="#Soyez_M.C3.A9dor">Comment</a></li>
+            </ul>
+        </div>    
             
         <div id="compteur">    
             <img src="/static/img/compteur-kiss.png"/>
@@ -86,9 +77,19 @@
         <script src="static/components/less/dist/less-1.7.0.min.js"></script>
         <script src="static/components/jquery/jquery.min.js"></script>
         <script src="static/components/jquery.hotkeys/jquery.hotkeys.js"></script>
-        <script src="static/js/jquery.xdomainajax.js"></script>
+        <script src="static/js/jquery.xdomainajax.js"></script>    
         <script>
         $(function() {
+            $('a[href^="#"]').click(function(){  
+                var the_id = $(this).attr("href");  
+                console.log('bla');
+                $('#main').animate({  
+                    scrollTop:$('[id="' + the_id.substring(1) + '"]').offset().top,
+                    //scrollLeft:$(the_id).offset().left  
+                }, 1500);  
+                return false;  
+            }); 
+            
             $.ajax({
                 url: 'http://www.kisskissbankbank.com/fr/projects/the-french-fromage/widget',
                 type: 'GET',
