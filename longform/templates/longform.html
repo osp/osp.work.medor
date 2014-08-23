@@ -24,29 +24,29 @@
         {% endcomment %}
         -->
         <header id="main-header">
-        
-        
+
+
         <div id="cartouche">
             <h1>Médor</h1>
             <h2 contenteditable="true">Les yeux ouverts</h2>
             </div>
-            
-        <div id="menu">    
+
+        <div id="menu">
             <ul style="list-style-type:none;">
                 <li><a href="#La_revue_digne_qui_fouine">Quoi</a></li>
                 <li><a href="#M.C3.A9dor.2C_c.27est_qui_.3F">Qui</a></li>
                 <li><a href="#Soyez_M.C3.A9dor">Comment</a></li>
             </ul>
-        </div>    
-            
-        <div id="compteur">    
-            <img src="/static/img/compteur-kiss.png"/>
         </div>
-               
-        
+
+        <div id="compteur">
+            <img src="static/img/compteur-kiss.png"/>
+        </div>
+
+
         </header>
 
-        <section id="main" class="crolle"> <!-- mCustomScrollbar -->
+        <section id="main"> <!-- mCustomScrollbar -->
             <nav>
                 <div>1</div>
                 <hr/>
@@ -70,28 +70,35 @@
 
         <section id="compta">
             <h1>Et concrètement?</h1>
-	      {% mwinclude "Appelàsous_-_concrètement" "En_chiffres" %}
-	      {% mwinclude "Appelàsous_-_concrètement" "En_contraste" %}
-	      {% mwinclude "Appelàsous_-_concrètement" "Par_r.C3.A9f.C3.A9rences" %}
+            {% mwinclude "Appelàsous_-_concrètement" "Objet" %}
+            {% mwincludedetails "Appelàsous_-_concrètement" "En_chiffres" %}
+            {% mwinclude "Appelàsous_-_concrètement" "En_contraste" %}
+            {% mwinclude "Appelàsous_-_concrètement" "Par_r.C3.A9f.C3.A9rences" %}
         </section>
 
         <script src="static/components/less/dist/less-1.7.0.min.js"></script>
         <script src="static/components/jquery/jquery.min.js"></script>
         <script src="static/js/jquery.mCustomScrollbar.concat.min.js"></script>
         <script src="static/components/jquery.hotkeys/jquery.hotkeys.js"></script>
-        <script src="static/js/jquery.xdomainajax.js"></script>    
+        <script src="static/js/jquery.xdomainajax.js"></script>
         <script>
         $(function() {
-            $('a[href^="#"]').click(function(){  
-                var the_id = $(this).attr("href");  
-                console.log('bla');
-                $('#main').animate({  
-                    scrollTop:$('[id="' + the_id.substring(1) + '"]').offset().top,
-                    //scrollLeft:$(the_id).offset().left  
-                }, 1500);  
-                return false;  
-            }); 
-            
+            $("#main, #compta").mCustomScrollbar({
+                theme:"rounded-dots-dark"
+            });
+
+            $('a[href^="#"]').click(function(){
+                var the_id = $(this).attr("href");
+                scrollTop = $('[id="' + the_id.substring(1) + '"]').position().top + 180;
+                console.log(scrollTop)
+                $('#main').mCustomScrollbar("scrollTo", scrollTop);
+                //$('#main').animate({
+                //    scrollTop:$('[id="' + the_id.substring(1) + '"]').offset().top,
+                //}, 1500);
+                return false;
+            });
+
+            /*
             $.ajax({
                 url: 'http://www.kisskissbankbank.com/fr/projects/the-french-fromage/widget',
                 type: 'GET',
@@ -117,16 +124,8 @@
                     $('header').append($elt);
                 }
             });
+            */
         });
         </script>
-        <script>
-	  (function($){
-	      $(window).load(function(){
-		$(".crolle").mCustomScrollbar({
-		  theme:"rounded-dots"
-		});
-	      });
-	   })(jQuery);
-	</script>
     </body>
 </html>
