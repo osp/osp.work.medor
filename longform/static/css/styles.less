@@ -122,7 +122,7 @@ body {
     left: 0%;
     width: 75%;
     height: 100%;
-    padding-top: 200px;
+    padding-top: 0px;
     margin-right:200px;
     overflow-y: auto;
 }
@@ -156,7 +156,7 @@ nav {
 
 body {
     font-family: 'Goudy Bookletter 1911', serif;;
-    font-size: 28px;
+    font-size: 32px;
     line-height: 1.21;
 }
 
@@ -174,7 +174,6 @@ pre {
 
 #main-header {
     font-family: 'alfphabetbipocatcondensed';
-
 }
 
 #cartouche {
@@ -200,7 +199,6 @@ pre {
     position:relative; 
     float:right; 
     top:-2px;
-   
 }
 
 #menu {
@@ -213,7 +211,6 @@ pre {
     list-style-type: none;
     font-size: 1.15em;
 
-    
     ul, li{
         list-style-type: none;
         text-decoration: none;
@@ -231,24 +228,28 @@ pre {
 
 #main {
     #content > section {
-        margin-bottom: 1.21em * 2;
-        padding:0% 15%;
+        margin-bottom: 0;
+        padding:50px 15%;
     }
 
     h2 {
         font-family: 'alfphabetbipocatcondensed';
         text-align: left;
         margin: 0% 0%;
-        margin-bottom: 0.5em;
-        font-size: 1.3em;
+        margin-bottom: 0.2em;
+        font-size: 2.5em;
+        line-height: 93%;
+        letter-spacing: -1px;
     }
 
     h3 {
         font-family: 'alfphabetbipocatcondensed';
         text-align: center;
-        margin: 0 0%;
-        margin-top: 1.21em;
-        font-size: 1em;
+        margin: 0% 0%;
+        margin-top: 0.7em;
+        font-size: 1.8em;
+        line-height: 95%;
+        letter-spacing: -0.5px;
     }
 
     img {
@@ -257,7 +258,6 @@ pre {
         margin-left: auto !important;
         margin-right: auto !important;
     }
-    
 }
 
 nav {
@@ -378,10 +378,53 @@ blockquote {
     column-count: 2;
 }
 
-[id="M.C3.A9dor.2C_c.27est_qui_.3F"] section {
+[id="La_revue_digne_qui_fouine"]{
+        padding-top:210px!important;
+	background-color: #FFFFFF;
+	  h2{
+	    display:none;
+	    }
+	  img{
+	    margin-top:20px;
+	    }
+	  section{
+	  padding-bottom: 0px;
+	  }
+}
+
+[id="M.C3.A9dor.2C_c.27est_un_magazine_belge_d.27enqu.C3.AAtes_et_de_r.C3.A9cits"] {
+    background:url('../img/cielbleu.jpg');
+    background-color: #ECE7D8;
+}
+
+[id="M.C3.A9dor.2C_c.27est_une_ligne_.C3.A9ditoriale"]{
+    background:url('../img/cielgris.jpg');
+    background-color: #DEDEDE;
+}
+
+[id="M.C3.A9dor.2C_c.27est_le_visuel_comme_autre_pratique_et_pour_une_autre_lecture"]{
+    background-color: #ECE7D8;
+}
+
+[id="M.C3.A9dor.2C_c.27est_une_coop.C3.A9rative"]{
+    background-color: #DEDEDE;
+}
+
+[id="M.C3.A9dor.2C_c.27est_une_exp.C3.A9rience_collaborative"]{
+    background-color: #ECE7D8;
+}
+[id="M.C3.A9dor.2C_c.27est_6_pages_de_pub_.28choisies.29"]{
+    background-color: #DEDEDE;
+}
+
+[id="M.C3.A9dor.2C_c.27est_d.C3.A9j.C3.A0_xxxx"]{
+    background-color: #ECE7D8;
+}
+
+[id="M.C3.A9dor.2C_c.27est_qui_.3F"]{
+    background-color: #DEDEDE;
     font-size: 0.7em;
     color: #3B170B;
-
     img {
         width: 25%;
         height: 25%;
@@ -389,27 +432,10 @@ blockquote {
     }
 }
 
-#La_revue_digne_qui_fouine{
-    h2 {
-        display:none;
-        padding: 2% 15% !important;
-    }
+[id="Soyez_M.C3.A9dor"]{
+    background-color: #ECE7D8;
 }
 
-[id="Du_visuel"] 
-{background-color: yellow;
-    padding: 2% 15% !important;
+[id="Ils_soutiennent_M.C3.A9dor"]{
+    background-color: #DEDEDE;
 }
-
-[id="M.C3.A9dor.2C_c.27est_un_magazine_belge_d.27enqu.C3.AAtes_et_de_r.C3.A9cits"] section {
-    background-image:url('../static/img/9128795550_77b59eb547_o.jpg');
-}
-
-[id="M.C3.A9dor.2C_c.27est_une_ligne_.C3.A9ditoriale"] {
-    background-color: red;
-}
-
-/*#La_revue_digne_qui_fouine {*/
-    /*background-color: @color-vert-eau;*/
-    /*color: white;*/
-/*}*/
