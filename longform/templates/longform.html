@@ -27,7 +27,7 @@
 
 
         <div id="cartouche">
-            <h1>Médor</h1>
+            <img src="static/img/medor-headline.png" width=500px />
             <h2 contenteditable="true">Les yeux ouverts</h2>
             </div>
 
@@ -60,7 +60,7 @@
                 {% mwinclude "Appelàsous_-_récit_principal" "M.C3.A9dor.2C_c.27est_le_visuel_comme_autre_pratique_et_pour_une_autre_lecture" %}
                 {% mwinclude "Appelàsous_-_récit_principal" "M.C3.A9dor.2C_c.27est_une_coop.C3.A9rative" %}
                 {% mwinclude "Appelàsous_-_récit_principal" "M.C3.A9dor.2C_c.27est_une_exp.C3.A9rience_collaborative" %}
-                {% mwinclude "Appelàsous_-_récit_principal" "M.C3.A9dor.2C_c.27est_6_pages_de_pub_.28choisies.29" %}
+                {% mwinclude "Appelàsous_-_récit_principal" "M.C3.A9dor.2C_c.27est_six_pages_de_pub_.28choisies.29" %}
                 {% mwinclude "Appelàsous_-_récit_principal" "M.C3.A9dor.2C_c.27est_d.C3.A9j.C3.A0_xxxx" %}
                 {% mwinclude "Appelàsous_-_récit_principal" "M.C3.A9dor.2C_c.27est_qui_.3F" %}
                 {% mwinclude "Appelàsous_-_récit_principal" "Soyez_M.C3.A9dor" %}
@@ -79,13 +79,34 @@
         <script src="static/components/less/dist/less-1.7.0.min.js"></script>
         <script src="static/components/jquery/jquery.min.js"></script>
         <script src="static/js/jquery.mCustomScrollbar.concat.min.js"></script>
+        <script src="static/js/scrollTo.min.js"></script>
         <script src="static/components/jquery.hotkeys/jquery.hotkeys.js"></script>
         <script src="static/js/jquery.xdomainajax.js"></script>
         <script>
         $(function() {
-            $("#main, #compta").mCustomScrollbar({
-                theme:"rounded-dots-dark"
+            $("#main").mCustomScrollbar({
+                theme:"rounded-dots" /*rounded-dots-dark*/
             });
+        	    /*
+        $('#La_revue_digne_qui_fouine').scrollTo({
+	    offset: -600, easing: 'easeOutBounce', speed: 2000
+	    });
+	});
+        </script>
+	<script>
+        $(function() {
+
+            $('#M.C3.A9dor.2C_c.27est_qui_.3F').scrollTo({
+	    offset: -400
+	    });
+	    
+            $('[id="Soyez_M.C3.A9dor"]').scrollTo({
+	    offset: 1000, easing: 'easeOutBounce', speed: 2000
+	    });
+	    */
+            /*$("#compta").mCustomScrollbar({
+                theme:"dark"
+            });*/
 
             $('a[href^="#"]').click(function(){
                 var the_id = $(this).attr("href");

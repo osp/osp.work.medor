@@ -149,7 +149,6 @@ nav {
     height: 100%;
     padding: 200px 30px 10px 10px;
     overflow-y: scroll;
-
 }
 
 /* styles */
@@ -180,17 +179,19 @@ pre {
     position:relative; 
     float:left; 
     margin-left: 9.5%;
+    margin-top: -12px;
     width: 28%;
     text-align:left;
-            
     h1 {
         font-size: 3.5em;
         font-family: 'Alfphabet-IV', sans-serif;
         line-height: 1em;
     }
     h2 {
-        font-size:1.3em;
-        line-height: 0.75em;
+    width: 80%;
+    padding: 2px 8px;
+    border: 1px solid black;
+    background-color: white;
     }
 }
 
@@ -205,12 +206,8 @@ pre {
     position:relative; 
     float:left; 
     margin-left: 0%;
-    width: 9%;
-    text-align:left;
-    text-transform:uppercase;
-    list-style-type: none;
-    font-size: 1.15em;
-
+    margin-left: 9px;
+    margin-top: 7px;
     ul, li{
         list-style-type: none;
         text-decoration: none;
@@ -219,12 +216,22 @@ pre {
     ul li:before {
         content: "";
     }
-
     li a{
-        text-decoration: none;
+    text-decoration: none;
+    color: black!important;
+    text-align:left;
+    text-transform:uppercase;
+    list-style-type: none;
+    font-size: 0.8em;
+    }
+    li a:hover{color:white!important;}
+    li{
+border: 1pt solid black;
+margin-bottom: 6px;
+padding: 0px 8px 2px 8px;
+background-color: #D9B571;
     }
 }
-
 
 #main {
     #content > section {
@@ -417,31 +424,56 @@ blockquote {
 [id="M.C3.A9dor.2C_c.27est_une_exp.C3.A9rience_collaborative"]{
     background-color: #ECE7D8;
 }
-[id="M.C3.A9dor.2C_c.27est_6_pages_de_pub_.28choisies.29"]{
+[id="M.C3.A9dor.2C_c.27est_six_pages_de_pub_.28choisies.29"]{
     background-color: #DEDEDE;
 }
 
 [id="M.C3.A9dor.2C_c.27est_d.C3.A9j.C3.A0_xxxx"]{
     background-color: #ECE7D8;
+    font-size: 0.8em;
 }
 
-[id="M.C3.A9dor.2C_c.27est_qui_.3F"]{
+[id="M.C3.A9dor.2C_c.27est_qui_.3F"] {
     background-color: #DEDEDE;
-    font-size: 0.7em;
     color: #3B170B;
-    img {
-        width: 25%;
-        height: 25%;
-        float: left;
-    }
+    section {
+	    font-size: 0.8em;
+            }
 }
 
 [id="Soyez_M.C3.A9dor"]{
     background-color: #ECE7D8;
+    	  img{
+	    margin-left:40px!important;
+	    }
+	    p{margin-bottom:20px!important;}
 }
 
 [id="Ils_soutiennent_M.C3.A9dor"]{
     background-color: #DEDEDE;
+}
+
+[id="Objet"]{
+	  h2{
+	    display:none;
+	    }
+	  img{
+	    margin-bottom:20px;
+	    }
+	  section{
+	  padding-bottom: 0px;
+	  } 
+}
+[id="En_chiffres"]{}
+[id="En_contraste"]{}
+[id="Par_r.C3.A9f.C3.A9rences"]{}
+
+.floatright {
+  float:right;
+}
+
+.floatleft {
+  float:left;
 }
 
 /*summary::-webkit-details-marker {*/
