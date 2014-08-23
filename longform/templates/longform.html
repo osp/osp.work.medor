@@ -86,32 +86,12 @@
         <script>
         $(function() {
             $("#main").mCustomScrollbar({
-                theme:"rounded-dots" /*rounded-dots-dark*/
-            });
-        	    /*
-        $('#La_revue_digne_qui_fouine').scrollTo({
-	    offset: -600, easing: 'easeOutBounce', speed: 2000
-	    });
-	});
-        </script>
-	<script>
-        $(function() {
-
-            $('#M.C3.A9dor.2C_c.27est_qui_.3F').scrollTo({
-	    offset: -400
-	    });
-	    
-            $('[id="Soyez_M.C3.A9dor"]').scrollTo({
-	    offset: 1000, easing: 'easeOutBounce', speed: 2000
-	    });
-	    */
-            /*$("#compta").mCustomScrollbar({
-                theme:"dark"
-            });*/
-
+                theme:"rounded-dots" 
+       	    });
+	
             $('a[href^="#"]').click(function(){
                 var the_id = $(this).attr("href");
-                scrollTop = $('[id="' + the_id.substring(1) + '"]').position().top + 180;
+                scrollTop = $('[id="' + the_id.substring(1) + '"]').position().top - 180;
                 console.log(scrollTop)
                 $('#main').mCustomScrollbar("scrollTo", scrollTop);
                 //$('#main').animate({
