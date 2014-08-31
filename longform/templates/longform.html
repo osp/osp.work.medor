@@ -54,27 +54,27 @@
             </nav>
             <div id="content">
                 <!-- <h1>C'est quoi?</h1> -->
-                {% mwinclude "Appelàsous_-_récit_principal" "La_revue_digne_qui_fouine" %}
-                {% mwinclude "Appelàsous_-_récit_principal" "M.C3.A9dor.2C_c.27est_un_magazine_belge_d.27enqu.C3.AAtes_et_de_r.C3.A9cits" %}
-                {% mwinclude "Appelàsous_-_récit_principal" "M.C3.A9dor.2C_c.27est_une_ligne_.C3.A9ditoriale" %}
-                {% mwinclude "Appelàsous_-_récit_principal" "M.C3.A9dor.2C_c.27est_le_visuel_comme_autre_pratique_et_pour_une_autre_lecture" %}
-                {% mwinclude "Appelàsous_-_récit_principal" "M.C3.A9dor.2C_c.27est_une_coop.C3.A9rative" %}
-                {% mwinclude "Appelàsous_-_récit_principal" "M.C3.A9dor.2C_c.27est_une_exp.C3.A9rience_collaborative" %}
-                {% mwinclude "Appelàsous_-_récit_principal" "M.C3.A9dor.2C_c.27est_six_pages_de_pub_.28choisies.29" %}
-                {% mwinclude "Appelàsous_-_récit_principal" "M.C3.A9dor.2C_c.27est_d.C3.A9j.C3.A0_xxxx" %}
-                {% mwinclude "Appelàsous_-_récit_principal" "M.C3.A9dor.2C_c.27est_qui_.3F" %}
-                {% mwinclude "Appelàsous_-_récit_principal" "Soyez_M.C3.A9dor" %}
-                {% mwinclude "Appelàsous_-_récit_principal" "Ils_soutiennent_M.C3.A9dor" %}
+                {% mwinclude "Appelàsous_-_récit_principal" "La_revue_digne_qui_fouine" 1311 %}
+                {% mwinclude "Appelàsous_-_récit_principal" "M.C3.A9dor.2C_c.27est_un_magazine_belge_d.27enqu.C3.AAtes_et_de_r.C3.A9cits" 1311 %}
+                {% mwinclude "Appelàsous_-_récit_principal" "M.C3.A9dor.2C_c.27est_une_ligne_.C3.A9ditoriale" 1311 %}
+                {% mwinclude "Appelàsous_-_récit_principal" "M.C3.A9dor.2C_c.27est_le_visuel_comme_autre_pratique_et_pour_une_autre_lecture" 1311 %}
+                {% mwinclude "Appelàsous_-_récit_principal" "M.C3.A9dor.2C_c.27est_une_coop.C3.A9rative" 1311 %}
+                {% mwinclude "Appelàsous_-_récit_principal" "M.C3.A9dor.2C_c.27est_une_exp.C3.A9rience_collaborative" 1311 %}
+                {% mwinclude "Appelàsous_-_récit_principal" "M.C3.A9dor.2C_c.27est_six_pages_de_pub_.28choisies.29" 1311 %}
+                {% mwinclude "Appelàsous_-_récit_principal" "M.C3.A9dor.2C_c.27est_d.C3.A9j.C3.A0_xxxx" 1311 %}
+                {% mwinclude "Appelàsous_-_récit_principal" "M.C3.A9dor.2C_c.27est_qui_.3F" 1311 %}
+                {% mwinclude "Appelàsous_-_récit_principal" "Soyez_M.C3.A9dor" 1311 %}
+                {% mwinclude "Appelàsous_-_récit_principal" "Ils_soutiennent_M.C3.A9dor" 1311 %}
             </div>
-             <img src="static/img/belge.jpg"/> 
+             <img src="static/img/belge.jpg"/>
         </section>
 
         <section id="compta">
             <h1>Et concrètement?</h1>
-            {% mwinclude "Appelàsous_-_concrètement" "Objet" %}
-            {% mwincludedetails "Appelàsous_-_concrètement" "En_chiffres" %}
-            {% mwinclude "Appelàsous_-_concrètement" "En_contraste" %}
-            {% mwinclude "Appelàsous_-_concrètement" "Par_r.C3.A9f.C3.A9rences" %}
+            {% mwinclude "Appelàsous_-_concrètement" "Objet" 1308 %}
+            {% mwincludedetails "Appelàsous_-_concrètement" "En_chiffres" 1308 %}
+            {% mwinclude "Appelàsous_-_concrètement" "En_contraste" 1308 %}
+            {% mwinclude "Appelàsous_-_concrètement" "Par_r.C3.A9f.C3.A9rences" 1308 %}
         </section>
 
         <script src="static/components/less/dist/less-1.7.0.min.js"></script>
@@ -86,9 +86,9 @@
         <script>
         $(function() {
             $("#main").mCustomScrollbar({
-                theme:"rounded-dots" 
+                theme:"rounded-dots"
        	    });
-	
+
             $('a[href^="#"]').click(function(){
                 var the_id = $(this).attr("href");
                 scrollTop = $('[id="' + the_id.substring(1) + '"]').position().top - 180;
