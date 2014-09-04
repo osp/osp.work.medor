@@ -78,25 +78,22 @@ def extract(src, id, details=False):
         parent.remove(elt)
         parent.text = text
 
+    for elt in tree.xpath('//section'):
+        #parent = elt.getparent()
+        #parent.getparent().attrib['id'] = elt.attrib.pop('id')
+        #text = elt.text
+        #parent.remove(elt)
+        wrapper =  lxml.etree.Element('div')
+        wrapper.attrib['class'] = 'wrapper'
+        for child in elt.getchildren():
+            wrapper.append(child)
+        elt.append(wrapper)
+        #import ipdb; ipdb.set_trace()
+
     for elt in tree.xpath('//img'):
         elt.attrib['src'] = 'http://tunakutafuta.be/' + elt.attrib['src']
 
-    #walker = html5lib.getTreeWalker("lxml")
-    #stream = walker(tree)
-
-    #serializer = html5lib.serializer.HTMLSerializer(quote_attr_values=True, omit_optional_tags=False)
-    #output = serializer.render(stream)
-
     frag = tree.xpath("//section[@id='%s']" % id)[0]
-
-    #frag.tag = "details"
-    #pattern = re.compile('^h(\d)')
-    #for child in frag.iterchildren():
-        #tag = child.tag
-        #match = pattern.match(tag.lower())
-        #if match:
-            #child.tag = "summary"
-
 
     if details:
         pattern = re.compile('^h(\d)')
