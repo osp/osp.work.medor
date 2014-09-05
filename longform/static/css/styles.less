@@ -113,9 +113,9 @@
 /*}*/
 
 #main .wrapper {
-    margin: 0 auto;
-    max-width: 100%;
-    width: 40em;
+    /*margin: 0 auto;*/
+    /*max-width: 100%;*/
+    /*width: 40em;*/
 }
 
 #main-header {
@@ -485,25 +485,13 @@ a:hover{
     /*background-color: #ECE7D8;*/
     /*font-size: 0.8em;*/
 /*}*/
-
-[id="M.C3.A9dor.2C_c.27est_qui_.3F"] {
-    section {
-        h3 {
-            display: none;
-        }
-        .caption {
-            font-family: 'alfphabetbipocatcondensed', sans;
-            font-size: 1.5em;
-        }
-        img {
-            height: 400px;
-        }
-        vertical-align: top;
-        display: inline-block;
-        margin-right: 1em;
-        width: 400px;
-        font-size: 0.8em;
+[id="M.C3.A9dor.2C_c.27est_d.C3.A9j.C3.A0.C2.A0"],
+[id="Une_.C3.A9quipe"] {
+    & > .wrapper {
+        width: 100%!important;
+        max-width: initial !important;;
     }
+
 }
 
 /*[id="Soyez_M.C3.A9dor"]{*/
@@ -557,11 +545,71 @@ ul li:before {
     content: "- ";
 }
 
-[id="Une_.C3.A9quipe"] section {
-    .concrete;
-    width: 300px;
-    display: inline-block;
-}
-[id="Une_.C3.A9quipe"] h4 {
-    display: none;
+#Portraits {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+
+    .wrapper {
+        width: 10000%;
+        position: relative;
+
+        figure,
+        img {
+            /*width: 1%;*/
+        }
+
+        figure {
+            float: left;
+
+            img {
+                /*width: 100%;*/
+            }
+
+            figcaption {
+                /*position: absolute;*/
+                /*bottom: 10px;*/
+            }
+        }
+    }
+
+    .jcarousel-controls {
+        background-color: yellow;
+        position: absolute;
+        top: 50%;
+        width: 100%;
+
+        .jcarousel-control-prev,
+        .jcarousel-control-next {
+            display: block;
+            position: absolute;
+            top: -15px;
+            width: 30px;
+            height: 30px;
+            text-align: center;
+            /*background-color: @color;*/
+            color: white;
+            text-decoration: none;
+            /*.border-radius(50%);*/
+        }
+
+        .jcarousel-control-prev {
+            left: 10px;
+        }
+
+        .jcarousel-control-next {
+            right: 10px;
+        }
+
+        /*.jcarousel-control-prev:hover span,*/
+        /*.jcarousel-control-next:hover span {*/
+            /*display: block;*/
+        /*}*/
+
+        .jcarousel-control-prev.inactive,
+        .jcarousel-control-next.inactive {
+            opacity: .5;
+            cursor: default;
+        }
+    }
 }
