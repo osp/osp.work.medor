@@ -106,63 +106,21 @@
 /* }}} */
 
 /* layout {{{ */
-/*html,*/
-/*body {*/
-    /*height: 100%;*/
-    /*overflow: hidden;*/
-/*}*/
-
-#main .wrapper {
-    /*margin: 0 auto;*/
-    /*max-width: 100%;*/
-    /*width: 40em;*/
-}
-
-#main-header {
-    /*.box-sizing();*/
-    /*position: fixed;*/
-    /*top: 0;*/
-    /*left: 0;*/
-    /*width: 100%;*/
-    /*height: 180px;*/
-    /*padding: 1.21em;*/
-    /*margin-bottom: 15px;*/
-    /*background:transparent;*/
-    /*z-index: 1000;*/
-}
-
 #main > section {
-    padding: 1.242em 0;
+    /*padding: 1.242em 0;*/
 }
 
-/*#main {*/
-    /*.box-sizing();*/
-    /*position: fixed;*/
-    /*bottom: 0;*/
-    /*left: 0%;*/
-    /*width: 75%;*/
-    /*height: 100%;*/
-    /*padding-top: 0px;*/
-    /*margin-right:200px;*/
-    /*overflow-y: auto;*/
-/*}*/
+.wrapper {
+    max-width: 45em;
+    margin: 0 auto;
+}
 
-/*nav {*/
-    /*.box-sizing();*/
-    /*position: fixed;*/
-    /*top : 10px;*/
-    /*left: 0;*/
-    /*width: 5%;*/
-    /*height: 35%;*/
-    /*font-family: 'alfphabetbipocatcondensed', sans;*/
-    /*padding-bottom: -150px;*/
-/*}*/
 /* }}} */
 
 /* styles {{{ */
 body {
     font-family: 'Goudy Bookletter 1911', serif;;
-    font-size: 21px;
+    font-size: 19px;
     line-height: 1.21;
 }
 
@@ -175,16 +133,16 @@ a:hover{
     text-decoration: underline;
 }
 
-/*pre {*/
-    /*display: none;*/
-/*}*/
+pre {
+    display: none;
+}
 
 #main-header {
     font-family: 'alfphabetbipocatcondensed';
 }
 
 #main > section:nth-child(odd) {
-    background-color: @color-vert-eau;
+    /*background-color: @color-vert-eau;*/
 }
 
 #main h2,
@@ -193,45 +151,12 @@ a:hover{
 }
 
 #main h2 {
-    width: 75%;
-    text-align: center;
-    margin: 0 auto;
+    max-width: 5em;
+    margin-left: 3em;
+    margin-top: 1em;
     margin-bottom: 1em;
     font-size: 2em;
     line-height: 1;
-
-    /*#content > section {*/
-        /*margin-bottom: 0;*/
-        /*padding:50px 15%;*/
-    /*}*/
-
-    /*h2 {*/
-        /*font-family: 'alfphabetbipocatcondensed';*/
-        /*text-align: left;*/
-        /*margin: 0% 0%;*/
-        /*margin-bottom: 0.2em;*/
-        /*font-size: 2.5em;*/
-        /*line-height: 93%;*/
-        /*letter-spacing: -1px;*/
-    /*}*/
-
-    /*h3 {*/
-        /*font-family: 'alfphabetbipocatcondensed';*/
-        /*text-align: center;*/
-        /*margin: 0% 0%;*/
-        /*margin-top: 0.7em;*/
-        /*font-size: 1.8em;*/
-        /*line-height: 95%;*/
-        /*letter-spacing: -0.5px;*/
-    /*}*/
-
-    /*img {*/
-        /*max-width: 800 px;*/
-        /*text-align: center !important;*/
-        /*margin-left: auto !important;*/
-        /*margin-right: auto !important;*/
-        /*margin-bottom: -12px !important;*/
-    /*}*/
 }
 
 #main h3 {
@@ -239,252 +164,6 @@ a:hover{
     font-size: 1.6em;
 }
 
-/*#cartouche {*/
-    /*position: relative; */
-    /*float: left; */
-    /*margin-left: 9.5%;*/
-    /*margin-top: -12px;*/
-    /*width: 28%;*/
-    /*text-align: left;*/
-
-    /*h1 {*/
-        /*font-size: 3.5em;*/
-        /*font-family: 'Alfphabet-IV', sans-serif;*/
-        /*line-height: 1em;*/
-    /*}*/
-
-    /*h2 {*/
-        /*width: 80%;*/
-        /*padding: 2px 8px;*/
-        /*border: 1px solid black;*/
-        /*background-color: white;*/
-    /*}*/
-/*}*/
-
-/*#compteur  {*/
-    /*margin-right: 5%;*/
-    /*position:relative; */
-    /*float:right; */
-    /*top:-2px;*/
-/*}*/
-
-/*#menu {*/
-    /*position:relative; */
-    /*float:left; */
-    /*margin-left: 0%;*/
-    /*margin-left: 9px;*/
-    /*margin-top: 7px;*/
-    /*ul, li{*/
-        /*list-style-type: none;*/
-        /*text-decoration: none;*/
-    /*}*/
-    
-    /*ul li:before {*/
-        /*content: "";*/
-    /*}*/
-
-    /*li a {*/
-        /*text-decoration: none;*/
-        /*color: black!important;*/
-        /*text-align:left;*/
-        /*text-transform: uppercase;*/
-        /*list-style-type: none;*/
-        /*font-size: 0.8em;*/
-    /*}*/
-
-    /*li a:hover {*/
-        /*color:white!important;*/
-    /*}*/
-
-    /*li{*/
-        /*border: 1pt solid black;*/
-        /*margin-bottom: 6px;*/
-        /*padding: 0px 8px 2px 8px;*/
-        /*background-color: #D9B571;*/
-    /*}*/
-/*}*/
-
-/*#main {*/
-    /*#content > section {*/
-        /*margin-bottom: 0;*/
-        /*padding:50px 15%;*/
-    /*}*/
-
-    /*img {*/
-        /*max-width: 800 px;*/
-        /*text-align: center !important;*/
-        /*margin-left: auto !important;*/
-        /*margin-right: auto !important;*/
-    /*}*/
-/*}*/
-
-/*#counter {*/
-    /*text-align: center;*/
-
-    /*&:before {*/
-        /*content: "\2191"*/
-    /*}*/
-
-    /*&:after {*/
-        /*content: "\2192";*/
-        /*[>content: "\21E4";<]*/
-        /*display: inline-block;*/
-        /*-webkit-transform: rotate(90deg); */
-        /*-moz-transform: rotate(90deg); */
-        /*-o-transform: rotate(90deg);*/
-        /*-ms-transform: rotate(90deg); */
-    /*}*/
-
-    /*hr {*/
-        /*border: none;*/
-        /*border-top: 1px solid black;*/
-    /*}*/
-/*}*/
-
-/*#compta {*/
-    /*font-size: 0.7em;*/
-
-    /*section + section {*/
-        /*margin-top: 1.21em * 1.5;*/
-    /*}*/
-
-    /*table {*/
-        /*margin: 2em 0.5em;*/
-        /*font-size: 18px;*/
-        /*line-height: 1.41em;*/
-        /*width: 75%;*/
-
-        /*tr:first-child {*/
-            /*border-top: 1px solid black;*/
-        /*}*/
-
-        /*tr:nth-child(odd) {*/
-            /*td {*/
-                /*padding-top: 0.5em;*/
-            /*}*/
-        /*}*/
-
-        /*tr:nth-child(even) {*/
-            /*border-bottom: 1px solid black;*/
-
-            /*td {*/
-                /*padding-bottom: 0.5em;*/
-            /*}*/
-        /*}*/
-
-        /*td:last-child {*/
-            /*font-family: 'alfphabetbipocatcondensed';*/
-        /*}*/
-    /*}*/
-    
-    /*h2 {*/
-        /*font-family: 'alfphabetbipocatcondensed';*/
-        /*text-align: center;*/
-        /*margin: 0 15%;*/
-        /*margin-bottom: 0.5em;*/
-        /*font-size: 1.3em;*/
-    /*}*/
-
-    /*h3 {*/
-        /*font-family: 'alfphabetbipocatcondensed';*/
-        /*text-align: center;*/
-        /*margin: 0 0%;*/
-        /*margin-top: 1.21em;*/
-        /*font-size: 1em;*/
-        /*color: @color-bleu-gris;*/
-    /*}*/
-
-    /*#Intro {*/
-        /*h2 {*/
-            /*display: none;*/
-        /*}*/
-    /*}*/
-/*}*/
-
-/*#main,*/
-/*#compta {*/
-    /*h1 {*/
-        /*font-family: 'alfphabetbipocatcondensed';*/
-        /*font-size: 18px;*/
-        /*text-align: center;*/
-        /*margin-bottom: 1.21em * 2;*/
-    /*}*/
-/*}*/
-
-/*ul {*/
-    /*li:before {*/
-        /*content: "— ";*/
-    /*}*/
-/*}*/
-
-/*ol {*/
-    /*list-style-type: decimal;*/
-    /*list-style-position: inside;*/
-
-    /*li {*/
-        /*margin-bottom: 1.21em;*/
-    /*}*/
-/*}*/
-
-/*blockquote {*/
-    /*font-style: italic;*/
-    /*font-size: 1.3em;*/
-    /*margin-left: 25%;*/
-    /*margin-top: 1.31em;*/
-    /*margin-bottom: 1.31em;*/
-/*}*/
-
-/*#Intro {*/
-    /*-moz-column-count: 2;*/
-    /*-webkit-column-count: 2;*/
-    /*column-count: 2;*/
-/*}*/
-
-/*[id="La_revue_digne_qui_fouine"]{*/
-        /*padding-top:210px!important;*/
-	/*background-color: #FFFFFF;*/
-	  /*h2{*/
-		/*display:none;*/
-		/*}*/
-	  /*img{*/
-		/*margin-top:20px;*/
-		/*}*/
-	  /*section{*/
-	  /*padding-bottom: 0px;*/
-	  /*}*/
-/*}*/
-
-/*[id="M.C3.A9dor.2C_c.27est_un_magazine_belge_d.27enqu.C3.AAtes_et_de_r.C3.A9cits"] {*/
-    /*background:url('../img/cielbleu.jpg');*/
-    /*background-color: #ECE7D8;*/
-/*}*/
-
-/*[id="M.C3.A9dor.2C_c.27est_une_ligne_.C3.A9ditoriale"]{*/
-    /*background:url('../img/cielgris.jpg');*/
-    /*background-color: #DEDEDE;*/
-/*}*/
-
-/*[id="M.C3.A9dor.2C_c.27est_le_visuel_comme_autre_pratique_et_pour_une_autre_lecture"]{*/
-    /*/*margin-top:200px;*/
-    /*background:url('../img/ailleurs.jpg');*/
-    /*background-color: #ECE7D8;*/
-/*}*/
-
-/*[id="M.C3.A9dor.2C_c.27est_une_coop.C3.A9rative"]{*/
-    /*background-color: #DEDEDE;*/
-/*}*/
-
-/*[id="M.C3.A9dor.2C_c.27est_une_exp.C3.A9rience_collaborative"]{*/
-    /*background-color: #ECE7D8;*/
-/*}*/
-/*[id="M.C3.A9dor.2C_c.27est_six_pages_de_pub_.28choisies.29"]{*/
-    /*background-color: #DEDEDE;*/
-/*}*/
-
-/*[id="M.C3.A9dor.2C_c.27est_d.C3.A9j.C3.A0_xxxx"]{*/
-    /*background-color: #ECE7D8;*/
-    /*font-size: 0.8em;*/
-/*}*/
 [id="M.C3.A9dor.2C_c.27est_d.C3.A9j.C3.A0.C2.A0"],
 [id="Une_.C3.A9quipe"] {
     & > .wrapper {
@@ -494,56 +173,73 @@ a:hover{
 
 }
 
-/*[id="Soyez_M.C3.A9dor"]{*/
-    /*background-color: #ECE7D8;*/
-          /*img{*/
-		/*margin-left:40px!important;*/
-		/*}*/
-		/*p{margin-bottom:20px!important;}*/
-/*}*/
-
-/*[id="Ils_soutiennent_M.C3.A9dor"]{*/
-    /*background-color: #DEDEDE;*/
-/*}*/
-
-/*[id="Objet"]{*/
-	  /*h2{*/
-		/*display:none;*/
-		/*}*/
-	  /*img{*/
-		/*margin-bottom:20px;*/
-		/*}*/
-	  /*section{*/
-	  /*padding-bottom: 0px;*/
-	  /*} */
-/*}*/
-/*[id="En_chiffres"]{}*/
-/*[id="En_contraste"]{}*/
-/*[id="Par_r.C3.A9f.C3.A9rences"]{}*/
-
-/*.floatright {*/
-  /*float:right;*/
-/*}*/
-
-/*.floatleft {*/
-  /*float:left;*/
-/*}*/
-/* }}} */
-
-/* vim: set foldmethod=markers: */
-
-#Abonnez-vous > .wrapper {
-    -webkit-column-count: 2;
-}
-
-[id="Pourquoi.C2.A0s.27abonner_.3F_.28liste_d.C3.A9pliante.29"] {
-    -webkit-column-break-inside: avoid;
-    .concrete;
-}
-
 ul li:before {
     content: "- ";
 }
+
+[id="Pourquoi.C2.A0s.27abonner_.3F_.28liste_d.C3.A9pliante.29"] {
+    /*width: 50%;*/
+    /*display: inline-block;*/
+    /*vertical-align: top;*/
+}
+
+[id="Illustration"] {
+    /*width: 50%;*/
+    /*display: inline-block;*/
+    /*vertical-align: top;*/
+
+    /*h3 {*/
+        /*display: none;*/
+    /*}*/
+}
+
+[id="Abonnez-vous"] {
+    background-image: url("/static/img/medor-croquis_abonnes.jpg");
+    background-size: 800px;
+    background-repeat: no-repeat;
+    background-position: right;
+    min-height: 411px;
+}
+
+[id="Abonnez-vous"] .wrapper {
+    padding-right: 35%;
+    .box-sizing;
+}
+
+[id="Devenez_coop.C3.A9rateur.C2.A0"] {
+    background-image: url("/static/img/medor-croquis_coop.jpg");
+    background-size: 800px;
+    background-repeat: no-repeat;
+    background-position: right;
+}
+
+[id="Devenez_coop.C3.A9rateur.C2.A0"] .wrapper {
+    padding-right: 35%;
+    .box-sizing;
+}
+
+[id="Faites_un_don"] {
+    background-image: url("/static/img/medor-croquis_kkbb.jpg");
+    background-size: 800px;
+    background-repeat: no-repeat;
+    background-position: right;
+}
+
+[id="Faites_un_don"] .wrapper {
+    padding-right: 35%;
+    .box-sizing;
+}
+
+details {
+    .concrete;
+}
+
+
+/* }}} */
+
+
+
+
 
 #Portraits {
     position: relative;
@@ -613,3 +309,5 @@ ul li:before {
         }
     }
 }
+
+/* vim: set foldmethod=marker: */
