@@ -79,6 +79,13 @@
     font-weight: normal;
     font-style: normal;
 }
+
+@font-face {
+    font-family: 'Grosjean';
+    src: url('../fonts/Grosjean.otf');
+    font-weight: normal;
+    font-style: normal;
+}
 /* }}} */
 
 /* mixins {{{ */
@@ -184,21 +191,29 @@ a:hover{
 }
 
 #main > section:nth-child(odd) {
-    background-color: @color-vert-eau;
+    /*background-color: @color-vert-eau;*/
 }
-
-#main h2,
+#main p.intro{
+    font-family: 'Grosjean';
+    font-size:0.9em;
+}
 #main h3 {
-    font-family: 'alfphabetbipocatcondensed';
+    font-family: 'Grosjean';
+    text-transform:uppercase;
+    font-size:1.2em;
+    margin-top: 16px;
+        text-align: center;
 }
 
 #main h2 {
     width: 75%;
     text-align: center;
     margin: 0 auto;
-    margin-bottom: 1em;
+    margin-bottom: 0.6em;
     font-size: 2em;
     line-height: 1;
+        font-family: 'alfphabetbipocatcondensed';
+        text-transform:uppercase;
 
     /*#content > section {*/
         /*margin-bottom: 0;*/
@@ -234,10 +249,7 @@ a:hover{
     /*}*/
 }
 
-#main h3 {
-    text-align: center;
-    font-size: 1.6em;
-}
+
 
 /*#cartouche {*/
     /*position: relative; */
