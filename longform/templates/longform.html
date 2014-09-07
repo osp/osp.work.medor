@@ -55,10 +55,23 @@
             {{ tree|xpath:"//*[@id='M.C3.A9dor.2C_c.27est_3800_abonn.C3.A9s_et_226452.E2.82.AC']"|serialize }}
             
             <div class="tranche-image_deja"></div>
-            {{ tree|xpath:"//*[@id='M.C3.A9dor.2C_c.27est_d.C3.A9j.C3.A0.C2.A0']"|serialize }}            
+            
+            <section id="M.C3.A9dor.2C_c.27est_d.C3.A9j.C3.A0.C2.A0">
+                <div class="wrapper">
+                    <h2>Médor, c'est déjà</h2>
+                </div>
+
+                    {{ tree|xpath:"//*[@id='Portraits']"|serialize }}
+                    
+
+                    <div class="tranche-image_partenaires"></div>
+                <div class="wrapper">
+                    {{ tree|xpath:"//*[@id='Des_partenaires']"|serialize }}
+                    
+                    {{ tree|xpath:"//*[@id='Une_coop.C3.A9rative_.C3.A0_finalit.C3.A9_sociale.']"|serialize }}
+                </div>
+            </section>            
         </section>
-        
-            <div class="tranche-image_partenaires"></div>
         {% endwith %}
         {% endwith %}
         
