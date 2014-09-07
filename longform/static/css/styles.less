@@ -9,6 +9,7 @@
 @color-bleu-gris:#376c6f;
 /* }}} */
 
+
 /* fonts {{{ */
 @font-face {
     font-family: 'texgyreschola';
@@ -88,6 +89,7 @@
 }
 /* }}} */
 
+
 /* mixins {{{ */
 .transition (@prop: all, @time: 1s, @ease: linear, @delay: 0s) {
     -webkit-transition: @prop @time @ease @delay;
@@ -105,12 +107,14 @@
 }
 /* }}} */
 
+
 /* custom mixins {{{ */
 .concrete {
     font-family: 'alfphabetbipocatcondensed';
     font-size: 0.8em;
 }
 /* }}} */
+
 
 /* layout {{{ */
 #main > section {
@@ -121,10 +125,10 @@
     max-width: 45em;
     margin: 0 auto;
 }
-
 /* }}} */
 
-/* styles {{{ */
+
+/* generic styles {{{ */
 body {
     font-family: 'Goudy Bookletter 1911', serif;;
     font-size: 19px;
@@ -144,22 +148,33 @@ pre {
     display: none;
 }
 
-#main-header {
+ul li:before {
+    content: "- ";
+}
+
+details {
+    .concrete;
+}
+/* }}} */
+
+
+/* specific styles {{{ */
+[id="main-header"] {
     /*font-family: 'alfphabetbipocatcondensed';*/
     font-family: 'Career', serif;;
     font-size: 2em;
 }
 
-#main > section:nth-child(odd) {
+[id="main"] > section:nth-child(odd) {
     /*background-color: @color-vert-eau;*/
 }
 
-#main h2,
-#main h3 {
+[id="main"] h2,
+[id="main"] h3 {
     font-family: 'alfphabetbipocatcondensed';
 }
 
-#main h2 {
+[id="main"] h2 {
     max-width: 5em;
     margin-left: 3em;
     margin-top: 1em;
@@ -168,7 +183,7 @@ pre {
     line-height: 1;
 }
 
-#main h3 {
+[id="main"] h3 {
     text-align: center;
     font-size: 1.6em;
 }
@@ -180,10 +195,6 @@ pre {
         max-width: initial !important;;
     }
 
-}
-
-ul li:before {
-    content: "- ";
 }
 
 [id="Pourquoi.C2.A0s.27abonner_.3F_.28liste_d.C3.A9pliante.29"] {
@@ -212,118 +223,52 @@ ul li:before {
     display: none; 
 }
 
-[id="Abonnez-vous"] {
-    background-image: url("/static/img/medor-croquis_abonnes.jpg");
+[id="Faites_un_don"],
+[id="Abonnez-vous"],
+[id="Devenez_coop.C3.A9rateur.C2.A0"] {
     background-size: 800px;
     background-repeat: no-repeat;
     background-position: right;
-    min-height: 411px;
 }
 
-[id="Abonnez-vous"] .wrapper {
-    padding-right: 35%;
-    .box-sizing;
+[id="Abonnez-vous"] {
+    background-image: url("/static/img/medor-croquis_abonnes.jpg");
+    min-height: 411px;
 }
 
 [id="Devenez_coop.C3.A9rateur.C2.A0"] {
     background-image: url("/static/img/medor-croquis_coop.jpg");
-    background-size: 800px;
-    background-repeat: no-repeat;
-    background-position: right;
-}
-
-[id="Devenez_coop.C3.A9rateur.C2.A0"] .wrapper {
-    padding-right: 35%;
-    .box-sizing;
 }
 
 [id="Faites_un_don"] {
     background-image: url("/static/img/medor-croquis_kkbb.jpg");
-    background-size: 800px;
-    background-repeat: no-repeat;
-    background-position: right;
 }
 
+[id="Devenez_coop.C3.A9rateur.C2.A0"] .wrapper,
+[id="Abonnez-vous"] .wrapper,
 [id="Faites_un_don"] .wrapper {
     padding-right: 35%;
     .box-sizing;
 }
-
-details {
-    .concrete;
-}
-
-
 /* }}} */
 
 
-#Portraits {
+/* Carousel {{{ */
+[id="Portraits"] {
     position: relative;
     overflow: hidden;
     width: 100%;
-
-    .wrapper {
-        width: 10000%;
-        position: relative;
-
-        figure,
-        img {
-            /*width: 1%;*/
-        }
-
-        figure {
-            float: left;
-
-            img {
-                /*width: 100%;*/
-            }
-
-            figcaption {
-                /*position: absolute;*/
-                /*bottom: 10px;*/
-            }
-        }
-    }
-
-    .jcarousel-controls {
-        background-color: yellow;
-        position: absolute;
-        top: 50%;
-        width: 100%;
-
-        .jcarousel-control-prev,
-        .jcarousel-control-next {
-            display: block;
-            position: absolute;
-            top: -15px;
-            width: 30px;
-            height: 30px;
-            text-align: center;
-            /*background-color: @color;*/
-            color: white;
-            text-decoration: none;
-            /*.border-radius(50%);*/
-        }
-
-        .jcarousel-control-prev {
-            left: 10px;
-        }
-
-        .jcarousel-control-next {
-            right: 10px;
-        }
-
-        /*.jcarousel-control-prev:hover span,*/
-        /*.jcarousel-control-next:hover span {*/
-            /*display: block;*/
-        /*}*/
-
-        .jcarousel-control-prev.inactive,
-        .jcarousel-control-next.inactive {
-            opacity: .5;
-            cursor: default;
-        }
-    }
 }
+
+[id="Portraits"] .wrapper {
+    width: 10000%;
+    position: relative;
+}
+
+[id="Portraits"] .wrapper figure {
+    float: left;
+}
+/* }}} */
+
 
 /* vim: set foldmethod=marker: */

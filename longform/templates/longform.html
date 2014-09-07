@@ -1,5 +1,5 @@
 <!doctype html>
-{% load mediawiki_tags %}
+{% load etree_tags %}
 <html>
     <head>
         <meta charset="utf-8">
@@ -14,15 +14,17 @@
     </head>
 
     <body>
+
         <!--
         {% comment %}
         Pour générer le code pour inclure les sections, tapez ça dans Firebug
 
             $('h2 span.mw-headline').each(function() {
-                console.log('{% mwinclude "Appel_à_souscription" "' + $(this).attr('id') + '" %}')
+                console.log('{{ tree|xpath:"//*[@id=\'' + $(this).attr('id') + '\'}"|serialize }}')
             });
         {% endcomment %}
         -->
+
         <header id="main-header">
             <h1>Medor</h1>
             <h2 contenteditable="true">Les yeux ouverts</h2>
@@ -41,20 +43,26 @@
         </header>
 
         <section id="main"> <!-- mCustomScrollbar -->
-            {% mwinclude "Appelàsous_-_public_release" "M.C3.A9dor.C2.A0" %}
-            {% mwinclude "Appelàsous_-_public_release" "Abonnez-vous" %}
-            {% mwinclude "Appelàsous_-_public_release" "Devenez_coop.C3.A9rateur.C2.A0" %}
-            {% mwinclude "Appelàsous_-_public_release" "Faites_un_don" %}
-            {% mwinclude "Appelàsous_-_public_release" "M.C3.A9dor.2C_c.27est_un_magazine.E2.80.A6" %}
-            {% mwinclude "Appelàsous_-_public_release" "Une_exp.C3.A9rience_collaborative" %}
+        {% with 'http://tunakutafuta.be/index.php?title=Appel%C3%A0sous_-_public_release' as url %}
+        {% with url|cache|tree|outline:"//*[@id='mw-content-text']"|cleanmw as tree %}
+            <div id="foo">
+                {{ tree|xpath:"//*[@id='M.C3.A9dor.C2.A0']/*/p"|serialize }}
+            </div>
+
+            {{ tree|xpath:"//*[@id='Abonnez-vous']"|serialize }}
+            {{ tree|xpath:"//*[@id='Devenez_coop.C3.A9rateur.C2.A0']"|serialize }}
+            {{ tree|xpath:"//*[@id='Faites_un_don']"|serialize }}
+            {{ tree|xpath:"//*[@id='M.C3.A9dor.2C_c.27est_un_magazine.E2.80.A6']"|serialize }}
+            {{ tree|xpath:"//*[@id='Une_exp.C3.A9rience_collaborative']"|serialize }}
             <img src="static/img/louis_extrait-2.jpg" style="width:70%;"/>
-            <img src="static/img/IMG_5137.JPG" style="width:100%;"/>
-            {% mwinclude "Appelàsous_-_public_release" "M.C3.A9dor.2C_c.27est_3.800_abonn.C3.A9s.2C_226.452_euros" %}
+            {{ tree|xpath:"//*[@id='M.C3.A9dor.2C_c.27est_3.800_abonn.C3.A9s.2C_226.452_euros']"|serialize }}
             <img src="static/img/eupen-carrefour.JPG" style="width:100%;"/>
-            {% mwinclude "Appelàsous_-_public_release" "M.C3.A9dor.2C_c.27est_d.C3.A9j.C3.A0.C2.A0" %}
+            {{ tree|xpath:"//*[@id='M.C3.A9dor.2C_c.27est_d.C3.A9j.C3.A0.C2.A0']"|serialize }}
             <img src="static/img/doel-colin.jpg" style="width:100%;"/>
             <img src="static/img/belge.jpg"/>
             <img src="static/img/9128795550_77b59eb547_o.jpg" style="width:100%;"/>
+        {% endwith %}
+        {% endwith %}
         </section>
 
         <script src="static/components/less/dist/less-1.7.0.min.js"></script>
@@ -64,74 +72,6 @@
         <script src="static/js/scrollTo.min.js"></script>
         <script src="static/components/jquery.hotkeys/jquery.hotkeys.js"></script>
         <script src="static/js/jquery.xdomainajax.js"></script>
-        <script>
-
-        $(function() {
-            /*
-            $("#main").mCustomScrollbar({
-                theme:"rounded-dots"
-       	    });
-            */
-
-            $('a[href^="#"]').click(function(){
-                var the_id = $(this).attr("href");
-                scrollTop = $('[id="' + the_id.substring(1) + '"]').position().top - 180;
-                console.log(scrollTop)
-                $('#main').mCustomScrollbar("scrollTo", scrollTop);
-                //$('#main').animate({
-                //    scrollTop:$('[id="' + the_id.substring(1) + '"]').offset().top,
-                //}, 1500);
-                return false;
-            });
-
-            /*
-            $.ajax({
-                url: 'http://www.kisskissbankbank.com/fr/projects/the-french-fromage/widget',
-                type: 'GET',
-                success: function(res) {
-                    var html = $(res.responseText);
-                    var data = {
-                        amount: html.find('.amount strong').text(),
-                        goal: $.trim(html.find('.goal p').contents().filter(function() { return this.nodeType == 3 })[0].textContent),
-                        collected: $.trim(html.find('.collected p').contents().filter(function() { return this.nodeType == 3 })[0].textContent),
-                        timeLeft: html.find('.time-left').text(),
-                        bankers: html.find('.bankers').text()
-                    }
-
-                    var $elt = $('<dl>');
-
-                    for (var prop in obj) {
-                        $el.append($('<dt>').text(prop));
-                        $el.append($('<dd>').text(obj[prop]));
-                    }
-
-                    console.log($elt);
-
-                    $('header').append($elt);
-                }
-            });
-            */
-            $('#Portraits').find('h4').remove();
-            $('#Portraits').find('p').remove();
-
-            $('#Portraits')
-            .jcarousel({wrap: 'circular'})
-            .jcarouselAutoscroll({
-                interval: 3000,
-                target: '+=1',
-                autostart: true
-            });
-
-            /*
-            $('.jcarousel-control-prev').jcarouselControl({
-                target: '-=1',
-            });
-
-            $('.jcarousel-control-next').jcarouselControl({
-                target: '+=1',
-            });
-            */
-        });
-        </script>
+        <script src="static/js/longform.js"></script>
     </body>
 </html>
