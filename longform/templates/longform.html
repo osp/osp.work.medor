@@ -14,7 +14,7 @@
     </head>
 
     <body>
-
+    
         <!--
         {% comment %}
         Pour générer le code pour inclure les sections, tapez ça dans Firebug
@@ -24,47 +24,44 @@
             });
         {% endcomment %}
         -->
-
-        <header id="main-header">
-            <h1>Medor</h1>
-            <h2 contenteditable="true">Les yeux ouverts</h2>
-
-            <!--<nav id="menu">-->
-                <!--<ul>-->
-                    <!--<li><a href="#La_revue_digne_qui_fouine">Quoi</a></li>-->
-                    <!--<li><a href="#M.C3.A9dor.2C_c.27est_qui_.3F">Qui</a></li>-->
-                    <!--<li><a href="#Soyez_M.C3.A9dor">Comment</a></li>-->
-                <!--</ul>-->
-            <!--</nav>-->
-
-            <!--<div id="compteur">-->
-                <!--<img src="static/img/compteur-kiss.png"/>-->
-            <!--</div>-->
-        </header>
-
-        <section id="main"> <!-- mCustomScrollbar -->
+        
         {% with 'http://tunakutafuta.be/index.php?title=Appel%C3%A0sous_-_public_release' as url %}
         {% with url|cache|tree|outline:"//*[@id='mw-content-text']"|cleanmw as tree %}
-            <div id="foo">
-                {{ tree|xpath:"//*[@id='M.C3.A9dor.C2.A0']/*/p"|serialize }}
-            </div>
+        
+        <header id="main-header">
+            <img alt="Medor-mag.png" src="/images/6/63/Medor-mag.png" width="189" height="325" />
+        </header>
 
-            {{ tree|xpath:"//*[@id='Abonnez-vous']"|serialize }}
+        <section id="main">
+            {{ tree|xpath:"//*[@id='M.C3.A9dor.C2.A0']"|serialize }}
+	       {{ tree|xpath:"//*[@id='Abonnez-vous']"|serialize }}
             {{ tree|xpath:"//*[@id='Devenez_coop.C3.A9rateur.C2.A0']"|serialize }}
             {{ tree|xpath:"//*[@id='Faites_un_don']"|serialize }}
-            {{ tree|xpath:"//*[@id='M.C3.A9dor.2C_c.27est_un_magazine.E2.80.A6']"|serialize }}
-            {{ tree|xpath:"//*[@id='Une_exp.C3.A9rience_collaborative']"|serialize }}
-            <img src="static/img/louis_extrait-2.jpg" style="width:70%;"/>
-            {{ tree|xpath:"//*[@id='M.C3.A9dor.2C_c.27est_3.800_abonn.C3.A9s.2C_226.452_euros']"|serialize }}
-            <img src="static/img/eupen-carrefour.JPG" style="width:100%;"/>
-            {{ tree|xpath:"//*[@id='M.C3.A9dor.2C_c.27est_d.C3.A9j.C3.A0.C2.A0']"|serialize }}
-            <img src="static/img/doel-colin.jpg" style="width:100%;"/>
-            <img src="static/img/belge.jpg"/>
-            <img src="static/img/9128795550_77b59eb547_o.jpg" style="width:100%;"/>
-        {% endwith %}
-        {% endwith %}
-        </section>
 
+            <section id="M.C3.A9dor.2C_c.27est_un_magazine.E2.80.A6">
+                <div class="wrapper">
+                    <h2> Médor, c'est un magazine… </h2>
+	                <div class="jcarousel">
+			          <div class="inner">
+                             {{ tree|xpath:"//*[@id='M.C3.A9dor.2C_c.27est_un_magazine.E2.80.A6']/*/section"|serialize }}
+		              </div>
+		          </div>
+                </div>
+            </section>
+		
+            <div class="tranche-image_experience-collaborative"></div>
+
+            {{ tree|xpath:"//*[@id='Une_exp.C3.A9rience_collaborative']"|serialize }}
+            {{ tree|xpath:"//*[@id='M.C3.A9dor.2C_c.27est_3800_abonn.C3.A9s_et_226452.E2.82.AC']"|serialize }}
+            
+            <div class="tranche-image_deja"></div>
+            {{ tree|xpath:"//*[@id='M.C3.A9dor.2C_c.27est_d.C3.A9j.C3.A0.C2.A0']"|serialize }}            
+        </section>
+        
+            <div class="tranche-image_partenaires"></div>
+        {% endwith %}
+        {% endwith %}
+        
         <script src="static/components/less/dist/less-1.7.0.min.js"></script>
         <script src="static/components/jquery/jquery.min.js"></script>
         <script src="static/components/jcarousel/dist/jquery.jcarousel.min.js"></script>
@@ -75,3 +72,4 @@
         <script src="static/js/longform.js"></script>
     </body>
 </html>
+

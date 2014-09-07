@@ -1,3 +1,5 @@
+/* test */
+
 /* less variables {{{ */
 @color-marron: #AA4400;
 @color-jaune: #FFFF00;
@@ -155,6 +157,14 @@ ul li:before {
 details {
     .concrete;
 }
+
+hr {
+    height: 400px;    
+}
+
+hr:nth-child(1) {
+    background-image: url("/static/img/medor-croquis_abonnes.jpg");
+}
 /* }}} */
 
 
@@ -188,6 +198,7 @@ details {
     font-size: 1.6em;
 }
 
+[id="M.C3.A9dor.2C_c.27est_un_magazine.E2.80.A6"],
 [id="M.C3.A9dor.2C_c.27est_d.C3.A9j.C3.A0.C2.A0"],
 [id="Une_.C3.A9quipe"] {
     & > .wrapper {
@@ -195,28 +206,6 @@ details {
         max-width: initial !important;;
     }
 
-}
-
-[id="Pourquoi.C2.A0s.27abonner_.3F_.28liste_d.C3.A9pliante.29"] {
-    /*width: 50%;*/
-    /*display: inline-block;*/
-    /*vertical-align: top;*/
-}
-
-[id="Illustration"] {
-    /*width: 50%;*/
-    /*display: inline-block;*/
-    /*vertical-align: top;*/
-
-    /*h3 {*/
-        /*display: none;*/
-    /*}*/
-}
-
-[id="M.C3.A9dor.C2.A0"] .wrapper {
-    .box-sizing;
-    width: 100%;
-    padding-left: 50%; 
 }
 
 [id="M.C3.A9dor.C2.A0"] h2 {
@@ -250,6 +239,34 @@ details {
     padding-right: 35%;
     .box-sizing;
 }
+
+
+.tranche-image_experience-collaborative {
+    height:300px;
+    background-image: url("/static/img/P8221662.JPG"); 
+   background-size:cover;
+   background-position:0 50%;
+}
+
+.tranche-image_deja {
+    height:300px;
+    background-image: url("/static/img/IMG_7375.JPG"); 
+   background-size:cover;
+   background-position:0 25%;
+}
+
+.tranche-image_partenaires {
+    height:300px;
+    background-image: url("/static/img/IMG_7245.JPG"); 
+   background-size:cover;
+   background-position:0 25%;
+}
+
+
+/*
+[id="M.C3.A9dor.2C_c.27est_3800_abonn.C3.A9s_et_226452.E2.82.AC"] {
+    background-image: url("/static/img/repartition-prix-magazine-cover-ventile.png");
+} 
 /* }}} */
 
 
@@ -261,14 +278,62 @@ details {
 }
 
 [id="Portraits"] .wrapper {
+    max-width: initial;
     width: 10000%;
     position: relative;
 }
 
-[id="Portraits"] .wrapper figure {
+[id="Portraits"] figure {
     float: left;
+    width: 260px;
+    padding: 1em;
+    .concrete;
+}
+
+[id="Portraits"] img {
+	display: block;
+	margin: 0 auto;
+}
+
+[id="Portraits"] figcaption {
+	display: none;
+    height: 225px;
+}
+
+[id="Portraits"] figure:hover figcaption {
+	display: block;
+}
+
+[id="Portraits"] figure:hover img {
+	display: none;
+}
+
+.jcarousel {
+	width: 100%;
+	overflow: hidden;
+	}
+
+.jcarousel .inner {
+    max-width: initial;
+    width: 10000%;
+    position: relative;
+}
+
+.jcarousel section {
+    margin: 1em;
+    float: left;
+    width: 200px;
+    padding: 1em;
+    .concrete;
+    height: 300px;
+    background-color: @color-marron;
+    color: @color-jaune;
+}
+
+.jcarousel h3 {
+    margin-bottom: 1.21em;
 }
 /* }}} */
 
-
 /* vim: set foldmethod=marker: */
+
