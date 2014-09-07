@@ -29,7 +29,7 @@
         {% with url|cache|tree|outline:"//*[@id='mw-content-text']"|cleanmw as tree %}
         
         <header id="main-header">
-            <img alt="Medor-mag.png" src="/images/6/63/Medor-mag.png" width="189" height="325" />
+            <img alt="Medor-mag.png" src="static/img/Medor-mag.png" width="189" height="325" />
         </header>
 
         <section id="main">
@@ -61,10 +61,10 @@
                     <h2>Médor, c'est déjà</h2>
                 </div>
 
-                    {{ tree|xpath:"//*[@id='Portraits']"|serialize }}
-                    
+                {{ tree|xpath:"//*[@id='Portraits']"|serialize }}                    
 
-                    <div class="tranche-image_partenaires"></div>
+                <div class="tranche-image_partenaires"></div>
+                    
                 <div class="wrapper">
                     {{ tree|xpath:"//*[@id='Des_partenaires']"|serialize }}
                     

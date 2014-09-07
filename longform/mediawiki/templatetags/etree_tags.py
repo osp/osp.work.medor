@@ -104,7 +104,8 @@ def cleanmw(tree):
         elt.append(wrapper)
 
     for elt in tree.xpath('//img'):
-        elt.attrib['src'] = 'http://tunakutafuta.be/' + elt.attrib['src']
+        if not elt.attrib['src'].startswith('http'):
+            elt.attrib['src'] = 'http://tunakutafuta.be/' + elt.attrib['src']
 
     return tree
 
