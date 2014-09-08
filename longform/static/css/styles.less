@@ -89,6 +89,17 @@
     font-weight: normal;
     font-style: normal;
 }
+
+@font-face {
+    font-family: 'urw-grotesk-t';
+    src: url('urwgroteskt-bold-webfont.eot');
+    src: url('urwgroteskt-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('urwgroteskt-bold-webfont.woff') format('woff'),
+         url('urwgroteskt-bold-webfont.ttf') format('truetype'),
+         url('urwgroteskt-bold-webfont.svg#urw_grotesk_tbold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
 /* }}} */
 
 
@@ -107,6 +118,15 @@
         -ms-box-sizing: @type;
             box-sizing: @type;
 }
+
+.user-select (@val) {
+    -webkit-touch-callout: @val;
+      -webkit-user-select: @val;
+       -khtml-user-select: @val;
+         -moz-user-select: @val;
+          -ms-user-select: @val;
+              user-select: @val;
+}
 /* }}} */
 
 
@@ -119,47 +139,60 @@
 
 
 /* Carousel {{{ */
+.jcarousel-outer {
+    position: relative;
+    border-top: 10px double black;
+    border-bottom: 10px double black;
+    height: 225px;
+}
+
 .jcarousel {
     position: relative;
     overflow: hidden;
-    margin: 0 -10%;
+    margin: 0 50px;
 }
 
-.jcarousel-wrapper {
+.jcarousel-inner {
     width: 10000%;
     position: relative;
 }
 
 .jcarousel-item {
     float: left;
+    outline: 3px solid black;
 }
 
 .jcarousel-controls {
-    background-color: yellow;
     position: absolute;
-    top: 50%;
+    top: 0%;
     width: 100%;
+    height: 100%;
+    .user-select(none);
 }
 
 .jcarousel-control-prev,
 .jcarousel-control-next {
     display: block;
     position: absolute;
-    top: -15px;
-    width: 30px;
-    height: 30px;
+    top: 0px;
+    width: 50px;
+    height: 100%;
     text-align: center;
-    background-color: black;
+    background-color: yellow;
     color: white;
     text-decoration: none;
 }
 
 .jcarousel-control-prev {
-    left: 10%;
+    left: 0px;
+    background-size: cover;
+    background-image: url("/static/img/arrow-left.svg");
 }
 
 .jcarousel-control-next {
-    right: 10%;
+    right: 0px;
+    background-size: cover;
+    background-image: url("/static/img/arrow.svg");
 }
 
 .jcarousel-control-prev.inactive,
@@ -227,15 +260,15 @@ td {
     font-size: 2em;
 }
 
-/*#main-header img {*/
-    /*width: 250px;*/
-    /*float: left;*/
-/*}*/
+#main-header img {
+    width: 380px;
+    float: left;
+}
 
-/*#main-header p {*/
-    /*height: 250px;*/
-    /*line-height: 250px;*/
-/*}*/
+#main-header p {
+    height: 250px;
+    line-height: 250px;
+}
 
 #main-header span { 
     vertical-align: middle;
@@ -249,16 +282,25 @@ main h3 {
 }
 
 main h2 {
-    margin-left: 3em;
     margin-top: 1em;
     margin-bottom: 1em;
-    font-size: 2em;
+    font-size: 4em;
     line-height: 1;
+    /*text-shadow:   1px 0px #eee, 0px 1px #ccc,*/
+               /*2px 1px #eee, 1px 2px #ccc,*/
+               /*3px 2px #eee, 2px 3px #ccc,*/
+               /*4px 3px #eee, 3px 4px #ccc,*/
+               /*5px 4px #eee, 4px 5px #ccc,*/
+               /*6px 5px #eee, 5px 6px #ccc,*/
+               /*7px 6px #eee, 6px 7px #ccc,*/
+               /*8px 7px #eee, 7px 8px #ccc,*/
+               /*8px 8px #eee;*/
 }
 
 main h3 {
     text-align: center;
     font-size: 1.6em;
+    margin: 1.21em;
 }
 
 #intro {
@@ -277,14 +319,17 @@ main h3 {
 #subscribing {
     background-image: url("/static/img/medor_schema-abonnements.jpg");
     min-height: 411px;
+    background-color: @color-jaune;
 }
 
 #cooperating {
     background-image: url("/static/img/medor_schema-coop.jpg");
+    background-color: @color-anthracite;
 }
 
 #donating {
     background-image: url("/static/img/medor_schema-kkbb.jpg");
+    background-color: @color-bleu-layette;
 }
 
 #cooperating .wrapper,
@@ -295,9 +340,17 @@ main h3 {
 }
 
 .tranche {
-    display: none;
     height: 300px;
     background-size: cover;
+    line-height: 300px;
+    text-align: center;
+    color: white;
+}
+
+#span { 
+    vertical-align: middle;
+    display: inline-block;
+    line-height: 0.925em;
 }
 
 .tranche-collaborative {
@@ -316,21 +369,23 @@ main h3 {
 }
 
 #dna .jcarousel-item {
-    .concrete();
+    font-family: 'urw-grotesk-t';
+    font-size: 13px;
+    font-weight: bold;
     .box-sizing();
     width: 0.20%;
     height: 225px;
     position: relative;
     color: white;
 
-    padding: 20px;
-    margin: 0 10px;
+    padding: 16px;
 
     background-image: url('../img/textures/banane-verte.png');
 }
 
 #dna h3 {
-    margin-bottom: 1em;
+    font-family: 'urw-grotesk-t';
+    margin: 0.5em 0;
 }
 
 #portraits .jcarousel-item {
