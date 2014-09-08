@@ -43,21 +43,17 @@ $(function() {
         }
     });
     */
-    $('#Portraits')
-    .jcarousel({wrap: 'circular'});
-    //.jcarouselAutoscroll({
-        //interval: 3000,
-        //target: '+=1',
-        //autostart: true
-    //});
+    $('.jcarousel').jcarousel({
+        wrap: 'circular'
+    });
 
-    /*
-    $('.jcarousel-control-prev').jcarouselControl({
+    $('.jcarousel-control-prev')
+    .jcarouselControl({
         target: '-=1',
     });
 
-    $('.jcarousel-control-next').jcarouselControl({
+    $('.jcarousel-control-next')
+    .jcarouselControl({
         target: '+=1',
     });
-    */
 });
