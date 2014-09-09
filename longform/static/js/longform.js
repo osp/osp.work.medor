@@ -57,14 +57,15 @@ $(function() {
         target: '+=1',
     });
 
-    $('#magazine').waypoint(function(direction) {
-        console.log('Direction example triggered scrolling ' + direction);
+    var $elts = $('#main-header, #collaborative-experience, #magazine, #accounting');
 
+    $elts.waypoint(function(direction) {
         if (direction === 'down') {
-            $('#cover').addClass('hide')
-            
+            $(this).addClass('active');
+            $(this).waypoint('prev').removeClass('active');
         } else {
-            $('#cover').removeClass('hide')
+            $(this).removeClass('active');
+            $(this).waypoint('prev').addClass('active');
         }
     });
 });

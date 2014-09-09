@@ -15,7 +15,9 @@
 
 <body>
     <header id="main-header">
-        <img id="cover" src="static/img/medor-objet-contenu.png" />
+        <figure id="cover-content" class="cover">
+            <img src="static/img/medor-objet-contenu.png" />
+        </figure>
         <p><span>Le trimestriel<br />cooperatif<br />belge<br /> d'enquetes<br />et de recit.</span></p>
     </header>
 
@@ -32,7 +34,7 @@
         </div>
 
         <div id="subscribing">
-            <div class="wrap">
+            <div class="text-fund">
                 <h2>Abonnez-vous</h2>
                 <p>Pour 60€ vous êtes abonné à Médor pendant un an et recevez quatre numéros. Si 3799 autres personnes posent ce même engagement, Médor sortira. Bravo : vous venez de créer un magazine et vous recevrez votre premier numéro en septembre 2015.</p>
                 <details>
@@ -44,10 +46,14 @@
                     </ul>
                 </details>
             </div>
+            <div class="image-fund">
+                <img src="static/img/medor_schema-abonnements.png" />
+            </div>
+            <div class="arrow"></div>
         </div>
 
         <div id="cooperating">
-            <div class="wrap">
+            <div class="text-fund">
                 <h2>Devenez coopérateur</h2>
                 <p>Prenez une ou plusieurs parts de 20 euros dans la coopérative de Médor. Vous devenez propriétaire d'un titre de presse, participez aux Assemblées Générales et êtes garant de la philosophie de Médor. Remplissez le <a href="/index.php?title=Accueil" title="Accueil">formulaire</a>. Une fois votre demande validée, vous devrez vous acquitter du montant engagé dans Médor. Mais avant, consultez nos <a href="/index.php?title=Accueil" title="Accueil">statuts</a>, notre <a href="/index.php?title=Accueil" title="Accueil">plan financier</a> et nos <a href="/index.php?title=Accueil" title="Accueil">FAQ</a>.</p>
                 <details>
@@ -60,10 +66,14 @@
                     </ul>
                 </details>
             </div>
+            <div class="image-fund">
+                <img src="static/img/medor_schema-coop.png" />
+            </div>
+            <div class="arrow"></div>
         </div>
 
         <div id="donating">
-            <div class="wrap">
+            <div class="text-fund">
                 <h2>Faites un don</h2>
                 <p>Un financement participatif est en route. Jusqu'au 3 décembre, vous pouvez effectuer un don, qui nous permettra de créer la maquette du premier Médor et son site web, le tout entièrement réalisé en logiciel libre. En plus, on vous prépare des contreparties swag - trop cool - top-délire - méga groove - fun - gaies - stylées - chouettes - délicieuses -fort à propos - bien dans le ton… (texte déroulant)</p>
                 <details>
@@ -74,9 +84,17 @@
                     </ul>
                 </details>
             </div>
+            <div class="image-fund">
+                <img src="static/img/medor_schema-kkbb.png" />
+            </div>
+            <div class="arrow"></div>
         </div>
 
         <div id="magazine">
+            <figure id="cover-detail" class="cover">
+                <img src="static/img/medor-objet-budget-detail.png" />
+            </figure>
+
             <div class="wrap">
                 <h2>Médor, c'est un magazine…</h2>
             </div>
@@ -130,6 +148,10 @@
         <div id="collaborative-experience">
             <h2 class="tranche tranche-collaborative"><span>Une expérience collaborative</span></h2>
 
+            <figure id="cover-coop" class="cover">
+                <img src="static/img/medor-objet-coop.png" />
+            </figure>
+
             <div class="wrap">
                 <h3>Pourquoi une coopérative?</h3>
                 <p>Alors qu'elle rencontre une crise pas piquée des vers, la presse peine à se réinventer et à esquisser sa survie. Nous ne souhaitons pas créer un média organisé de façon pyramidale, ni assimiler le lecteur à un simple consommateur. Nous créons une structure collaborative où chaque citoyen, de l'abonné au journaliste, peut jouer un rôle.</p>
@@ -163,13 +185,11 @@
         <div id="accounting">
             <h2 class="tranche tranche-partenaires"><span>Médor, c'est 3800 abonnés et 226452 €<span></h2>
 
-            <div class="wrap">
-                <p>
-                    <a href="/index.php?title=Fichier:Repartition-prix-magazine-cover-ventile.png" class="image">
-                        <img width="500" alt="Repartition-prix-magazine-cover-ventile.png" height="283" srcset="/images/thumb/6/6c/Repartition-prix-magazine-cover-ventile.png/750px-Repartition-prix-magazine-cover-ventile.png 1.5x, /images/thumb/6/6c/Repartition-prix-magazine-cover-ventile.png/1000px-Repartition-prix-magazine-cover-ventile.png 2x" src="http://tunakutafuta.be//images/thumb/6/6c/Repartition-prix-magazine-cover-ventile.png/500px-Repartition-prix-magazine-cover-ventile.png" />
-                    </a>
-                </p>
+            <figure id="cover-budget" class="cover">
+                <img src="static/img/medor-objet-budget.png" />
+            </figure>
 
+            <div class="wrap" style="position: relative">
                 <div id="3800_abonn.C3.A9s">
                     <h3>3800 abonnés</h3>
                     <p>226452€, c'est notre coût vérité à l'année. Celui qui nous permet un équilibre (nous ne cherchons pas de bénéfices) tout en valorisant le travail des producteurs de sens à sa juste valeur et de ne pas sacrifier à l'urgence et aux payements au lance-pierre. Ces 226452€ couvrent les frais pour quatre numéros par an.</p>
@@ -208,6 +228,8 @@
                     </details>
                 </div>
 
+                <img id="maquette" alt="maquette" src="static/img/maquette-nuage.png" />
+
                 <div class="cols2">
                     <div id="Le_co.C3.BBt_d.27une_enqu.C3.AAte">
                         <h3>Le coût d'une enquête</h3>
@@ -224,11 +246,6 @@
 
                     <div id="Les_frais_de_lancement">
                         <h3>Les frais de lancement</h3>
-                        <!--<p>-->
-                            <!--<img alt="maquette" src="static/img/maquette-nuage.png" />-->
-                            <!--<img width="200" alt="Medor-maquette preview1.png" height="141" srcset="/images/thumb/6/62/Medor-maquette_preview1.png/300px-Medor-maquette_preview1.png 1.5x, /images/thumb/6/62/Medor-maquette_preview1.png/400px-Medor-maquette_preview1.png 2x" src="http://tunakutafuta.be//images/thumb/6/62/Medor-maquette_preview1.png/200px-Medor-maquette_preview1.png" />-->
-                            <!--<img width="200" alt="Medor-maquette preview2.png" height="138" srcset="/images/thumb/6/67/Medor-maquette_preview2.png/300px-Medor-maquette_preview2.png 1.5x, /images/thumb/6/67/Medor-maquette_preview2.png/400px-Medor-maquette_preview2.png 2x" src="http://tunakutafuta.be//images/thumb/6/67/Medor-maquette_preview2.png/200px-Medor-maquette_preview2.png" />-->
-                        <!--</p>-->
                         <p>Médor a un besoin d'un squelette, arc-bouté sur ses éléments récurrents. En langage comptable, on appelle cela un plan de financement (hors TVA) pour démarrage. Le nôtre est modeste, mais essentiel. Notre assise de base se créera avec 24206€. Pour les avoir, outre le <a href="/index.php?title=Crowdfunding&amp;action=edit&amp;redlink=1" class="new" title="Crowdfunding (page inexistante)">crowdfunding</a>, nous cherchons des coopérateurs prêts à rejoindre <a href="/index.php?title=Les_17_fondateurs&amp;action=edit&amp;redlink=1" class="new" title="Les 17 fondateurs (page inexistante)">les 17 fondateurs</a> et à devenir <a href="/index.php?title=Les_patrons_de_presse_du_futur&amp;action=edit&amp;redlink=1" class="new" title="Les patrons de presse du futur (page inexistante)">les patrons de presse du futur</a>.</p>
 
                         <details>
@@ -283,7 +300,6 @@
 
         <div id="status">
             <h2 class="tranche tranche-deja"><span>Médor, c'est déjà</span></h2>
-
             <div class="wrap">
                 <h3>Une équipe</h3>
 
