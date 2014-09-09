@@ -1,0 +1,14 @@
+{
+  "name": "CareerFont",
+  "homepage": "https://github.com/Antoine-Gelgon/CareerFont",
+  "_release": "0b5b502ea9",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "0b5b502ea99dcaa33691d0d0b911f64c4a2f4d19"
+  },
+  "_source": "https://github.com/Antoine-Gelgon/CareerFont.git",
+  "_target": "*",
+  "_originalSource": "https://github.com/Antoine-Gelgon/CareerFont.git",
+  "_direct": true
+}
