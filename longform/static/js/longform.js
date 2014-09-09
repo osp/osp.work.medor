@@ -44,7 +44,7 @@ $(function() {
     });
     */
     $('.jcarousel').jcarousel({
-        wrap: 'circular'
+        //wrap: 'circular'
     });
 
     $('.jcarousel-control-prev')
@@ -55,5 +55,16 @@ $(function() {
     $('.jcarousel-control-next')
     .jcarouselControl({
         target: '+=1',
+    });
+
+    $('#magazine').waypoint(function(direction) {
+        console.log('Direction example triggered scrolling ' + direction);
+
+        if (direction === 'down') {
+            $('#cover').addClass('hide')
+            
+        } else {
+            $('#cover').removeClass('hide')
+        }
     });
 });

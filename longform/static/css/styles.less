@@ -92,11 +92,11 @@
 
 @font-face {
     font-family: 'urw-grotesk-t';
-    src: url('urwgroteskt-bold-webfont.eot');
-    src: url('urwgroteskt-bold-webfont.eot?#iefix') format('embedded-opentype'),
-         url('urwgroteskt-bold-webfont.woff') format('woff'),
-         url('urwgroteskt-bold-webfont.ttf') format('truetype'),
-         url('urwgroteskt-bold-webfont.svg#urw_grotesk_tbold') format('svg');
+    src: url('../fonts/urwgroteskt-bold-webfont.eot');
+    src: url('../fonts/urwgroteskt-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/urwgroteskt-bold-webfont.woff') format('woff'),
+         url('../fonts/urwgroteskt-bold-webfont.ttf') format('truetype'),
+         url('../fonts/urwgroteskt-bold-webfont.svg#urw_grotesk_tbold') format('svg');
     font-weight: bold;
     font-style: normal;
 }
@@ -127,6 +127,24 @@
           -ms-user-select: @val;
               user-select: @val;
 }
+
+.column-count(@column-count: 2){
+    -webkit-column-count: @column-count;
+       -moz-column-count: @column-count;
+            column-count: @column-count;
+}
+
+.column-gap(@column-gap: 30px){
+    -webkit-column-gap: @column-gap;
+       -moz-column-gap: @column-gap;
+            column-gap: @column-gap;
+}
+
+.column-rule(@column-rule: 1px solid black){
+    -webkit-column-rule: @column-rule;
+       -moz-column-rule: @column-rule;
+            column-rule: @column-rule;
+}
 /* }}} */
 
 
@@ -134,6 +152,16 @@
 .concrete {
     font-family: 'alfphabetbipocatcondensed';
     font-size: 0.8em;
+}
+
+.cols2 {
+    .column-count(2);
+    .column-rule(3px double black);
+    .column-gap(50px);
+}
+
+.cols2 div {
+    display: inline-block;
 }
 /* }}} */
 
@@ -255,6 +283,17 @@ td {
 
 
 /* specific styles {{{ */
+#cover {
+    position: fixed;
+    .transition(left, 500ms, ease-out, 0s);
+    left: 0px;
+    top: 0px;
+}
+
+#cover.hide {
+    left: -500px;
+}
+
 #main-header {
     font-family: 'Career', serif;;
     font-size: 2em;
