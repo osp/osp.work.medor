@@ -44,7 +44,7 @@ $(function() {
     });
     */
     $('.jcarousel').jcarousel({
-        wrap: 'circular'
+        //wrap: 'circular'
     });
 
     $('.jcarousel-control-prev')
@@ -55,5 +55,17 @@ $(function() {
     $('.jcarousel-control-next')
     .jcarouselControl({
         target: '+=1',
+    });
+
+    var $elts = $('#main-header, #collaborative-experience, #magazine, #accounting');
+
+    $elts.waypoint(function(direction) {
+        if (direction === 'down') {
+            $(this).addClass('active');
+            $(this).waypoint('prev').removeClass('active');
+        } else {
+            $(this).removeClass('active');
+            $(this).waypoint('prev').addClass('active');
+        }
     });
 });
