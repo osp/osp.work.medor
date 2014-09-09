@@ -163,6 +163,18 @@
 .cols2 div {
     display: inline-block;
 }
+
+.button {
+    color: black;
+    margin: 0.5em;
+    display: inline-block;
+    border: 3px solid black;
+    font-family: 'urw-grotesk-t';
+    text-transform: uppercase;
+    letter-spacing: 0.25em;
+    padding: 0.5em;
+    font-size: 13px;
+}
 /* }}} */
 
 
@@ -171,7 +183,6 @@
     position: relative;
     border-top: 10px double black;
     border-bottom: 10px double black;
-    height: 225px;
     background-color: white;
 }
 
@@ -179,6 +190,7 @@
     position: relative;
     overflow: hidden;
     margin: 0 50px;
+    z-index: 2;
 }
 
 .jcarousel-inner {
@@ -188,7 +200,6 @@
 
 .jcarousel-item {
     float: left;
-    outline: 3px solid black;
 }
 
 .jcarousel-controls {
@@ -207,20 +218,22 @@
     width: 50px;
     height: 100%;
     text-align: center;
-    background-color: yellow;
     color: white;
     text-decoration: none;
+
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url("/static/img/arrow-left.svg");
 }
 
 .jcarousel-control-prev {
     left: 0px;
-    background-size: cover;
     background-image: url("/static/img/arrow-left.svg");
 }
 
 .jcarousel-control-next {
     right: 0px;
-    background-size: cover;
     background-image: url("/static/img/arrow.svg");
 }
 
@@ -238,8 +251,9 @@ body {
 }
 
 .wrap {
-    width: 45rem;
-    margin: 0 auto;
+    max-width: 35rem;
+    margin-left: 380px;
+    margin-right: 10px;
 }
 
 .jcarousel-outer,
@@ -311,7 +325,11 @@ body {
 body {
     font-family: 'Goudy Bookletter 1911', serif;;
     font-size: 19px;
-    line-height: 1.21;
+    line-height: 1.31;
+}
+
+p + p {
+    margin-top: 1.31em;
 }
 
 em {
@@ -333,6 +351,7 @@ ul li:before {
 
 details {
     .concrete;
+    text-align: right;
 }
 
 table {
@@ -413,7 +432,7 @@ main h3 {
     color: white;
 }
 
-#span { 
+.tranche span { 
     vertical-align: middle;
     display: inline-block;
     line-height: 0.925em;
@@ -436,22 +455,24 @@ main h3 {
 
 #dna .jcarousel-item {
     font-family: 'urw-grotesk-t';
-    font-size: 13px;
+    font-size: 16px;
+    line-height: 1.21em;
     font-weight: bold;
     .box-sizing();
     width: 0.25%;
-    height: 225px;
     position: relative;
-    color: white;
-
     padding: 16px;
+    counter-increment: foo;
+    /*counter-reset: section;*/
+}
 
-    background-image: url('../img/textures/banane-verte.png');
+#dna .jcarousel-item:before {
+    content: counter(foo) ". ";
 }
 
 #dna h3 {
-    font-family: 'urw-grotesk-t';
     margin: 0.5em 0;
+    font-family: inherit;
 }
 
 #Les_frais_de_lancement {
@@ -467,12 +488,22 @@ main h3 {
     z-index: -1;
 }
 
+#maquette figcaption {
+    margin-left: 33%;
+    margin-top: 1em;
+    .concrete;
+    color: grey;
+}
+
 #portraits .jcarousel-item {
-    .concrete();
+    font-family: 'urw-grotesk-t';
+    font-size: 16px;
+    line-height: 1.21em;
+    font-weight: bold;
     .box-sizing();
     width: 0.20%;
-    height: 225px;
     position: relative;
+    margin-bottom: -225px;
 }
 
 #portraits .jcarousel-item img {
@@ -481,17 +512,17 @@ main h3 {
 }
 
 #portraits .jcarousel-item figcaption {
-    display: none;
-    position: absolute;
-    bottom: 0;
+    position: relative;
+    top: -225px;
+    visibility: hidden;
 }
 
 #portraits .jcarousel-item:hover img {
-    display: none;
+    visibility: hidden;
 }
 
 #portraits .jcarousel-item:hover figcaption {
-    display: block;
+    visibility: visible;
 }
 
 /* }}} */
