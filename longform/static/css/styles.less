@@ -181,12 +181,31 @@
     display: inline-block;
 }
 
+/*
+.column {
+        float: left;
+    height: 80%;
+}
+.column + .column {
+        padding-left: 1em;
+}
+.column20 {
+    width: 20%;
+}
+.column33 {
+    width: 33%;
+}
+.column66 {
+    width: 66%;
+}
+*/
+
 .button {
     color: black;
     margin: 0.5em;
     display: block;
-	width:150px;
-	height: 30px;
+        width:150px;
+        height: 30px;
     border: 3px solid black;
     font-family: 'urw-grotesk-t';
     text-transform: uppercase;
@@ -200,15 +219,17 @@
 /* Carousel {{{ */
 .jcarousel-outer {
     position: relative;
-    border-bottom: 10px double black;
+    /* border-bottom: 10px double black; */
     background-color: white;
     margin-left:380px;
 }
 
+
+
 .jcarousel {
     position: relative;
     overflow: hidden;
-    margin: 0 100px;
+    margin: 0px;
     z-index: 2;
 }
 
@@ -258,8 +279,6 @@
 .jcarousel-control-next {
     right: 0px;
     background-image: url("../img/arrow3.svg");
-
-
 }
 
 .jcarousel-control-prev.inactive,
@@ -282,8 +301,8 @@ body {
 }
 
 #subscribing {
-	margin-left: 150px;
-	margin-right: 50px;
+        margin-left: 150px;
+        margin-right: 50px;
 }
 
 .left-arrow {
@@ -301,15 +320,15 @@ body {
 }
 
 .text {
-	margin-right: 70%;
-	margin-left: 50px;  
+        margin-right: 70%;
+        margin-left: 50px;  
 }
 
 .schema {
-	position: absolute;
-	top: -70px;
-	left: 30%;
-	width: 65%;    
+        position: absolute;
+        top: -70px;
+        left: 30%;
+        width: 65%;    
 }
 
 .jcarousel-outer,
@@ -333,9 +352,9 @@ body {
 }
 
 .image-fund img {
-	width: 100%;
-	max-width: 800px;
-	margin-bottom: -125px;
+        width: 100%;
+        max-width: 800px;
+        margin-bottom: -125px;
 }
 
 .arrow {
@@ -364,9 +383,7 @@ body {
     width: 380px;
 }
 
-
 /* }}} */
-
 
 /* generic styles {{{ */
 body {
@@ -418,10 +435,10 @@ td {
     font-size: 2.6em;
 }
 
-#main-header p {
+/* #main-header p {
     height: 250px;
     line-height: 250px;
-}
+} */
 
 #main-header span { 
     vertical-align: middle;
@@ -452,10 +469,33 @@ main h3 {
     margin: 1.21em;
 }
 
+summary {
+    margin-top: 0.5em;
+    margin-bottom: 1em;
+}
+
+.small {
+    font-size: 70%;
+}
+
+.main-citation {
+    font-family: 'alfphabetbipocatcondensed';
+    font-size: 0.4em;
+    line-height: 15px;
+    height: 50px;
+}
+
+.main-signature {
+    font-size: 0.4em;
+    line-height: 15px;
+    font-family: 'alfphabetbipocatcondensed';
+    margin-left: 100px;
+}
+
 #intro {
-	font-family:'alfphabetbipocatcondensed';
-	font-size: 1.1em;
-	color: black;
+        font-family:'alfphabetbipocatcondensed';
+        font-size: 1.1em;
+        color: black;
 }
 
 #subscribing {
@@ -473,7 +513,7 @@ main h3 {
 #subscribing h2,
 #cooperating h2,
 #donating h2 {
-	display: none;
+        display: none;
 }
 
 .tranche {
@@ -497,9 +537,14 @@ main h3 {
 }
 
 .tranche-deja {
-    background-image: url("../img/IMG_7375.JPG"); 
-    background-position: 0 25%;
+    background-image: url("../img/doel-colin.jpg"); 
+    background-position: 0 50%;
 }
+.tranche-3800 {
+    background-image: url("../img/PC207027.JPG"); 
+    background-position: 0 50%;
+}
+
 
 .tranche-partenaires {
     background-image: url("../img/IMG_7245.JPG"); 
@@ -507,20 +552,18 @@ main h3 {
 }
 
 .louis-image {
-	display: block;
-	width: 400px;
-	max-width: 100%;
-	margin: 0 auto;  
+        display: block;
+        width: 400px;
+        max-width: 100%;
+        margin: 0 auto;  
 }
 
 .louis-image img {
-	max-width: 100%;
+        max-width: 100%;
 }
 
 #magazine {
-    border-top: 10px double black;
     }
-
 
 #dna .jcarousel-item {
     font-family: 'urw-grotesk-t';
@@ -528,7 +571,7 @@ main h3 {
     line-height: 1.21em;
     font-weight: bold;
     .box-sizing();
-    width: 0.15%;
+    width: 0.30%;
     position: relative;
     padding: 16px;
     counter-increment: foo;
@@ -544,6 +587,7 @@ main h3 {
     font-family: inherit;
     color: @color-A2;
     text-transform:uppercase;
+    text-align:left;
 }
 
 #Les_frais_de_lancement {
@@ -554,7 +598,7 @@ main h3 {
 #maquette {
     display: block;
     position: absolute;
-	    right: -260px;
+            right: -260px;
     top: 215px;
     z-index: -1;
 }
