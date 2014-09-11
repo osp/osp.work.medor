@@ -1,20 +1,25 @@
 $(function() {
+    //Modernizr.load({
+        //test: Modernizr.details,
+        //yep : 'geo.js',
+        //nope: 'geo-polyfill.js'
+    //});
     /*
     $("#main").mCustomScrollbar({
         theme:"rounded-dots"
     });
     */
 
-    $('a[href^="#"]').click(function(){
-        var the_id = $(this).attr("href");
-        scrollTop = $('[id="' + the_id.substring(1) + '"]').position().top - 180;
-        console.log(scrollTop)
-        $('#main').mCustomScrollbar("scrollTo", scrollTop);
-        //$('#main').animate({
-        //    scrollTop:$('[id="' + the_id.substring(1) + '"]').offset().top,
-        //}, 1500);
-        return false;
-    });
+    //$('a[href^="#"]').click(function(){
+        //var the_id = $(this).attr("href");
+        //scrollTop = $('[id="' + the_id.substring(1) + '"]').position().top - 180;
+        //console.log(scrollTop)
+        //$('#main').mCustomScrollbar("scrollTo", scrollTop);
+        ////$('#main').animate({
+        ////    scrollTop:$('[id="' + the_id.substring(1) + '"]').offset().top,
+        ////}, 1500);
+        //return false;
+    //});
 
     /*
     $.ajax({

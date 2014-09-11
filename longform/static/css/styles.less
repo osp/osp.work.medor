@@ -184,8 +184,10 @@
 .button {
     color: black;
     margin: 0.5em;
-    display: inline-block;
-    border: 2px solid black;
+    display: block;
+	width:150px;
+	height: 30px;
+    border: 3px solid black;
     font-family: 'urw-grotesk-t';
     text-transform: uppercase;
     letter-spacing: 0.25em;
@@ -200,12 +202,13 @@
     position: relative;
     border-bottom: 10px double black;
     background-color: white;
+    margin-left:380px;
 }
 
 .jcarousel {
     position: relative;
     overflow: hidden;
-    margin: 0 50px;
+    margin: 0 100px;
     z-index: 2;
 }
 
@@ -216,7 +219,10 @@
 
 .jcarousel-item {
     float: left;
-    color:@color-A2;
+    color:black;
+    h3{
+        text-transform:uppercase;
+        }
 }
 
 .jcarousel-controls {
@@ -247,13 +253,11 @@
 .jcarousel-control-prev {
     left: 0px;
     background-image: url("../img/arrow-left3.svg");
-    border-right:3px solid @color-B2;
 }
 
 .jcarousel-control-next {
     right: 0px;
     background-image: url("../img/arrow3.svg");
-        border-left:3px solid @color-B2;
 
 
 }
@@ -277,6 +281,37 @@ body {
     margin-right: 10px;
 }
 
+#subscribing {
+	margin-left: 150px;
+	margin-right: 50px;
+}
+
+.left-arrow {
+    height: 250px;
+    position: absolute;
+    top: 0;
+    left: -150px;
+}
+
+.right-arrow {
+    height: 250px;
+    position: absolute;
+    top: 0;
+    right: -50px;
+}
+
+.text {
+	margin-right: 70%;
+	margin-left: 50px;  
+}
+
+.schema {
+	position: absolute;
+	top: -70px;
+	left: 30%;
+	width: 65%;    
+}
+
 .jcarousel-outer,
 #donating,
 #subscribing,
@@ -286,7 +321,7 @@ body {
 }
 
 #donating,
-#subscribing,
+/*#subscribing,*/
 #cooperating {
     padding: 3em 0;
 }
@@ -417,13 +452,13 @@ main h3 {
 }
 
 #intro {
-font-family:'alfphabetbipocatcondensed';
-font-size: 1.1em;
-color: black;
+	font-family:'alfphabetbipocatcondensed';
+	font-size: 1.1em;
+	color: black;
 }
 
 #subscribing {
-    background-color: @color-A4;
+    background-color: lighten(@color-A4, 20%);
 }
 
 #cooperating {
@@ -437,8 +472,7 @@ color: black;
 #subscribing h2,
 #cooperating h2,
 #donating h2 {
-    margin: 0;
-    font-size: 19px * 2;
+	display: none;
 }
 
 .tranche {
@@ -497,7 +531,7 @@ color: black;
     position: relative;
     padding: 16px;
     counter-increment: foo;
-    color: @color-B2;
+    color: black;
 }
 
 #dna .jcarousel-item:before {
@@ -507,7 +541,8 @@ color: black;
 #dna h3 {
     margin: 0.5em 0;
     font-family: inherit;
-    color: black;
+    color: @color-A2;
+    text-transform:uppercase;
 }
 
 #Les_frais_de_lancement {
@@ -518,8 +553,8 @@ color: black;
 #maquette {
     display: block;
     position: absolute;
-    right: -100px;
-    top: 400px;
+	    right: -260px;
+    top: 215px;
     z-index: -1;
 }
 
