@@ -24,23 +24,19 @@
      guidetolerance="10"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:window-width="1375"
-     inkscape:window-height="876"
+     inkscape:window-width="1680"
+     inkscape:window-height="995"
      id="namedview8"
      showgrid="false"
      inkscape:zoom="1.475"
-     inkscape:cx="-97.567873"
-     inkscape:cy="200.6872"
-     inkscape:window-x="65"
-     inkscape:window-y="24"
+     inkscape:cx="139.0423"
+     inkscape:cy="369.50076"
+     inkscape:window-x="0"
+     inkscape:window-y="27"
      inkscape:window-maximized="1"
      inkscape:current-layer="layer1"
      showguides="true"
      inkscape:guide-bbox="true">
-    <sodipodi:guide
-       orientation="-0.70710678,0.70710678"
-       position="221.01695,408.13559"
-       id="guide3023" />
     <sodipodi:guide
        orientation="0,1"
        position="168.26744,282.84271"
@@ -68,7 +64,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -77,16 +73,13 @@
      id="layer1"
      style="fill:#ffd42a">
     <path
-       d="M 455,560.68421 325,531.6842 455,502.68419 419,531.68421 z"
-       id="path4023"
-       style="fill:#db2823;fill-opacity:1;stroke:none"
+       style="color:#000000;fill:#b14542;fill-opacity:1;stroke:none;stroke-width:6.25;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       d="m 409.8125,403.22152 6,28.625 40.875,0 0,201.0625 -40.875,0 -6,28.5938 -36.5,-129.125 z"
+       id="rect9187"
        inkscape:connector-curvature="0"
-       sodipodi:nodetypes="ccccc" />
-    <path
-       style="fill:none;stroke:#db2823;stroke-width:6;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
-       d="m 96.949153,324.74576 43.389827,0"
-       id="path3051"
-       inkscape:connector-curvature="0"
-       transform="translate(315.84746,206.93844)" />
+       sodipodi:nodetypes="cccccccc"
+       inkscape:export-filename="/home/ludi/wrk/osp.work.medor/longform/static/img/longform-meta.png"
+       inkscape:export-xdpi="30.641693"
+       inkscape:export-ydpi="30.641693" />
   </g>
 </svg>
