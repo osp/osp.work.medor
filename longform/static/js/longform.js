@@ -1,9 +1,15 @@
 $(function() {
-    //Modernizr.load({
-        //test: Modernizr.details,
-        //yep : 'geo.js',
-        //nope: 'geo-polyfill.js'
-    //});
+    if (Modernizr.details) {
+        console.log('support ok');
+    } else {
+        console.log('support not ok');
+        // script to run if local storage is not supported
+    }
+    Modernizr.load({
+        test: Modernizr.details,
+        yep : 'geo.js',
+        nope: 'geo-polyfill.js'
+    });
     /*
     $("#main").mCustomScrollbar({
         theme:"rounded-dots"
