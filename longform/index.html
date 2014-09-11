@@ -1,6 +1,5 @@
 <!doctype html>
 <html>
-
 <head>
     <meta charset="utf-8">
     <title>Médor</title>
@@ -8,7 +7,7 @@
     <link rel="stylesheet" text="text/css" href="static/components/reset-css/reset.css">
     <link rel="stylesheet" type="text/less" href="static/css/styles.less">
     <link rel="stylesheet" href="static/css/jquery.mCustomScrollbar.css" />
-    
+
     <script src="static/components/modernizr/modernizr.js" ></script>
 </head>
 
@@ -17,26 +16,25 @@
         <figure id="cover-content" class="cover">
             <img src="static/img/medor-objet-contenu.png" />
         </figure>
+
         <p><span>Trimestriel<br />cooperatif belge;<br />enquetes et recit.</span></p>
-                    <div style="position:absolute; top:5%; right:20%">
-            <p>
-                <a href="#subscribing" class="button">déjà convaincu!</a>
-                <a href="#cooperating" class="button">quoi ça?</a>
-                <a href="#equipe" class="button">C'est qui?</a>
-            </p>
-            </div>
+
+        <nav>
+            <ul>
+                <li><a href="#subscribing" class="button">déjà convaincu!</a></li>
+                <li><a href="#cooperating" class="button">quoi ça?</a></li>
+                <li><a href="#equipe" class="button">C'est qui?</a></li>
+            </ul>
+        </nav>
     </header>
 
     <main>
         <div id="intro" class="wrap">
             <p>Médor n'est pas un chien. C'est un magazine belge d'enquêtes et de récits. 128 pages, 16×23cm, quadrichromie. Au programme de chaque numéro : 2 grandes enquêtes, 3 récits et portraits, un entretien, un portfolio photo et des rubriques dans le ventre. Médor est un aussi un projet coopératif. Peut-être le vôtre?</p>
-            
-
         </div>
 
         <div id="subscribing" />
-        
-			    <img src="static/img/je_m-abonne.png" class="left-arrow"/>
+            <img src="static/img/je_m-abonne.png" class="left-arrow"/>
 
             <div class="text">
                 <h2>Abonnez-vous</h2>
@@ -50,9 +48,9 @@
                     </ul>
                 </details>
             </div>
-				    <img class="schema" src="static/img/3800-abonnes-yes.png" />
-		        <img class="right-arrow" src="static/img/je_m-abonne_fleche.png" />
-	        </div>
+            <img class="schema" src="static/img/3800-abonnes-yes.png" />
+            <img class="right-arrow" src="static/img/je_m-abonne_fleche.png" />
+        </div>
 
         <div id="cooperating">
             <div class="image-fund">
@@ -129,18 +127,18 @@
 
                         <div id="imparfait" class="jcarousel-item">
                             <h3>Imparfait</h3>
-                            <p>Médor imprime sur papier <a href="http://www.fsc.be/" class="external text" rel="nofollow">FSC</a>, pratique l'<a href="http://www.article27.be/" class="external text" rel="nofollow">article 27</a> (démocratisation de l'accès à la culture et l'info), est attentif aux questions de diversité et d'égalité femmes-hommes, est livré à vélo et emballé par une entreprise de travail adapté (<a href="/index.php?title=Nos_Pilifs&amp;action=edit&amp;redlink=1" class="new" title="Nos Pilifs (page inexistante)">Nos Pilifs</a>). À côté, Nicolas Hulot et Pierre Rabhi, ce sont les princes du Qatar. Mais on peut toujours faire mieux. Alors on continue…</p>
+                            <p>Médor imprime sur papier <a href="http://www.fsc.be/">FSC</a>, pratique l'<a href="http://www.article27.be/">article 27</a> (démocratisation de l'accès à la culture et l'info), est attentif aux questions de diversité et d'égalité femmes-hommes, est livré à vélo et emballé par une entreprise de travail adapté (<a href="http://www.fermenospilifs.be/">Nos Pilifs</a>). À côté, Nicolas Hulot et Pierre Rabhi, ce sont les princes du Qatar. Mais on peut toujours faire mieux. Alors on continue…</p>
                         </div>
 
                         <div id="digne" class="jcarousel-item">
                             <h3>Digne</h3>
-                            <p><a href="/index.php?title=L%27%C3%A9quipe&amp;action=edit&amp;redlink=1" class="new" title="L'équipe (page inexistante)">L'équipe</a> qui a pensé Médor sont des producteurs de sens. Ils aiment leur métier mais ont un peu mal à leur clavier, parce que le métier s'abîme, parce que l'urgence ronge le sens. Aujourd'hui, un pigiste belge gagne en moyenne moins qu'un laveur de vitres (voir <a href="/index.php?title=L%27%C3%A9tude_de_l%27AJP&amp;action=edit&amp;redlink=1" class="new" title="L'étude de l'AJP (page inexistante)">l'étude de l'AJP</a>). Nous voulons un média digne sur toute la ligne. Augmentons les journalistes et les laveurs de vitre. Ils aident à y voir clair.</p>
+                            <p><a href="#status">L'équipe</a> qui a pensé Médor sont des producteurs de sens. Ils aiment leur métier mais ont un peu mal à leur clavier, parce que le métier s'abîme, parce que l'urgence ronge le sens. Aujourd'hui, un pigiste belge gagne en moyenne moins qu'un laveur de vitres (voir <a href="#" >l'étude de l'AJP</a>). Nous voulons un média digne sur toute la ligne. Augmentons les journalistes et les laveurs de vitre. Ils aident à y voir clair.</p>
                         </div>
                     </div>
                 </div>
                 <nav class="jcarousel-controls">
-                    <span class="jcarousel-control-prev">‹</span>
-                    <span class="jcarousel-control-next">›</span>
+                    <span class="jcarousel-control-prev"></span>
+                    <span class="jcarousel-control-next"></span>
                 </nav>
             </div>
         </div>
@@ -173,24 +171,26 @@
 
                 <h3>Des équipes plurielles</h3>
                 <p>Chaque article est entamé, écrit, développé et bouclé par un duo : journaliste et auteur visuel, que ce soit un photographe, un illustrateur et/ou un graphiste. Tout tableau de données, plan, cartographie, schéma, potentielle trace visuelle est mis en forme et peut venir compléter ou remplacer une partie de texte.</p>
-                
-                <figure class="louis-image"><img src="static/img/louis_extrait-2.jpg" /></figure>
-                
+
+                <figure class="louis-image">
+                    <img src="static/img/louis_extrait-2.jpg" />
+                </figure>
+
                 <h3>Des outils partagés</h3>
                 <p>Une plateforme web mettra en commun savoirs et données. Elle permet aux journalistes de montrer les avancées rédactionnelles, d'appeler à l'aide pour la recherche d'un contact, d'une info, pour une relecture provisoire, une question déontologique…</p>
 
                 <h3>Un graphisme post gutemberg</h3>
                 <p>Le graphisme de Médor sera réalisé dans une perspective collaborative et  ouverte. Tous les logiciels utilisés pour le visuel seront libres, la  typographie sera neuve et libre elle aussi, puisant une partie de ses  sources dans la culture graphique belge. Médor souhaite ainsi contribuer  à l'ébullition typographique et graphique en cours, mais pas seulement.  Par ce mode de fonctionnement, Médor donnera des outils concrets aux  graphistes et journalistes pour avancer ensemble dans la production de contenu et proposer une information où texte et visuel peuvent se compléter de façon inédite.</br>
 En construisant sa propre plateforme de publication libre, initiée et développée en Belgique, Médor fait aussi le pari d'une nouvelle pratique d'édition et de mise en page, sort la presse de celle de Gutemberg pour la fondre sur nos mutlisurfaces à venir.</p>
-<details>
+                <details>
                     <summary>Voir le colophon de cette première page</summary>
-                <p>Cette page web a été générée à partir de l'une des pages de l'outil <a herf="http://tunakutafuta.be/index.php?title=Appel%C3%A0sous_-_public_release">wiki du projet</a>, écrite à plusieurs mains, 
-                les éléments qui l'habitent sont dessinés sur <a href="http://www.inkscape.org/fr/">Inkscape</a>, <a href="http://www.gimp.org/">Gimp</a>, <a href="http://www.imagemagick.org/">ImageMagick</a>. 
-                La navigation et la mise en page est structurée et rendue active via HTML5, Less/CSS, 
-                Jquery, <a herf="https://github.com/ether/etherpad-lite">Etherpad Lite</a>, <a href="http://curl.haxx.se/">Curl</a>, Git, GNU/Linux. Le texte est typographié avec les fontes 
-                <a herf="http://ospublish.constantvzw.org/foundry/alfphabet/">Alfphabet</a>, <a href="https://github.com/Antoine-Gelgon/CareerFont">Career, 
-                <a href="http://www.google.com/fonts/specimen/Goudy+Bookletter+1911">Goudy Bookletter 1911</a>, 
-                <a href="http://git.ghostscript.com/?p=ghostpdl.git;a=tree;f=urwfonts;hb=HEAD">URWGroteskT-Bold.</a></p>
+                    <p>Cette page web a été générée à partir de l'une des pages de l'outil <a href="http://tunakutafuta.be/index.php?title=Appel%C3%A0sous_-_public_release">wiki du projet</a>, écrite à plusieurs mains,
+                    les éléments qui l'habitent sont dessinés sur <a href="http://www.inkscape.org/fr/">Inkscape</a>, <a href="http://www.gimp.org/">Gimp</a>, <a href="http://www.imagemagick.org/">ImageMagick</a>.
+                    La navigation et la mise en page est structurée et rendue active via HTML5, Less/CSS,
+                    Jquery, <a href="https://github.com/ether/etherpad-lite">Etherpad Lite</a>, <a href="http://curl.haxx.se/">Curl</a>, Git, GNU/Linux. Le texte est typographié avec les fontes
+                    <a href="http://ospublish.constantvzw.org/foundry/alfphabet/">Alfphabet</a>, <a href="https://github.com/Antoine-Gelgon/CareerFont">Career,
+                    <a href="http://www.google.com/fonts/specimen/Goudy+Bookletter+1911">Goudy Bookletter 1911</a>,
+                    <a href="http://git.ghostscript.com/?p=ghostpdl.git;a=tree;f=urwfonts;hb=HEAD">URWGroteskT-Bold.</a></p>
                 </details>
             </div>
         </div>
@@ -205,7 +205,7 @@ En construisant sa propre plateforme de publication libre, initiée et développ
             <div class="wrap" style="position: relative">
                 <div id="3800_abonn.C3.A9s">
                     <h3>3800 abonnés</h3>
-                    <p>226452€, c'est notre coût vérité à l'année. Celui qui nous permet un équilibre (nous ne cherchons pas de bénéfices) tout en valorisant le travail des producteurs de sens à sa juste valeur et de ne pas sacrifier à l'urgence et aux payements au lance-pierre. Ces 226452€ couvrent les frais pour quatre numéros par an. Pour y parvenir, nous avons choisi de convaincre 3800 abonnées et de publier <a href="/index.php?title=6_pages_de_publicit%C3%A9&amp;action=edit&amp;redlink=1" class="new" title="6 pages de publicité (page inexistante)">6 pages de publicité</a>.</p>
+                    <p>226452€, c'est notre coût vérité à l'année. Celui qui nous permet un équilibre (nous ne cherchons pas de bénéfices) tout en valorisant le travail des producteurs de sens à sa juste valeur et de ne pas sacrifier à l'urgence et aux payements au lance-pierre. Ces 226452€ couvrent les frais pour quatre numéros par an. Pour y parvenir, nous avons choisi de convaincre 3800 abonnées et de publier <a href="#">6 pages de publicité</a>.</p>
 
                     <details>
                         <summary>Voir le détail</summary>
@@ -261,7 +261,7 @@ En construisant sa propre plateforme de publication libre, initiée et développ
 
                     <div id="Les_frais_de_lancement">
                         <h3>Les frais de lancement</h3>
-                        <p>Médor a un besoin d'un squelette, arc-bouté sur ses éléments récurrents. En langage comptable, on appelle cela un plan de financement (hors TVA) pour démarrage. Le nôtre est modeste, mais essentiel. Notre assise de base se créera avec 24206€. Pour les avoir, outre le <a href="/index.php?title=Crowdfunding&amp;action=edit&amp;redlink=1" class="new" title="Crowdfunding (page inexistante)">crowdfunding</a>, nous cherchons des coopérateurs prêts à rejoindre <a href="/index.php?title=Les_17_fondateurs&amp;action=edit&amp;redlink=1" class="new" title="Les 17 fondateurs (page inexistante)">les 17 fondateurs</a> et à devenir <a href="/index.php?title=Les_patrons_de_presse_du_futur&amp;action=edit&amp;redlink=1" class="new" title="Les patrons de presse du futur (page inexistante)">les patrons de presse du futur</a>.</p>
+                        <p>Médor a un besoin d'un squelette, arc-bouté sur ses éléments récurrents. En langage comptable, on appelle cela un plan de financement (hors TVA) pour démarrage. Le nôtre est modeste, mais essentiel. Notre assise de base se créera avec 24206€. Pour les avoir, outre le <a href="#">crowdfunding</a>, nous cherchons des coopérateurs prêts à rejoindre <a href="#">les 17 fondateurs</a> et à devenir <a href="#">les patrons de presse du futur</a>.</p>
 
                         <details>
                             <summary>voir le détail</summary>
@@ -270,32 +270,26 @@ En construisant sa propre plateforme de publication libre, initiée et développ
                                 <tr>
                                     <td>frais de constitution (déjà couverts par nos parts fondateurs = 17×160€)</td>
                                     <td>2300€</td>
-                                    <td></td>
                                 </tr>
                                 <tr>
                                     <td>un site internet, un logo, une charte graphique, un chemin de fer et une maquette.</td>
-                                    <td>13180€ </td>
-                                    <td></td>
+                                    <td>13180€</td>
                                 </tr>
                                 <tr>
                                     <td>achats de matériel</td>
                                     <td>600€</td>
-                                    <td></td>
                                 </tr>
                                 <tr>
                                     <td>frais de lancement</td>
-                                    <td>5500€ </td>
-                                    <td></td>
+                                    <td>5500€</td>
                                 </tr>
                                 <tr>
                                     <td>Le reste sera affecté à la trésorerie</td>
                                     <td>2626€ au minimum</td>
-                                    <td></td>
                                 </tr>
                                 <tr>
                                     <td>total</td>
                                     <td>24206€</td>
-                                    <td>100%</td>
                                 </tr>
                             </table>
                         </details>
@@ -315,7 +309,7 @@ En construisant sa propre plateforme de publication libre, initiée et développ
             <div class="wrap">
                 <h3>Une équipe</h3>
 
-                <p>Aujourd'hui, Médor est constitué de 17 journalistes, photographes, et illustrateurs indépendants, de professionnels de la communication issus du spectacle vivant et de la presse ainsi que de graphistes et de développeurs. Dès l'origine, Médor a décidé de ne pas brader le coût de sa production. Nous ne pouvons pas encore vous le montrer dans Médor, mais nous pouvons vous montrer <a href="/index.php?title=Ce_que_chacun_d%27entre_nous_a_d%C3%A9j%C3%A0_fait&amp;action=edit&amp;redlink=1" class="new" title="Ce que chacun d'entre nous a déjà fait (page inexistante)">ce que chacun d'entre nous a déjà fait</a>.</p>
+                <p>Aujourd'hui, Médor est constitué de 17 journalistes, photographes, et illustrateurs indépendants, de professionnels de la communication issus du spectacle vivant et de la presse ainsi que de graphistes et de développeurs. Dès l'origine, Médor a décidé de ne pas brader le coût de sa production. Nous ne pouvons pas encore vous le montrer dans Médor, mais nous pouvons vous montrer <a href="#">ce que chacun d'entre nous a déjà fait</a>.</p>
             </div>
 
 			<!-- for i in *; do convert "$i" +level-colors ,'rgb(222,113,98)' $(basename "$i" .png)-color.png; done -->
@@ -325,7 +319,7 @@ En construisant sa propre plateforme de publication libre, initiée et développ
                         <figure class="jcarousel-item">
                             <img width="160" alt="Portrait-Chloe.png" height="225" src="static/img/portraits/Portrait-Chloé-color.png" />
                             <figcaption>
-                                <p class="name"><a href="/index.php?title=Chlo%C3%A9" title="Chloé">Chloé Andries</a></p>
+                                <p class="name">Chloé Andries</p>
                                 <p>Elle aurait pu faire bonne sœur, mais comme elle en a déjà une, <a href="http://canalordinaire.wordpress.com/journalistes/chloe-andries/">Chloé</a> a choisi journaliste. Résultat, depuis sa sortie de l' <a href="http://esj-lille.fr/">École de journalisme de Lille</a>, en 2006, elle écrit surtout des articles sur les religions (mais pas que), pour la presse belge et française, réalise des documentaires dans des trous paumés sans accès wifi, et a co-fondé il y a cinq ans un collectif de journalistes indépendants à Bruxelles, <a href="http://canalordinaire.wordpress.com/">Canal ordinaire</a>. Membre du conseil de direction de l' <a href="http://www.ajp.be/">Association des journalistes professionnels (AJP)</a>, elle y représente les indépendants.</p>
                             </figcaption>
                         </figure>
@@ -333,7 +327,7 @@ En construisant sa propre plateforme de publication libre, initiée et développ
                         <figure class="jcarousel-item">
                             <img width="160" alt="Portrait-Olivier.png" height="225" src="static/img/portraits/Portrait-Olivier-color.png" />
                             <figcaption>
-                                <p class="name"><a href="/index.php?title=Oli_B" title="Oli B">Olivier Bailly</a></p>
+                                <p class="name">Olivier Bailly</p>
                                 <p>Il y en a pas mal qui s'appellent Olivier Bailly. Lui c’est l’autre, <a href="http://jedoutedoncjecherche.wordpress.com/">journaliste indépendant</a> et auteur, à Bruxelles. Il a <a href="http://jedoutedoncjecherche.wordpress.com/2008/01/01/un-cancer-mon-amour-decembre-2008/">écrit</a> <a href="http://cactusinebranlableeditions.e-monsite.com/pages/les-auteurs-de-cactus/bailly-olivier.html#">trois</a><a href="http://www.onlit.net/products/sur-la-grue">romans</a>, quatre livres d'enquêtes/reportage et de nombreux articles. En journalisme, il a reçu quelques prix et mendié plusieurs bourses (à moins que ça ne soit le contraire)…</p>
                             </figcaption>
                         </figure>
@@ -341,7 +335,7 @@ En construisant sa propre plateforme de publication libre, initiée et développ
                         <figure class="jcarousel-item">
                             <img width="160" alt="Portrait-Jean-Pierre.png" height="225" src="static/img/portraits/Portrait-Jean-Pierre-color.png" />
                             <figcaption>
-                                <p class="name"><a href="/index.php?title=Jean-Pierre" title="Jean-Pierre">Jean-Pierre Borloo</a></p>
+                                <p class="name">Jean-Pierre Borloo</p>
                                 <p>Après vingt ans de journalisme au <a href="http://www.lesoir.be/">Soir</a>, pour lequel il arpentait surtout les couloirs du palais de Justice de Bruxelles, Jean-Pierre a rejoint l'<a href="http://www.ajp.be/">AJP</a>, où il coordonne le <a href="http://www.fondspourlejournalisme.be/">Fonds pour le journalisme</a>. En parallèle, il arpente d'autres couloirs, à 6.900 mètres d'altitude. Il se situe quelque part entre journalisme, alpinisme et autres paysages en « isthme ».</p>
                             </figcaption>
                         </figure>
@@ -349,7 +343,7 @@ En construisant sa propre plateforme de publication libre, initiée et développ
                         <figure class="jcarousel-item">
                             <img width="160" alt="Portrait-CelineD.png" height="225"src="static/img/portraits/Portrait-CelineD-color.png" />
                             <figcaption>
-                                <p class="name"><a href="/index.php?title=C%C3%A9line_Decamp&amp;action=edit&amp;redlink=1" class="new" title="Céline Decamp (page inexistante)">Céline Decamp</a></p>
+                                <p class="name">Céline Decamp</p>
                                 <p>Socio-économiste, Céline <a href="http://www.credal.be/">accompagne</a> la création de projets collaboratifs, sociaux, agricoles et durables. Elle s’occupe des aspects financiers et juridiques de Médor. Nos plus savants graphiques et tableaux chiffrés, c'est elle.</p>
                             </figcaption>
                         </figure>
@@ -357,7 +351,7 @@ En construisant sa propre plateforme de publication libre, initiée et développ
                         <figure class="jcarousel-item">
                             <img width="160" alt="Portrait-Colin.png" height="225" src="static/img/portraits/Portrait-Colin-color.png" />
                             <figcaption>
-                                <p class="name"><a href="/index.php?title=Colin_Delfosse&amp;action=edit&amp;redlink=1" class="new" title="Colin Delfosse (page inexistante)">Colin Delfosse</a></p>
+                                <p class="name">Colin Delfosse</p>
                                 <p>Issu d’une famille nombreuse du Brabant Wallon, <a href="http://colindelfosse.blogspot.be/">Colin</a> se destinait à devenir riche et célèbre. Se lancer dans la photographie documentaire et s’intéresser au Congo n’était sans doute pas le chemin le plus évident. Qu’importe, dans le foisonnement de jeunes ambitieux qui sonnent aux portes de la gloire, il taille sa route et explore à coup de machette les nouvelles voies de la photographie documentaire.</p>
                             </figcaption>
                         </figure>
@@ -365,8 +359,8 @@ En construisant sa propre plateforme de publication libre, initiée et développ
                         <figure class="jcarousel-item">
                             <img width="160" alt="Portrait-CelineG.png" height="225" src="static/img/portraits/Portrait-CelineG-color.png" />
                             <figcaption>
-                                <p class="name"><a href="/index.php?title=C%C3%A9line" title="Céline">Céline Gautier</a></p>
-                                <p>Infiltrée à <a href="http://www.elle.be/">Elle</a> pendant près de dix ans, Céline rassure son monde en se décrivant comme « journaliste société, axée sur les sujets femmes, vélo et familles ». En réalité, elle aime (un peu trop) voyager et écrire des histoires d'excisions et de femmes sans-abris. Romaniste de formation, elle préfère le <em>dikke</em> journalisme au slow journalisme, roule en Brompton et pratique la randonnée vers Saint-Jacques de Compostelle.</p>
+                                <p class="name">Céline Gautier</p>
+                                <p>Infiltrée à <a href="http://www.elle.be/">Elle</a> pendant près de dix ans, Céline rassure son monde en se décrivant comme « journaliste société, axée sur les sujets femmes, vélo et familles ». En réalité, elle aime (un peu trop) voyager et écrire des histoires d'excisions et de femmes sans-abris. Romaniste de formation, elle préfère le <em>dikke</em> journalisme au <em>slow</em> journalisme, roule en Brompton et pratique la randonnée vers Saint-Jacques de Compostelle.</p>
                             </figcaption>
                         </figure>
 
@@ -471,10 +465,10 @@ En construisant sa propre plateforme de publication libre, initiée et développ
 
 
                 <h3> Une coopérative à finalité sociale. </h3>
-                <p><a href=''http://www.ejustice.just.fgov.be/tsv_pdf/2014/07/15/14136380.pdf">La coopérative Médor a été créée à Namur le 30 juin 2014.</a></p>
+                <p><a href="http://www.ejustice.just.fgov.be/tsv_pdf/2014/07/15/14136380.pdf">La coopérative Médor a été créée à Namur le 30 juin 2014.</a></p>
             </div>
         </div>
-        
+
         <img src="static/img/palette.png" />
     </main>
 
@@ -488,6 +482,4 @@ En construisant sa propre plateforme de publication libre, initiée et développ
     <script src="static/js/jquery.xdomainajax.js"></script>
     <script src="static/js/longform.js"></script>
 </body>
-
 </html>
-

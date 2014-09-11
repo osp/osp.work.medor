@@ -1,15 +1,6 @@
 /* test */
 
 /* less variables {{{ */
-@color-marron: #AA4400;
-@color-jaune: #FFFF00;
-@color-anthracite: #412828;
-@color-beige: #D9DEBA; 
-@color-bleu-layette: #DBE3E2; 
-@color-rose: #FF8080;
-@color-vert-eau: #BEE5BE;
-@color-bleu-gris:#376c6f;
-
 @color-A1: rgba(42, 133, 164, 255);
 @color-A2: rgba(177, 69, 66, 255);
 @color-A3: rgba(255, 254, 53, 255);
@@ -54,7 +45,6 @@
          url('../fonts/texgyreschola-bolditalic-webfont.svg#texgyrescholabold_italic') format('svg');
     font-weight: bold;
     font-style: italic;
-
 }
 
 @font-face {
@@ -185,7 +175,7 @@
     color: black;
     margin: 0.5em;
     display: block;
-	width:150px;
+	width: 150px;
 	height: 30px;
     border: 3px solid black;
     font-family: 'urw-grotesk-t';
@@ -202,7 +192,7 @@
     position: relative;
     border-bottom: 10px double black;
     background-color: white;
-    margin-left:380px;
+    margin-left: 380px;
 }
 
 .jcarousel {
@@ -220,9 +210,10 @@
 .jcarousel-item {
     float: left;
     color:black;
-    h3{
-        text-transform:uppercase;
-        }
+}
+
+.jcarousel-item h3 {
+    text-transform: uppercase;
 }
 
 .jcarousel-controls {
@@ -258,8 +249,6 @@
 .jcarousel-control-next {
     right: 0px;
     background-image: url("../img/arrow3.svg");
-
-
 }
 
 .jcarousel-control-prev.inactive,
@@ -363,8 +352,6 @@ body {
 .cover img {
     width: 380px;
 }
-
-
 /* }}} */
 
 
@@ -518,7 +505,7 @@ main h3 {
 
 #magazine {
     border-top: 10px double black;
-    }
+}
 
 
 #dna .jcarousel-item {
@@ -542,7 +529,7 @@ main h3 {
     margin: 0.5em 0;
     font-family: inherit;
     color: @color-A2;
-    text-transform:uppercase;
+    text-transform: uppercase;
 }
 
 #Les_frais_de_lancement {
@@ -553,7 +540,7 @@ main h3 {
 #maquette {
     display: block;
     position: absolute;
-	    right: -260px;
+	right: -260px;
     top: 215px;
     z-index: -1;
 }
@@ -594,8 +581,6 @@ main h3 {
 #portraits .jcarousel-item:hover figcaption {
     visibility: visible;
 }
-
 /* }}} */
 
 /* vim: set foldmethod=marker: */
-
