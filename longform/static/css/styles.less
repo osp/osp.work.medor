@@ -1,3 +1,22 @@
+.arrow-dna {
+    text-align: center;
+    line-height: 4em;
+    border: 0.25em solid @color-A4;
+    border-bottom-width: 1.25em;
+    height: 7em;
+    width: 6em;
+    position: absolute;
+    top: 50%;
+    left: -50px;
+    z-index: 999;
+    color: #39914F;
+    font-weight: bold;
+    font-size: 28px;
+    font-family: 'urw-grotesk-t';
+    background-color: white;
+    margin-top: -3.25em;
+}
+
 .arrow-money {
     text-align: center;
     line-height: 6em;
@@ -401,9 +420,9 @@ body {
 }
 
 .wrap {
-    max-width: 35rem;
-    margin-left: 380px;
-    margin-right: 10px;
+    max-width: 60%;
+    margin-left: 37%;
+    margin-right: 30px;
 }
 
 #subscribing {
@@ -478,7 +497,7 @@ body {
     .transition(left, 500ms, ease-out, 0s);
     left: -500px;
     top: 0px;
-    .transform(rotate(10deg));
+//    .transform(rotate(10deg));
 }
 
 .active .cover {
@@ -486,7 +505,8 @@ body {
 }
 
 .cover img {
-    width: 380px;
+    width: 35%;
+    max-width: 1000px;
 }
 
 /* }}} */
@@ -678,6 +698,11 @@ main h2 {
     font-size: 6em;
     line-height: 0.85;
     letter-spacing: -3px;
+    text-shadow:
+   -1px -1px 0 #000,  
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+     1px 1px 0 #000;
 }
 
 main h3 {
@@ -698,7 +723,7 @@ summary {
     font-size: 70%;
 }
 
-.main-citation {
+header > blockquote {
     font-family: 'alfphabetbipocatcondensed';
     font-size: 1em;
     line-height: 15px;
@@ -707,7 +732,7 @@ summary {
     margin-top: 40px;
 }
 
-.main-signature {
+header > blockquote > footer {
     font-size: 0.7em;
     line-height: 15px;
     font-family: 'alfphabetbipocatcondensed';
@@ -801,12 +826,10 @@ summary {
 
 #dna {
     font-family: 'Goudy Bookletter 1911';
-    letter-spacing: 0.07em;
     font-size: 17px;
-	line-height: 1.1em;
-    color: black;
-    margin-left: 28%;
-    width: 45%;
+    line-height: 1.15em;
+    margin-left: 37%;
+    margin-right: 10px;
     margin-bottom: 42px;
 }
 
@@ -815,24 +838,45 @@ summary {
     display: inline-block;
     vertical-align: top;
     .box-sizing();
-    padding: 11px 12px;
-    counter-increment: foo;
-    color: #b14542;
+    padding: 11px 20px 11px 0;
+    //counter-increment: foo;
+    //color: #b14542;
 }
 
-#dna > div:before {
+/* #dna > div:before {
     content: counter(foo) ". ";
     bottom:1em;
-}
+} */
 
 #dna h3 {
-    font-family:'alfphabetbipocatcondensed';
+    font-family:'urw-grotesk-t';
+    font-size: 1.2em;
     margin: 0.5em 0;
-    font-family: inherit;
     color: @color-A2;
     text-align: left;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    font-size: 1.2em;
 }
 
+#dna em {
+    letter-spacing: 0em;
+    text-decoration: none;
+    font-style: none;
+}
+
+#dna .barre {
+    text-decoration: line-through;
+    font-size:80%;
+    line-height:80%;
+    color: gray;
+    text-line-through-color: gray;
+}
+
+#dna #digne {
+    width: 100%;
+}
+    
 #maquette {
     display: block;
     position: absolute;
