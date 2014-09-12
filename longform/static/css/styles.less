@@ -1,5 +1,52 @@
 /* test */
 
+.arrow-money {
+    text-align: center;
+    line-height: 7em;
+    border: 0.25em solid #39914F;
+    border-right-width: 1.25em;
+    height: 7em;
+    width: 7em;
+    position: relative;
+    z-index: 999;
+    color: #39914F;
+    font-weight: bold;
+    font-size: 28px;
+    font-family: 'urw-grotesk-t';
+    background-color: white;
+}
+
+.arrow-money:after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 8.25em;
+    top: -1.5em;
+    border-color: transparent #39914F;
+        border-style: solid;
+        border-width: 5em 0px 5em 1em;
+        height: 0px;
+        width: 0px;
+}
+
+.arrow-money .inner {
+    line-height: 22px;
+    vertical-align: middle;
+    display: inline-block;
+}
+
+.arrow-money .price {
+	font-family: 'alfphabetbipocatcondensed';
+	font-size: 96px;
+	font-weight: normal;
+	line-height: 88px;
+}
+
+.arrow-money .price sup {
+	font-size: 0.5em;
+	vertical-align: top;
+}
+
 /* less variables {{{ */
 @color-marron: #AA4400;
 @color-jaune: #FFFF00;
@@ -388,8 +435,8 @@ body {
 /* generic styles {{{ */
 body {
     font-family: 'Goudy Bookletter 1911', serif;
-    font-size: 19px;
-    line-height: 1.31;
+    font-size: 20px;
+    line-height: 1.22;
 }
 
 p + p {
@@ -431,10 +478,23 @@ td {
 
 /* specific styles {{{ */
 #main-header {
-    font-family: 'Career', serif;
-    font-size: 2.6em;
+	h1{
+    font-family:'Alfphabet-IV';
+	}
+	h2{
+    font-family:''alfphabetbipocatcondensed'';
+	}
+	
+
 }
 
+.sous-titre {
+    font-family: 'Career', serif;
+}
+
+#cartouche {
+    }
+    
 /* #main-header p {
     height: 250px;
     line-height: 250px;
@@ -449,6 +509,7 @@ td {
 main {
     margin-bottom: 5em;
 }
+
 
 main h2,
 main h3 {
@@ -467,6 +528,7 @@ main h3 {
     text-align: center;
     font-size: 1.6em;
     margin: 1.21em;
+    margin-bottom: 0.3em;
 }
 
 summary {
@@ -482,7 +544,9 @@ summary {
     font-family: 'alfphabetbipocatcondensed';
     font-size: 0.4em;
     line-height: 15px;
-    height: 50px;
+    height: 0px;
+    margin-left: 0px;
+    margin-top: 40px;
 }
 
 .main-signature {
@@ -553,40 +617,52 @@ summary {
 
 .louis-image {
         display: block;
-        width: 400px;
-        max-width: 100%;
-        margin: 0 auto;  
+        margin: 0 auto;
 }
 
 .louis-image img {
-        max-width: 100%;
+        max-width: 130%;
 }
 
 #magazine {
     }
 
-#dna .jcarousel-item {
-    font-family: 'urw-grotesk-t';
-    font-size: 16px;
-    line-height: 1.21em;
-    font-weight: bold;
-    .box-sizing();
-    width: 0.30%;
-    position: relative;
-    padding: 16px;
-    counter-increment: foo;
+#dna {
+    font-family: 'Goudy Bookletter 1911';
+    letter-spacing: 0.07em;
+    font-size: 17px;
+	line-height: 1.1em;
     color: black;
+    margin-left: 28%;
+    width: 45%;
+    margin-bottom: 42px;
+
 }
 
-#dna .jcarousel-item:before {
+#dna > div {
+    width: 45%;
+    display:inline-block;
+    vertical-align:top;
+    .box-sizing();
+		padding: 11px 12px;
+    counter-increment: foo;
+    color: #b14542;
+        h3{
+            font-family:'alfphabetbipocatcondensed';
+					margin: 0.2em 0em 0.5em;
+        }
+    }
+
+#dna > div:before {
     content: counter(foo) ". ";
+    bottom:1em;
 }
 
 #dna h3 {
     margin: 0.5em 0;
     font-family: inherit;
     color: @color-A2;
-    text-transform:uppercase;
+    /*text-transform:uppercase;*/
     text-align:left;
 }
 
