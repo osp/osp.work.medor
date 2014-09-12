@@ -68,15 +68,18 @@ $(function() {
         target: '+=1',
     });
 
-    var $elts = $('#main-header, #collaborative-experience, #magazine, #accounting');
+    var $elts = $('header, #magazine, #collaborative-experience, #accounting');
 
-    $elts.waypoint(function(direction) {
-        if (direction === 'down') {
-            $(this).addClass('active');
-            $(this).waypoint('prev').removeClass('active');
-        } else {
-            $(this).removeClass('active');
-            $(this).waypoint('prev').addClass('active');
+    $elts.waypoint({
+        offset: 50,
+        handler: function(direction) {
+            if (direction === 'down') {
+                $(this).addClass('active');
+                $(this).waypoint('prev').removeClass('active');
+            } else {
+                $(this).removeClass('active');
+                $(this).waypoint('prev').addClass('active');
+            }
         }
     });
 });
