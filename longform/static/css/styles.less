@@ -64,27 +64,37 @@
 
 .fund {
     background-color: lighten(@color-A4, 20%);
-    margin-left: 200px;
+    margin-left: 10em;
     position: relative;
+    min-height: 12em;
 }
 
 .fund-text {
-	display: inline-block;
-	width: 10em;
-}
+    margin-left: 12em;
+    margin-right: 600px;
+    padding-top: 1em;
+    padding-bottom: 1em;
+ }
 
 .illu {
-    outline: 1px solid yellow;
     position: absolute;
     width: 400px;
-    height: 100%;
     right: 0;
-    top: 0; 
+    bottom: -75px; 
+}
+
+.illu img {
+    max-width: 100%;
+    vertical-align: bottom;
 }
 
 .goal-outer {
-    outline: 1px solid purple;
-    height: 100%;
+    width: 200px;
+    position: absolute;
+    right: 400px;
+    top: 50%;
+    margin-top: -5em;
+    height: 10em;
     text-align: center;
     line-height: 10em;
     font-family: 'urw-grotesk-t'
@@ -604,16 +614,16 @@ td {
 
 #head-button {
 	font-family: 'alfphabetbipocatcondensed';
-	font-size:1em;
+	font-size: 1em;
 	display: block;
-	font-size:1em !important;
+	font-size: 1em !important;
 	letter-spacing: 0em;
 	text-align: center;
 	border: 0px solid black;
 }
 	
 #head-button a {
-    color:black;
+    color: black;
 }
 	
 #head-button li {
