@@ -1,4 +1,123 @@
-/* test */
+/* http://jsfiddle.net/jLoou1as/ */
+
+.arrow-money {
+    text-align: center;
+    line-height: 6em;
+    border: 0.25em solid @color-A4;
+    border-right-width: 1.25em;
+    height: 6em;
+    width: 7em;
+    position: relative;
+    z-index: 999;
+    color: #39914F;
+    font-weight: bold;
+    font-size: 28px;
+    font-family: 'urw-grotesk-t';
+    background-color: white;
+    margin-top: 3.5em;
+    margin-top: 3.5em;
+}
+
+.arrow-money:after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 8.25em;
+    top: -1.5em;
+    border-color: transparent @color-A4;
+        border-style: solid;
+        border-width: 4.5em 0px 4.5em 1em;
+        height: 0px;
+        width: 0px;
+}
+
+.arrow-money:before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 4em;
+    height: 9em;
+    left: -5em;
+    top: -1.5em;
+    background-image: url('../img/medor-perso2-ABONNE-2.png');
+    .background-size(contain);
+    background-repeat: no-repeat;
+}
+
+.arrow-money .inner {
+    line-height: 22px;
+    vertical-align: middle;
+    display: inline-block;
+}
+
+.arrow-money .price {
+	font-family: 'alfphabetbipocatcondensed';
+	font-size: 96px;
+	font-weight: normal;
+	line-height: 88px;
+}
+
+.arrow-money .price sup {
+	font-size: 0.5em;
+	vertical-align: top;
+}
+
+.fund {
+    background-color: lighten(@color-A4, 20%);
+    margin-left: 150px;
+    position: relative;
+}
+
+.illu {
+    outline: 1px solid yellow;
+    position: absolute;
+    width: 400px;
+    height: 100%;
+    right: 0;
+    top: 0; 
+}
+
+.goal-outer {
+        outline: 1px solid purple;
+        height: 100%;
+    text-align: center;
+    line-height: 10em;
+    font-family: 'urw-grotesk-t'
+}
+
+.goal-middle {
+    line-height: 1.1em;
+    vertical-align: middle;
+    display: inline-block;
+}
+
+.goal-arrow {
+        height: 0.25em;
+        width: 2em;
+    margin: 0em auto 0.5em auto;
+    position: relative;
+    background-color: black;
+    font-weight: bold;
+}
+
+.goal-arrow:after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: -1em;
+    top: 100%;
+    border-color: black transparent;
+        border-style: solid;
+        border-width: 0.5em 2em 0em 2em;
+        height: 0px;
+        width: 0px;
+}
+
+.number {
+	font-family: 'alfphabetbipocatcondensed';
+	font-size: 36px;
+	line-height: 36px;
+}
 
 /* less variables {{{ */
 @color-marron: #AA4400;
@@ -122,6 +241,13 @@
             transition: @prop @time @ease @delay;
 }
 
+.background-size (@size: cover) {
+  -webkit-background-size: @size;   
+  -moz-background-size: @size;   
+  -o-background-size: @size;   
+  background-size: @size;
+}
+
 .box-sizing (@type: border-box) {
     -webkit-box-sizing: @type;
        -moz-box-sizing: @type;
@@ -207,7 +333,7 @@
         width:150px;
         height: 30px;
     border: 3px solid black;
-    font-family: 'urw-grotesk-t';
+	font-family: 'alfphabetbipocatcondensed';
     text-transform: uppercase;
     letter-spacing: 0.25em;
     padding: 0.75em;
@@ -388,8 +514,8 @@ body {
 /* generic styles {{{ */
 body {
     font-family: 'Goudy Bookletter 1911', serif;
-    font-size: 19px;
-    line-height: 1.31;
+    font-size: 20px;
+    line-height: 1.22;
 }
 
 p + p {
@@ -409,8 +535,16 @@ a:hover{
     text-decoration: underline;
 }
 
+ul {
+    margin-left: 20px;
+}
+
+li {
+    margin-top: 5px;
+}
+
 ul li:before {
-    content: "- ";
+    content: "— ";
 }
 
 details {
@@ -428,13 +562,116 @@ td {
 }
 /* }}} */
 
+.champ {
+    border: 1px solid black;
+    background: @color-D3;
+}
+
+.champ:hover {
+    border: 1px solid black;
+    background: #fff;
+}
+
+.button {
+    border: 1px solid black;
+    background: @color-D1;
+}
+
+.button:hover {
+    border: 1px solid black;
+    background: @color-D3;
+    color: white;
+}
 
 /* specific styles {{{ */
 #main-header {
-    font-family: 'Career', serif;
+    width: 45%;
+    margin-top:20px;
+		
+	h1{
+    font-family:'Alfphabet-IV';
     font-size: 2.6em;
+	}
+	h2{
+	font-family: 'Career', serif;    
+	font-size:1.3em;
+	outline: 1px solid black;
+	padding: 0.15em;
+	margin-top:-7px !important;
+	margin-bottom:12px !important;
+	letter-spacing: 0.04em;
+	}
 }
 
+#main-header > div {
+		width: 49%;
+    display:inline-block;
+    vertical-align:top;
+    .box-sizing();
+		padding: 11px 7px;
+    }
+
+.sous-titre {
+		font-family: 'Goudy Bookletter 1911';
+    font-size: 1.8em;
+}
+#main-intro {
+    
+		font-family: 'Goudy Bookletter 1911';
+    font-size: 1.2em;
+    }
+#head-button {
+	font-family: 'alfphabetbipocatcondensed';
+	font-size:1em;
+	display: block;
+	font-size:1em !important;
+	letter-spacing: 0em;
+	text-align: center;
+	border: 0px solid black;
+	
+		a{
+		color:black;
+		}
+	
+}
+
+	
+	
+	#head-button li {
+	    border: 3px solid black;
+	    position: relative;
+	    height: 4em;
+	    padding: 0 4em;
+	    text-align: center;
+	    line-height: 4em;
+	}
+	
+	#head-button li:before,
+	#head-button li:after {
+	    content: "";
+	    display: block;
+	    position: absolute;
+	    top: 0;
+	    border-color: transparent black;
+	        border-style: solid;
+	        height: 0px;
+	        width: 0px;
+	
+	}
+	
+	#head-button li:after {
+	    left: 0;
+	        border-width: 2em 0 2em 2em;
+	}
+	
+	#head-button li:before {
+	    right: 0;
+	        border-width: 2em 2em 2em 0;
+	}
+
+#cartouche {
+    }
+    
 /* #main-header p {
     height: 250px;
     line-height: 250px;
@@ -449,6 +686,7 @@ td {
 main {
     margin-bottom: 5em;
 }
+
 
 main h2,
 main h3 {
@@ -467,6 +705,7 @@ main h3 {
     text-align: center;
     font-size: 1.6em;
     margin: 1.21em;
+    margin-bottom: 0.3em;
 }
 
 summary {
@@ -480,16 +719,29 @@ summary {
 
 .main-citation {
     font-family: 'alfphabetbipocatcondensed';
-    font-size: 0.4em;
+font-size: 1em;
     line-height: 15px;
-    height: 50px;
+    height: 0px;
+    margin-left: 0px;
+    margin-top: 40px;
 }
 
 .main-signature {
-    font-size: 0.4em;
+    font-size: 0.7em;
     line-height: 15px;
     font-family: 'alfphabetbipocatcondensed';
-    margin-left: 100px;
+	margin-left: 449px;
+	    margin-top: 2.6em;
+}
+
+.blocvideo {
+    border: solid 1px black;
+    width: 300px;
+    padding: 80px 30px 80px 30px;
+}
+
+.indent {
+    margin-left: 20px;
 }
 
 #intro {
@@ -545,7 +797,6 @@ summary {
     background-position: 0 50%;
 }
 
-
 .tranche-partenaires {
     background-image: url("../img/IMG_7245.JPG"); 
     background-position: 0 25%;
@@ -553,40 +804,52 @@ summary {
 
 .louis-image {
         display: block;
-        width: 400px;
-        max-width: 100%;
-        margin: 0 auto;  
+        margin: 0 auto;
 }
 
 .louis-image img {
-        max-width: 100%;
+        max-width: 130%;
 }
 
 #magazine {
     }
 
-#dna .jcarousel-item {
-    font-family: 'urw-grotesk-t';
-    font-size: 16px;
-    line-height: 1.21em;
-    font-weight: bold;
-    .box-sizing();
-    width: 0.30%;
-    position: relative;
-    padding: 16px;
-    counter-increment: foo;
+#dna {
+    font-family: 'Goudy Bookletter 1911';
+    letter-spacing: 0.07em;
+    font-size: 17px;
+	line-height: 1.1em;
     color: black;
+    margin-left: 28%;
+    width: 45%;
+    margin-bottom: 42px;
+
 }
 
-#dna .jcarousel-item:before {
+#dna > div {
+    width: 45%;
+    display:inline-block;
+    vertical-align:top;
+    .box-sizing();
+		padding: 11px 12px;
+    counter-increment: foo;
+    color: #b14542;
+        h3{
+            font-family:'alfphabetbipocatcondensed';
+					margin: 0.2em 0em 0.5em;
+        }
+    }
+
+#dna > div:before {
     content: counter(foo) ". ";
+    bottom:1em;
 }
 
 #dna h3 {
     margin: 0.5em 0;
     font-family: inherit;
     color: @color-A2;
-    text-transform:uppercase;
+    /*text-transform:uppercase;*/
     text-align:left;
 }
 
