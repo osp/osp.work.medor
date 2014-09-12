@@ -2,10 +2,10 @@
 
 .arrow-money {
     text-align: center;
-    line-height: 7em;
-    border: 0.25em solid #39914F;
+    line-height: 6em;
+    border: 0.25em solid @color-A4;
     border-right-width: 1.25em;
-    height: 7em;
+    height: 6em;
     width: 7em;
     position: relative;
     z-index: 999;
@@ -14,6 +14,8 @@
     font-size: 28px;
     font-family: 'urw-grotesk-t';
     background-color: white;
+    margin-top: 3.5em;
+    margin-top: 3.5em;
 }
 
 .arrow-money:after {
@@ -22,11 +24,24 @@
     position: absolute;
     left: 8.25em;
     top: -1.5em;
-    border-color: transparent #39914F;
+    border-color: transparent @color-A4;
         border-style: solid;
-        border-width: 5em 0px 5em 1em;
+        border-width: 4.5em 0px 4.5em 1em;
         height: 0px;
         width: 0px;
+}
+
+.arrow-money:before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 4em;
+    height: 9em;
+    left: -5em;
+    top: -1.5em;
+    background-image: url('../img/medor-perso2-ABONNE-2.png');
+    .background-size(contain);
+    background-repeat: no-repeat;
 }
 
 .arrow-money .inner {
@@ -45,6 +60,63 @@
 .arrow-money .price sup {
 	font-size: 0.5em;
 	vertical-align: top;
+}
+
+.fund {
+    background-color: lighten(@color-A4, 20%);
+    margin-left: 150px;
+    position: relative;
+}
+
+.illu {
+    outline: 1px solid yellow;
+    position: absolute;
+    width: 400px;
+    height: 100%;
+    right: 0;
+    top: 0; 
+}
+
+.goal-outer {
+        outline: 1px solid purple;
+        position: absolute;
+        width: 200px;
+        height: 100%;
+        right: 400px;
+        top: 0; 
+}
+
+.goal-outer {
+    text-align: center;
+    line-height: 10em;
+}
+
+.goal-middle {
+    line-height: 1.1em;
+    vertical-align: middle;
+    display: inline-block;
+}
+
+.goal-arrow {
+        height: 0.25em;
+        width: 2em;
+    margin: 0 auto;
+    position: relative;
+    background-color: black;
+    font-weight: bold;
+}
+
+.goal-arrow:after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: -1em;
+    top: 100%;
+    border-color: black transparent;
+        border-style: solid;
+        border-width: 0.5em 2em 0em 2em;
+        height: 0px;
+        width: 0px;
 }
 
 /* less variables {{{ */
@@ -169,6 +241,13 @@
             transition: @prop @time @ease @delay;
 }
 
+.background-size (@size: cover) {
+  -webkit-background-size: @size;   
+  -moz-background-size: @size;   
+  -o-background-size: @size;   
+  background-size: @size;
+}
+
 .box-sizing (@type: border-box) {
     -webkit-box-sizing: @type;
        -moz-box-sizing: @type;
@@ -254,7 +333,7 @@
         width:150px;
         height: 30px;
     border: 3px solid black;
-    font-family: 'urw-grotesk-t';
+	font-family: 'alfphabetbipocatcondensed';
     text-transform: uppercase;
     letter-spacing: 0.25em;
     padding: 0.75em;
@@ -456,8 +535,16 @@ a:hover{
     text-decoration: underline;
 }
 
+ul {
+    margin-left: 20px;
+}
+
+li {
+    margin-top: 5px;
+}
+
 ul li:before {
-    content: "- ";
+    content: "— ";
 }
 
 details {
@@ -478,19 +565,52 @@ td {
 
 /* specific styles {{{ */
 #main-header {
+    width: 45%;
+		
 	h1{
     font-family:'Alfphabet-IV';
+    font-size: 2.6em;
 	}
 	h2{
-    font-family:''alfphabetbipocatcondensed'';
+	font-family: 'Career', serif;    
+	font-size:1.3em;
+	outline: 1px solid black;
+	padding: 0.15em;
+	margin-top:-7px !important;
+	margin-bottom:12px !important;
+	letter-spacing: 0.04em;
 	}
-	
-
 }
+#main-header > div {
+		width: 45%;
+    display:inline-block;
+    vertical-align:top;
+    .box-sizing();
+		padding: 11px 12px;
+    }
 
 .sous-titre {
-    font-family: 'Career', serif;
+		font-family: 'Goudy Bookletter 1911';
+    font-size: 1.8em;
 }
+#main-intro {
+    
+		font-family: 'Goudy Bookletter 1911';
+    font-size: 0.9em;
+    }
+#head-button {
+	font-family: 'alfphabetbipocatcondensed';
+	font-size:1em;
+	display: block;
+}
+#head-button > a {
+	font-size:1em !important;
+	letter-spacing: 0em;
+	text-align: center;
+	outline: 2px solid black;
+	padding: 4px;
+	border: 0px solid black;
+	}
 
 #cartouche {
     }
@@ -542,7 +662,7 @@ summary {
 
 .main-citation {
     font-family: 'alfphabetbipocatcondensed';
-    font-size: 0.4em;
+font-size: 1em;
     line-height: 15px;
     height: 0px;
     margin-left: 0px;
@@ -550,10 +670,21 @@ summary {
 }
 
 .main-signature {
-    font-size: 0.4em;
+    font-size: 0.7em;
     line-height: 15px;
     font-family: 'alfphabetbipocatcondensed';
-    margin-left: 100px;
+	margin-left: 449px;
+	    margin-top: 2.6em;
+}
+
+.blocvideo {
+    border: solid 1px black;
+    width: 300px;
+    padding: 80px 30px 80px 30px;
+}
+
+.indent {
+    margin-left: 20px;
 }
 
 #intro {
