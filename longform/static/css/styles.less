@@ -1,5 +1,3 @@
-/* http://jsfiddle.net/jLoou1as/ */
-
 .arrow-money {
     text-align: center;
     line-height: 6em;
@@ -26,10 +24,10 @@
     left: 8.25em;
     top: -1.5em;
     border-color: transparent @color-A4;
-        border-style: solid;
-        border-width: 4.5em 0px 4.5em 1em;
-        height: 0px;
-        width: 0px;
+    border-style: solid;
+    border-width: 4.5em 0px 4.5em 1em;
+    height: 0px;
+    width: 0px;
 }
 
 .arrow-money:before {
@@ -60,7 +58,8 @@
 
 .arrow-money .price sup {
 	font-size: 0.5em;
-	vertical-align: top;
+	vertical-align: super;
+    line-height: 0;
 }
 
 .fund {
@@ -84,8 +83,8 @@
 }
 
 .goal-outer {
-        outline: 1px solid purple;
-        height: 100%;
+    outline: 1px solid purple;
+    height: 100%;
     text-align: center;
     line-height: 10em;
     font-family: 'urw-grotesk-t'
@@ -98,8 +97,8 @@
 }
 
 .goal-arrow {
-        height: 0.25em;
-        width: 2em;
+    height: 0.25em;
+    width: 2em;
     margin: 0em auto 0.5em auto;
     position: relative;
     background-color: black;
@@ -113,10 +112,10 @@
     left: -1em;
     top: 100%;
     border-color: black transparent;
-        border-style: solid;
-        border-width: 0.5em 2em 0em 2em;
-        height: 0px;
-        width: 0px;
+    border-style: solid;
+    border-width: 0.5em 2em 0em 2em;
+    height: 0px;
+    width: 0px;
 }
 
 .number {
@@ -239,14 +238,6 @@
 
 
 /* mixins {{{ */
-.transition (@prop: all, @time: 1s, @ease: linear, @delay: 0s) {
-    -webkit-transition: @prop @time @ease @delay;
-       -moz-transition: @prop @time @ease @delay;
-         -o-transition: @prop @time @ease @delay;
-        -ms-transition: @prop @time @ease @delay;
-            transition: @prop @time @ease @delay;
-}
-
 .background-size (@size: cover) {
   -webkit-background-size: @size;   
   -moz-background-size: @size;   
@@ -259,15 +250,6 @@
        -moz-box-sizing: @type;
         -ms-box-sizing: @type;
             box-sizing: @type;
-}
-
-.user-select (@val) {
-    -webkit-touch-callout: @val;
-      -webkit-user-select: @val;
-       -khtml-user-select: @val;
-         -moz-user-select: @val;
-          -ms-user-select: @val;
-              user-select: @val;
 }
 
 .column-count(@column-count: 2){
@@ -286,6 +268,23 @@
     -webkit-column-rule: @column-rule;
        -moz-column-rule: @column-rule;
             column-rule: @column-rule;
+}
+
+.user-select (@val) {
+    -webkit-touch-callout: @val;
+      -webkit-user-select: @val;
+       -khtml-user-select: @val;
+         -moz-user-select: @val;
+          -ms-user-select: @val;
+              user-select: @val;
+}
+
+.transition (@prop: all, @time: 1s, @ease: linear, @delay: 0s) {
+    -webkit-transition: @prop @time @ease @delay;
+       -moz-transition: @prop @time @ease @delay;
+         -o-transition: @prop @time @ease @delay;
+        -ms-transition: @prop @time @ease @delay;
+            transition: @prop @time @ease @delay;
 }
 
 .transform(@string){
@@ -313,31 +312,12 @@
     display: inline-block;
 }
 
-/*
-.column {
-        float: left;
-    height: 80%;
-}
-.column + .column {
-        padding-left: 1em;
-}
-.column20 {
-    width: 20%;
-}
-.column33 {
-    width: 33%;
-}
-.column66 {
-    width: 66%;
-}
-*/
-
 .button {
     color: black;
     margin: 0.5em;
     display: block;
-        width:150px;
-        height: 30px;
+    width: 150px;
+    height: 30px;
     border: 3px solid black;
 	font-family: 'alfphabetbipocatcondensed';
     text-transform: uppercase;
@@ -351,12 +331,9 @@
 /* Carousel {{{ */
 .jcarousel-outer {
     position: relative;
-    /* border-bottom: 10px double black; */
     background-color: white;
-    margin-left:380px;
+    margin-left: 380px;
 }
-
-
 
 .jcarousel {
     position: relative;
@@ -373,9 +350,10 @@
 .jcarousel-item {
     float: left;
     color:black;
-    h3{
-        text-transform:uppercase;
-        }
+}
+
+.jcarousel-item h3 {
+    text-transform: uppercase;
 }
 
 .jcarousel-controls {
@@ -433,8 +411,8 @@ body {
 }
 
 #subscribing {
-        margin-left: 150px;
-        margin-right: 50px;
+    margin-left: 150px;
+    margin-right: 50px;
 }
 
 .left-arrow {
@@ -452,15 +430,15 @@ body {
 }
 
 .text {
-        margin-right: 70%;
-        margin-left: 50px;  
+    margin-right: 70%;
+    margin-left: 50px;  
 }
 
 .schema {
-        position: absolute;
-        top: -70px;
-        left: 30%;
-        width: 65%;    
+    position: absolute;
+    top: -70px;
+    left: 30%;
+    width: 65%;    
 }
 
 .jcarousel-outer,
@@ -484,9 +462,9 @@ body {
 }
 
 .image-fund img {
-        width: 100%;
-        max-width: 800px;
-        margin-bottom: -125px;
+    width: 100%;
+    max-width: 800px;
+    margin-bottom: -125px;
 }
 
 .arrow {
@@ -592,40 +570,42 @@ td {
 /* specific styles {{{ */
 #main-header {
     width: 45%;
-    margin-top:20px;
-		
-	h1{
+    margin-top: 20px;
+}
+    
+#main-header h1 {
     font-family:'Alfphabet-IV';
     font-size: 2.6em;
-	}
-	h2{
-	font-family: 'Career', serif;    
-	font-size:1.3em;
-	outline: 1px solid black;
-	padding: 0.15em;
-	margin-top:-7px !important;
-	margin-bottom:12px !important;
-	letter-spacing: 0.04em;
-	}
+}
+
+#main-header h2 {
+    font-family: 'Career', serif;    
+    font-size: 1.3em;
+    outline: 1px solid black;
+    padding: 0.15em;
+    margin-top: -7px !important;
+    margin-bottom: 12px !important;
+    letter-spacing: 0.04em;
 }
 
 #main-header > div {
-		width: 49%;
-    display:inline-block;
-    vertical-align:top;
+    width: 49%;
+    display: inline-block;
+    vertical-align: top;
     .box-sizing();
-		padding: 11px 7px;
-    }
+    padding: 11px 7px;
+}
 
 .sous-titre {
-		font-family: 'Goudy Bookletter 1911';
+    font-family: 'Goudy Bookletter 1911';
     font-size: 1.8em;
 }
+
 #main-intro {
-    
-		font-family: 'Goudy Bookletter 1911';
+    font-family: 'Goudy Bookletter 1911';
     font-size: 1.2em;
-    }
+}
+
 #head-button {
 	font-family: 'alfphabetbipocatcondensed';
 	font-size:1em;
@@ -634,54 +614,44 @@ td {
 	letter-spacing: 0em;
 	text-align: center;
 	border: 0px solid black;
+}
 	
-		a{
-		color:black;
-		}
-	
+#head-button a {
+    color:black;
 }
 
 	
 	
-	#head-button li {
-	    border: 3px solid black;
-	    position: relative;
-	    height: 4em;
-	    padding: 0 4em;
-	    text-align: center;
-	    line-height: 4em;
-	}
-	
-	#head-button li:before,
-	#head-button li:after {
-	    content: "";
-	    display: block;
-	    position: absolute;
-	    top: 0;
-	    border-color: transparent black;
-	        border-style: solid;
-	        height: 0px;
-	        width: 0px;
-	
-	}
-	
-	#head-button li:after {
-	    left: 0;
-	        border-width: 2em 0 2em 2em;
-	}
-	
-	#head-button li:before {
-	    right: 0;
-	        border-width: 2em 2em 2em 0;
-	}
+#head-button li {
+    border: 3px solid black;
+    position: relative;
+    height: 4em;
+    padding: 0 4em;
+    text-align: center;
+    line-height: 4em;
+}
 
-#cartouche {
-    }
-    
-/* #main-header p {
-    height: 250px;
-    line-height: 250px;
-} */
+#head-button li:before,
+#head-button li:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    border-color: transparent black;
+    border-style: solid;
+    height: 0px;
+    width: 0px;
+}
+
+#head-button li:after {
+    left: 0;
+    border-width: 2em 0 2em 2em;
+}
+
+#head-button li:before {
+    right: 0;
+    border-width: 2em 2em 2em 0;
+}
 
 #main-header span { 
     vertical-align: middle;
@@ -708,12 +678,12 @@ main h2 {
 }
 
 main h3 {
-		text-align: center;
-		font-size: 1.6em;
-		margin: 1.21em;
-		margin-bottom: 0.3em;
-		line-height: 0.9em;
-		letter-spacing: -0.01em;
+    text-align: center;
+    font-size: 1.6em;
+    margin: 1.21em;
+    margin-bottom: 0.3em;
+    line-height: 0.9em;
+    letter-spacing: -0.01em;
 }
 
 summary {
@@ -727,7 +697,7 @@ summary {
 
 .main-citation {
     font-family: 'alfphabetbipocatcondensed';
-font-size: 1em;
+    font-size: 1em;
     line-height: 15px;
     height: 0px;
     margin-left: 0px;
@@ -739,7 +709,7 @@ font-size: 1em;
     line-height: 15px;
     font-family: 'alfphabetbipocatcondensed';
 	margin-left: 449px;
-	    margin-top: 2.6em;
+    margin-top: 2.6em;
 }
 
 .blocvideo {
@@ -753,9 +723,9 @@ font-size: 1em;
 }
 
 #intro {
-        font-family:'alfphabetbipocatcondensed';
-        font-size: 1.1em;
-        color: black;
+    font-family:'alfphabetbipocatcondensed';
+    font-size: 1.1em;
+    color: black;
 }
 
 #subscribing {
@@ -773,7 +743,7 @@ font-size: 1em;
 #subscribing h2,
 #cooperating h2,
 #donating h2 {
-        display: none;
+    display: none;
 }
 
 .tranche {
@@ -811,16 +781,13 @@ font-size: 1em;
 }
 
 .louis-image {
-        display: block;
-        margin: 0 auto;
+    display: block;
+    margin: 0 auto;
 }
 
 .louis-image img {
-        max-width: 130%;
+    max-width: 130%;
 }
-
-#magazine {
-    }
 
 #dna {
     font-family: 'Goudy Bookletter 1911';
@@ -831,7 +798,6 @@ font-size: 1em;
     margin-left: 28%;
     width: 45%;
     margin-bottom: 42px;
-
 }
 
 #dna > div {
@@ -839,14 +805,10 @@ font-size: 1em;
     display:inline-block;
     vertical-align:top;
     .box-sizing();
-		padding: 11px 12px;
+    padding: 11px 12px;
     counter-increment: foo;
     color: #b14542;
-        h3{
-            font-family:'alfphabetbipocatcondensed';
-					margin: 0.2em 0em 0.5em;
-        }
-    }
+}
 
 #dna > div:before {
     content: counter(foo) ". ";
@@ -854,22 +816,17 @@ font-size: 1em;
 }
 
 #dna h3 {
+    font-family:'alfphabetbipocatcondensed';
     margin: 0.5em 0;
     font-family: inherit;
     color: @color-A2;
-    /*text-transform:uppercase;*/
-    text-align:left;
-}
-
-#Les_frais_de_lancement {
-    /*position: relative;*/
-    /*overflow: visible;*/
+    text-align: left;
 }
 
 #maquette {
     display: block;
     position: absolute;
-            right: -260px;
+    right: -260px;
     top: 215px;
     z-index: -1;
 }
@@ -910,8 +867,6 @@ font-size: 1em;
 #portraits .jcarousel-item:hover figcaption {
     visibility: visible;
 }
-
 /* }}} */
 
 /* vim: set foldmethod=marker: */
-
