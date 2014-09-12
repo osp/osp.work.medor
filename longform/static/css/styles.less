@@ -1,4 +1,4 @@
-/* test */
+/* http://jsfiddle.net/jLoou1as/ */
 
 .arrow-money {
     text-align: center;
@@ -7,7 +7,8 @@
     border-right-width: 1.25em;
     height: 6em;
     width: 7em;
-    position: relative;
+    position: absolute;
+    top: 50%;
     z-index: 999;
     color: #39914F;
     font-weight: bold;
@@ -79,16 +80,10 @@
 
 .goal-outer {
         outline: 1px solid purple;
-        position: absolute;
-        width: 200px;
         height: 100%;
-        right: 400px;
-        top: 0; 
-}
-
-.goal-outer {
     text-align: center;
     line-height: 10em;
+    font-family: 'urw-grotesk-t'
 }
 
 .goal-middle {
@@ -100,7 +95,7 @@
 .goal-arrow {
         height: 0.25em;
         width: 2em;
-    margin: 0 auto;
+    margin: 0em auto 0.5em auto;
     position: relative;
     background-color: black;
     font-weight: bold;
@@ -117,6 +112,12 @@
         border-width: 0.5em 2em 0em 2em;
         height: 0px;
         width: 0px;
+}
+
+.number {
+	font-family: 'alfphabetbipocatcondensed';
+	font-size: 36px;
+	line-height: 36px;
 }
 
 /* less variables {{{ */
@@ -562,10 +563,31 @@ td {
 }
 /* }}} */
 
+.champ {
+    border: 1px solid black;
+    background: @color-D3;
+}
+
+.champ:hover {
+    border: 1px solid black;
+    background: #fff;
+}
+
+.button {
+    border: 1px solid black;
+    background: @color-D1;
+}
+
+.button:hover {
+    border: 1px solid black;
+    background: @color-D3;
+    color: white;
+}
 
 /* specific styles {{{ */
 #main-header {
     width: 45%;
+    margin-top:20px;
 		
 	h1{
     font-family:'Alfphabet-IV';
@@ -581,12 +603,13 @@ td {
 	letter-spacing: 0.04em;
 	}
 }
+
 #main-header > div {
-		width: 45%;
+		width: 49%;
     display:inline-block;
     vertical-align:top;
     .box-sizing();
-		padding: 11px 12px;
+		padding: 11px 7px;
     }
 
 .sous-titre {
@@ -596,20 +619,55 @@ td {
 #main-intro {
     
 		font-family: 'Goudy Bookletter 1911';
-    font-size: 0.9em;
+    font-size: 1.2em;
     }
 #head-button {
 	font-family: 'alfphabetbipocatcondensed';
 	font-size:1em;
 	display: block;
-}
-#head-button > a {
 	font-size:1em !important;
 	letter-spacing: 0em;
 	text-align: center;
-	outline: 2px solid black;
-	padding: 4px;
 	border: 0px solid black;
+	
+		a{
+		color:black;
+		}
+	
+}
+
+	
+	
+	#head-button li {
+	    border: 3px solid black;
+	    position: relative;
+	    height: 4em;
+	    padding: 0 4em;
+	    text-align: center;
+	    line-height: 4em;
+	}
+	
+	#head-button li:before,
+	#head-button li:after {
+	    content: "";
+	    display: block;
+	    position: absolute;
+	    top: 0;
+	    border-color: transparent black;
+	        border-style: solid;
+	        height: 0px;
+	        width: 0px;
+	
+	}
+	
+	#head-button li:after {
+	    left: 0;
+	        border-width: 2em 0 2em 2em;
+	}
+	
+	#head-button li:before {
+	    right: 0;
+	        border-width: 2em 2em 2em 0;
 	}
 
 #cartouche {
@@ -739,7 +797,6 @@ font-size: 1em;
     background-image: url("../img/PC207027.JPG"); 
     background-position: 0 50%;
 }
-
 
 .tranche-partenaires {
     background-image: url("../img/IMG_7245.JPG"); 

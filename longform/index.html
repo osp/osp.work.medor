@@ -36,15 +36,14 @@
 				<div id="main-intro">
 					            <p>Médor n'est pas un chien. C'est un magazine belge d'enquêtes et de récits. 128 pages, 16×23cm, quadrichromie. Au programme de chaque numéro : 2 grandes enquêtes, 3 récits et portraits, un entretien, un portfolio photo et des rubriques dans le ventre. Médor est un aussi un projet coopératif. Peut-être le vôtre?</p>
 				</div>
-				<div id="head-button">
-					            
-					                <a href="#subscribing" class="button">déjà convaincu!</a>
-					                <a href="#cooperating" class="button">quoi ça?</a>
-					                <a href="#equipe" class="button">C'est qui?</a>
-					            
-		            </div>
+				            <ul  id="head-button">
+								<li> <a href="#subscribing">déjà convaincu!</a></li>
+							            <li>     <a href="#cooperating">quoi ça?</a></li>
+							              <li>   <a href="#equipe">C'est qui?</a></li>
+								</li>
+					            </ul>
 		        </div>
-		
+		<!--
 	        <div id="subscribing">
 
                             <img src="static/img/je_m-abonne.png" class="left-arrow"/>
@@ -64,7 +63,7 @@
                                     <img class="schema" src="static/img/3800-abonnes-yes.png" />
                         <img class="right-arrow" src="static/img/je_m-abonne_fleche.png" />
                 </div>
-
+-->
 <div class="fund">
 	<div class="arrow-money">
 	    <span class="inner">je m'abonne,<br />j'avance<br /><span class="price">60<sup>€</sup></span></span>
@@ -73,13 +72,13 @@
 	    <div class="goal-middle">
 	        <div id="goal">
 		        objectif<br />
-		        3800<br />
+		        <span class="number">3800</span><br />
 		        abonnés
 	        </div>
 	        <div class="goal-arrow"></div>
 	        <div>
 		        décompte annuel<br />
-		        2129<br />
+		        <span class="number">2129</span><br />
 		        abonnés
 	        </div>
 	    </div>
@@ -135,7 +134,7 @@
 
         <div id="magazine">
             <figure id="cover-detail" class="cover">
-                <img src="static/img/medor-objet-budget-detail.png" />
+                <img src="static/img/medor-objet-mag.png" />
             </figure>
 
             <div class="wrap">
@@ -212,11 +211,11 @@
                 <figure class="louis-image"><img src="static/img/louis_extrait-2.jpg" /></figure>
 
                 <h3>Des outils partagés</h3>
-                <p>Une plateforme web mettra en commun savoirs et données. Elle permet aux journalistes de montrer les avancées rédactionnelles, d'appeler à l'aide pour la recherche d'un contact, d'une info, pour une relecture provisoire, une question déontologique…</p>
+                <p>En construisant sa propre plateforme de publication libre, initiée et développée en Belgique, Médor met en commun savoirs et données. Elle permet aux journalistes de montrer les avancées rédactionnelles, d'appeler à l'aide pour la recherche d'un contact, d'une info, pour une relecture provisoire, une question déontologique. Cette plateforme est développée sous licence libre et proposée à tous les médias qui comme Médor, basculent leurs pratiques et écosystèmes. Partage, on vous dit.</p>
 
-                <h3>Un graphisme post gutemberg</h3>
-                <p>Le graphisme de Médor sera réalisé dans une perspective collaborative et  ouverte. Tous les logiciels utilisés pour le visuel seront libres, la  typographie sera neuve et libre elle aussi, puisant une partie de ses  sources dans la culture graphique belge. Médor souhaite ainsi contribuer  à l'ébullition typographique et graphique en cours, mais pas seulement.  Par ce mode de fonctionnement, Médor donnera des outils concrets aux  graphistes et journalistes pour avancer ensemble dans la production de contenu et proposer une information où texte et visuel peuvent se compléter de façon inédite.</br>
-En construisant sa propre plateforme de publication libre, initiée et développée en Belgique, Médor fait aussi le pari d'une nouvelle pratique d'édition et de mise en page, sort la presse de celle de Gutemberg pour la fondre sur nos mutlisurfaces à venir.</p>
+                <h3>Un graphisme post Gutemberg</h3>
+                <p>Tous les logiciels utilisés pour le graphisme de Médor sont libres, la typographie l'est autant, puisant une partie de ses sources dans la culture graphique belge. Médor souhaite ainsi contribuer à l'ébullition typographique et graphique en cours. Mais ausii, par ce mode de fonctionnement, Médor donnera des outils concrets aux graphistes et journalistes pour avancer ensemble dans la production de contenu et proposer une information où texte et visuel peuvent se compléter de façon inédite. Ce choix radical et singulier, associé à sa plateforme de publication, emmène Médor vers des pratiques d'édition et de mise en page résolument neuves, et sort la presse de celle de Gutemberg pour la fondre sur nos multisurfaces à venir.
+</p>
 <details>
                     <summary>Voir le colophon de cette première page</summary>
                 <p>Cette page web a été générée à partir de l'une des pages de l'outil <a herf="http://tunakutafuta.be/index.php?title=Appel%C3%A0sous_-_public_release">wiki du projet</a>, écrite à plusieurs mains,
@@ -522,10 +521,10 @@ En construisant sa propre plateforme de publication libre, initiée et développ
 								<p class="indent">5100 Dave (Namur)</p>
 								<li>Abonnez-vous à notre liste d'information:
 								<form method="post" action="http://list.medor.coop/process.php" name="signup">
-	                    <input type="text" name="Email" id="email" maxlength="120" />
+	                    <input class="champ" type="text" name="Email" id="email" maxlength="120" VALUE="Votre adresse e-mail" />
 	                    <!-- *** DO NOT CHANGE name="pommo_signup" ! *** If you'd like to change the button text change the "value=" text. -->            
 	                    <input type="hidden" name="pommo_signup" value="true" />
-	                    <input type="submit" value="Je m'abonne" />
+	                    <input class="button" type="submit" value="Je m'abonne" />
 								</form>
 								</li>
 								<li>
