@@ -239,10 +239,10 @@
 
 /* mixins {{{ */
 .background-size (@size: cover) {
-  -webkit-background-size: @size;   
-  -moz-background-size: @size;   
-  -o-background-size: @size;   
-  background-size: @size;
+    -webkit-background-size: @size;   
+       -moz-background-size: @size;   
+         -o-background-size: @size;   
+            background-size: @size;
 }
 
 .box-sizing (@type: border-box) {
@@ -311,20 +311,6 @@
 .cols2 div {
     display: inline-block;
 }
-
-.button {
-    color: black;
-    margin: 0.5em;
-    display: block;
-    width: 150px;
-    height: 30px;
-    border: 3px solid black;
-	font-family: 'alfphabetbipocatcondensed';
-    text-transform: uppercase;
-    letter-spacing: 0.25em;
-    padding: 0.75em;
-    font-size: 13px;
-}
 /* }}} */
 
 
@@ -349,7 +335,7 @@
 
 .jcarousel-item {
     float: left;
-    color:black;
+    color: black;
 }
 
 .jcarousel-item h3 {
@@ -546,22 +532,32 @@ td {
 }
 /* }}} */
 
-.champ {
+#newsletter input[type="text"] {
     border: 1px solid black;
     background: @color-D3;
 }
 
-.champ:hover {
+#newsletter input[type="text"]:hover {
     border: 1px solid black;
     background: #fff;
 }
 
-.button {
+#newsletter input[type="submit"]{
+    color: black;
+    margin: 0.5em;
+    display: block;
+    width: 150px;
+    height: 30px;
+	font-family: 'alfphabetbipocatcondensed';
+    text-transform: uppercase;
+    letter-spacing: 0.25em;
+    padding: 0.75em;
+    font-size: 13px;
     border: 1px solid black;
     background: @color-D1;
 }
 
-.button:hover {
+#newsletter input[type="submit"]:hover {
     border: 1px solid black;
     background: @color-D3;
     color: white;
@@ -619,8 +615,6 @@ td {
 #head-button a {
     color:black;
 }
-
-	
 	
 #head-button li {
     border: 3px solid black;
@@ -662,7 +656,6 @@ td {
 main {
     margin-bottom: 5em;
 }
-
 
 main h2,
 main h3 {
@@ -746,7 +739,10 @@ summary {
     display: none;
 }
 
-.tranche {
+#collaborative-experience h2,
+#status h2,
+#accounting h2,
+#now-what h2 {
     height: 500px;
     background-size: cover;
     line-height: 500px;
@@ -755,27 +751,31 @@ summary {
     margin: 0px 45px;
 }
 
-.tranche span { 
+#collaborative-experience h2 span,
+#status h2 span,
+#accounting h2 span,
+#now-what h2 span {
     vertical-align: middle;
     display: inline-block;
     line-height: 0.925em;
 }
 
-.tranche-collaborative {
+#collaborative-experience h2 {
     background-image: url("../img/up-n-down.JPG"); 
     background-position: 0 25%;
 }
 
-.tranche-deja {
+#status h2 {
     background-image: url("../img/doel-colin.jpg"); 
     background-position: 0 50%;
 }
-.tranche-3800 {
+
+#accounting h2 {
     background-image: url("../img/PC207027.JPG"); 
     background-position: 0 50%;
 }
 
-.tranche-partenaires {
+#now-what h2 {
     background-image: url("../img/IMG_7245.JPG"); 
     background-position: 0 25%;
 }
@@ -802,8 +802,8 @@ summary {
 
 #dna > div {
     width: 45%;
-    display:inline-block;
-    vertical-align:top;
+    display: inline-block;
+    vertical-align: top;
     .box-sizing();
     padding: 11px 12px;
     counter-increment: foo;

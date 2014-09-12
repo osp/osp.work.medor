@@ -16,12 +16,12 @@
             <img src="static/img/medor-objet-contenu.png" alt="contenu d'un numéro"/>
         </figure>
 
-        <p class="main-citation">
-            <span class="small">[...]</span>&nbsp;une révolution est simplement ce qui se produit quand un cycle est révolu.
-        </p>
-        <p class="main-signature">
-            — <a href="http://www.ttoarendt.com/2014/03/bernard-stiegler-le-front-national-est-un-escamoteur.html">Bernard Stiegler</a>
-        </p>
+        <blockquote class="main-citation" cite="http://www.ttoarendt.com/2014/03/bernard-stiegler-le-front-national-est-un-escamoteur.html">
+            <p><span class="small">[...]</span>&nbsp;une révolution est simplement ce qui se produit quand un cycle est révolu.</p>
+            <footer class="main-signature">
+                — <a href="http://www.ttoarendt.com/2014/03/bernard-stiegler-le-front-national-est-un-escamoteur.html">Bernard Stiegler</a>
+            </footer>
+        </blockquote>
     </header>
 
     <main>
@@ -139,7 +139,7 @@
 
         <div id="magazine">
             <figure id="cover-detail" class="cover">
-                <img src="static/img/medor-objet-mag.png" />
+                <img src="static/img/medor-objet-mag.png" alt="premier numéro" />
             </figure>
 
             <div class="wrap">
@@ -184,7 +184,7 @@
             </div>
 
             <div id="collaborative-experience">
-                <h2 class="tranche tranche-collaborative"><span>Médor,<br/>c'est une expérience<br/>collaborative</span></h2>
+                <h2 class="tranche"><span>Médor,<br/>c'est une expérience<br/>collaborative</span></h2>
 
                 <figure id="cover-coop" class="cover">
                     <img src="static/img/medor-objet-coop.png" alt="organisation de Médor" />
@@ -235,7 +235,7 @@
         </div>
 
         <div id="accounting">
-            <h2 class="tranche tranche-3800"><span style="color:white;">Médor,<br/>c'est 3800 abonnés<br/>et 226452 €</span></h2>
+            <h2 class="tranche"><span style="color:white;">Médor,<br/>c'est 3800 abonnés<br/>et 226452 €</span></h2>
 
             <figure id="cover-budget" class="cover">
                 <img src="static/img/medor-objet-budget.png" alt="répartition du budget"/>
@@ -350,7 +350,7 @@
         </div>
 
         <div id="status">
-            <h2 class="tranche tranche-deja"><span>Médor,<br/>c'est déjà</span></h2>
+            <h2 class="tranche"><span>Médor,<br/>c'est déjà</span></h2>
             <div class="wrap">
                 <h3>Une équipe</h3>
 
@@ -503,38 +503,52 @@
                     <span class="jcarousel-control-next">›</span>
                 </nav>
             </div>
+        </div>
 
-            <h2 class="tranche tranche-partenaires">Et maintenant?</h2>
+        <div id="now-what">
+            <h2 class="tranche">Et maintenant?</h2>
 	            <div class="wrap">
-
-						  <h3>Nos partenaires et soutiens</h3>
-			            <p>Ils nous soutiennent. On est heureux. <a href="todo.html">Rejoignez-les</a>!</p>
+                    <h3>Nos partenaires et soutiens</h3>
+                    <p>Ils nous soutiennent. On est heureux. <a href="todo.html">Rejoignez-les</a>!</p>
                     <p class="blocvideo">Capsule vidéo 1 (un de nos soutiens explique pourquoi il soutient Médor).</p>
-			            <p class="blocvideo">Capsule vidéo 2 (un de nos soutiens explique pourquoi il soutient Médor).</p>
-			            <p class="blocvideo">Capsule vidéo 3 (un de nos soutiens explique pourquoi il soutient Médor).</p>
+                    <p class="blocvideo">Capsule vidéo 2 (un de nos soutiens explique pourquoi il soutient Médor).</p>
+                    <p class="blocvideo">Capsule vidéo 3 (un de nos soutiens explique pourquoi il soutient Médor).</p>
 
-							<h3>Approfondissements et échanges</h3>
+                    <h3>Approfondissements et échanges</h3>
 
-								<p>La coopérative à finalité sociale Médor a été créée à Namur le 30 juin 2014. Téléchargez nos <a href="http://www.ejustice.just.fgov.be/tsv_pdf/2014/07/15/14136380.pdf">statuts (en pdf)</a>.</p>
+                    <p>La coopérative à finalité sociale Médor a été créée à Namur le 30 juin 2014. Téléchargez nos <a href="http://www.ejustice.just.fgov.be/tsv_pdf/2014/07/15/14136380.pdf">statuts (en pdf)</a>.</p>
 
-								<p>Vous l'avez compris, l'élaboration de Médor est en cours. Nous sommes très impatient d'échanger avec vous à propos de notre projet.
-								<ul>
-								<li>Lisez notre <a href="todo.html">foire aux questions</a>.</li>
-								<li>Contactez-nous par <a href="javascript:location='mailto:\u006d\u0065\u0064\u006f\u0072\u0040\u006d\u0065\u0064\u006f\u0072\u002e\u0063\u006f\u006f\u0070';void 0">courriel</a> ou à l'adresse postale<br />
-								<p class="indent">Médor</p>
-								<p class="indent">Rue Saint-Hubert, 135</p>
-								<p class="indent">5100 Dave (Namur)</p>
-								<li>Abonnez-vous à notre liste d'information:
-								<form method="post" action="http://list.medor.coop/process.php" name="signup">
-	                    <input class="champ" type="text" name="Email" id="email" maxlength="120" VALUE="Votre adresse e-mail" />
-	                    <!-- *** DO NOT CHANGE name="pommo_signup" ! *** If you'd like to change the button text change the "value=" text. -->
-	                    <input type="hidden" name="pommo_signup" value="true" />
-	                    <input class="button" type="submit" value="Je m'abonne" />
-								</form>
-								</li>
-								<li>
-								Suivez-nous sur <a href="https://www.facebook.com/medormag">Facebook</a> (à consommer avec sagesse), sur <a href="https://twitter.com/Medor_mag">Twitter</a>, sur <a href="todo.html">Identica</a>, sur <a href="todo.html">*Diaspora</a>, sur <a href="todo.html">Instagram</a>, sur <a href="todo.html">Youtube</a> et sur la route des étoiles.
-						</ul>
+                    <p>Vous l'avez compris, l'élaboration de Médor est en cours. Nous sommes très impatient d'échanger avec vous à propos de notre projet.</p>
+
+                    <ul>
+                        <li>Lisez notre <a href="todo.html">foire aux questions</a>.</li>
+                        <li>Contactez-nous par <a href="javascript:location='mailto:\u006d\u0065\u0064\u006f\u0072\u0040\u006d\u0065\u0064\u006f\u0072\u002e\u0063\u006f\u006f\u0070';void 0">courriel</a> ou à l'adresse postale<br />
+                            <div class="vcard indent">
+                                <div class="org">Médor SCRL FS</div>
+                                <div class="adr">
+                                    <div class="street-address">rue Saint-Hubert, 135</div>
+                                    <div>
+                                        <span class="postal-code">5100</span>
+                                        <span class="locality">Dave</span>
+                                        (<span class="region">Namur</span>)
+                                    </div>
+                                    <div class="country-name">Belgique</div>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li>Abonnez-vous à notre liste d'information:
+                            <form id="newsletter" method="post" action="http://list.medor.coop/process.php" name="signup">
+                                <input type="text" name="Email" id="email" maxlength="120" VALUE="Votre adresse e-mail" />
+                                <!-- *** DO NOT CHANGE name="pommo_signup" ! *** If you'd like to change the button text change the "value=" text. -->
+                                <input type="hidden" name="pommo_signup" value="true" />
+                                <input class="button" type="submit" value="Je m'abonne" />
+                            </form>
+                        </li>
+                        <li>
+                            Suivez-nous sur <a href="https://www.facebook.com/medormag">Facebook</a> (à consommer avec sagesse), sur <a href="https://twitter.com/Medor_mag">Twitter</a>, sur <a href="todo.html">Identica</a>, sur <a href="todo.html">*Diaspora</a>, sur <a href="todo.html">Instagram</a>, sur <a href="todo.html">Youtube</a> et sur la route des étoiles.
+                        </li>
+                    </ul>
             </div>
         </div>
 
