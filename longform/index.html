@@ -13,13 +13,27 @@
 
 <body>
 
-    <div id="outer-wrapper">
-        <!--<div id="foo">-->
+    <div id="foo">
+        <div id="bar">
             <figure id="cover-content" class="cover">
                 <img src="static/img/medor-objet-contenu.png" alt="contenu d'un numéro"/>
             </figure>
-        <!--</div>-->
 
+            <figure id="cover-detail" class="cover">
+                <img src="static/img/medor-objet-mag.png" alt="premier numéro" />
+            </figure>
+
+            <figure id="cover-coop" class="cover">
+                <img src="static/img/medor-objet-coop.png" alt="organisation de Médor" />
+            </figure>
+
+            <figure id="cover-budget" class="cover">
+                <img src="static/img/medor-objet-budget.png" alt="répartition du budget"/>
+            </figure>
+        </div>
+    </div>
+
+    <div id="outer-wrapper" data-waypoint-target="#cover-content">
         <header class="wrap">
             <blockquote cite="http://www.ttoarendt.com/2014/03/bernard-stiegler-le-front-national-est-un-escamoteur.html">
                 <p><span class="small">[...]</span>&nbsp;une révolution est simplement ce qui se produit quand un cycle est révolu.</p>
@@ -177,11 +191,7 @@
                 </div>
             </div>
 
-            <div id="magazine">
-                <figure id="cover-detail" class="cover">
-                    <img src="static/img/medor-objet-mag.png" alt="premier numéro" />
-                </figure>
-
+            <div id="magazine" data-waypoint-target="#cover-detail">
                 <div class="wrap">
                     <h2>Médor,<br/>c'est un magazine</h2>
 
@@ -226,12 +236,8 @@
                 </div>
             </div>
 
-            <div id="collaborative-experience">
+            <div id="collaborative-experience" data-waypoint-target="#cover-coop">
                 <h2 class="tranche"><span>Médor,<br/>c'est une expérience<br/>collaborative</span></h2>
-
-                <figure id="cover-coop" class="cover">
-                    <img src="static/img/medor-objet-coop.png" alt="organisation de Médor" />
-                </figure>
 
                 <div class="wrap">
                     <h3>Pourquoi une coopérative?</h3>
@@ -276,12 +282,8 @@
                 </div>
             </div>
 
-            <div id="accounting">
+            <div id="accounting" data-waypoint-target="#cover-budget">
                 <h2 class="tranche"><span style="color:white;">Médor,<br/>c'est 3800 abonnés<br/>et 226452 €</span></h2>
-
-                <figure id="cover-budget" class="cover">
-                    <img src="static/img/medor-objet-budget.png" alt="répartition du budget"/>
-                </figure>
 
                 <div class="wrap">
                     <div id="3800_abonn.C3.A9s">

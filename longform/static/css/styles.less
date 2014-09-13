@@ -302,19 +302,26 @@
 
 
 /* layout {{{ */
-html,
 body {
     margin: 50px;
+    overflow-x: hidden;
 }
 
 #foo {
     position: fixed;
-    outline: 1px solid gold;
-    width: 33.333%;
+    top: 50px;
+    left: 50px;
+    right: 50px;
+}
+
+#bar {
+    position: relative;
+    margin: 0 auto;
+    max-width: 1960px;
+    min-width: 240px;
 }
 
 #outer-wrapper {
-    outline: 1px solid gold;
     margin: 0 auto;
     max-width: 1960px;
     min-width: 240px;
@@ -388,26 +395,24 @@ body {
     background-image: url("../img/arrow.svg");
 }
 
-/*.cover {*/
-    /*position: fixed;*/
-    /*z-index: 1;*/
-    /*.transition(left, 500ms, ease-out, 0s);*/
-    /*left: -500px;*/
-    /*top: 0px;*/
-/*//    .transform(rotate(10deg));*/
-/*}*/
-
-/*.active .cover {*/
-    /*left: 0;*/
-/*}*/
-
 .cover {
+    position: absolute;
+    z-index: 1;
+    .transition(left, 500ms, ease-out, 0s);
+    left: -500px;
+    top: 0px;
+    text-align: center;
     width: 33.333%;
     padding-right: 20px;
 }
 
+
+.cover.active {
+    left: 0;
+}
+
 .cover img {
-    width: 100%;
+    width: 90%;
 }
 
 /* }}} */
@@ -809,7 +814,7 @@ header > blockquote > footer {
     left: -50px;
     z-index: 999;
     font-weight: bold;
-    font-size: 28px;
+    font-size: 24px;
     font-family: 'urw-grotesk-t';
     background-color: white;
     margin-top: -3.25em;
@@ -840,16 +845,16 @@ header > blockquote > footer {
 }
 
 .arrow-money .inner {
-    line-height: 22px;
+    line-height: 20px;
     vertical-align: middle;
     display: inline-block;
 }
 
 .arrow-money .price {
 	font-family: 'alfphabetbipocatcondensed';
-	font-size: 96px;
+	font-size: 88px;
 	font-weight: normal;
-	line-height: 88px;
+	line-height: 78px;
 }
 
 .arrow-money .price sup {
@@ -870,15 +875,15 @@ header > blockquote > footer {
 }
 
 .fund-text {
-    margin-left: 12em;
-    margin-right: 600px;
+    margin-left: 10em;
+    margin-right: 500px;
     padding-top: 1em;
     padding-bottom: 1em;
  }
 
 .fund-top .illu {
     position: absolute;
-    width: 400px;
+    width: 300px;
     right: 0;
     bottom: 0; 
 }
@@ -896,7 +901,7 @@ header > blockquote > footer {
 .fund-bottom details {
     font-size: 1em;
     margin-left: 12em;
-    margin-right: 400px;
+    margin-right: 300px;
 }
 
 .fund-bottom summary {
@@ -905,7 +910,7 @@ header > blockquote > footer {
 
 .fund-bottom .illu {
     position: absolute;
-    width: 400px;
+    width: 300px;
     right: 0;
     top: 0;
 }
@@ -918,7 +923,7 @@ header > blockquote > footer {
 .goal-outer {
     width: 200px;
     position: absolute;
-    right: 400px;
+    right: 300px;
     top: 50%;
     margin-top: -5em;
     height: 10em;

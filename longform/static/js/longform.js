@@ -68,17 +68,23 @@ $(function() {
         target: '+=1',
     });
 
-    var $elts = $('header, #magazine, #collaborative-experience, #accounting');
+    var $elts = $('#outer-wrapper, #magazine, #collaborative-experience, #accounting');
 
     $elts.waypoint({
         offset: 50,
         handler: function(direction) {
             if (direction === 'down') {
-                $(this).addClass('active');
-                $(this).waypoint('prev').removeClass('active');
+                var selector = $(this).attr('data-waypoint-target');
+                $(selector).addClass('active');
+
+                selector = $(this).waypoint('prev').attr('data-waypoint-target');
+                $(selector).removeClass('active');
             } else {
-                $(this).removeClass('active');
-                $(this).waypoint('prev').addClass('active');
+                var selector = $(this).attr('data-waypoint-target');
+                $(selector).removeClass('active');
+
+                selector = $(this).waypoint('prev').attr('data-waypoint-target');
+                $(selector).addClass('active');
             }
         }
     });
