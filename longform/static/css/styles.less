@@ -307,6 +307,12 @@ body {
     margin: 50px;
 }
 
+#foo {
+    position: fixed;
+    outline: 1px solid gold;
+    width: 33.333%;
+}
+
 #outer-wrapper {
     outline: 1px solid gold;
     margin: 0 auto;
@@ -382,22 +388,26 @@ body {
     background-image: url("../img/arrow.svg");
 }
 
-.cover {
-    position: fixed;
-    z-index: 1;
-    .transition(left, 500ms, ease-out, 0s);
-    left: -500px;
-    top: 0px;
-//    .transform(rotate(10deg));
-}
+/*.cover {*/
+    /*position: fixed;*/
+    /*z-index: 1;*/
+    /*.transition(left, 500ms, ease-out, 0s);*/
+    /*left: -500px;*/
+    /*top: 0px;*/
+/*//    .transform(rotate(10deg));*/
+/*}*/
 
-.active .cover {
-    left: 0;
+/*.active .cover {*/
+    /*left: 0;*/
+/*}*/
+
+.cover {
+    width: 33.333%;
+    padding-right: 20px;
 }
 
 .cover img {
-    width: 35%;
-    max-width: 1000px;
+    width: 100%;
 }
 
 /* }}} */
@@ -486,15 +496,16 @@ td {
 
 /* specific styles {{{ */
 #main-header {
-    margin-top: 20px;
+    .column-count(2);
+    .column-gap(20px);
 }
-    
-#main-header h1 {
+
+header h1 {
     font-family:'Alfphabet-IV';
     font-size: 2.6em;
 }
 
-#main-header h2 {
+#baseline {
     font-family: 'Career', serif;    
     font-size: 1.3em;
     outline: 1px solid black;
@@ -504,15 +515,7 @@ td {
     letter-spacing: 0.04em;
 }
 
-#main-header > div {
-    width: 49%;
-    display: inline-block;
-    vertical-align: top;
-    .box-sizing();
-    padding: 11px 7px;
-}
-
-.sous-titre {
+#subtitle {
     font-family: 'Goudy Bookletter 1911';
     font-size: 1.8em;
 }
@@ -567,12 +570,6 @@ td {
     border-width: 2em 2em 2em 0;
 }
 
-#main-header span { 
-    vertical-align: middle;
-    display: inline-block;
-    line-height: 1.1em;
-}
-
 main {
     margin-bottom: 5em;
 }
@@ -617,9 +614,9 @@ header > blockquote {
     font-family: 'alfphabetbipocatcondensed';
     font-size: 1em;
     line-height: 15px;
-    height: 0px;
     margin-left: 0px;
     margin-top: 40px;
+    margin-bottom: 20px;
 }
 
 header > blockquote > footer {
@@ -1033,6 +1030,5 @@ header > blockquote > footer {
     background-image: url('../img/medor-perso4-DON-2_smile.png');
 }
 /* }}} */
-
 
 /* vim: set foldmethod=marker: */
