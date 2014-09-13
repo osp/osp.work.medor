@@ -1,3 +1,5 @@
+@import '../components/semantic-grid/stylesheets/less/grid.less';
+
 .arrow-dna {
     text-align: center;
     line-height: 4em;
@@ -234,7 +236,7 @@
 .jcarousel-outer {
     position: relative;
     background-color: white;
-    margin-left: 380px;
+    /*margin-left: 380px;*/
 }
 
 .jcarousel {
@@ -302,8 +304,90 @@
 
 
 /* layout {{{ */
+
+//////////
+// GRID //
+//////////
+
+// Specify the number of columns and set column and gutter widths
+@columns: 12;
+@column-width: 60;
+@gutter-width: 20;
+
+// Remove the definition below for a pixel-based layout
+@total-width: 100%;
+
 html,
 body {
+    margin: 50px;
+}
+
+#outer-wrapper {
+    position: relative;
+    height: 50px;
+    outline: 1px solid gold;
+    margin: 0 auto;
+    max-width: 1960px;
+    min-width: 240px;
+}
+
+#banners {
+    .column(12);
+}
+
+#magazine {
+    .column(8);
+    .push(4);
+}
+
+#dna {
+    .row(8);
+}
+
+#dna > div {
+    .column(4, 8);
+}
+
+#collaborative-experience h2 {
+    .column(12)
+}
+
+#collaborative-experience > div {
+    .column(8);
+    .push(4);
+}
+
+
+#status h2 {
+    .column(12)
+}
+
+#status .foo {
+    .column(8);
+    .push(4);
+}
+
+#status .jcarousel-outer {
+    .column(12);
+}
+
+
+#accounting h2 {
+    .column(12)
+}
+
+#accounting > div {
+    .column(8);
+    .push(4);
+}
+
+#now-what h2 {
+    .column(12)
+}
+
+#now-what .foo {
+    .column(8);
+    .push(4);
 }
 
 .wrap {
@@ -657,7 +741,6 @@ header > blockquote > footer {
     line-height: 500px;
     text-align: center;
     color: @color-A3;
-    margin: 0px 45px;
 }
 
 #collaborative-experience h2 span,
@@ -702,25 +785,12 @@ header > blockquote > footer {
     font-family: 'Goudy Bookletter 1911';
     font-size: 17px;
     line-height: 1.15em;
-    margin-left: 37%;
-    margin-right: 10px;
     margin-bottom: 42px;
 }
 
 #dna > div {
-    width: 45%;
-    display: inline-block;
-    vertical-align: top;
-    .box-sizing();
-    padding: 11px 20px 11px 0;
-    //counter-increment: foo;
-    //color: #b14542;
+    margin-bottom: 22px;
 }
-
-/* #dna > div:before {
-    content: counter(foo) ". ";
-    bottom:1em;
-} */
 
 #dna h3 {
     font-family:'urw-grotesk-t';
