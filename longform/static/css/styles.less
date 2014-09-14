@@ -135,7 +135,7 @@
 
 @font-face {
     font-family: 'Career';
-    src: url('../components/CareerFont/files-font/ttf/Career-autohinted.ttf');
+    src: url('../fonts/Career.ttf');
     font-weight: normal;
     font-style: normal;
 }
@@ -234,13 +234,12 @@
 .jcarousel-outer {
     position: relative;
     background-color: white;
-    margin-left: 380px;
 }
 
 .jcarousel {
     position: relative;
     overflow: hidden;
-    margin: 0px;
+    margin: 0 50px;
     z-index: 2;
 }
 
@@ -302,14 +301,43 @@
 
 
 /* layout {{{ */
-html,
 body {
+    margin: 50px;
+    overflow-x: hidden;
+}
+
+#foo {
+    position: fixed;
+    top: 50px;
+    left: 50px;
+    right: 50px;
+}
+
+#bar {
+    position: relative;
+    margin: 0 auto;
+    max-width: 1960px;
+    min-width: 240px;
+}
+
+#outer-wrapper {
+    margin: 0 auto;
+    max-width: 1440px;
+    min-width: 240px;
 }
 
 .wrap {
-    max-width: 60%;
-    margin-left: 37%;
-    margin-right: 30px;
+    margin-left: 33.333%;
+    padding-left: 20px;
+}
+
+#dna {
+    .column-count(2);
+    .column-gap(20px);
+}
+
+#dna > div {
+    display: inline-block; 
 }
 
 /*#subscribing {*/
@@ -367,21 +395,24 @@ body {
 }
 
 .cover {
-    position: fixed;
+    position: absolute;
     z-index: 1;
-    .transition(left, 500ms, ease-out, 0s);
-    left: -500px;
+    .transition(left, 1000ms, ease-out, 0s);
+    left: -2000px;
     top: 0px;
-//    .transform(rotate(10deg));
+    text-align: center;
+    width: 33.333%;
+    padding-right: 20px;
 }
 
-.active .cover {
+
+.cover.active {
     left: 0;
 }
 
 .cover img {
-    width: 35%;
-    max-width: 1000px;
+    width: 90%;
+    max-width: 350px;
 }
 
 /* }}} */
@@ -389,6 +420,9 @@ body {
 /* generic styles {{{ */
 body {
     font-family: 'Goudy Bookletter 1911', serif;
+    /*font-family: 'texgyreschola';*/
+    /*font-family: 'Lora', serif;*/
+    /*font-family: 'Sorts Mill Goudy', serif;*/
     font-size: 20px;
     line-height: 1.22;
 }
@@ -428,12 +462,13 @@ details {
 }
 
 table {
-    width: 300px;
+    /*width: 300px;*/
     .concrete;
 }
 
 td {
-    border: 1px solid black;
+    /*border: 1px solid black;*/
+    text-align: ".";
 }
 /* }}} */
 
@@ -485,40 +520,37 @@ background-color: rgb(0, 104, 162);
 
 /* specific styles {{{ */
 #main-header {
-    margin-top: 20px;
+    .column-count(2);
+    .column-gap(20px);
 }
-    
-#main-header h1 {
-    font-family:'Alfphabet-IV';
+
+
+header {
+    margin-bottom:5em;
+}
+
+header h1 {
+    font-family:'alfphabetbipocatcondensed';
     font-size: 2.6em;
 }
 
-#main-header h2 {
-    font-family: 'Career', serif;    
-    font-size: 1.3em;
+#baseline {
+    font-family: 'alfphabetbipocatcondensed';    
+    font-size: 1.5em;
     outline: 1px solid black;
     padding: 0.15em;
     margin-top: -7px !important;
     margin-bottom: 12px !important;
-    letter-spacing: 0.04em;
+/*    letter-spacing: 0.04em;*/
 }
 
-#main-header > div {
-    width: 49%;
-    display: inline-block;
-    vertical-align: top;
-    .box-sizing();
-    padding: 11px 7px;
-}
-
-.sous-titre {
-    font-family: 'Goudy Bookletter 1911';
+#subtitle {
+    font-family: 'Career';
     font-size: 1.8em;
 }
 
 #main-intro {
-    font-family: 'Goudy Bookletter 1911';
-    font-size: 1.2em;
+    display:inline-block;
 }
 
 #head-button {
@@ -564,12 +596,6 @@ background-color: rgb(0, 104, 162);
 #head-button li:before {
     right: 0;
     border-width: 2em 2em 2em 0;
-}
-
-#main-header span { 
-    vertical-align: middle;
-    display: inline-block;
-    line-height: 1.1em;
 }
 
 main {
@@ -618,11 +644,8 @@ summary {
 
 header > blockquote {
     font-family: 'alfphabetbipocatcondensed';
-    font-size: 1em;
     line-height: 15px;
-    height: 0px;
-    margin-left: 0px;
-    margin-top: 40px;
+    text-align: center;
 }
 
 header > blockquote > footer {
@@ -676,7 +699,6 @@ header > blockquote > footer {
     line-height: 500px;
     text-align: center;
     color: @color-A3;
-    margin: 0px 45px;
 }
 
 #collaborative-experience h2 span,
@@ -718,28 +740,15 @@ header > blockquote > footer {
 }
 
 #dna {
-    font-family: 'Goudy Bookletter 1911';
+    /*font-family: 'Goudy Bookletter 1911';*/
     font-size: 17px;
     line-height: 1.15em;
-    margin-left: 37%;
-    margin-right: 10px;
     margin-bottom: 42px;
 }
 
 #dna > div {
-    width: 45%;
-    display: inline-block;
-    vertical-align: top;
-    .box-sizing();
-    padding: 11px 20px 11px 0;
-    //counter-increment: foo;
-    //color: #b14542;
+    margin-bottom: 22px;
 }
-
-/* #dna > div:before {
-    content: counter(foo) ". ";
-    bottom:1em;
-} */
 
 #dna h3 {
     font-family:'urw-grotesk-t';
@@ -758,7 +767,7 @@ header > blockquote > footer {
     font-style: none;
 }
 
-#dna .barre {
+#dna del {
     text-decoration: line-through;
     font-size:80%;
     line-height:80%;
@@ -829,7 +838,7 @@ header > blockquote > footer {
     left: -50px;
     z-index: 999;
     font-weight: bold;
-    font-size: 28px;
+    font-size: 24px;
     font-family: 'urw-grotesk-t';
     background-color: white;
     margin-top: -3.25em;
@@ -860,16 +869,16 @@ header > blockquote > footer {
 }
 
 .arrow-money .inner {
-    line-height: 22px;
+    line-height: 20px;
     vertical-align: middle;
     display: inline-block;
 }
 
 .arrow-money .price {
 	font-family: 'alfphabetbipocatcondensed';
-	font-size: 96px;
+	font-size: 88px;
 	font-weight: normal;
-	line-height: 88px;
+	line-height: 78px;
 }
 
 .arrow-money .price sup {
@@ -890,15 +899,15 @@ header > blockquote > footer {
 }
 
 .fund-text {
-    margin-left: 12em;
-    margin-right: 600px;
+    margin-left: 10em;
+    margin-right: 500px;
     padding-top: 1em;
     padding-bottom: 1em;
  }
 
 .fund-top .illu {
     position: absolute;
-    width: 400px;
+    width: 300px;
     right: 0;
     bottom: 0; 
 }
@@ -916,7 +925,7 @@ header > blockquote > footer {
 .fund-bottom details {
     font-size: 1em;
     margin-left: 12em;
-    margin-right: 400px;
+    margin-right: 300px;
 }
 
 .fund-bottom summary {
@@ -925,7 +934,7 @@ header > blockquote > footer {
 
 .fund-bottom .illu {
     position: absolute;
-    width: 400px;
+    width: 300px;
     right: 0;
     top: 0;
 }
@@ -938,7 +947,7 @@ header > blockquote > footer {
 .goal-outer {
     width: 200px;
     position: absolute;
-    right: 400px;
+    right: 300px;
     top: 50%;
     margin-top: -5em;
     height: 10em;
@@ -1050,6 +1059,5 @@ header > blockquote > footer {
     background-image: url('../img/medor-perso4-DON-2_smile.png');
 }
 /* }}} */
-
 
 /* vim: set foldmethod=marker: */
