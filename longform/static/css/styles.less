@@ -17,25 +17,6 @@
     margin-top: -3.25em;
 }
 
-.arrow-money {
-    text-align: center;
-    line-height: 6em;
-    border: 0.25em solid @color-A4;
-    border-right-width: 1.25em;
-    height: 6em;
-    width: 7em;
-    position: absolute;
-    top: 50%;
-    left: -50px;
-    z-index: 999;
-    color: #39914F;
-    font-weight: bold;
-    font-size: 28px;
-    font-family: 'urw-grotesk-t';
-    background-color: white;
-    margin-top: -3.25em;
-}
-
 /* less variables {{{ */
 @color-marron: #AA4400;
 @color-jaune: #FFFF00;
@@ -180,6 +161,20 @@
             box-sizing: @type;
 }
 
+// The micro clearfix http://nicolasgallagher.com/micro-clearfix-hack/
+.clearfix() {
+	*zoom:1;
+	
+	&:before,
+	&:after {
+	    content:"";
+	    display:table;
+	}
+	&:after {
+	    clear:both;
+	}
+}
+
 .column-count(@column-count: 2){
     -webkit-column-count: @column-count;
        -moz-column-count: @column-count;
@@ -315,7 +310,7 @@
 /* layout {{{ */
 body {
     margin: 50px;
-    overflow-x: hidden;
+    /*overflow-x: hidden;*/
 }
 
 #foo {
@@ -666,18 +661,6 @@ header > blockquote > footer {
     color: black;
 }
 
-/*#subscribing {*/
-    /*background-color: lighten(@color-A4, 20%);*/
-/*}*/
-
-/*#cooperating {*/
-    /*background-color: @color-D3;*/
-/*}*/
-
-/*#donating {*/
-    /*background-color: @color-D1;*/
-/*}*/
-
 /*#subscribing h2,*/
 /*#cooperating h2,*/
 /*#donating h2 {*/
@@ -821,31 +804,29 @@ header > blockquote > footer {
 
 /* 3 panels {{{ */
 .arrow-money {
-    text-align: center;
     line-height: 6em;
     border: 0.25em solid;
-    border-right-width: 1.25em;
+    border-bottom-width: 1.25em;
     height: 6em;
     width: 7em;
-    position: absolute;
-    top: 50%;
-    left: -50px;
-    z-index: 999;
     font-weight: bold;
     font-size: 24px;
     font-family: 'urw-grotesk-t';
     background-color: white;
-    margin-top: -3.25em;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+    top: -2em;
 }
 
 .arrow-money:after {
     content: "";
     display: block;
-    position: absolute;
-    left: 8.25em;
-    top: -1.5em;
+    position: relative;
+    left: -1.5em;
+    top: 1.25em;
     border-style: solid;
-    border-width: 4.5em 0px 4.5em 1em;
+    border-width: 1em 5em 0 5em;
     height: 0px;
     width: 0px;
 }
@@ -856,8 +837,8 @@ header > blockquote > footer {
     position: absolute;
     width: 4em;
     height: 9em;
-    left: -5em;
-    top: -1.5em;
+    left: -4.5em;
+    top: -2.5em;
     .background-size(contain);
     background-repeat: no-repeat;
 }
@@ -881,29 +862,30 @@ header > blockquote > footer {
     line-height: 0;
 }
 
+#panels {
+    .clearfix;
+}
+
 .fund {
-    margin-left: 10em;
+    width: 33.333%;
+    float: left;
+    vertical-align: top;
     position: relative;
-    min-height: 12em;
     margin-bottom: 2em;
 }
 
 .fund-top {
+    padding: 0 20px;
     position: relative;
 }
 
 .fund-text {
-    margin-left: 10em;
-    margin-right: 500px;
     padding-top: 1em;
     padding-bottom: 1em;
  }
 
 .fund-top .illu {
-    position: absolute;
-    width: 300px;
-    right: 0;
-    bottom: 0; 
+    text-align: center;
 }
 
 #subscribing .fund-top .illu img {
@@ -926,8 +908,6 @@ header > blockquote > footer {
 
 .fund-bottom details {
     font-size: 1em;
-    margin-left: 12em;
-    margin-right: 300px;
 }
 
 .fund-bottom summary {
@@ -947,11 +927,6 @@ header > blockquote > footer {
 }
 
 .goal-outer {
-    width: 200px;
-    position: absolute;
-    right: 300px;
-    top: 50%;
-    margin-top: -5em;
     height: 10em;
     text-align: center;
     line-height: 10em;
@@ -1012,7 +987,7 @@ header > blockquote > footer {
 }
 
 #subscribing .arrow-money:after {
-    border-color: transparent @color-A4;
+    border-color: @color-A4 transparent;
 }
 
 #subscribing .arrow-money:before {
@@ -1033,7 +1008,7 @@ header > blockquote > footer {
 }
 
 #cooperating .arrow-money:after {
-    border-color: transparent @color-A2;
+    border-color: @color-A2 transparent;
 }
 
 #cooperating .arrow-money:before {
@@ -1054,7 +1029,7 @@ header > blockquote > footer {
 }
 
 #donating .arrow-money:after {
-    border-color: transparent @color-A1;
+    border-color: @color-A1 transparent;
 }
 
 #donating .arrow-money:before {
