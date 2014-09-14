@@ -64,6 +64,18 @@
 
 /* fonts {{{ */
 @font-face {
+    font-family: 'centurycatalogue';
+    src: url('../fonts/century-catalogue-webfont.eot');
+    src: url('../fonts/century-catalogue-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/century-catalogue-webfont.woff2') format('woff2'),
+         url('../fonts/century-catalogue-webfont.woff') format('woff'),
+         url('../fonts/century-catalogue-webfont.ttf') format('truetype'),
+         url('../fonts/century-catalogue-webfont.svg#century_catalogueroman') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
     font-family: 'texgyreschola';
     src: url('../fonts/texgyreschola-regular-webfont.eot');
     src: url('../fonts/texgyreschola-regular-webfont.eot?#iefix') format('embedded-opentype'),
@@ -420,6 +432,7 @@ body {
 /* generic styles {{{ */
 body {
     font-family: 'Goudy Bookletter 1911', serif;
+    font-family: 'centurycatalogue';
     /*font-family: 'texgyreschola';*/
     /*font-family: 'Lora', serif;*/
     /*font-family: 'Sorts Mill Goudy', serif;*/
@@ -893,10 +906,18 @@ header > blockquote > footer {
     bottom: 0; 
 }
 
-.fund-top .illu img {
+#subscribing .fund-top .illu img {
     max-width: 100%;
     vertical-align: bottom;
 }
+
+#cooperating .fund-top .illu img,
+#donating .fund-top .illu img {
+    width: 100%;
+    max-width: 200px;
+    vertical-align: center;
+}
+
 
 .fund-bottom {
     position: relative;
