@@ -135,7 +135,7 @@
 
 @font-face {
     font-family: 'Career';
-    src: url('../components/CareerFont/files-font/ttf/Career-autohinted.ttf');
+    src: url('../fonts/Career.ttf');
     font-weight: normal;
     font-style: normal;
 }
@@ -323,7 +323,7 @@ body {
 
 #outer-wrapper {
     margin: 0 auto;
-    max-width: 1960px;
+    max-width: 1440px;
     min-width: 240px;
 }
 
@@ -398,8 +398,8 @@ body {
 .cover {
     position: absolute;
     z-index: 1;
-    .transition(left, 500ms, ease-out, 0s);
-    left: -500px;
+    .transition(left, 1000ms, ease-out, 0s);
+    left: -2000px;
     top: 0px;
     text-align: center;
     width: 33.333%;
@@ -413,6 +413,7 @@ body {
 
 .cover img {
     width: 90%;
+    max-width: 350px;
 }
 
 /* }}} */
@@ -505,13 +506,18 @@ td {
     .column-gap(20px);
 }
 
+
+header {
+    margin-bottom:5em;
+}
+
 header h1 {
     font-family:'Alfphabet-IV';
     font-size: 2.6em;
 }
 
 #baseline {
-    font-family: 'Career', serif;    
+    font-family: 'alfphabetbipocatcondensed';    
     font-size: 1.3em;
     outline: 1px solid black;
     padding: 0.15em;
@@ -521,13 +527,13 @@ header h1 {
 }
 
 #subtitle {
-    font-family: 'Goudy Bookletter 1911';
+    font-family: 'Career';
     font-size: 1.8em;
 }
 
 #main-intro {
     font-family: 'Goudy Bookletter 1911';
-    font-size: 1.2em;
+    display:inline-block;
 }
 
 #head-button {
