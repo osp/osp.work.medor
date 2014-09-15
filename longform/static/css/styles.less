@@ -17,25 +17,6 @@
     margin-top: -3.25em;
 }
 
-.arrow-money {
-    text-align: center;
-    line-height: 6em;
-    border: 0.25em solid @color-A4;
-    border-right-width: 1.25em;
-    height: 6em;
-    width: 7em;
-    position: absolute;
-    top: 50%;
-    left: -50px;
-    z-index: 999;
-    color: #39914F;
-    font-weight: bold;
-    font-size: 28px;
-    font-family: 'urw-grotesk-t';
-    background-color: white;
-    margin-top: -3.25em;
-}
-
 /* less variables {{{ */
 @color-marron: #AA4400;
 @color-jaune: #FFFF00;
@@ -63,6 +44,18 @@
 
 
 /* fonts {{{ */
+@font-face {
+    font-family: 'centurycatalogue';
+    src: url('../fonts/century-catalogue-webfont.eot');
+    src: url('../fonts/century-catalogue-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/century-catalogue-webfont.woff2') format('woff2'),
+         url('../fonts/century-catalogue-webfont.woff') format('woff'),
+         url('../fonts/century-catalogue-webfont.ttf') format('truetype'),
+         url('../fonts/century-catalogue-webfont.svg#century_catalogueroman') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
 @font-face {
     font-family: 'texgyreschola';
     src: url('../fonts/texgyreschola-regular-webfont.eot');
@@ -135,7 +128,7 @@
 
 @font-face {
     font-family: 'Career';
-    src: url('../components/CareerFont/files-font/ttf/Career-autohinted.ttf');
+    src: url('../fonts/Career.ttf');
     font-weight: normal;
     font-style: normal;
 }
@@ -166,6 +159,20 @@
        -moz-box-sizing: @type;
         -ms-box-sizing: @type;
             box-sizing: @type;
+}
+
+// The micro clearfix http://nicolasgallagher.com/micro-clearfix-hack/
+.clearfix() {
+	*zoom:1;
+	
+	&:before,
+	&:after {
+	    content:"";
+	    display:table;
+	}
+	&:after {
+	    clear:both;
+	}
 }
 
 .column-count(@column-count: 2){
@@ -215,7 +222,7 @@
 /* custom mixins {{{ */
 .concrete {
     font-family: 'alfphabetbipocatcondensed';
-    font-size: 0.8em;
+    font-size: 0.9em;
 }
 
 .cols2 {
@@ -233,14 +240,13 @@
 /* Carousel {{{ */
 .jcarousel-outer {
     position: relative;
-    background-color: white;
-    /*margin-left: 380px;*/
+    //background-color: white;
 }
 
 .jcarousel {
     position: relative;
     overflow: hidden;
-    margin: 0px;
+    margin: 0 50px;
     z-index: 2;
 }
 
@@ -304,10 +310,11 @@
 /* layout {{{ */
 body {
     margin: 50px;
-    overflow-x: hidden;
+    /*overflow-x: hidden;*/
 }
 
 #foo {
+    z-index: -1;
     position: fixed;
     top: 50px;
     left: 50px;
@@ -323,7 +330,7 @@ body {
 
 #outer-wrapper {
     margin: 0 auto;
-    max-width: 1960px;
+    max-width: 1440px;
     min-width: 240px;
 }
 
@@ -398,8 +405,8 @@ body {
 .cover {
     position: absolute;
     z-index: 1;
-    .transition(left, 500ms, ease-out, 0s);
-    left: -500px;
+    .transition(left, 1000ms, ease-out, 0s);
+    left: -2000px;
     top: 0px;
     text-align: center;
     width: 33.333%;
@@ -413,6 +420,7 @@ body {
 
 .cover img {
     width: 90%;
+    max-width: 350px;
 }
 
 /* }}} */
@@ -420,6 +428,10 @@ body {
 /* generic styles {{{ */
 body {
     font-family: 'Goudy Bookletter 1911', serif;
+    font-family: 'centurycatalogue';
+    /*font-family: 'texgyreschola';*/
+    /*font-family: 'Lora', serif;*/
+    /*font-family: 'Sorts Mill Goudy', serif;*/
     font-size: 20px;
     line-height: 1.22;
 }
@@ -459,17 +471,47 @@ details {
 }
 
 table {
-    width: 300px;
+    /*width: 300px;*/
     .concrete;
 }
 
 td {
-    border: 1px solid black;
+    /*border: 1px solid black;*/
+    text-align: ".";
 }
 /* }}} */
 
+.numbers {
+width:15%;
+text-align:right;
+}
+
+.pourcentage {
+width:15%;
+text-align:right;
+}
+
+tr {
+border-top: black solid 1px;
+}
+
+#equipe {
+margin-bottom:50px;
+}
+
+/* 
+.portrait {
+margin-top: 30px;
+}
+*/
+
 #newsletter input[type="text"] {
     border: 1px solid black;
+    font-size: 110%;
+    font-family: alfphabetbipocatcondensed;
+    padding: 0 0 0 6px;
+    margin: 10px 0 0 25px;
+    width: 400px;
     background: @color-D3;
 }
 
@@ -479,18 +521,28 @@ td {
 }
 
 #newsletter input[type="submit"]{
-    color: black;
-    margin: 0.5em;
-    display: block;
-    width: 150px;
-    height: 30px;
-	font-family: 'alfphabetbipocatcondensed';
-    text-transform: uppercase;
-    letter-spacing: 0.25em;
-    padding: 0.75em;
-    font-size: 13px;
-    border: 1px solid black;
-    background: @color-D1;
+color: black;
+margin: -1px 0 0 25px;
+display: block;
+width: 150px;
+height: 30px;
+font-family: 'alfphabetbipocatcondensed';
+text-transform: uppercase;
+letter-spacing: 0.25em;
+padding: 0px;
+font-size: 19px;
+border: 1px solid black;
+background: #0054A2;
+background-image: initial;
+background-position-x: initial;
+background-position-y: initial;
+background-size: initial;
+background-repeat-x: initial;
+background-repeat-y: initial;
+background-attachment: initial;
+background-origin: initial;
+background-clip: initial;
+background-color: rgb(0, 104, 162);
 }
 
 #newsletter input[type="submit"]:hover {
@@ -505,29 +557,33 @@ td {
     .column-gap(20px);
 }
 
+
+header {
+    margin-bottom:5em;
+}
+
 header h1 {
-    font-family:'Alfphabet-IV';
-    font-size: 2.6em;
+    font-family:'alfphabetbipocatcondensed';
+    font-size: 4.6em;
 }
 
 #baseline {
-    font-family: 'Career', serif;    
-    font-size: 1.3em;
+    font-family: 'alfphabetbipocatcondensed';    
+    font-size: 1.5em;
     outline: 1px solid black;
     padding: 0.15em;
     margin-top: -7px !important;
     margin-bottom: 12px !important;
-    letter-spacing: 0.04em;
+/*    letter-spacing: 0.04em;*/
 }
 
 #subtitle {
-    font-family: 'Goudy Bookletter 1911';
+    font-family: 'Career';
     font-size: 1.8em;
 }
 
 #main-intro {
-    font-family: 'Goudy Bookletter 1911';
-    font-size: 1.2em;
+    display:inline-block;
 }
 
 #head-button {
@@ -597,6 +653,10 @@ main h2 {
      1px 1px 0 #000;
 }
 
+#magazine h2 {
+color: azure;
+}
+
 main h3 {
     text-align: center;
     font-size: 1.6em;
@@ -617,19 +677,18 @@ summary {
 
 header > blockquote {
     font-family: 'alfphabetbipocatcondensed';
-    font-size: 1em;
     line-height: 15px;
-    margin-left: 0px;
-    margin-top: 40px;
-    margin-bottom: 20px;
+    text-align: center;
+    margin-bottom: 1em;
 }
 
-header > blockquote > footer {
+header > blockquote > .footer {
     font-size: 0.7em;
     line-height: 15px;
     font-family: 'alfphabetbipocatcondensed';
-	margin-left: 449px;
-    margin-top: 2.6em;
+	//margin-left: 449px;
+    text-align:right;
+    margin-top: 0.8em;
 }
 
 .blocvideo {
@@ -647,18 +706,6 @@ header > blockquote > footer {
     font-size: 1.1em;
     color: black;
 }
-
-/*#subscribing {*/
-    /*background-color: lighten(@color-A4, 20%);*/
-/*}*/
-
-/*#cooperating {*/
-    /*background-color: @color-D3;*/
-/*}*/
-
-/*#donating {*/
-    /*background-color: @color-D1;*/
-/*}*/
 
 /*#subscribing h2,*/
 /*#cooperating h2,*/
@@ -712,18 +759,18 @@ header > blockquote > footer {
 }
 
 .louis-image img {
-    max-width: 130%;
+    max-width: 105%;
 }
 
 #dna {
-    font-family: 'Goudy Bookletter 1911';
+    /*font-family: 'Goudy Bookletter 1911';*/
     font-size: 17px;
     line-height: 1.15em;
     margin-bottom: 42px;
 }
 
 #dna > div {
-    margin-bottom: 22px;
+    margin-bottom: 2px;
 }
 
 #dna h3 {
@@ -743,7 +790,7 @@ header > blockquote > footer {
     font-style: none;
 }
 
-#dna .barre {
+#dna del {
     text-decoration: line-through;
     font-size:80%;
     line-height:80%;
@@ -774,16 +821,22 @@ header > blockquote > footer {
     font-family: 'urw-grotesk-t';
     font-size: 16px;
     line-height: 1.21em;
-    font-weight: bold;
+    //font-weight: bold;
     .box-sizing();
     width: 0.20%;
     position: relative;
     margin-bottom: -225px;
 }
 
+.name {
+background-color:white;}
+
+.bio {
+background-color:white;}
+
 #portraits .jcarousel-item img {
     display: block;
-    margin: 0 auto;
+    margin: 40px auto;
 }
 
 #portraits .jcarousel-item figcaption {
@@ -801,33 +854,36 @@ header > blockquote > footer {
 }
 /* }}} */
 
+#now-what {
+margin-bottom:150px;
+}
+
 /* 3 panels {{{ */
 .arrow-money {
-    text-align: center;
     line-height: 6em;
     border: 0.25em solid;
-    border-right-width: 1.25em;
+    border-bottom-width: 1.25em;
     height: 6em;
     width: 7em;
-    position: absolute;
-    top: 50%;
-    left: -50px;
-    z-index: 999;
     font-weight: bold;
-    font-size: 24px;
+    font-size: 20px;
     font-family: 'urw-grotesk-t';
     background-color: white;
-    margin-top: -3.25em;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+    top: -2em;
+    display: block;
 }
 
 .arrow-money:after {
     content: "";
     display: block;
-    position: absolute;
-    left: 8.25em;
-    top: -1.5em;
+    position: relative;
+    left: -1.5em;
+    top: 1.25em;
     border-style: solid;
-    border-width: 4.5em 0px 4.5em 1em;
+    border-width: 1em 5em 0 5em;
     height: 0px;
     width: 0px;
 }
@@ -838,23 +894,31 @@ header > blockquote > footer {
     position: absolute;
     width: 4em;
     height: 9em;
-    left: -5em;
-    top: -1.5em;
+    left: -4.5em;
+    top: -2.5em;
     .background-size(contain);
     background-repeat: no-repeat;
 }
 
+.arrow-money a {
+    color: inherit;
+}
+
+.arrow-money a:hover {
+    text-decoration: underline;
+}
+
 .arrow-money .inner {
-    line-height: 20px;
+    line-height: 0.85em;
     vertical-align: middle;
     display: inline-block;
 }
 
 .arrow-money .price {
 	font-family: 'alfphabetbipocatcondensed';
-	font-size: 88px;
+	font-size: 3em;
 	font-weight: normal;
-	line-height: 78px;
+	line-height: 0.95em;
 }
 
 .arrow-money .price sup {
@@ -863,35 +927,52 @@ header > blockquote > footer {
     line-height: 0;
 }
 
-.fund {
-    margin-left: 10em;
+#panels {
     position: relative;
-    min-height: 12em;
+    background: @color-B3;
+    background: -moz-linear-gradient(left, @color-B3 0%, @color-B3 33.333%, @color-E1 33.333%, @color-E1 66.666%, @color-C1 66.666%, @color-C1 100%);
+    background: -webkit-gradient(left top, right top, color-stop(0%, @color-B3), color-stop(33.333%, @color-B3), color-stop(33.333%, @color-E1), color-stop(66.666%, @color-E1), color-stop(66.666%, @color-C1), color-stop(100%, @color-C1));
+    background: -webkit-linear-gradient(left, @color-B3 0%, @color-B3 33.333%, @color-E1 33.333%, @color-E1 66.666%, @color-C1 66.666%, @color-C1 100%);
+    background: -o-linear-gradient(left, @color-B3 0%, @color-B3 33.333%, @color-E1 33.333%, @color-E1 66.666%, @color-C1 66.666%, @color-C1 100%);
+    background: -ms-linear-gradient(left, @color-B3 0%, @color-B3 33.333%, @color-E1 33.333%, @color-E1 66.666%, @color-C1 66.666%, @color-C1 100%);
+    background: linear-gradient(to right, @color-B3 0%, @color-B3 33.333%, @color-E1 33.333%, @color-E1 66.666%, @color-C1 66.666%, @color-C1 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff0000', endColorstr='#2f0cf5', GradientType=1 );
+}
+
+.fund {
+    width: 33.333%;
+    float: left;
+    vertical-align: top;
+    position: relative;
     margin-bottom: 2em;
 }
 
 .fund-top {
+    padding: 0 20px;
     position: relative;
 }
 
 .fund-text {
-    margin-left: 10em;
-    margin-right: 500px;
-    padding-top: 1em;
+    padding-top: 0.2em;
     padding-bottom: 1em;
  }
 
 .fund-top .illu {
-    position: absolute;
-    width: 300px;
-    right: 0;
-    bottom: 0; 
+    text-align: center;
 }
 
-.fund-top .illu img {
+#subscribing .fund-top .illu img {
     max-width: 100%;
     vertical-align: bottom;
 }
+
+#cooperating .fund-top .illu img,
+#donating .fund-top .illu img {
+    width: 100%;
+    max-width: 200px;
+    vertical-align: center;
+}
+
 
 .fund-bottom {
     position: relative;
@@ -900,8 +981,6 @@ header > blockquote > footer {
 
 .fund-bottom details {
     font-size: 1em;
-    margin-left: 12em;
-    margin-right: 300px;
 }
 
 .fund-bottom summary {
@@ -921,11 +1000,6 @@ header > blockquote > footer {
 }
 
 .goal-outer {
-    width: 200px;
-    position: absolute;
-    right: 300px;
-    top: 50%;
-    margin-top: -5em;
     height: 10em;
     text-align: center;
     line-height: 10em;
@@ -972,12 +1046,8 @@ header > blockquote > footer {
 	line-height: 36px;
 }
 
-#subscribing .fund-top {
-    background-color: @color-B3;
-}
-
-#subscribing .fund-bottom {
-    background-color: @color-E3;
+.arrow-money {
+    .transition(all, 250ms, ease-out, 0s);
 }
 
 #subscribing .arrow-money {
@@ -985,20 +1055,20 @@ header > blockquote > footer {
     color: @color-A4;
 }
 
+.arrow-money:hover {
+    color: white !important;
+}
+
+#subscribing .arrow-money:hover {
+    background-color: lighten(@color-A4, 20%);
+}
+
 #subscribing .arrow-money:after {
-    border-color: transparent @color-A4;
+    border-color: @color-A4 transparent;
 }
 
 #subscribing .arrow-money:before {
     background-image: url('../img/medor-perso2-ABONNE-2.png');
-}
-
-#cooperating .fund-top {
-    background-color: @color-E1;
-}
-
-#cooperating .fund-bottom {
-    background-color: lighten(@color-E1, 5%);
 }
 
 #cooperating .arrow-money {
@@ -1006,20 +1076,16 @@ header > blockquote > footer {
     color: @color-A2;
 }
 
+#cooperating .arrow-money:hover {
+    background-color: lighten(@color-A2, 20%);
+}
+
 #cooperating .arrow-money:after {
-    border-color: transparent @color-A2;
+    border-color: @color-A2 transparent;
 }
 
 #cooperating .arrow-money:before {
     background-image: url('../img/medor-perso3-PRET-2.png');
-}
-
-#donating .fund-top {
-    background-color: @color-C1;
-}
-
-#donating .fund-bottom {
-    background-color: @color-D1;
 }
 
 #donating .arrow-money {
@@ -1027,12 +1093,55 @@ header > blockquote > footer {
     color: @color-A1;
 }
 
+#donating .arrow-money:hover {
+    background-color: lighten(@color-A1, 20%);
+}
+
+
 #donating .arrow-money:after {
-    border-color: transparent @color-A1;
+    border-color: @color-A1 transparent;
 }
 
 #donating .arrow-money:before {
     background-image: url('../img/medor-perso4-DON-2_smile.png');
+}
+
+#panel-descriptions {
+    .clearfix;
+}
+
+#panel-acting {
+    position: relative
+}
+
+form {
+    padding: 0 20px;
+}
+
+form,
+form input {
+    font-family: 'alfphabetbipocatcondensed';
+    font-size: 16px;
+}
+
+form input {
+    outline: 0;
+    border: none;
+}
+
+form input:focus {
+    outline-offset: 0;
+}
+
+form p {
+    margin: 0;
+    width: 45%;
+    display: inline-block;
+}
+
+form label,
+form input {
+    display: block;
 }
 /* }}} */
 
