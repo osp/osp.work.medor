@@ -71,7 +71,7 @@ $(function() {
     var $elts = $('#outer-wrapper, #magazine, #collaborative-experience, #accounting');
 
     $elts.waypoint({
-        offset: 50,
+        offset: 100,
         handler: function(direction) {
             if (direction === 'down') {
                 var selector = $(this).attr('data-waypoint-target');
@@ -88,4 +88,6 @@ $(function() {
             }
         }
     });
+
+    //$('#panel-acting').waypoint('sticky');
 });

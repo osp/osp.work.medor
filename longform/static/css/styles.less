@@ -314,6 +314,7 @@ body {
 }
 
 #foo {
+    z-index: -1;
     position: fixed;
     top: 50px;
     left: 50px;
@@ -656,7 +657,7 @@ header > blockquote {
     text-align: center;
 }
 
-header > blockquote > footer {
+header > blockquote > .footer {
     font-size: 0.7em;
     line-height: 15px;
     font-family: 'alfphabetbipocatcondensed';
@@ -829,13 +830,14 @@ header > blockquote > footer {
     height: 6em;
     width: 7em;
     font-weight: bold;
-    font-size: 24px;
+    font-size: 20px;
     font-family: 'urw-grotesk-t';
     background-color: white;
     margin: 0 auto;
     text-align: center;
     position: relative;
     top: -2em;
+    display: block;
 }
 
 .arrow-money:after {
@@ -862,17 +864,25 @@ header > blockquote > footer {
     background-repeat: no-repeat;
 }
 
+.arrow-money a {
+    color: inherit;
+}
+
+.arrow-money a:hover {
+    text-decoration: underline;
+}
+
 .arrow-money .inner {
-    line-height: 20px;
+    line-height: 0.85em;
     vertical-align: middle;
     display: inline-block;
 }
 
 .arrow-money .price {
 	font-family: 'alfphabetbipocatcondensed';
-	font-size: 88px;
+	font-size: 3em;
 	font-weight: normal;
-	line-height: 78px;
+	line-height: 0.95em;
 }
 
 .arrow-money .price sup {
@@ -882,7 +892,15 @@ header > blockquote > footer {
 }
 
 #panels {
-    .clearfix;
+    position: relative;
+    background: @color-B3;
+    background: -moz-linear-gradient(left, @color-B3 0%, @color-B3 33.333%, @color-E1 33.333%, @color-E1 66.666%, @color-C1 66.666%, @color-C1 100%);
+    background: -webkit-gradient(left top, right top, color-stop(0%, @color-B3), color-stop(33.333%, @color-B3), color-stop(33.333%, @color-E1), color-stop(66.666%, @color-E1), color-stop(66.666%, @color-C1), color-stop(100%, @color-C1));
+    background: -webkit-linear-gradient(left, @color-B3 0%, @color-B3 33.333%, @color-E1 33.333%, @color-E1 66.666%, @color-C1 66.666%, @color-C1 100%);
+    background: -o-linear-gradient(left, @color-B3 0%, @color-B3 33.333%, @color-E1 33.333%, @color-E1 66.666%, @color-C1 66.666%, @color-C1 100%);
+    background: -ms-linear-gradient(left, @color-B3 0%, @color-B3 33.333%, @color-E1 33.333%, @color-E1 66.666%, @color-C1 66.666%, @color-C1 100%);
+    background: linear-gradient(to right, @color-B3 0%, @color-B3 33.333%, @color-E1 33.333%, @color-E1 66.666%, @color-C1 66.666%, @color-C1 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff0000', endColorstr='#2f0cf5', GradientType=1 );
 }
 
 .fund {
@@ -992,17 +1010,21 @@ header > blockquote > footer {
 	line-height: 36px;
 }
 
-#subscribing .fund-top {
-    background-color: @color-B3;
-}
-
-#subscribing .fund-bottom {
-    background-color: @color-E3;
+.arrow-money {
+    .transition(all, 250ms, ease-out, 0s);
 }
 
 #subscribing .arrow-money {
     border-color: @color-A4;
     color: @color-A4;
+}
+
+.arrow-money:hover {
+    color: white !important;
+}
+
+#subscribing .arrow-money:hover {
+    background-color: lighten(@color-A4, 20%);
 }
 
 #subscribing .arrow-money:after {
@@ -1013,17 +1035,13 @@ header > blockquote > footer {
     background-image: url('../img/medor-perso2-ABONNE-2.png');
 }
 
-#cooperating .fund-top {
-    background-color: @color-E1;
-}
-
-#cooperating .fund-bottom {
-    background-color: lighten(@color-E1, 5%);
-}
-
 #cooperating .arrow-money {
     border-color: @color-A2;
     color: @color-A2;
+}
+
+#cooperating .arrow-money:hover {
+    background-color: lighten(@color-A2, 20%);
 }
 
 #cooperating .arrow-money:after {
@@ -1034,18 +1052,15 @@ header > blockquote > footer {
     background-image: url('../img/medor-perso3-PRET-2.png');
 }
 
-#donating .fund-top {
-    background-color: @color-C1;
-}
-
-#donating .fund-bottom {
-    background-color: @color-D1;
-}
-
 #donating .arrow-money {
     border-color: @color-A1;
     color: @color-A1;
 }
+
+#donating .arrow-money:hover {
+    background-color: lighten(@color-A1, 20%);
+}
+
 
 #donating .arrow-money:after {
     border-color: @color-A1 transparent;
@@ -1053,6 +1068,44 @@ header > blockquote > footer {
 
 #donating .arrow-money:before {
     background-image: url('../img/medor-perso4-DON-2_smile.png');
+}
+
+#panel-descriptions {
+    .clearfix;
+}
+
+#panel-acting {
+    position: relative
+}
+
+form {
+    padding: 0 20px;
+}
+
+form,
+form input {
+    font-family: 'alfphabetbipocatcondensed';
+    font-size: 16px;
+}
+
+form input {
+    outline: 0;
+    border: none;
+}
+
+form input:focus {
+    outline-offset: 0;
+}
+
+form p {
+    margin: 0;
+    width: 45%;
+    display: inline-block;
+}
+
+form label,
+form input {
+    display: block;
 }
 /* }}} */
 
