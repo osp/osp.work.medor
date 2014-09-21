@@ -8,7 +8,10 @@
 @color-B4: rgba(225, 241, 122, 255);
 @color-C1: rgba(137, 203, 225, 255);
 @color-C2: rgba(249, 49, 52, 255);
+@color-C3: rgba(250, 181, 71, 255);
+@color-C4: rgba(243, 253, 207, 255);
 @color-D1: rgba(169, 213, 222, 255);
+@color-D2: rgba(222, 113, 98, 255);
 @color-D3: rgba(247, 229, 149, 255);
 @color-E1: rgba(233, 234, 225, 255);
 @color-E3: rgba(254, 250, 194, 255);
@@ -82,16 +85,16 @@
 
 // The micro clearfix http://nicolasgallagher.com/micro-clearfix-hack/
 .clearfix() {
-	*zoom:1;
-	
-	&:before,
-	&:after {
-	    content:"";
-	    display:table;
-	}
-	&:after {
-	    clear:both;
-	}
+    *zoom:1;
+    
+    &:before,
+    &:after {
+        content:"";
+        display:table;
+    }
+    &:after {
+        clear:both;
+    }
 }
 
 .column-count(@column-count: 2){
@@ -301,7 +304,7 @@ em {
 
 a {
     text-decoration: none;
-    color: @color-A1;
+    color: @color-A2;
 }
 
 a:hover{
@@ -403,7 +406,7 @@ header > blockquote > .footer {
     font-size: 0.7em;
     line-height: 15px;
     font-family: 'alfphabetbipocatcondensed';
-	//margin-left: 449px;
+    //margin-left: 449px;
     text-align:right;
     margin-top: 0.8em;
 }
@@ -451,9 +454,7 @@ main h3 {
 }
 /* }}} */
 
-#magazine h2 {
-    color: azure;
-}
+
 
 .small {
     font-size: 70%;
@@ -478,18 +479,21 @@ main h3 {
 #collaborative-experience h2,
 #status h2,
 #accounting h2,
-#now-what h2 {
+#now-what h2,
+#magazine h2  {
     height: 500px;
     background-size: cover;
     line-height: 500px;
     text-align: center;
-    color: @color-A3;
+    color: @color-B3;
 }
 
 #collaborative-experience h2 span,
 #status h2 span,
 #accounting h2 span,
-#now-what h2 span {
+#now-what h2 span,
+#magazine h2 span,
+ {
     vertical-align: middle;
     display: inline-block;
     line-height: 0.925em;
@@ -501,7 +505,7 @@ main h3 {
 }
 
 #status h2 {
-    background-image: url("../img/doel-colin.jpg"); 
+    background-image: url("../img/medor-meet.jpeg"); 
     background-position: 0 50%;
 }
 
@@ -722,27 +726,27 @@ main h3 {
 }
 
 .arrow-money .price {
-	font-family: 'alfphabetbipocatcondensed';
-	font-size: 3em;
-	font-weight: normal;
-	line-height: 0.95em;
+    font-family: 'alfphabetbipocatcondensed';
+    font-size: 3em;
+    font-weight: normal;
+    line-height: 0.95em;
 }
 
 .arrow-money .price sup {
-	font-size: 0.5em;
-	vertical-align: super;
+    font-size: 0.5em;
+    vertical-align: super;
     line-height: 0;
 }
 
 #panels {
     position: relative;
-    background: @color-B3;
-    background: -moz-linear-gradient(left, @color-B3 0%, @color-B3 33.333%, @color-E1 33.333%, @color-E1 66.666%, @color-C1 66.666%, @color-C1 100%);
-    background: -webkit-gradient(left top, right top, color-stop(0%, @color-B3), color-stop(33.333%, @color-B3), color-stop(33.333%, @color-E1), color-stop(66.666%, @color-E1), color-stop(66.666%, @color-C1), color-stop(100%, @color-C1));
-    background: -webkit-linear-gradient(left, @color-B3 0%, @color-B3 33.333%, @color-E1 33.333%, @color-E1 66.666%, @color-C1 66.666%, @color-C1 100%);
-    background: -o-linear-gradient(left, @color-B3 0%, @color-B3 33.333%, @color-E1 33.333%, @color-E1 66.666%, @color-C1 66.666%, @color-C1 100%);
-    background: -ms-linear-gradient(left, @color-B3 0%, @color-B3 33.333%, @color-E1 33.333%, @color-E1 66.666%, @color-C1 66.666%, @color-C1 100%);
-    background: linear-gradient(to right, @color-B3 0%, @color-B3 33.333%, @color-E1 33.333%, @color-E1 66.666%, @color-C1 66.666%, @color-C1 100%);
+    background: @color-D1;
+    background: -moz-linear-gradient(left, @color-D1 0%, @color-D1 33.333%, @color-C3 33.333%, @color-C3 66.666%, @color-E1 66.666%, @color-E1 100%);
+    background: -webkit-gradient(left top, right top, color-stop(0%, @color-D1), color-stop(33.333%, @color-D1), color-stop(33.333%, @color-C3), color-stop(66.666%, @color-C3), color-stop(66.666%, @color-E1), color-stop(100%, @color-E1));
+    background: -webkit-linear-gradient(left, @color-D1 0%, @color-D1 33.333%, @color-C3 33.333%, @color-C3 66.666%, @color-E1 66.666%, @color-E1 100%);
+    background: -o-linear-gradient(left, @color-D1 0%, @color-D1 33.333%, @color-C3 33.333%, @color-C3 66.666%, @color-E1 66.666%, @color-E1 100%);
+    background: -ms-linear-gradient(left, @color-D1 0%, @color-D1 33.333%, @color-C3 33.333%, @color-C3 66.666%, @color-E1 66.666%, @color-E1 100%);
+    background: linear-gradient(to right, @color-D1 0%, @color-D1 33.333%, @color-C3 33.333%, @color-C3 66.666%, @color-E1 66.666%, @color-E1 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff0000', endColorstr='#2f0cf5', GradientType=1 );
 }
 
@@ -788,7 +792,7 @@ main h3 {
 }
 
 .goal-outer sup {
-	vertical-align: 0.3em;
+    vertical-align: 0.3em;
     font-size: 0.7em;
     line-height: 0;
 }
@@ -822,9 +826,9 @@ main h3 {
 }
 
 .number {
-	font-family: 'alfphabetbipocatcondensed';
-	font-size: 36px;
-	line-height: 36px;
+    font-family: 'alfphabetbipocatcondensed';
+    font-size: 36px;
+    line-height: 36px;
 }
 
 .arrow-money {
@@ -836,16 +840,16 @@ main h3 {
 }
 
 #subscribing .arrow-money {
-    border-color: @color-A4;
-    color: @color-A4;
+    border-color: @color-A1;
+    color: @color-A1;
 }
 
 #subscribing .arrow-money:hover {
-    background-color: lighten(@color-A4, 20%);
+    background-color: @color-A1;
 }
 
 #subscribing .arrow-money:after {
-    border-color: @color-A4 transparent;
+    border-color: @color-A1 transparent;
 }
 
 #subscribing .arrow-money:before {
@@ -858,7 +862,7 @@ main h3 {
 }
 
 #cooperating .arrow-money:hover {
-    background-color: lighten(@color-A2, 20%);
+    background-color: @color-A2;
 }
 
 #cooperating .arrow-money:after {
@@ -870,17 +874,17 @@ main h3 {
 }
 
 #donating .arrow-money {
-    border-color: @color-A1;
-    color: @color-A1;
+    border-color: @color-A4;
+    color: @color-A4;
 }
 
 #donating .arrow-money:hover {
-    background-color: lighten(@color-A1, 20%);
+    background-color: @color-A4;
 }
 
 
 #donating .arrow-money:after {
-    border-color: @color-A1 transparent;
+    border-color: @color-A4 transparent;
 }
 
 #donating .arrow-money:before {
@@ -902,3 +906,4 @@ main h3 {
 }
 
 /* vim: set foldmethod=marker: */
+
