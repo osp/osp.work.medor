@@ -141,12 +141,13 @@
 /* custom mixins {{{ */
 .concrete() {
     font-family: 'alfphabetbipocatcondensed';
-    font-size: 0.9em;
+    font-size: 0.95em;
+    line-height: 1.3em;
 }
 
 .cols2 {
     .column-count(2);
-    .column-rule(3px double black);
+    /*.column-rule(3px double black);*/
     .column-gap(50px);
 }
 
@@ -327,10 +328,13 @@ details {
 summary {
     margin-top: 0.5em;
     margin-bottom: 1em;
+    font-size: 0.8em;
+    border-top: solid black 2px;
+    text-align: center;
 }
 
 table {
-    .concrete;
+    /*.concrete;*/
 }
 
 tr {
@@ -338,7 +342,8 @@ tr {
 }
 
 td {
-    text-align: ".";
+    /*text-align: ".";*/
+    padding: 3px;
 }
 
 form {
@@ -509,6 +514,12 @@ main h3 {
     background-image: url("../img/IMG_7245.JPG"); 
     background-position: 0 25%;
 }
+
+#magazine h2 {
+    background-image: url("../img/IMG_6582.JPG"); 
+    background-position: 0 25%;
+}
+
 
 .louis-image {
     display: block;
@@ -838,7 +849,7 @@ main h3 {
 }
 
 #subscribing .arrow-money:before {
-    background-image: url('../img/medor-perso2-ABONNE-2.png');
+    /*background-image: url('../img/medor-perso2-ABONNE-2.png');*/
 }
 
 #cooperating .arrow-money {
@@ -855,7 +866,7 @@ main h3 {
 }
 
 #cooperating .arrow-money:before {
-    background-image: url('../img/medor-perso3-PRET-2.png');
+    /*background-image: url('../img/medor-perso3-PRET-2.png');*/
 }
 
 #donating .arrow-money {
@@ -873,7 +884,7 @@ main h3 {
 }
 
 #donating .arrow-money:before {
-    background-image: url('../img/medor-perso4-DON-2_smile.png');
+   /* background-image: url('../img/medor-perso4-DON-2_smile.png');*/
 }
 
 #panel-descriptions {
