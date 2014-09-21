@@ -28,6 +28,7 @@ INSTALLED_APPS = (
 
 MIDDLEWARE_CLASSES = (
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'django.middleware.locale.LocaleMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -45,6 +46,8 @@ WSGI_APPLICATION = 'medor.wsgi.application'
 # https://docs.djangoproject.com/en/1.7/topics/i18n/
 
 LANGUAGE_CODE = 'fr-be'
+LANGUAGES = [('fr', 'Francais'),]
+DEFAULT_LANGUAGE = 0
 
 TIME_ZONE = 'UTC'
 
