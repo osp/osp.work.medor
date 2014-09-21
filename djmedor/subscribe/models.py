@@ -22,17 +22,15 @@ class Person(models.Model):
     email = models.EmailField('courriel')
     birth_date = models.DateTimeField('date de naissance')
     title = models.BooleanField('civilité', default=False, choices=TITLE_CHOICES)
-
     nationality = models.CharField('nationalité', max_length=2, choices=COUNTRY_CHOICES, default="BE")
-    id_number = models.CharField("numéro d'identité nationale", max_length=30)
-
+    id_number = models.CharField("N° d'identité nationale", max_length=30)
     street = models.CharField('rue', max_length=30)
     number = models.CharField('numéro', max_length=10) # 27 bis
     letterbox = models.PositiveSmallIntegerField('boîte postale', max_length=30, null=True, blank=True)
     city = models.CharField('ville', max_length=30)
     zip_code = models.PositiveSmallIntegerField('code postal', max_length=5)
     country = models.CharField('pays', max_length=2, choices=COUNTRY_CHOICES, default="BE")
-    phone_number = PhoneNumberField(blank=True, verbose_name='numéro de téléphone')
+    phone_number = PhoneNumberField(blank=True, verbose_name='téléphone')
 
 
     def __unicode__(self):

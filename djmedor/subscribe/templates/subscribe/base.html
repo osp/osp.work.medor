@@ -2,12 +2,23 @@
 <html>
 <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="http://medor.coop/static/components/reset-css/reset.css">
+    <link rel="stylesheet" type="text/less" href="{{ STATIC_URL }}less/styles.less">
+    <link rel="stylesheet" type="text/less" href="{{ STATIC_URL }}less/forms.less">
 
     <title>Médor</title>
     {% block head %}{% endblock %}
 
 </head>
 <body>
+    <div id="main-header">
+        <h1>Médor</h1>
+        <p contenteditable="true" id="baseline">Les yeux ouverts</p>
+    </div>
+
     {% block content %}{% endblock %}
+
+
+<script src="http://medor.coop/appel4/static/components/less/dist/less-1.7.0.min.js"></script>
 </body>
 </html>
