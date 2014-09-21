@@ -14,6 +14,9 @@ class CooperationForm(forms.ModelForm):
     """
     http://stackoverflow.com/questions/15889794/creating-one-django-form-to-save-two-models
     """
+    error_css_class = 'error'
+    required_css_class = 'required'
+
     def __init__(self, *args, **kwargs):
         instance = kwargs.get('instance')
         _fields = [f.name for f in Person._meta.fields]
@@ -23,6 +26,8 @@ class CooperationForm(forms.ModelForm):
         kwargs['initial'] = _initial
         super(CooperationForm, self).__init__(*args, **kwargs)
         self.fields.update(fields_for_model(Person, _fields))
+        self.fields['birth_date'].widget.attrs["placeholder"] = "JJ/MM/AAAA"
+        self.fields['phone_number'].widget.attrs["placeholder"] = "+32 "
 
     class Meta:
         model = Cooperation
