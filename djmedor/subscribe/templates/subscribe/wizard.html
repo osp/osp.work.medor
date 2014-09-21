@@ -28,15 +28,9 @@
                 {{ form }}
             {% endfor %}
         {% else %}
-            {#{{ wizard.form.as_p }} #}
-
             {{ form.non_field_errors }} 
 
-            <p>
-                {{ form.share_number.errors }}
-                {{ form.share_number.label_tag }}
-                {{ form.share_number }}
-            </p>
+        <div class="box">
             <p>
                 {{ form.first_name.errors }}
                 {{ form.first_name.label_tag }}
@@ -72,6 +66,8 @@
                 {{ form.id_number.label_tag }}
                 {{ form.id_number }}
             </p>
+        </div>
+        <div class="box">
             <p>
                 {{ form.street.errors }}
                 {{ form.street.label_tag }}
@@ -107,51 +103,14 @@
                 {{ form.phone_number.label_tag }}
                 {{ form.phone_number }}
             </p>
-            <!--<div class="box">            -->
-                <!--<div class="required"><th><label for="id_0-first_name">Prénom</label></th><td><input id="id_0-first_name" maxlength="30" name="0-first_name" type="text"></td></div>-->
-                <!--<div class="required"><th><label for="id_0-last_name">Nom de famille</label></th><td><input id="id_0-last_name" maxlength="30" name="0-last_name" type="text"></td></div>-->
-                <!--<div class="required"><th><label for="id_0-email">Courriel</label></th><td><input id="id_0-email" maxlength="75" name="0-email" type="email"></td></div>-->
-                <!--<div class="required"><th><label for="id_0-birth_date">Date de naissance</label></th><td><input id="id_0-birth_date" name="0-birth_date" type="text"></td></div>-->
-                <!--<div><th><label for="id_0-title">Civilité</label></th><td><select id="id_0-title" name="0-title">-->
-                <!--<option value="0">Madam</option>-->
-                <!--<option value="1">Sir</option>-->
-                <!--</select></td></div>-->
-                <!--<div class="required"><th><label for="id_0-nationality">Nationalité</label></th><td><select id="id_0-nationality" name="0-nationality">-->
-                <!--<option value="" selected="selected">---------</option>-->
-                <!--<option value="be">Belgique</option>-->
-                <!--<option value="fr">France</option>-->
-                <!--<option value="lu">Luxembourg</option>-->
-                <!--</select></td></div>-->
-                <!--<div class="required"><th><label for="id_0-id_number">N<sup>0</sup> d'identité nationale</label></th><td><input id="id_0-id_number" maxlength="30" name="0-id_number" type="text"></td></div>-->
-            <!--</div>-->
-
-            <!--<div class="box">            -->
-                <!--<div class="required"><th><label for="id_0-sdiveet">Rue</label></th><td><input id="id_0-sdiveet" maxlength="30" name="0-sdiveet" type="text"></td></div>-->
-                <!--<div class="required"><th><label for="id_0-number">Numéro</label></th><td><input id="id_0-number" maxlength="10" name="0-number" type="text"></td></div>-->
-                <!--<div><th><label for="id_0-letterbox">Boîte postale</label></th><td><input id="id_0-letterbox" min="0" name="0-letterbox" type="number"></td></div>-->
-                <!--<div class="required"><th><label for="id_0-city">Ville</label></th><td><input id="id_0-city" maxlength="30" name="0-city" type="text"></td></div>-->
-                <!--<div class="required"><th><label for="id_0-zip_code">Code postal</label></th><td><input id="id_0-zip_code" min="0" name="0-zip_code" type="number"></td></div>-->
-                <!--<div class="required"><th><label for="id_0-country">Pays</label></th><td><select id="id_0-country" name="0-country">-->
-                <!--<option value="" selected="selected">---------</option>-->
-                <!--<option value="be">Belgique</option>-->
-                <!--<option value="fr">France</option>-->
-                <!--<option value="lu">Luxembourg</option>-->
-                <!--</select></td></div>-->
-                <!--<div><th><label for="id_0-phone_number">Téléphone</label></th><td><input id="id_0-phone_number" name="0-phone_number" type="text"></td></div>-->
-            <!--</div>-->
-
-
-            <!--<div class="box">            -->
-                <!--<div class="required"><th><label for="id_0-share_number">Nombre de parts</label></th><td><select id="id_0-share_number" name="0-share_number">-->
-                <!--<option value="" selected="selected">---------</option>-->
-                <!--<option value="1">1 (20€)</option>-->
-                <!--<option value="2">2 (40€)</option>-->
-                <!--<option value="3">3 (60€)</option>-->
-                <!--<option value="4">4 (80€)</option>-->
-                <!--<option value="5">5 (100€)</option>-->
-                <!--<option value="6">6 (120€)</option>-->
-                <!--</select></td></div>-->
-            <!--</div>-->
+        </div>
+        <div class="box">
+            <p>
+                {{ form.share_number.errors }}
+                {{ form.share_number.label_tag }}
+                {{ form.share_number }}
+            </p>
+        </div>
         {% endif %}
 
 
