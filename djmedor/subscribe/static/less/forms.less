@@ -34,11 +34,14 @@ h2 {
     text-shadow: -1px -1px 0 #000000, 1px -1px 0 #000000, -1px 1px 0 #000000, 1px 1px 0 #000000;
     font-family: 'alfphabetbipocatcondensed';
     color: white;
+    text-align: center;
 }
 
 div#steps {
     font-family: 'urw-grotesk-t';
     text-align: center;
+    color: darkgray;
+
 
     div {
         border-top: 1px solid black;
@@ -58,6 +61,7 @@ div#steps {
 
     div.active {
         background-color: @color-B3;
+        color: black;
     }
 }
 
@@ -78,16 +82,26 @@ div.box {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     padding: @line-height ;
+
+    p {
+        display: flex;
+    }
+    input, select {
+        flex: 1;
+        height: @line-height;
+        position: relative;
+        top: @font-size;
+    }
 }
 div.box:nth-of-type(1) {
     min-height: 550px;
 }
 div.box:nth-of-type(2) {
-    border-bottom: 3px solid black;
-    border-left: 3px solid black;
+    border-bottom: 3px double black;
+    border-left: 3px double black;
 }
 div.box:nth-of-type(3) {
-    border-left: 3px solid black;
+    border-left: 3px double black;
 }
 
 
@@ -100,28 +114,48 @@ label {
     margin-right: @line-height / 2;
 }
 
+select {
+    font-family: @font;
+    font-size: @font-size - 2;
+    background-color: white;
+    border: 0;
+    /*border-top: 1px solid black;*/
+    border-bottom: 1px solid black;
+    
+    &:focus {
+        border-top: 1px solid black;
+        background-color: @color-B3;
+    }
+}
+
 input {
     border: 0;
-    border-top: 1px solid black;
+    /*border-top: 1px solid black;*/
     border-bottom: 1px solid black;
     background-color: white; 
     font-family: @font;
-    font-size: @font-size;
+    font-size: @font-size - 2;
     padding: 0 @line-height / 4 ;
 
     &:focus {
-        background-color: @color-A3;
+        background-color: @color-B3;
+        border-top: 1px solid black;
     }
 
     &[type=submit] {
         font-family: 'alfphabetbipocatcondensed';
         font-size: @font-size;
         cursor: pointer;
+        border-top: 1px solid black;
 
         &:hover {
             background-color: @color-A3;
         }
     }
+}
+
+p:not(.required) label {
+    color: gray;
 }
 
 input#prendre-part {
@@ -134,9 +168,11 @@ input#prendre-part {
     padding: @line-height / 2;
     width: 50%;
     clear: both;
+    color: black;
 
     &:hover {
         background-color: @color-B3;
+        color: black;
     }
 }
 
@@ -145,4 +181,9 @@ sup {
     vertical-align: 7px;
     line-height: 0;
     margin-left: 1px;
+}
+
+.errorlist {
+    color: @color-C2;
+    line-height: @line-height;
 }

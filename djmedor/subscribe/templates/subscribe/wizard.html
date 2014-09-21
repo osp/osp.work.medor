@@ -31,49 +31,50 @@
             {{ form.non_field_errors }} 
 
         <div class="box">
-            <p>
-                {{ form.first_name.errors }}
-                {{ form.first_name.label_tag }}
-                {{ form.first_name }}
-            </p>
-            <p>
-                {{ form.last_name.errors }}
-                {{ form.last_name.label_tag }}
-                {{ form.last_name }}
-            </p>
-            <p>
-                {{ form.email.errors }}
-                {{ form.email.label_tag }}
-                {{ form.email }}
-            </p>
-            <p>
-                {{ form.birth_date.errors }}
-                {{ form.birth_date.label_tag }}
-                {{ form.birth_date }}
-            </p>
-            <p>
+            <p class="required">
                 {{ form.title.errors }}
                 {{ form.title.label_tag }}
                 {{ form.title }}
             </p>
-            <p>
+            <p class="required">
+                {{ form.first_name.errors }}
+                {{ form.first_name.label_tag }}
+                {{ form.first_name }}
+            </p>
+            <p class="required">
+                {{ form.last_name.errors }}
+                {{ form.last_name.label_tag }}
+                {{ form.last_name }}
+            </p>
+            <p class="required">
+                {{ form.birth_date.errors }}
+                {{ form.birth_date.label_tag }}
+                {{ form.birth_date }}
+            </p>
+            <p class="required">
                 {{ form.nationality.errors }}
                 {{ form.nationality.label_tag }}
                 {{ form.nationality }}
             </p>
-            <p>
+            <p class="required">
                 {{ form.id_number.errors }}
-                {{ form.id_number.label_tag }}
+                <!--{{ form.id_number.label_tag }}-->
+                <label for="id_0-id_number">N<sup>0</sup> d'identité nationale&nbsp;:</label>
                 {{ form.id_number }}
+            </p>
+            <p class="required">
+                {{ form.email.errors }}
+                {{ form.email.label_tag }}
+                {{ form.email }}
             </p>
         </div>
         <div class="box">
-            <p>
+            <p class="required">
                 {{ form.street.errors }}
                 {{ form.street.label_tag }}
                 {{ form.street }}
             </p>
-            <p>
+            <p class="required">
                 {{ form.number.errors }}
                 {{ form.number.label_tag }}
                 {{ form.number }}
@@ -83,29 +84,32 @@
                 {{ form.letterbox.label_tag }}
                 {{ form.letterbox }}
             </p>
-            <p>
+            <p class="required">
                 {{ form.city.errors }}
                 {{ form.city.label_tag }}
                 {{ form.city }}
             </p>
-            <p>
+            <p class="required">
                 {{ form.zip_code.errors }}
                 {{ form.zip_code.label_tag }}
                 {{ form.zip_code }}
             </p>
-            <p>
+            <p class="required">
                 {{ form.country.errors }}
                 {{ form.country.label_tag }}
                 {{ form.country }}
             </p>
             <p>
-                {{ form.phone_number.errors }}
+            {% if form.phone_number.errors %}
+                <ul class="errorlist"><li>Veuillez entrer un numéro de téléphone valide au format international.</li></ul>
+            {% endif %}
+                <!--{{ form.phone_number.errors }}-->
                 {{ form.phone_number.label_tag }}
                 {{ form.phone_number }}
             </p>
         </div>
         <div class="box">
-            <p>
+            <p class="required">
                 {{ form.share_number.errors }}
                 {{ form.share_number.label_tag }}
                 {{ form.share_number }}

@@ -11,6 +11,11 @@ class Person(models.Model):
         ('FR', u'France'),
         ('LU', u'Luxembourg')
     )
+    NATIONALITY_CHOICES = (
+        ('BE', u'Belge'),
+        ('FR', u'Française'),
+        ('LU', u'Luxembourgeoise')
+    )
 
     TITLE_CHOICES = (
         (0, u'Madame'),
@@ -22,7 +27,7 @@ class Person(models.Model):
     email = models.EmailField('courriel')
     birth_date = models.DateTimeField('date de naissance')
     title = models.BooleanField('civilité', default=False, choices=TITLE_CHOICES)
-    nationality = models.CharField('nationalité', max_length=2, choices=COUNTRY_CHOICES, default="BE")
+    nationality = models.CharField('nationalité', max_length=2, choices=NATIONALITY_CHOICES, default="BE")
     id_number = models.CharField("N° d'identité nationale", max_length=30)
     street = models.CharField('rue', max_length=30)
     number = models.CharField('numéro', max_length=10) # 27 bis
