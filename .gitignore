@@ -3,7 +3,6 @@
 cache
 *.pyc
 venv
-_*
 
 djmedor/medor/local_settings.py
 djmedor/medor.db
