@@ -7,6 +7,8 @@ function remy(target) {
 
 
 $(function() {
+    remy($("main"));
+    
     if (Modernizr.details) {
         console.log('support ok');
     } else {
@@ -99,5 +101,4 @@ $(function() {
 
     //$('#panel-acting').waypoint('sticky');
 
-    remy($("main"));
 });
