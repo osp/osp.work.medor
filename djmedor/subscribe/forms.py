@@ -26,6 +26,9 @@ class CooperationForm(forms.ModelForm):
         kwargs['initial'] = _initial
         super(CooperationForm, self).__init__(*args, **kwargs)
         self.fields.update(fields_for_model(Person, self._person_fields))
+        self.fields['birth_date'].required = True
+        self.fields['id_number'].required = True
+        self.fields['nationality'].required = True
         self.fields['birth_date'].widget.attrs["placeholder"] = "JJ/MM/AAAA"
         self.fields['phone_number'].widget.attrs["placeholder"] = "+32 "
 
@@ -62,8 +65,10 @@ class SubscriptionForm(forms.ModelForm):
         kwargs['initial'] = _initial
         super(SubscriptionForm, self).__init__(*args, **kwargs)
         self.fields.update(fields_for_model(Person, self._person_fields))
-        self.fields['birth_date'].widget.attrs["placeholder"] = "JJ/MM/AAAA"
+        import ipdb; ipdb.set_trace()
         self.fields['phone_number'].widget.attrs["placeholder"] = "+32 "
+
+
 
     class Meta:
         model = Subscription

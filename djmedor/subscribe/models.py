@@ -25,10 +25,10 @@ class Person(models.Model):
     first_name = models.CharField('prénom', max_length=30)
     last_name = models.CharField('nom de famille', max_length=30)
     email = models.EmailField('courriel')
-    birth_date = models.DateTimeField('date de naissance')
+    birth_date = models.DateTimeField('date de naissance', null=True, blank=True)
     title = models.BooleanField('civilité', default=False, choices=TITLE_CHOICES)
-    nationality = models.CharField('nationalité', max_length=2, choices=NATIONALITY_CHOICES, default="BE")
-    id_number = models.CharField("N° d'identité nationale", max_length=30)
+    nationality = models.CharField('nationalité', max_length=2, choices=NATIONALITY_CHOICES, default="BE", blank=True)
+    id_number = models.CharField("N° d'identité nationale", max_length=30, blank=True)
     street = models.CharField('rue', max_length=30)
     number = models.CharField('numéro', max_length=10) # 27 bis
     letterbox = models.PositiveSmallIntegerField('boîte postale', max_length=30, null=True, blank=True)
@@ -46,8 +46,8 @@ class Subscription(models.Model):
     """ Describes a cooperation"""
     person = models.ForeignKey(Person)
 
-    def __unicode__(self):
-        return self.communication
+    #def __unicode__(self):
+        #return self.person
 
     def communication(self):
         invoice_nbr = 2014101234
