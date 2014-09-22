@@ -65,7 +65,6 @@ class SubscriptionForm(forms.ModelForm):
         kwargs['initial'] = _initial
         super(SubscriptionForm, self).__init__(*args, **kwargs)
         self.fields.update(fields_for_model(Person, self._person_fields))
-        import ipdb; ipdb.set_trace()
         self.fields['phone_number'].widget.attrs["placeholder"] = "+32 "
 
 
