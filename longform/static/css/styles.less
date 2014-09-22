@@ -144,8 +144,9 @@
 /* custom mixins {{{ */
 .concrete() {
     font-family: 'alfphabetbipocatcondensed';
-    font-size: 0.95em;
-    line-height: 1.3em;
+    font-size: 0.8em;
+    line-height: 1.4em;
+    letter-spacing: 0.06em;
 }
 
 .cols2 {
@@ -200,6 +201,7 @@
     text-align: center;
     color: white;
     text-decoration: none;
+    cursor: pointer;
 
     background-size: contain;
     background-repeat: no-repeat;
@@ -221,7 +223,7 @@
 
 /* layout {{{ */
 body {
-    margin: 50px;
+    margin: 150px;
     /*overflow-x: hidden;*/
 }
 
@@ -241,7 +243,9 @@ body {
 }
 
 #outer-wrapper {
-    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top:-80px;
     max-width: 1440px;
     min-width: 640px;
 }
@@ -275,6 +279,7 @@ body {
     width: 33.333%;
     padding-right: 20px;
 }
+
 
 
 .cover.active {
@@ -387,33 +392,44 @@ form input {
 
 /* header {{{ */
 #main-header {
-
+margin-top:-150px;
 }
 
 header {
     margin-bottom: 5em;
 }
 
+.anim {
+     width: 70%; 
+     text-align:center; 
+     margin-left:120px;
+     margin-top:-50px;
+     }
+
 header h1 {
     font-family:'alfphabetbipocatcondensed';
     font-size: 4.6em;
 }
 
-header > blockquote {
+blockquote#stiegler {
     font-family: 'alfphabetbipocatcondensed';
     line-height: 15px;
     text-align: center;
     margin-bottom: 1em;
+    margin-top: 4em;
 }
 
-header > blockquote > .footer {
+blockquote#stiegler > .footer {
     font-size: 0.7em;
     line-height: 15px;
     font-family: 'alfphabetbipocatcondensed';
     //margin-left: 449px;
-    text-align:right;
+    text-align:center;
     margin-top: 0.8em;
 }
+
+
+
 
 #baseline {
     font-family: 'Career';    
@@ -472,7 +488,8 @@ main h3 {
 }
 
 .vcard {
-    margin-left: 20px;
+    margin-left: 42px;
+    margin-top: 5px;
 }
 
 /*#subscribing h2,*/
@@ -480,6 +497,106 @@ main h3 {
 /*#donating h2 {*/
     /*display: none;*/
 /*}*/
+
+#magazine {
+/*border: solid black 2px;*/
+/*margin-top: 5em;*/
+    }
+
+.menu-selected{
+	outline: 2px solid black;
+    background-color:white;
+    }
+
+.menu{
+    position: fixed;
+	margin-right: 26px;
+	top:50px;
+	right:0px;
+    font-family: 'alfphabetbipocatcondensed';
+        text-align:center;
+        
+        li {
+            margin-top: 2px;
+        }
+        
+        li:before {
+            content: "";
+        }
+        
+	a {
+		color: black;
+		padding: 0 8px;
+		margin-bottom: 1px;
+		
+		&:hover {
+			text-decoration: none;
+			outline: 2px solid black;
+			
+		}
+	}
+
+    }
+
+.menu-arrow{
+        height: 0.2em;
+    width: 1em;
+    margin: 0em auto 0.5em auto;
+    /*position: relative;*/
+    background-color: black;
+    font-weight: bold;
+    
+    }
+    
+    
+.menu-arrow:after {
+content: "";
+    display: block;
+    position: absolute;
+    top: -4%;
+    left: 0.65em;
+    border-color: black transparent;
+    border-style: solid;
+    border-width:0.4em 1.5em 0em 1.5em;
+    height: 0px;
+    width: 0px;
+        -webkit-transform: rotate(180deg);
+-moz-transform: rotate(180deg);
+-o-transform: rotate(180deg);
+-ms-transform: rotate(180deg);
+}
+
+.menu-arrow:before {
+
+    content: "";
+    display: block;
+    position: absolute;
+    top: 94%;
+    left: 0.65em;
+    border-color: black transparent;
+    border-style: solid;
+    border-width: 0.4em 1.5em 0em 1.5em;
+    height: 0px;
+    width: 0px;
+}
+
+.menu span
+	{
+	border:solid black 2px;
+    display: block;
+    text-align:center;
+    width: 110%;
+	
+	}
+
+#collaborative-experience,
+#status,
+#accounting,
+#now-what,
+#magazine  {
+    border-top: double black 17px;
+    margin-bottom:2em;
+    }
 
 #collaborative-experience h2,
 #status h2,
@@ -491,6 +608,8 @@ main h3 {
     line-height: 500px;
     text-align: center;
     color: @color-B3;
+    margin-top:0em;
+    
 }
 
 #collaborative-experience h2 span,
@@ -746,12 +865,12 @@ main h3 {
 #panels {
     position: relative;
     background: @color-D1;
-    background: -moz-linear-gradient(left, @color-D1 0%, @color-D1 33.333%, @color-C3 33.333%, @color-C3 66.666%, @color-E1 66.666%, @color-E1 100%);
-    background: -webkit-gradient(left top, right top, color-stop(0%, @color-D1), color-stop(33.333%, @color-D1), color-stop(33.333%, @color-C3), color-stop(66.666%, @color-C3), color-stop(66.666%, @color-E1), color-stop(100%, @color-E1));
-    background: -webkit-linear-gradient(left, @color-D1 0%, @color-D1 33.333%, @color-C3 33.333%, @color-C3 66.666%, @color-E1 66.666%, @color-E1 100%);
-    background: -o-linear-gradient(left, @color-D1 0%, @color-D1 33.333%, @color-C3 33.333%, @color-C3 66.666%, @color-E1 66.666%, @color-E1 100%);
-    background: -ms-linear-gradient(left, @color-D1 0%, @color-D1 33.333%, @color-C3 33.333%, @color-C3 66.666%, @color-E1 66.666%, @color-E1 100%);
-    background: linear-gradient(to right, @color-D1 0%, @color-D1 33.333%, @color-C3 33.333%, @color-C3 66.666%, @color-E1 66.666%, @color-E1 100%);
+    background: -moz-linear-gradient(left, @color-D1 0%, @color-D1 33%, white 33%, white 34%, @color-B3 34%, @color-B3 66%, white 66%, white 67%, @color-E1 67%, @color-E1 100%);
+    background: -webkit-gradient(left top, right top, color-stop(0%, @color-D1), color-stop(33%, @color-D1), color-stop(33%, white), color-stop(34%, white), color-stop(34%, @color-B3), color-stop(66%, @color-B3), color-stop(66%, white), color-stop(67%, white), color-stop(67%, @color-E1), color-stop(100%, @color-E1));
+    background: -webkit-linear-gradient(left, @color-D1 0%, @color-D1 33%, white 33%, white 34%, @color-B3 34%, @color-B3 66%, white 66%, white 67%, @color-E1 67%, @color-E1 100%);
+    background: -o-linear-gradient(left, @color-D1 0%, @color-D1 33%, white 33%, white 34%, @color-B3 34%, @color-B3 66%, white 66%, white 67%, @color-E1 67%, @color-E1 100%);
+    background: -ms-linear-gradient(left, @color-D1 0%, @color-D1 33%, white 33%, white 34%, @color-B3 34%, @color-B3 66%, white 66%, white 67%, @color-E1 67%, @color-E1 100%);
+    background: linear-gradient(to right, @color-D1 0%, @color-D1 33%, white 33%, white 34%, @color-B3 34%, @color-B3 66%, white 66%, white 67%, @color-E1 67%, @color-E1 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff0000', endColorstr='#2f0cf5', GradientType=1 );
 }
 
@@ -775,6 +894,13 @@ main h3 {
 
 .fund-top .illu {
     text-align: center;
+    margin-top: 2em;
+}
+#cooperating .fund-top .illu {
+    margin-top: 3em;
+}
+#donating .fund-top .illu {
+    margin-top: 7em;
 }
 
 #subscribing .fund-top .illu img {
@@ -837,7 +963,7 @@ main h3 {
 }
 
 .arrow-money {
-    .transition(all, 250ms, ease-out, 0s);
+    //.transition(all, 250ms, ease-out, 0s);
 }
 
 .arrow-money:hover {
