@@ -1,3 +1,11 @@
+function remy(target) {          
+    // Avoids Capitalized short words (2 to 3 characters) to be alone
+    pattern = /(\b[A-Z].{0,2}|, .{0,3}) /g;
+    text = target.html();          
+    target.html(text.replace(pattern, '$1 ')); // I actually put a non-breaking space charcter after $1! You don’t see it, but it’s there. This is to not have this &nbsp; value pop up in places.
+}    
+
+
 $(function() {
     if (Modernizr.details) {
         console.log('support ok');
@@ -90,4 +98,6 @@ $(function() {
     });
 
     //$('#panel-acting').waypoint('sticky');
+
+    remy($("main"));
 });
