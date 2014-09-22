@@ -1,3 +1,7 @@
 from django.contrib import admin
+from subscribe.models import Person, Subscription, Cooperation
 
-# Register your models here.
+
+admin.site.register(Person)
+admin.site.register(Subscription)
+admin.site.register(Cooperation)

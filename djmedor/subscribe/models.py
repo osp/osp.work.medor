@@ -25,10 +25,10 @@ class Person(models.Model):
     first_name = models.CharField('prénom', max_length=30)
     last_name = models.CharField('nom de famille', max_length=30)
     email = models.EmailField('courriel')
-    birth_date = models.DateTimeField('date de naissance')
+    birth_date = models.DateTimeField('date de naissance', null=True, blank=True)
     title = models.BooleanField('civilité', default=False, choices=TITLE_CHOICES)
-    nationality = models.CharField('nationalité', max_length=2, choices=NATIONALITY_CHOICES, default="BE")
-    id_number = models.CharField("N° d'identité nationale", max_length=30)
+    nationality = models.CharField('nationalité', max_length=2, choices=NATIONALITY_CHOICES, default="BE", blank=True)
+    id_number = models.CharField("N° d'identité nationale", max_length=30, blank=True)
     street = models.CharField('rue', max_length=30)
     number = models.CharField('numéro', max_length=10) # 27 bis
     letterbox = models.PositiveSmallIntegerField('boîte postale', max_length=30, null=True, blank=True)
@@ -41,18 +41,13 @@ class Person(models.Model):
     def __unicode__(self):
         return self.first_name
 
-    def communication(self):
-        invoice_nbr = 2014101234
-        nbr = "{:010d}{:02d}".format(invoice_nbr, invoice_nbr % 97)
-        return "+++{}/{}/{}+++".format(nbr[:3], nbr[3:6], nbr[6:])
-
 
 class Subscription(models.Model):
     """ Describes a cooperation"""
     person = models.ForeignKey(Person)
 
-    def __unicode__(self):
-        return self.communication
+    #def __unicode__(self):
+        #return self.person
 
     def communication(self):
         invoice_nbr = 2014101234
@@ -75,9 +70,9 @@ class Cooperation(models.Model):
     share_number = models.PositiveSmallIntegerField('nombre de parts', choices=SHARE_CHOICES, default="1")
 
     def __unicode__(self):
-        return self.first_name
+        return u"%s" % self.share_number
 
     def communication(self):
-        return self.communication
+        invoice_nbr = 1234567890
         nbr = "{:010d}{:02d}".format(invoice_nbr, invoice_nbr % 97)
         return "+++{}/{}/{}+++".format(nbr[:3], nbr[3:6], nbr[6:])

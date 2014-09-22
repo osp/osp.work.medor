@@ -33,3 +33,8 @@ DATABASES = {
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = ''
+
+
+if DEBUG:
+    # Show emails in the console during developement.
+    EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'

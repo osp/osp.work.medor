@@ -1,0 +1,67 @@
+{% extends "subscribe/base.html" %}
+{% load i18n %}
+
+{% block head %}
+{{ wizard.form.media }}
+{% endblock %}
+
+{% block content %}
+    <h2>Je coopère</h2>
+
+    <div id="steps">
+        {% if wizard.steps.step1 == 1 %}
+            <div class="active">Enregistrement</div>
+            <div>Confirmation</div>
+        {% else %}
+            <div>Enregistrement</div> 
+            <div class="active">Confirmation</div>
+        {% endif %}
+    </div>
+
+    <!--{{ infos }}-->
+
+    <h3>Récapitulatif:</h3>
+
+    <p>{{ infos.title|yesno:"Monsieur,Madame" }} {{ infos.first_name }} {{ infos.last_name }}</p>
+    <p>{{ infos.street }}, {{ infos.number }}</p>
+    <p>{{ infos.zip_code }} {{ infos.city }}, {{ infos.country }}</p>
+    <p>{% if infos.phone_number %}{{ infos.phone_number }}{% else %}N<sup>0</sup> de téléphone non-renseigné{% endif %}</p>
+    <p>{{ infos.email }}</p>
+    <p>N<sup>0</sup> d'identité nationale {{ infos.nationality }}&thinsp;: {{ infos.id_number }}</p>
+
+
+    <form action="" method="post" class="step-{{ wizard.steps.step1 }}">
+        {% csrf_token %}
+        {{ wizard.management_form }}
+
+
+        <div id="confirm-box" class="required">
+            {% if wizard.form.forms %}
+                {{ wizard.form.management_form }}
+                {% for form in wizard.form.forms %}
+                    {{ form }}
+                {% endfor %}
+            {% else %}
+                {{ wizard.form.as_p }}
+            {% endif %}
+        </div>
+
+        <ul class="declaration">
+           <li>Je déclare ces informations conformes. </li>
+           <li>J'ai bien pris connaissance des <a target="_blank" href="http://www.ejustice.just.fgov.be/tsv_pdf/2014/07/15/14136380.pdf">statuts</a>, du <a target="_blank" href="todo.html">plan financier</a> et de la&nbsp;<a href="http://tunakutafuta.be/index.php?title=Foire_aux_questions" target="_blank">FAQ</a>.</li>
+           <li>Je m'engage à prendre <strong>{{ infos.share_number }} part{{ infos.share_number|pluralize }}</strong> pour un montant de <strong>{{ total }} euros</strong>. </li>
+        </ul>
+
+
+        {% if wizard.steps.prev %}
+        <div id="nav">
+            <button name="wizard_goto_step" type="submit" value="{{ wizard.steps.first }}">Recommencer</button>
+            <button name="wizard_goto_step" type="submit" value="{{ wizard.steps.prev }}">Étape précédente</button>
+        </div>
+        {% endif %}
+
+        <div id="confirm">
+            <input id="prendre-part" type="submit" value="Prendre part"/>
+        </div>
+    </form>
+{% endblock %}

@@ -1,0 +1,63 @@
+{% extends "subscribe/base.html" %}
+{% load i18n %}
+
+{% block head %}
+{{ wizard.form.media }}
+{% endblock %}
+
+{% block content %}
+    <h2>Je m'abonne</h2>
+
+    <div id="steps">
+        {% if wizard.steps.step1 == 1 %}
+            <div class="active">Enregistrement</div>
+            <div>Confirmation</div>
+        {% else %}
+            <div>Enregistrement</div> 
+            <div class="active">Confirmation</div>
+        {% endif %}
+    </div>
+
+    <!--{{ infos }}-->
+
+    <h3>Récapitulatif:</h3>
+
+    <p>{{ infos.title|yesno:"Monsieur,Madame" }} {{ infos.first_name }} {{ infos.last_name }}</p>
+    <p>{{ infos.street }}, {{ infos.number }}</p>
+    <p>{{ infos.zip_code }} {{ infos.city }}, {{ infos.country }}</p>
+    <p>{% if infos.phone_number %}{{ infos.phone_number }}{% else %}N<sup>0</sup> de téléphone non-renseigné{% endif %}</p>
+    <p>{{ infos.email }}</p>
+
+
+    <form action="" method="post" class="step-{{ wizard.steps.step1 }}">
+        {% csrf_token %}
+        {{ wizard.management_form }}
+
+
+        <div id="confirm-box" class="required">
+            {% if wizard.form.forms %}
+                {{ wizard.form.management_form }}
+                {% for form in wizard.form.forms %}
+                    {{ form }}
+                {% endfor %}
+            {% else %}
+                {{ wizard.form.as_p }}
+            {% endif %}
+        </div>
+        <ul class="declaration">
+            <li>Je déclare ces informations conformes et m'engage à m'abonner <br />pour <strong>quatre numéros</strong> pour un montant de <strong>60 euros</strong>.</li>
+        </ul>
+
+
+        {% if wizard.steps.prev %}
+        <div id="nav">
+            <button name="wizard_goto_step" type="submit" value="{{ wizard.steps.first }}">Recommencer</button>
+            <button name="wizard_goto_step" type="submit" value="{{ wizard.steps.prev }}">Étape précédente</button>
+        </div>
+        {% endif %}
+
+        <div id="confirm">
+            <input id="prendre-part" type="submit" value="Souscrire pour 60€"/>
+        </div>
+    </form>
+{% endblock %}
