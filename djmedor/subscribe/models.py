@@ -41,11 +41,6 @@ class Person(models.Model):
     def __unicode__(self):
         return self.first_name
 
-    def communication(self):
-        invoice_nbr = 2014101234
-        nbr = "{:010d}{:02d}".format(invoice_nbr, invoice_nbr % 97)
-        return "+++{}/{}/{}+++".format(nbr[:3], nbr[3:6], nbr[6:])
-
 
 class Subscription(models.Model):
     """ Describes a cooperation"""
@@ -78,6 +73,6 @@ class Cooperation(models.Model):
         return u"%s" % self.share_number
 
     def communication(self):
-        return self.communication
+        invoice_nbr = 1234567890
         nbr = "{:010d}{:02d}".format(invoice_nbr, invoice_nbr % 97)
         return "+++{}/{}/{}+++".format(nbr[:3], nbr[3:6], nbr[6:])
