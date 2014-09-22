@@ -1,0 +1,13 @@
+{{ data }}
+
+
+Cher(e) {{ data.first_name }} {{ data.last_name }},
+
+Via notre site web, vous vous êtes inscrit comme coopérateur. Vous avez choisi de payer par virement.
+
+Nous vous prions de transférer aujourd'hui {{ amount }} euros sur le compte BE
+65 5230 8066 7396 (BIC: TRIOBEBB). Pour faciliter le travail administratif,
+prière d’utiliser seulement la communication structurée {{ communication }}.
+
+Avec nos remerciements
+L'équipe Médor

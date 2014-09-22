@@ -1,0 +1,112 @@
+{% extends "subscribe/base.html" %}
+{% load i18n %}
+
+{% block head %}
+{{ wizard.form.media }}
+{% endblock %}
+
+{% block content %}
+    <h2>Je prend part</h2>
+
+    <div id="steps">
+        {% if wizard.steps.step1 == 1 %}
+            <div class="active">Enregistrement</div>
+            <div>Confirmation</div>
+        {% else %}
+            <div>Enregistrement</div> 
+            <div class="active">Confirmation</div>
+        {% endif %}
+    </div>
+
+    <form action="" method="post">{% csrf_token %}
+        {{ wizard.management_form }}
+
+
+        {% if wizard.form.forms %}
+            {{ wizard.form.management_form }}
+            {% for form in wizard.form.forms %}
+                {{ form }}
+            {% endfor %}
+        {% else %}
+            {{ form.non_field_errors }} 
+
+        <div class="box">
+            <p class="required">
+                {{ form.title.errors }}
+                {{ form.title.label_tag }}
+                {{ form.title }}
+            </p>
+            <p class="required">
+                {{ form.first_name.errors }}
+                {{ form.first_name.label_tag }}
+                {{ form.first_name }}
+            </p>
+            <p class="required">
+                {{ form.last_name.errors }}
+                {{ form.last_name.label_tag }}
+                {{ form.last_name }}
+            </p>
+            <p class="required">
+                {{ form.email.errors }}
+                {{ form.email.label_tag }}
+                {{ form.email }}
+            </p>
+        </div>
+        <div class="box">
+            <p class="required">
+                {{ form.street.errors }}
+                {{ form.street.label_tag }}
+                {{ form.street }}
+            </p>
+            <p class="required">
+                {{ form.number.errors }}
+                {{ form.number.label_tag }}
+                {{ form.number }}
+            </p>
+            <p>
+                {{ form.letterbox.errors }}
+                {{ form.letterbox.label_tag }}
+                {{ form.letterbox }}
+            </p>
+            <p class="required">
+                {{ form.city.errors }}
+                {{ form.city.label_tag }}
+                {{ form.city }}
+            </p>
+            <p class="required">
+                {{ form.zip_code.errors }}
+                {{ form.zip_code.label_tag }}
+                {{ form.zip_code }}
+            </p>
+            <p class="required">
+                {{ form.country.errors }}
+                {{ form.country.label_tag }}
+                {{ form.country }}
+            </p>
+            <p>
+            {% if form.phone_number.errors %}
+                <ul class="errorlist"><li>Veuillez entrer un numéro de téléphone valide au format international.</li></ul>
+            {% endif %}
+                <!--{{ form.phone_number.errors }}-->
+                {{ form.phone_number.label_tag }}
+                {{ form.phone_number }}
+            </p>
+        </div>
+        <div class="box">
+            <p class="required">
+                {{ form.share_number.errors }}
+                {{ form.share_number.label_tag }}
+                {{ form.share_number }}
+            </p>
+        </div>
+        {% endif %}
+
+
+        {% if wizard.steps.prev %}
+            <button name="wizard_goto_step" type="submit" value="{{ wizard.steps.first }}">{% trans "first step" %}</button>
+            <button name="wizard_goto_step" type="submit" value="{{ wizard.steps.prev }}">{% trans "prev step" %}</button>
+        {% endif %}
+
+        <input id="prendre-part" type="submit" value="Prendre part"/>
+    </form>
+{% endblock %}
