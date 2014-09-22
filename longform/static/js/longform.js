@@ -78,10 +78,10 @@ $(function() {
         target: '+=1',
     });
 
-    var $elts = $('#outer-wrapper, #magazine, #collaborative-experience, #accounting');
+    var $elts = $('#outer-wrapper, #main-header, #magazine, #collaborative-experience, #accounting');
 
     $elts.waypoint({
-        offset: 100,
+        offset: 70,
         handler: function(direction) {
             if (direction === 'down') {
                 var selector = $(this).attr('data-waypoint-target');
