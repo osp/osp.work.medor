@@ -1,7 +1,7 @@
 @import "styles.less";
 
 @font-size: 20px;
-@line-height: 24px;
+@line-height: 25px;
 @font: "centurycatalogue";
 @width: 45em;
 
@@ -40,6 +40,13 @@ h2 {
     color: white;
     text-align: center;
 }
+h3 {
+    font-family: 'alfphabetbipocatcondensed';
+    margin-bottom: 1em;
+}
+p {
+    line-height: @line-height;
+}
 
 div#steps {
     font-family: 'urw-grotesk-t';
@@ -72,7 +79,6 @@ div#steps {
 form {
     clear: both;
     line-height: 2.5 * @line-height;
-    text-align: center;
 
     div {
         text-align: left;
@@ -100,7 +106,7 @@ div.box {
         top: @font-size;
     }
 }
-form.enregistrement div.box:nth-of-type(1) {
+.step-1.cooperation div.box:nth-of-type(1) {
     min-height: 550px;
 }
 div.box:nth-of-type(2) {
@@ -112,6 +118,9 @@ div.box:nth-of-type(3) {
     border-left: 3px double black;
     border-top: 1px double black;
 }
+div.box:nth-of-type(2) {
+    border-bottom: 0;
+}
 
 
 th {
@@ -121,6 +130,11 @@ th {
 label {
     font-family: 'alfphabetbipocatcondensed';
     margin-right: @line-height / 2;
+    color: gray;
+}
+
+div.required label {
+    color: black;
 }
 
 select {
@@ -178,9 +192,6 @@ button {
     }
 }
 
-div:not(.required) label {
-    color: gray;
-}
 
 div#nav {
     clear: both;
@@ -190,7 +201,7 @@ div#nav {
     margin-top: @line-height;
 }
 
-.enregistrement div#confirm {
+.step-1 div#confirm {
     margin-left: 50%;
 }
 
@@ -229,6 +240,40 @@ sup {
     color: @color-C2;
     line-height: @line-height;
     flex: 1 100%;
+}
+.step-1 .errorlist {
     margin-bottom: -14px;
     margin-top: 20px;
+}
+
+#confirm-box {
+    float: left;
+    padding-top: 26px;
+}
+
+.declaration {
+    margin-top: 1em;
+    margin-left: 1em;
+    padding-left: 1em;
+    float: left;
+    line-height: @line-height;
+    border-left: 3px double black;
+}
+
+strong {
+    border-bottom: 1px double black;
+}
+
+a, 
+a:visited {
+    text-decoration: none;
+    color: @color-A2;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+a:visited {
+    text-decoration: none;
+    color: @color-A1;
 }

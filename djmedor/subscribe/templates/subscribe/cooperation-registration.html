@@ -6,7 +6,7 @@
 {% endblock %}
 
 {% block content %}
-    <h2>Je prend part</h2>
+    <h2>Je coopère</h2>
 
     <div id="steps">
         {% if wizard.steps.step1 == 1 %}
@@ -18,7 +18,7 @@
         {% endif %}
     </div>
 
-    <form action="" method="post" class="{% if wizard.steps.step1 == 1 %}enregistrement{% endif %}">
+    <form action="" method="post" class="step-{{ wizard.steps.step1 }} cooperation">
         {% csrf_token %}
         {{ wizard.management_form }}
 
