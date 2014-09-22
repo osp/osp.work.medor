@@ -8,6 +8,10 @@ function remy(target) {
 
 $(function() {
     remy($("main"));
+
+    $("#menu").tocify({
+        "selectors": "h2",
+    });
     
     if (Modernizr.details) {
         console.log('support ok');
