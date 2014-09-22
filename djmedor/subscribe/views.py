@@ -1,7 +1,8 @@
 from subscribe.forms import CooperationForm, ConfirmForm
+from django.core.mail import send_mail
 from django.views.generic.edit import FormView
 
-from django.shortcuts import render_to_response
+from django.shortcuts import render
 from django.contrib.formtools.wizard.views import CookieWizardView
 
 
@@ -33,6 +34,19 @@ class CooperationWizardView(CookieWizardView):
         return [COOPERATION_TEMPLATES[int(self.steps.current)]]
 
     def done(self, form_list, form_dict, **kwargs):
-        return render_to_response('done.html', {
+        form_list[0].save()
+        #subject = form.cleaned_data['subject']
+        #message = form.cleaned_data['message']
+        #sender = form.cleaned_data['sender']
+        #cc_myself = form.cleaned_data['cc_myself']
+
+        #recipients = ['info@example.com']
+
+        #if cc_myself:
+            #recipients.append(sender)
+
+        #send_mail(subject, message, sender, recipients)
+
+        return render(self.request, 'subscribe/cooperation-done.html', {
             'form_data': [form.cleaned_data for form in form_list],
         })

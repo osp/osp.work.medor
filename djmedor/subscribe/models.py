@@ -75,7 +75,7 @@ class Cooperation(models.Model):
     share_number = models.PositiveSmallIntegerField('nombre de parts', choices=SHARE_CHOICES, default="1")
 
     def __unicode__(self):
-        return self.first_name
+        return u"%s" % self.share_number
 
     def communication(self):
         return self.communication
